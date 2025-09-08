@@ -2,9 +2,12 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, Phone, Menu, X, Facebook, Twitter, Instagram } from "lucide-react";
+import { useSearch } from "@/contexts/SearchContext";
+import SearchResults from "@/components/SearchResults";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { searchQuery, setSearchQuery } = useSearch();
 
   const navLinks = [
     "Home",
@@ -68,8 +71,11 @@ const Header = () => {
               <Input
                 placeholder="Search destinations, packages..."
                 className="w-80 pr-10"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <Search className="w-5 h-5 absolute right-3 text-muted-foreground" />
+              <Search className="w-5 h-5 absolute right-3 text-muted-foreground pointer-events-none" />
+              <SearchResults />
             </div>
 
             {/* Mobile menu button */}
@@ -86,8 +92,14 @@ const Header = () => {
           {/* Mobile search */}
           <div className="md:hidden mt-4">
             <div className="relative">
-              <Input placeholder="Search destinations, packages..." className="pr-10" />
-              <Search className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
+              <Input 
+                placeholder="Search destinations, packages..." 
+                className="pr-10" 
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <Search className="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground pointer-events-none" />
+              <SearchResults />
             </div>
           </div>
         </div>
