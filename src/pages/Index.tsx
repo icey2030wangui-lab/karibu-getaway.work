@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PopularDestinations from "@/components/PopularDestinations";
+import DianiPackages from "@/components/DianiPackages";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -10,6 +11,7 @@ const Index = () => {
       <main className="flex-1">
         <Hero />
         <PopularDestinations />
+        <DianiPackages />
       </main>
       <Footer />
     </div>
