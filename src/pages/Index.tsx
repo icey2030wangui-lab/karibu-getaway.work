@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import PopularDestinations from "@/components/PopularDestinations";
 import SpecialOffers from "@/components/SpecialOffers";
 import DianiPackages from "@/components/DianiPackages";
+import MombasaPackages from "@/components/MombasaPackages";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
         <PopularDestinations />
         <SpecialOffers />
         <DianiPackages />
+        <MombasaPackages />
       </main>
       <Footer />
     </div>

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { destinations } from '@/data/destinations';
-import { dianiPackages } from '@/data/packages';
+import { dianiPackages, mombasaPackages } from '@/data/packages';
 import { specialOffers } from '@/data/offers';
 
 export interface SearchResult {
@@ -65,8 +65,26 @@ export const SearchProvider = ({ children }: { children: ReactNode }) => {
       const searchText = `${pkg.title} ${pkg.location} ${pkg.description} ${pkg.badge} ${pkg.duration}`.toLowerCase();
       if (searchText.includes(normalizedQuery)) {
         results.push({
-          id: `package-${pkg.id}`,
+          id: `diani-package-${pkg.id}`,
           title: pkg.title,
+          subtitle: pkg.location,
+          description: pkg.description,
+          price: pkg.price,
+          image: pkg.images[0],
+          badge: pkg.badge,
+          type: 'package',
+          originalData: pkg
+        });
+      }
+    });
+
+    // Search Mombasa packages
+    mombasaPackages.forEach((pkg) => {
+      const searchText = `${pkg.title} ${pkg.location} ${pkg.accommodation} ${pkg.description} ${pkg.badge} ${pkg.duration}`.toLowerCase();
+      if (searchText.includes(normalizedQuery)) {
+        results.push({
+          id: `mombasa-package-${pkg.id}`,
+          title: `${pkg.accommodation} - ${pkg.duration}`,
           subtitle: pkg.location,
           description: pkg.description,
           price: pkg.price,

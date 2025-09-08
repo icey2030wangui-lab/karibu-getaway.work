@@ -1,4 +1,5 @@
 import dianiBeach from "@/assets/diani-beach.jpg";
+import mombasa from "@/assets/mombasa.jpg";
 
 export const dianiPackages = [
   {
@@ -139,5 +140,253 @@ export const dianiPackages = [
     description: "Perfect family vacation with activities for all ages and comfortable accommodation.",
     dayCount: 4,
     freeSightseeing: "Free Sightseeing & Hotel"
+  }
+];
+
+export const mombasaPackages = [
+  {
+    id: 1,
+    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    location: "Mombasa/North Coast",
+    accommodation: "Pride Inn Paradise",
+    price: "Ksh66,900",
+    originalPrice: "Ksh75,000",
+    duration: "5 Days 4 Nights",
+    badge: "School Holiday Special",
+    rating: 4.6,
+    reviews: 142,
+    images: [mombasa, mombasa, mombasa],
+    inclusions: [
+      "4 Nights accommodation at Pride Inn Paradise",
+      "Travel insurance",
+      "Return Transfers",
+      "Return Economy SGR Tickets",
+      "Daily breakfast",
+      "Swimming pool access",
+      "Free WiFi"
+    ],
+    exclusions: ["All Not Mentioned in the Inclusions", "Personal expenses", "Tips and gratuities", "Lunch and Dinner"],
+    description: "Experience the beauty of Mombasa's North Coast with luxurious accommodation at Pride Inn Paradise. Perfect for family school holidays with excellent amenities.",
+    dayCount: 5,
+    freeSightseeing: "Free Sightseeing & Hotel",
+    highlights: [
+      "Beachfront location with private beach access",
+      "Family-friendly facilities and activities",
+      "Cultural tours to Fort Jesus and Old Town"
+    ]
+  },
+  {
+    id: 2,
+    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    location: "Mombasa/North Coast",
+    accommodation: "Sarova Whitesands",
+    price: "Ksh72,000",
+    originalPrice: "Ksh82,000",
+    duration: "5 Days 4 Nights",
+    badge: "Luxury",
+    rating: 4.8,
+    reviews: 189,
+    images: [mombasa, mombasa, mombasa],
+    inclusions: [
+      "4 Nights accommodation at Sarova Whitesands",
+      "Travel insurance",
+      "Return Transfers",
+      "Return Economy SGR Tickets",
+      "All meals (Full Board)",
+      "Swimming pool and beach access",
+      "Entertainment programs"
+    ],
+    exclusions: ["All Not Mentioned in the Inclusions", "Personal expenses", "Premium beverages"],
+    description: "Luxury beachfront resort experience at the renowned Sarova Whitesands with full board accommodation and premium amenities.",
+    dayCount: 5,
+    freeSightseeing: "Free Sightseeing & Hotel",
+    highlights: [
+      "Award-winning beachfront resort",
+      "Full board dining experience",
+      "Professional entertainment and kids club"
+    ]
+  },
+  {
+    id: 3,
+    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    location: "Mombasa/North Coast",
+    accommodation: "Flamingo Beach Resort",
+    price: "Ksh66,000",
+    originalPrice: "Ksh74,000",
+    duration: "5 Days 4 Nights",
+    badge: "Family Favorite",
+    rating: 4.5,
+    reviews: 156,
+    images: [mombasa, mombasa, mombasa],
+    inclusions: [
+      "4 Nights accommodation at Flamingo Beach",
+      "Travel insurance",
+      "Return Transfers",
+      "Return Economy SGR Tickets",
+      "Daily breakfast",
+      "Beach and pool access",
+      "Kids playground"
+    ],
+    exclusions: ["All Not Mentioned in the Inclusions", "Lunch and dinner", "Water sports"],
+    description: "Family-friendly resort with excellent facilities for children and adults. Located on pristine Kikambala Beach with stunning ocean views.",
+    dayCount: 5,
+    freeSightseeing: "Free Sightseeing & Hotel",
+    highlights: [
+      "Excellent family facilities",
+      "Kids club and playground",
+      "Multiple dining options"
+    ]
+  },
+  {
+    id: 4,
+    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    location: "Mombasa/North Coast",
+    accommodation: "Bamburi Beach Hotel",
+    price: "Ksh62,700",
+    originalPrice: "Ksh70,000",
+    duration: "5 Days 4 Nights",
+    badge: "Popular Choice",
+    rating: 4.4,
+    reviews: 198,
+    images: [mombasa, mombasa, mombasa],
+    inclusions: [
+      "4 Nights accommodation at Bamburi Beach",
+      "Travel insurance",
+      "Return Transfers",
+      "Return Economy SGR Tickets",
+      "Daily breakfast",
+      "Swimming pool access",
+      "Beach activities"
+    ],
+    exclusions: ["All Not Mentioned in the Inclusions", "Lunch and dinner", "Premium activities"],
+    description: "Popular beachfront hotel offering comfortable accommodation with easy access to Bamburi Beach and local attractions.",
+    dayCount: 5,
+    freeSightseeing: "Free Sightseeing & Hotel",
+    highlights: [
+      "Central location in Bamburi",
+      "Easy access to shopping and attractions",
+      "Traditional Swahili architecture"
+    ]
+  },
+  {
+    id: 5,
+    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    location: "Mombasa/North Coast",
+    accommodation: "Severin Sea Lodge",
+    price: "Ksh54,100",
+    originalPrice: "Ksh62,000",
+    duration: "5 Days 4 Nights",
+    badge: "Budget Friendly",
+    rating: 4.2,
+    reviews: 134,
+    images: [mombasa, mombasa, mombasa],
+    inclusions: [
+      "4 Nights accommodation at Severin Sea Lodge",
+      "Travel insurance",
+      "Return Transfers",
+      "Return Economy SGR Tickets",
+      "Daily breakfast",
+      "Swimming pool access"
+    ],
+    exclusions: ["All Not Mentioned in the Inclusions", "Lunch and dinner", "Water sports"],
+    description: "Comfortable beachfront lodge offering great value for money with beautiful gardens and direct beach access.",
+    dayCount: 5,
+    freeSightseeing: "Free Sightseeing & Hotel",
+    highlights: [
+      "Beautiful tropical gardens",
+      "Direct beach access",
+      "Affordable luxury experience"
+    ]
+  },
+  {
+    id: 6,
+    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    location: "Mombasa/North Coast",
+    accommodation: "Travellers Beach Hotel",
+    price: "Ksh75,100",
+    originalPrice: "Ksh85,000",
+    duration: "5 Days 4 Nights",
+    badge: "Premium",
+    rating: 4.7,
+    reviews: 167,
+    images: [mombasa, mombasa, mombasa],
+    inclusions: [
+      "4 Nights accommodation at Travellers Beach",
+      "Travel insurance",
+      "Return Transfers",
+      "Return Economy SGR Tickets",
+      "Half board (breakfast & dinner)",
+      "Swimming pool and beach access",
+      "Live entertainment"
+    ],
+    exclusions: ["All Not Mentioned in the Inclusions", "Lunch", "Premium beverages", "Spa services"],
+    description: "Premium beachfront hotel with half-board accommodation, live entertainment, and excellent service standards.",
+    dayCount: 5,
+    freeSightseeing: "Free Sightseeing & Hotel",
+    highlights: [
+      "Half-board dining included",
+      "Live entertainment shows",
+      "Premium beachfront location"
+    ]
+  },
+  {
+    id: 7,
+    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    location: "Mombasa/North Coast",
+    accommodation: "Neptune Beach Resort",
+    price: "Ksh60,800",
+    originalPrice: "Ksh68,000",
+    duration: "5 Days 4 Nights",
+    badge: "All Inclusive Available",
+    rating: 4.3,
+    reviews: 145,
+    images: [mombasa, mombasa, mombasa],
+    inclusions: [
+      "4 Nights accommodation at Neptune Beach",
+      "Travel insurance",
+      "Return Transfers",
+      "Return Economy SGR Tickets",
+      "Daily breakfast",
+      "Swimming pool access",
+      "Beach volleyball court"
+    ],
+    exclusions: ["All Not Mentioned in the Inclusions", "Lunch and dinner", "All-inclusive upgrade"],
+    description: "Beachfront resort with multiple accommodation options and the choice to upgrade to all-inclusive for the ultimate holiday experience.",
+    dayCount: 5,
+    freeSightseeing: "Free Sightseeing & Hotel",
+    highlights: [
+      "Multiple accommodation wings",
+      "All-inclusive upgrade available",
+      "Sports and recreation facilities"
+    ]
+  },
+  {
+    id: 8,
+    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    location: "Mombasa/North Coast",
+    accommodation: "Mombasa Budget Beach Hotel",
+    price: "Ksh25,500",
+    originalPrice: "Ksh32,000",
+    duration: "5 Days 4 Nights",
+    badge: "Best Value",
+    rating: 4.0,
+    reviews: 89,
+    images: [mombasa, mombasa, mombasa],
+    inclusions: [
+      "4 Nights accommodation",
+      "Travel insurance",
+      "Return Transfers",
+      "Return Economy SGR Tickets",
+      "Daily breakfast"
+    ],
+    exclusions: ["All Not Mentioned in the Inclusions", "Lunch and dinner", "Swimming pool access"],
+    description: "Budget-friendly accommodation perfect for travelers looking for basic comfort and convenience while exploring Mombasa.",
+    dayCount: 5,
+    freeSightseeing: "Free Sightseeing & Hotel",
+    highlights: [
+      "Budget-friendly pricing",
+      "Clean and comfortable rooms",
+      "Strategic location for exploration"
+    ]
   }
 ];
