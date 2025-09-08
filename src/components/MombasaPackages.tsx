@@ -326,7 +326,7 @@ const MombasaPackages = () => {
                 </div>
                 <div>
                   <div className="text-sm opacity-75">Contact</div>
-                  <div className="font-medium">+254 700 123 456</div>
+                  <div className="font-medium">+254719542780</div>
                 </div>
               </div>
             </div>
