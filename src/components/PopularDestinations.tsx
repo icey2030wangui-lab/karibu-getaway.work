@@ -60,6 +60,13 @@ const destinations = [
 ];
 
 const PopularDestinations = () => {
+  const scrollToDianiPackages = () => {
+    const dianiSection = document.getElementById('diani-packages');
+    if (dianiSection) {
+      dianiSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="py-16 px-4 bg-muted/20">
       <div className="container mx-auto">
@@ -110,7 +117,10 @@ const PopularDestinations = () => {
                       per person
                     </span>
                   </div>
-                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Button 
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    onClick={destination.name === "Diani Beach" ? scrollToDianiPackages : undefined}
+                  >
                     View Packages
                   </Button>
                 </div>
