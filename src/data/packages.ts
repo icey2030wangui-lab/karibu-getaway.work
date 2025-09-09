@@ -155,7 +155,11 @@ export const mombasaPackages = [
     badge: "School Holiday Special",
     rating: 4.6,
     reviews: 142,
-    images: [mombasa, mombasa, mombasa],
+    images: [
+      "/lovable-uploads/ead104a0-4a30-467c-8759-0661a035fca5.png",
+      "/lovable-uploads/3dd9b23c-49c3-4b2d-8813-e4945bdd5799.png",
+      "/lovable-uploads/d4fcb5d3-5677-4dd2-a136-ff677a4488ce.png"
+    ],
     inclusions: [
       "4 Nights accommodation at Pride Inn Paradise",
       "Travel insurance",
