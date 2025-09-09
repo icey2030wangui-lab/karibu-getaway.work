@@ -294,7 +294,13 @@ export const mombasaPackages = [
     badge: "Budget Friendly",
     rating: 4.2,
     reviews: 134,
-    images: [mombasa, mombasa, mombasa],
+    images: [
+      "/lovable-uploads/6be3b9de-9642-4ee9-a350-9ccc729898e4.png",
+      "/lovable-uploads/e6853cec-70d8-4e9e-9655-a536f4561b36.png",
+      "/lovable-uploads/b70e728d-db71-4a23-a81c-ea4231e107c3.png",
+      "/lovable-uploads/96e52dc7-6d49-435c-9568-5b1d07c958c3.png",
+      "/lovable-uploads/2ab48a20-1edc-48b1-b6b3-485d43db99f8.png"
+    ],
     inclusions: [
       "4 Nights accommodation at Severin Sea Lodge",
       "Travel insurance",
