@@ -190,7 +190,11 @@ export const mombasaPackages = [
     badge: "Luxury",
     rating: 4.8,
     reviews: 189,
-    images: [mombasa, mombasa, mombasa],
+    images: [
+      "/lovable-uploads/132ca583-4bfa-48d9-913d-64a6bb7d6aba.png",
+      "/lovable-uploads/75633e98-537f-4fa8-a38b-a489e218828a.png",
+      "/lovable-uploads/9d551d15-b948-4210-935a-12ce070c0897.png"
+    ],
     inclusions: [
       "4 Nights accommodation at Sarova Whitesands",
       "Travel insurance",

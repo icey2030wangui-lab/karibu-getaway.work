@@ -47,6 +47,45 @@ const MombasaPackages = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
         <div className="lg:col-span-2">
+          {/* Image Gallery */}
+          <div className="mb-6">
+            <div className="relative overflow-hidden rounded-lg bg-muted">
+              <div className="flex transition-transform duration-300 ease-in-out" 
+                   style={{ transform: `translateX(-${(pkg.images.findIndex((_, i) => i === 0) || 0) * 100}%)` }}>
+                {pkg.images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`${pkg.accommodation} - View ${index + 1}`}
+                    className="w-full h-64 object-cover flex-shrink-0"
+                  />
+                ))}
+              </div>
+              {pkg.images.length > 1 && (
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                  {pkg.images.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`w-3 h-3 rounded-full transition-colors ${
+                        index === 0 ? 'bg-white' : 'bg-white/50'
+                      }`}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+            <div className="grid grid-cols-3 gap-2 mt-3">
+              {pkg.images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`${pkg.accommodation} thumbnail ${index + 1}`}
+                  className="w-full h-16 object-cover rounded cursor-pointer hover:opacity-75 transition-opacity"
+                />
+              ))}
+            </div>
+          </div>
+
           <Tabs defaultValue="overview" className="w-full">
             <TabsList className="grid w-full grid-cols-6 mb-6">
               <TabsTrigger value="overview">Overview</TabsTrigger>
