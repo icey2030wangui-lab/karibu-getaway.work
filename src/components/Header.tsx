@@ -48,9 +48,11 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
-              <h1 className="text-2xl md:text-3xl font-bold text-primary">
-                KARIBU GATEWAYS
-              </h1>
+              <img 
+                src="/lovable-uploads/33ada6c7-5194-4f3d-abba-d2296688edd8.png" 
+                alt="Karibu Gateways - Kenya's Premier Travel & Safari Company"
+                className="h-12 md:h-16 w-auto"
+              />
             </div>
 
             {/* Desktop Navigation */}
