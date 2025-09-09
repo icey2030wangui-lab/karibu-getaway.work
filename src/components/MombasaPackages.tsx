@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
-import { Star, MapPin, Calendar, Users, CheckCircle2, Building, Phone, Mail, Clock } from "lucide-react";
+import { Star, MapPin, Calendar, Users, CheckCircle2, Building, Phone, Mail, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { mombasaPackages } from "@/data/packages";
 
@@ -16,7 +16,22 @@ const MombasaPackages = () => {
     checkOut: ''
   });
 
-  const EnhancedBookingModal = ({ pkg }: { pkg: typeof mombasaPackages[0] }) => (
+  const EnhancedBookingModal = ({ pkg }: { pkg: typeof mombasaPackages[0] }) => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    
+    const nextImage = () => {
+      setCurrentImageIndex((prev) => (prev + 1) % pkg.images.length);
+    };
+    
+    const previousImage = () => {
+      setCurrentImageIndex((prev) => (prev - 1 + pkg.images.length) % pkg.images.length);
+    };
+    
+    const goToImage = (index: number) => {
+      setCurrentImageIndex(index);
+    };
+
+    return (
     <DialogContent className="max-w-5xl max-h-[95vh] overflow-y-auto">
       <DialogHeader>
         <DialogTitle className="text-2xl font-bold flex items-center justify-between">
@@ -47,41 +62,81 @@ const MombasaPackages = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
         <div className="lg:col-span-2">
-          {/* Image Gallery */}
+          {/* Enhanced Image Gallery */}
           <div className="mb-6">
-            <div className="relative overflow-hidden rounded-lg bg-muted">
-              <div className="flex transition-transform duration-300 ease-in-out" 
-                   style={{ transform: `translateX(-${(pkg.images.findIndex((_, i) => i === 0) || 0) * 100}%)` }}>
+            <div className="relative overflow-hidden rounded-lg bg-muted group">
+              <div className="flex transition-transform duration-500 ease-in-out" 
+                   style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
                 {pkg.images.map((image, index) => (
                   <img
                     key={index}
                     src={image}
                     alt={`${pkg.accommodation} - View ${index + 1}`}
-                    className="w-full h-64 object-cover flex-shrink-0"
+                    className="w-full h-80 object-cover flex-shrink-0"
                   />
                 ))}
               </div>
+              
+              {/* Navigation Buttons */}
+              {pkg.images.length > 1 && (
+                <>
+                  <button
+                    onClick={previousImage}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={nextImage}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </>
+              )}
+              
+              {/* Dots Navigation */}
               {pkg.images.length > 1 && (
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
                   {pkg.images.map((_, index) => (
                     <button
                       key={index}
-                      className={`w-3 h-3 rounded-full transition-colors ${
-                        index === 0 ? 'bg-white' : 'bg-white/50'
+                      onClick={() => goToImage(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
                       }`}
                     />
                   ))}
                 </div>
               )}
+              
+              {/* Image Counter */}
+              <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                {currentImageIndex + 1} / {pkg.images.length}
+              </div>
             </div>
-            <div className="grid grid-cols-3 gap-2 mt-3">
+            
+            {/* Thumbnail Gallery */}
+            <div className="grid grid-cols-4 md:grid-cols-6 gap-2 mt-4">
               {pkg.images.map((image, index) => (
-                <img
+                <button
                   key={index}
-                  src={image}
-                  alt={`${pkg.accommodation} thumbnail ${index + 1}`}
-                  className="w-full h-16 object-cover rounded cursor-pointer hover:opacity-75 transition-opacity"
-                />
+                  onClick={() => goToImage(index)}
+                  className={`relative overflow-hidden rounded-lg transition-all duration-300 ${
+                    index === currentImageIndex 
+                      ? 'ring-2 ring-primary scale-105' 
+                      : 'hover:scale-105 hover:opacity-75'
+                  }`}
+                >
+                  <img
+                    src={image}
+                    alt={`${pkg.accommodation} thumbnail ${index + 1}`}
+                    className="w-full h-16 object-cover"
+                  />
+                  {index === currentImageIndex && (
+                    <div className="absolute inset-0 bg-primary/20" />
+                  )}
+                </button>
               ))}
             </div>
           </div>
@@ -407,7 +462,8 @@ const MombasaPackages = () => {
         </div>
       </div>
     </DialogContent>
-  );
+    );
+  };
 
   return (
     <section id="mombasa-packages" className="py-16 px-4 bg-muted/30">
