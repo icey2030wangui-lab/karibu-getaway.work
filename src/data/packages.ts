@@ -225,7 +225,14 @@ export const mombasaPackages = [
     badge: "Family Favorite",
     rating: 4.5,
     reviews: 156,
-    images: [mombasa, mombasa, mombasa],
+    images: [
+      "/lovable-uploads/22445433-5f5e-4c53-88c9-ed69b91c549f.png",
+      "/lovable-uploads/ba9fd9b9-7270-433a-8c6e-e17c8096cb88.png",
+      "/lovable-uploads/930ae9f0-305d-4c23-bb2a-3861a6dd2a0a.png",
+      "/lovable-uploads/a1a82f23-135c-40d4-86b0-701d5c0dd9ae.png",
+      "/lovable-uploads/1ae69be0-81d4-4e42-aa04-3ef4004ec9b5.png",
+      "/lovable-uploads/85de9d45-ae0a-4412-a3b5-b297ecdec9c3.png"
+    ],
     inclusions: [
       "4 Nights accommodation at Flamingo Beach",
       "Travel insurance",
