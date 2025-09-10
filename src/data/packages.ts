@@ -271,37 +271,6 @@ export const mombasaPackages = [
     ]
   },
   {
-    id: 4,
-    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
-    location: "Mombasa/North Coast",
-    accommodation: "Bamburi Beach Hotel",
-    price: "Ksh62,700",
-    originalPrice: "Ksh70,000",
-    duration: "5 Days 4 Nights",
-    badge: "Popular Choice",
-    rating: 4.4,
-    reviews: 198,
-    images: [mombasa, mombasa, mombasa],
-    inclusions: [
-      "4 Nights accommodation at Bamburi Beach",
-      "Travel insurance",
-      "Return Transfers",
-      "Return Economy SGR Tickets",
-      "Daily breakfast",
-      "Swimming pool access",
-      "Beach activities"
-    ],
-    exclusions: ["All Not Mentioned in the Inclusions", "Lunch and dinner", "Premium activities"],
-    description: "Popular beachfront hotel offering comfortable accommodation with easy access to Bamburi Beach and local attractions.",
-    dayCount: 5,
-    freeSightseeing: "Free Sightseeing & Hotel",
-    highlights: [
-      "Central location in Bamburi",
-      "Easy access to shopping and attractions",
-      "Traditional Swahili architecture"
-    ]
-  },
-  {
     id: 5,
     title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
     location: "Mombasa/North Coast",
@@ -413,33 +382,4 @@ export const mombasaPackages = [
       "Sports and recreation facilities"
     ]
   },
-  {
-    id: 8,
-    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
-    location: "Mombasa/North Coast",
-    accommodation: "Mombasa Budget Beach Hotel",
-    price: "Ksh25,500",
-    originalPrice: "Ksh32,000",
-    duration: "5 Days 4 Nights",
-    badge: "Best Value",
-    rating: 4.0,
-    reviews: 89,
-    images: [mombasa, mombasa, mombasa],
-    inclusions: [
-      "4 Nights accommodation",
-      "Travel insurance",
-      "Return Transfers",
-      "Return Economy SGR Tickets",
-      "Daily breakfast"
-    ],
-    exclusions: ["All Not Mentioned in the Inclusions", "Lunch and dinner", "Swimming pool access"],
-    description: "Budget-friendly accommodation perfect for travelers looking for basic comfort and convenience while exploring Mombasa.",
-    dayCount: 5,
-    freeSightseeing: "Free Sightseeing & Hotel",
-    highlights: [
-      "Budget-friendly pricing",
-      "Clean and comfortable rooms",
-      "Strategic location for exploration"
-    ]
-  }
 ];
