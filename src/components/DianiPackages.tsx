@@ -50,20 +50,14 @@ const DianiPackages = () => {
                 <p className="text-muted-foreground mb-4">{pkg.description}</p>
                 
                 <div className="bg-accent/10 p-4 rounded-lg">
-                  <h4 className="font-bold mb-2 text-accent">Package Highlights</h4>
+                  <h4 className="font-bold mb-2 text-accent">Recommended Dining</h4>
                   <ul className="space-y-1">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
-                      <span className="text-sm">Premium beachfront accommodation</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
-                      <span className="text-sm">Professional photography session</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
-                      <span className="text-sm">Complimentary spa treatments</span>
-                    </li>
+                    {pkg.diningOptions?.map((option, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-green-500" />
+                        <span className="text-sm">{option}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -201,10 +195,10 @@ const DianiPackages = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Diani Beach Packages
+            Diani Stay & Dine Selection
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover pristine white sand beaches and crystal-clear turquoise waters at Kenya's premier coastal destination
+            Curated collection of premium accommodations paired with memorable dining experiences at Kenya's premier beach destination
           </p>
         </div>
 
@@ -284,7 +278,7 @@ const DianiPackages = () => {
             variant="outline"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8"
           >
-            View More Diani Packages
+            Explore More Stay & Dine Options
           </Button>
         </div>
       </div>
