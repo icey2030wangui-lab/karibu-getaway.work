@@ -348,7 +348,14 @@ export const mombasaPackages = [
     badge: "Premium",
     rating: 4.7,
     reviews: 167,
-    images: [mombasa, mombasa, mombasa],
+    images: [
+      "/lovable-uploads/82dec078-64ae-449b-bfe9-da0d158bb0b9.png",
+      "/lovable-uploads/4b17e36e-0376-446d-9593-f67c55b200b6.png",
+      "/lovable-uploads/70d79873-7697-42e4-ba90-dd87dbeae2f6.png",
+      "/lovable-uploads/df5447bd-91aa-4296-b7c6-91772e403030.png",
+      "/lovable-uploads/3d6057b4-9d5c-43b2-b8ad-fc568061b0ea.png",
+      "/lovable-uploads/9873f05f-8c2e-400c-b05f-5758e118ae2d.png"
+    ],
     inclusions: [
       "4 Nights accommodation at Travellers Beach",
       "Travel insurance",
