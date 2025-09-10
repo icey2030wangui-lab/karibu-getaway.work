@@ -386,7 +386,14 @@ export const mombasaPackages = [
     badge: "All Inclusive Available",
     rating: 4.3,
     reviews: 145,
-    images: [mombasa, mombasa, mombasa],
+    images: [
+      "/lovable-uploads/8785a5f6-d901-43b2-a870-0be0612308b2.png",
+      "/lovable-uploads/df722116-1d5e-49a1-88d9-b3281c46a2b5.png",
+      "/lovable-uploads/9b1fb155-1bb2-4742-82f7-175ea124dea3.png",
+      "/lovable-uploads/7b805240-9487-46d8-9571-b8dbf0f6f407.png",
+      "/lovable-uploads/7c7ee04a-5962-4896-b374-97de360c5fc3.png",
+      "/lovable-uploads/922e6645-a097-4dea-ad1b-e9930460104c.png"
+    ],
     inclusions: [
       "4 Nights accommodation at Neptune Beach",
       "Travel insurance",
