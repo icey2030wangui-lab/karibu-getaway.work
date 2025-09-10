@@ -12,7 +12,13 @@ export const dianiPackages = [
     badge: "Premium Resort",
     rating: 4.8,
     reviews: 245,
-    images: [dianiBeach, dianiBeach, dianiBeach],
+    images: [
+      "/lovable-uploads/c5e80523-454e-4b41-8bf5-b5c9dc087228.png",
+      "/lovable-uploads/6b39dced-187e-4b26-935f-a2b86b056fac.png", 
+      "/lovable-uploads/da19a70d-35a6-47f6-be9c-0a3aedcf5ac9.png",
+      "/lovable-uploads/cb84111e-b26f-4fa3-896f-b90640d06ec2.png",
+      "/lovable-uploads/9f86cdaf-4716-4d9b-b48d-0fb64aad7562.png"
+    ],
     inclusions: [
       "Luxury beachfront accommodation",
       "Full-service spa access",
