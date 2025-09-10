@@ -42,7 +42,14 @@ export const dianiPackages = [
     badge: "All-Inclusive",
     rating: 4.6,
     reviews: 189,
-    images: [dianiBeach, dianiBeach, dianiBeach],
+    images: [
+      "/lovable-uploads/1e1867c9-72d9-4495-9370-6e7dbe1f224d.png",
+      "/lovable-uploads/d7cc1504-6dcb-4208-8dc8-ec5cfb6ef076.png",
+      "/lovable-uploads/d511c3f3-b960-449e-8804-8194e6703019.png",
+      "/lovable-uploads/0b87144c-a68b-4f6e-ba86-8545a3514aee.png",
+      "/lovable-uploads/c6c0fc68-4272-4b32-86c6-d681c2f449b0.png",
+      "/lovable-uploads/7aa72d25-0454-4af4-a365-3bf86ef0701f.png"
+    ],
     inclusions: [
       "All meals and beverages",
       "Beach and pool access",
