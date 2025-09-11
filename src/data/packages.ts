@@ -64,30 +64,6 @@ export const dianiPackages = [
     diningOptions: ["Ali Barbour's Cave - unique cave dining", "Resort buffet - international cuisine"]
   },
   {
-    id: 3,
-    title: "Diani Sea Lodge",
-    location: "Diani Beach",
-    price: "KES 11,500+",
-    originalPrice: null,
-    duration: "per person",
-    badge: "All-Inclusive",
-    rating: 4.5,
-    reviews: 156,
-    images: [dianiBeach, dianiBeach, dianiBeach],
-    inclusions: [
-      "All-inclusive accommodation",
-      "All meals and drinks",
-      "Beach activities",
-      "Evening shows",
-      "Sports facilities"
-    ],
-    exclusions: ["Excursions", "Spa treatments", "Premium services", "Tips"],
-    description: "Affordable all-inclusive beach lodge offering great value with comprehensive amenities and beachfront location.",
-    dayCount: "Flexible",
-    freeSightseeing: "Beach Activities & Shows",
-    diningOptions: ["Nomad Beach Bar & Restaurant - laid-back beachfront", "Lodge dining room - local & international"]
-  },
-  {
     id: 4,
     title: "PrideInn Hotel Diani",
     location: "Diani Beach",
