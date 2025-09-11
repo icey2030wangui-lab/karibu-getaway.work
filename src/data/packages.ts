@@ -97,7 +97,14 @@ export const dianiPackages = [
     badge: "Great Value",
     rating: 4.3,
     reviews: 198,
-    images: [dianiBeach, dianiBeach, dianiBeach],
+    images: [
+      "/lovable-uploads/444d1bb7-0c05-4c7f-97d0-9682573aaac3.png",
+      "/lovable-uploads/8dbcb609-1f8f-43ac-9eb7-f3c620944755.png",
+      "/lovable-uploads/ebd9698d-b87f-43cd-81f9-b5beefee5970.png",
+      "/lovable-uploads/8ad5338f-d0f3-438e-8bba-496751178e99.png",
+      "/lovable-uploads/9d848aca-580b-4e20-bdfb-d25750e0faaf.png",
+      "/lovable-uploads/ae5428fd-5b43-4669-a030-94de024f44b6.png"
+    ],
     inclusions: [
       "Comfortable accommodation",
       "Swimming pool access",
