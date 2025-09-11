@@ -161,7 +161,16 @@ export const dianiPackages = [
     badge: "Boutique",
     rating: 4.7,
     reviews: 167,
-    images: [dianiBeach, dianiBeach, dianiBeach],
+    images: [
+      "/lovable-uploads/7b40ce2a-3a3d-4e84-8afe-46cce0087b91.png",
+      "/lovable-uploads/2bfbd9e6-49cb-4548-b0c5-cd486f6c0fe6.png",
+      "/lovable-uploads/17ccc419-fc50-43fb-ac04-6c3a19fbba98.png",
+      "/lovable-uploads/4d4723e6-6978-4022-a6e0-0de2bd15a2e3.png",
+      "/lovable-uploads/5f62f19a-1ea8-45f0-81f4-d6a3348482cd.png",
+      "/lovable-uploads/2bd3d765-cb5d-4e0a-be3d-8c4c55f062c9.png",
+      "/lovable-uploads/89fe9145-c388-42a7-82b3-96351c2cc4d6.png",
+      "/lovable-uploads/48f2c12b-1289-4679-8c8f-623b0d0c422c.png"
+    ],
     inclusions: [
       "Boutique accommodation",
       "Beachfront location",
