@@ -128,7 +128,16 @@ export const dianiPackages = [
     badge: "Premium Luxury",
     rating: 4.9,
     reviews: 134,
-    images: [dianiBeach, dianiBeach, dianiBeach],
+    images: [
+      "/lovable-uploads/0c2ae074-ad06-40ae-a888-a6d6f0ee9ffc.png",
+      "/lovable-uploads/a90ba897-d663-4633-8644-f53f6748e156.png",
+      "/lovable-uploads/6fc34ec0-8980-4918-b354-50da3972990a.png",
+      "/lovable-uploads/04bdfff3-d176-47c0-b877-1947b5f59561.png",
+      "/lovable-uploads/8f866d25-18e4-457d-a9a2-9809ad7c6d6d.png",
+      "/lovable-uploads/0f854827-7861-4943-b1b1-bf81880720d9.png",
+      "/lovable-uploads/e6acbe7c-2ab2-4567-b8af-10aa3fc80c5c.png",
+      "/lovable-uploads/041804d0-a99f-45d3-83ee-aebe20c4509e.png"
+    ],
     inclusions: [
       "Luxury oceanfront suites",
       "Private beach access",
