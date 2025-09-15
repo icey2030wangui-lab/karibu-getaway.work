@@ -1,8 +1,6 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-secondary text-secondary-foreground">
+  return <footer className="bg-secondary text-secondary-foreground">
       {/* Main footer content */}
       <div className="py-16 px-4">
         <div className="container mx-auto">
@@ -40,23 +38,11 @@ const Footer = () => {
                 Quick Links
               </h4>
               <ul className="space-y-2">
-                {[
-                  "Home",
-                  "All Destinations", 
-                  "Safari Packages",
-                  "Beach Holidays",
-                  "Local Packages",
-                  "Contact Us"
-                ].map((link) => (
-                  <li key={link}>
-                    <a 
-                      href="#" 
-                      className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200"
-                    >
+                {["Home", "All Destinations", "Safari Packages", "Beach Holidays", "Local Packages", "Contact Us"].map(link => <li key={link}>
+                    <a href="#" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
                       {link}
                     </a>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
 
@@ -66,23 +52,11 @@ const Footer = () => {
                 Top Destinations
               </h4>
               <ul className="space-y-2">
-                {[
-                  "Maasai Mara",
-                  "Diani Beach",
-                  "Amboseli",
-                  "Mombasa",
-                  "Samburu",
-                  "Mount Kenya"
-                ].map((destination) => (
-                  <li key={destination}>
-                    <a 
-                      href="#" 
-                      className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200"
-                    >
+                {["Maasai Mara", "Diani Beach", "Amboseli", "Mombasa", "Samburu", "Mount Kenya"].map(destination => <li key={destination}>
+                    <a href="#" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
                       {destination}
                     </a>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
           </div>
@@ -125,9 +99,7 @@ const Footer = () => {
       <div className="bg-secondary/80 py-4 px-4 border-t border-secondary-foreground/10">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-secondary-foreground/60">
-            <p>
-              © 2024 Karibu Gateways. All rights reserved.
-            </p>
+            <p>© 2025 Karibu Gateways. All rights reserved.</p>
             <div className="flex gap-6 mt-2 md:mt-0">
               <a href="#" className="hover:text-accent transition-colors duration-200">
                 Privacy Policy
@@ -139,8 +111,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
