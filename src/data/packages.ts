@@ -497,3 +497,37 @@ export const masaiMaraPackages = [
     diningOptions: ["Safari lodge restaurant - local & international cuisine", "Bush breakfast experiences"]
   }
 ];
+
+export const amboseliPackages = [
+  {
+    id: 1,
+    title: "Amboseli Elephant Safari",
+    location: "Amboseli National Park",
+    price: "Ksh72,000",
+    originalPrice: null,
+    duration: "3 Days 2 Nights",
+    badge: "Elephant Paradise",
+    rating: 4.8,
+    reviews: 198,
+    images: [
+      "/lovable-uploads/amboseli-elephants.jpg",
+      "/lovable-uploads/amboseli1.jpeg",
+      "/lovable-uploads/amboooose.jpg",
+      "/lovable-uploads/amboseli_11.jpg",
+      "/lovable-uploads/amboseli-map-1.jpg"
+    ],
+    inclusions: [
+      "2 Nights accommodation in safari camp",
+      "All meals (Full Board)",
+      "Multiple game drives with Mt. Kilimanjaro views",
+      "Professional safari guide",
+      "Park entrance fees",
+      "Airport/hotel transfers"
+    ],
+    exclusions: ["International flights", "Travel insurance", "Personal expenses", "Tips and gratuities", "Optional activities"],
+    description: "Discover Amboseli National Park, famous for its large elephant herds and breathtaking views of Mt. Kilimanjaro. Experience the magnificent wildlife against Africa's iconic backdrop.",
+    dayCount: 3,
+    freeSightseeing: "Game Drives & Mt. Kilimanjaro Views",
+    diningOptions: ["Safari camp restaurant - bush dining", "Sundowner experiences with Kilimanjaro views"]
+  }
+];
