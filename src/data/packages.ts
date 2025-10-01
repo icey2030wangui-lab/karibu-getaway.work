@@ -255,7 +255,6 @@ export const mombasaPackages = [
     rating: 4.6,
     reviews: 142,
     images: [
-      "/lovable-uploads/mombasa-blog-1.jpg",
       "/lovable-uploads/ead104a0-4a30-467c-8759-0661a035fca5.png",
       "/lovable-uploads/3dd9b23c-49c3-4b2d-8813-e4945bdd5799.png",
       "/lovable-uploads/d4fcb5d3-5677-4dd2-a136-ff677a4488ce.png"
@@ -291,7 +290,6 @@ export const mombasaPackages = [
     rating: 4.8,
     reviews: 189,
     images: [
-      "/lovable-uploads/mombasa-blog-1.jpg",
       "/lovable-uploads/132ca583-4bfa-48d9-913d-64a6bb7d6aba.png",
       "/lovable-uploads/75633e98-537f-4fa8-a38b-a489e218828a.png",
       "/lovable-uploads/9d551d15-b948-4210-935a-12ce070c0897.png"
@@ -327,7 +325,6 @@ export const mombasaPackages = [
     rating: 4.5,
     reviews: 156,
     images: [
-      "/lovable-uploads/mombasa-blog-1.jpg",
       "/lovable-uploads/22445433-5f5e-4c53-88c9-ed69b91c549f.png",
       "/lovable-uploads/ba9fd9b9-7270-433a-8c6e-e17c8096cb88.png",
       "/lovable-uploads/930ae9f0-305d-4c23-bb2a-3861a6dd2a0a.png",
@@ -366,7 +363,6 @@ export const mombasaPackages = [
     rating: 4.2,
     reviews: 134,
     images: [
-      "/lovable-uploads/mombasa-blog-1.jpg",
       "/lovable-uploads/6be3b9de-9642-4ee9-a350-9ccc729898e4.png",
       "/lovable-uploads/e6853cec-70d8-4e9e-9655-a536f4561b36.png",
       "/lovable-uploads/b70e728d-db71-4a23-a81c-ea4231e107c3.png",
@@ -403,7 +399,6 @@ export const mombasaPackages = [
     rating: 4.7,
     reviews: 167,
     images: [
-      "/lovable-uploads/mombasa-blog-1.jpg",
       "/lovable-uploads/82dec078-64ae-449b-bfe9-da0d158bb0b9.png",
       "/lovable-uploads/4b17e36e-0376-446d-9593-f67c55b200b6.png",
       "/lovable-uploads/70d79873-7697-42e4-ba90-dd87dbeae2f6.png",
@@ -442,7 +437,6 @@ export const mombasaPackages = [
     rating: 4.3,
     reviews: 145,
     images: [
-      "/lovable-uploads/mombasa-blog-1.jpg",
       "/lovable-uploads/8785a5f6-d901-43b2-a870-0be0612308b2.png",
       "/lovable-uploads/df722116-1d5e-49a1-88d9-b3281c46a2b5.png",
       "/lovable-uploads/9b1fb155-1bb2-4742-82f7-175ea124dea3.png",
