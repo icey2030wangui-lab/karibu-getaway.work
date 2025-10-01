@@ -464,3 +464,36 @@ export const mombasaPackages = [
     ]
   },
 ];
+
+export const masaiMaraPackages = [
+  {
+    id: 1,
+    title: "Masai Mara Safari Experience",
+    location: "Masai Mara National Reserve",
+    price: "Ksh85,000",
+    originalPrice: null,
+    duration: "3 Days 2 Nights",
+    badge: "Wildlife Safari",
+    rating: 4.9,
+    reviews: 256,
+    images: [
+      "/lovable-uploads/masai.jpeg",
+      "/lovable-uploads/masai_2.jpeg",
+      "/lovable-uploads/masai_11.jpeg",
+      "/lovable-uploads/maasaai.jpeg"
+    ],
+    inclusions: [
+      "2 Nights accommodation in safari lodge",
+      "All meals (Full Board)",
+      "Game drives in 4x4 safari vehicle",
+      "Professional safari guide",
+      "Park entrance fees",
+      "Airport/hotel transfers"
+    ],
+    exclusions: ["International flights", "Travel insurance", "Personal expenses", "Tips and gratuities", "Optional activities"],
+    description: "Experience the world-renowned Masai Mara with its incredible wildlife, including the Big Five and the Great Migration. Professional guides ensure unforgettable game viewing.",
+    dayCount: 3,
+    freeSightseeing: "Game Drives & Wildlife Viewing",
+    diningOptions: ["Safari lodge restaurant - local & international cuisine", "Bush breakfast experiences"]
+  }
+];
