@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Search, Phone, Menu, X, Facebook, Twitter, Instagram } from "lucide-react";
 import { useSearch } from "@/contexts/SearchContext";
 import SearchResults from "@/components/SearchResults";
+import karibuLogo from "@/assets/karibu-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,7 +50,7 @@ const Header = () => {
             {/* Logo */}
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/33ada6c7-5194-4f3d-abba-d2296688edd8.png" 
+                src={karibuLogo} 
                 alt="Karibu Gateways - Kenya's Premier Travel & Safari Company"
                 className="h-12 md:h-16 w-auto"
               />
