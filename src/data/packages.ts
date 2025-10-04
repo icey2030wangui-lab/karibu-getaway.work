@@ -221,7 +221,9 @@ export const mombasaPackages = [
     images: [
       "/lovable-uploads/ead104a0-4a30-467c-8759-0661a035fca5.png",
       "/lovable-uploads/3dd9b23c-49c3-4b2d-8813-e4945bdd5799.png",
-      "/lovable-uploads/d4fcb5d3-5677-4dd2-a136-ff677a4488ce.png"
+      "/lovable-uploads/d4fcb5d3-5677-4dd2-a136-ff677a4488ce.png",
+      "/lovable-uploads/mombasa-tusks.jpg",
+      "/lovable-uploads/mombasa-fort-jesus.jpg"
     ],
     inclusions: [
       "4 Nights accommodation at Pride Inn Paradise",
@@ -256,7 +258,9 @@ export const mombasaPackages = [
     images: [
       "/lovable-uploads/132ca583-4bfa-48d9-913d-64a6bb7d6aba.png",
       "/lovable-uploads/75633e98-537f-4fa8-a38b-a489e218828a.png",
-      "/lovable-uploads/9d551d15-b948-4210-935a-12ce070c0897.png"
+      "/lovable-uploads/9d551d15-b948-4210-935a-12ce070c0897.png",
+      "/lovable-uploads/mombasa-port.webp",
+      "/lovable-uploads/mombasa-old-town.jpeg"
     ],
     inclusions: [
       "4 Nights accommodation at Sarova Whitesands",
