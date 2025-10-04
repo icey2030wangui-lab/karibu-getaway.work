@@ -126,7 +126,11 @@ export const dianiPackages = [
     badge: "Beach Resort",
     rating: 4.5,
     reviews: 198,
-    images: [dianiBeach, dianiBeach, dianiBeach],
+    images: [
+      "/lovable-uploads/leopard-beach-3.jpg",
+      "/lovable-uploads/leopard-beach-1.jpg",
+      "/lovable-uploads/leopard-beach-2.jpeg"
+    ],
     inclusions: [
       "Beachfront accommodation",
       "Swimming pool access",
