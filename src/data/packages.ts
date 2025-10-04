@@ -66,7 +66,13 @@ export const dianiPackages = [
     badge: "Paradise Resort",
     rating: 4.9,
     reviews: 134,
-    images: [dianiBeach, dianiBeach, dianiBeach],
+    images: [
+      "/lovable-uploads/neptune-1.jpg",
+      "/lovable-uploads/neptune-2.png",
+      "/lovable-uploads/neptune-3.jpg",
+      "/lovable-uploads/neptune-4.jpg",
+      "/lovable-uploads/neptune-5.jpg"
+    ],
     inclusions: [
       "Premium beachfront accommodation",
       "Swimming pools access",
