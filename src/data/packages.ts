@@ -96,7 +96,13 @@ export const dianiPackages = [
     badge: "Lagoon Resort",
     rating: 4.4,
     reviews: 156,
-    images: [dianiBeach, dianiBeach, dianiBeach],
+    images: [
+      "/lovable-uploads/papillion-1.jpg",
+      "/lovable-uploads/papillion-2.jpg",
+      "/lovable-uploads/papillion-3.webp",
+      "/lovable-uploads/papillion-4.jpg",
+      "/lovable-uploads/papillion-5.webp"
+    ],
     inclusions: [
       "Lagoon-side accommodation",
       "Swimming pool access",
