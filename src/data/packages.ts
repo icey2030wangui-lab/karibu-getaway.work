@@ -57,30 +57,6 @@ export const dianiPackages = [
     diningOptions: ["Sails Beach Bar & Restaurant - fine seafood", "Resort restaurants - international cuisine"]
   },
   {
-    id: 3,
-    title: "Diani Reef",
-    location: "Diani Beach",
-    price: "Ksh37,300",
-    originalPrice: null,
-    duration: "3 Days Package",
-    badge: "Beach Resort",
-    rating: 4.6,
-    reviews: 167,
-    images: [dianiBeach, dianiBeach, dianiBeach],
-    inclusions: [
-      "Beachfront accommodation",
-      "Swimming pool access",
-      "Beach activities",
-      "Restaurant facilities",
-      "WiFi access"
-    ],
-    exclusions: ["All meals", "Airport transfers", "Excursions", "Spa treatments"],
-    description: "Beautiful beachfront resort with excellent facilities, pool access, and direct beach location perfect for tropical getaways.",
-    dayCount: "3 Days",
-    freeSightseeing: "Beach Activities",
-    diningOptions: ["Resort restaurant - local & international", "Beach bar - refreshments"]
-  },
-  {
     id: 4,
     title: "Neptune Paradise",
     location: "Diani Beach",
@@ -151,30 +127,6 @@ export const dianiPackages = [
     dayCount: "3 Days",
     freeSightseeing: "Beach Access & Pool",
     diningOptions: ["Beach restaurant - coastal cuisine", "Pool bar - refreshments"]
-  },
-  {
-    id: 7,
-    title: "Diani Sea Resort",
-    location: "Diani Beach",
-    price: "Ksh28,200",
-    originalPrice: null,
-    duration: "3 Days Package",
-    badge: "Sea Resort",
-    rating: 4.6,
-    reviews: 189,
-    images: [dianiBeach, dianiBeach, dianiBeach],
-    inclusions: [
-      "Sea-view accommodation",
-      "Beach and pool access",
-      "Evening entertainment",
-      "Restaurant facilities",
-      "Basic amenities"
-    ],
-    exclusions: ["Premium beverages", "Spa treatments", "Excursions", "Personal expenses"],
-    description: "Sea-view resort perfect for beach vacations with comprehensive facilities, entertainment, and direct access to pristine Diani Beach.",
-    dayCount: "3 Days",
-    freeSightseeing: "Sea & Beach Activities",
-    diningOptions: ["Sea restaurant - oceanfront dining", "Resort bar - evening drinks"]
   },
   {
     id: 8,
