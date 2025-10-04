@@ -499,3 +499,38 @@ export const amboseliPackages = [
     diningOptions: ["Safari camp restaurant - bush dining", "Sundowner experiences with Kilimanjaro views"]
   }
 ];
+
+export const samburuPackages = [
+  {
+    id: 1,
+    title: "Samburu Wildlife & Culture Safari",
+    location: "Samburu National Reserve",
+    price: "Ksh78,000",
+    originalPrice: null,
+    duration: "3 Days 2 Nights",
+    badge: "Cultural Safari",
+    rating: 4.9,
+    reviews: 176,
+    images: [
+      "/lovable-uploads/samburu-wildlife.jpg",
+      "/lovable-uploads/samburu-warriors.webp",
+      "/lovable-uploads/samburu-lodge.jpg",
+      "/lovable-uploads/samburu-elephant.jpeg",
+      "/lovable-uploads/samburu-suite.webp"
+    ],
+    inclusions: [
+      "2 Nights accommodation in luxury safari lodge",
+      "All meals (Full Board)",
+      "Game drives to see unique Samburu wildlife",
+      "Cultural visit to Samburu village",
+      "Professional safari guide",
+      "Park entrance fees",
+      "Airport/hotel transfers"
+    ],
+    exclusions: ["International flights", "Travel insurance", "Personal expenses", "Tips and gratuities", "Optional activities"],
+    description: "Experience the unique beauty of Samburu National Reserve, home to rare species like Grevy's zebra, reticulated giraffe, and Beisa oryx. Immerse yourself in authentic Samburu culture and witness traditional warrior ceremonies.",
+    dayCount: 3,
+    freeSightseeing: "Game Drives & Cultural Village Visit",
+    diningOptions: ["Safari lodge restaurant - authentic cuisine", "Bush dinner under the stars"]
+  }
+];
