@@ -3,30 +3,6 @@ import mombasa from "@/assets/mombasa.jpg";
 
 export const dianiPackages = [
   {
-    id: 1,
-    title: "Neptune Village",
-    location: "Diani Beach",
-    price: "Ksh32,500",
-    originalPrice: null,
-    duration: "3 Days Package",
-    badge: "Premium Resort",
-    rating: 4.7,
-    reviews: 189,
-    images: [dianiBeach, dianiBeach, dianiBeach],
-    inclusions: [
-      "Luxury beachfront accommodation",
-      "Swimming pool access",
-      "Beach activities",
-      "Restaurant and bar",
-      "WiFi and basic amenities"
-    ],
-    exclusions: ["All meals", "Airport transfers", "Excursions", "Personal expenses"],
-    description: "Premium beachfront resort offering excellent facilities with pool, beach access, and comfortable accommodations in a tropical setting.",
-    dayCount: "3 Days",
-    freeSightseeing: "Beach & Resort Activities",
-    diningOptions: ["Resort restaurant - international cuisine", "Beach bar - tropical drinks"]
-  },
-  {
     id: 2,
     title: "BAOBAB BEACH RESORT & SPA",
     location: "Diani Beach", 
