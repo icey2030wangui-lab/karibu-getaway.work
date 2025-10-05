@@ -52,12 +52,12 @@ export const dianiPackages = [
   },
   {
     id: 4,
-    title: "Neptune Paradise",
+    title: "Neptune Paradise Beach Resort",
     location: "Diani Beach",
-    price: "Ksh39,100",
+    price: "Ksh119,700",
     originalPrice: null,
     duration: "3 Days Package",
-    badge: "Paradise Resort",
+    badge: "All Inclusive",
     rating: 4.9,
     reviews: 134,
     images: [
@@ -67,18 +67,40 @@ export const dianiPackages = [
       "/lovable-uploads/neptune-4.jpg",
       "/lovable-uploads/neptune-5.jpg"
     ],
+    roomType: "Deluxe Sea Side Room",
+    roomSize: "31 SQM",
+    bedding: "Queen Bed",
+    roomAmenities: [
+      "Alarm clock",
+      "Air conditioning",
+      "Balcony (On Request)",
+      "Bathrobe (On Request)",
+      "Coffee Maker",
+      "Telephone with external line",
+      "Hair dryer",
+      "Internet access (WiFi)",
+      "Mini Bar (On request)",
+      "Private bathroom & WC",
+      "Safe box",
+      "Trouser press (On Request)",
+      "Desk",
+      "Satellite TV",
+      "Sea View"
+    ],
     inclusions: [
-      "Premium beachfront accommodation",
+      "All-inclusive dining (breakfast, lunch, dinner)",
+      "Premium beachfront accommodation in Deluxe Sea Side Room",
       "Swimming pools access",
       "Beach activities",
       "Multiple dining venues",
-      "Entertainment programs"
+      "Entertainment programs",
+      "WiFi and all resort facilities"
     ],
-    exclusions: ["Airport transfers", "Personal expenses", "Excursions", "Premium spa services"],
-    description: "Premium paradise resort offering top-tier accommodations with multiple pools, dining options, and entertainment in a stunning beachfront setting.",
+    exclusions: ["Airport transfers", "Personal expenses", "Excursions", "Premium spa services", "Premium beverages"],
+    description: "Premium all-inclusive paradise resort offering top-tier accommodations with multiple pools, dining options, and entertainment in a stunning beachfront setting. Stay in elegantly appointed Deluxe Sea Side Rooms (31 SQM) with modern amenities including queen bed, balcony (on request), mini bar, satellite TV, and sea views.",
     dayCount: "3 Days",
     freeSightseeing: "Paradise Beach & Resort",
-    diningOptions: ["Paradise restaurant - gourmet dining", "Pool bar - tropical cocktails"]
+    diningOptions: ["Paradise restaurant - gourmet dining", "Pool bar - tropical cocktails", "All-inclusive meal plan"]
   },
   {
     id: 5,
