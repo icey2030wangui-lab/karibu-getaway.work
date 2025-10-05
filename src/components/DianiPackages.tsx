@@ -49,6 +49,40 @@ const DianiPackages = () => {
                 <h3 className="text-xl font-bold mb-4">About The Package</h3>
                 <p className="text-muted-foreground mb-4">{pkg.description}</p>
                 
+                {pkg.roomType && (
+                  <div className="bg-primary/10 p-4 rounded-lg mb-4">
+                    <h4 className="font-bold mb-3 text-primary">Room Details</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div>
+                        <div className="text-sm text-muted-foreground">Room Type</div>
+                        <div className="font-semibold">{pkg.roomType}</div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground">Room Size</div>
+                        <div className="font-semibold">{pkg.roomSize}</div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground">Bedding</div>
+                        <div className="font-semibold">{pkg.bedding}</div>
+                      </div>
+                    </div>
+                    
+                    {pkg.roomAmenities && (
+                      <div className="mt-4">
+                        <div className="text-sm font-semibold mb-2">Room Amenities</div>
+                        <div className="grid grid-cols-2 gap-2">
+                          {pkg.roomAmenities.map((amenity, idx) => (
+                            <div key={idx} className="flex items-center gap-2">
+                              <CheckCircle2 className="w-3 h-3 text-primary" />
+                              <span className="text-sm">{amenity}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+                
                 <div className="bg-accent/10 p-4 rounded-lg">
                   <h4 className="font-bold mb-2 text-accent">Recommended Dining</h4>
                   <ul className="space-y-1">

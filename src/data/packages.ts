@@ -6,10 +6,10 @@ export const dianiPackages = [
     id: 2,
     title: "BAOBAB BEACH RESORT & SPA",
     location: "Diani Beach", 
-    price: "Ksh28,100",
+    price: "Ksh67,200",
     originalPrice: null,
     duration: "3 Days Package",
-    badge: "Spa Resort",
+    badge: "All Inclusive",
     rating: 4.8,
     reviews: 245,
     images: [
@@ -19,18 +19,36 @@ export const dianiPackages = [
       "/lovable-uploads/cb84111e-b26f-4fa3-896f-b90640d06ec2.png",
       "/lovable-uploads/9f86cdaf-4716-4d9b-b48d-0fb64aad7562.png"
     ],
+    roomType: "Sea Front Room",
+    roomSize: "31 SQM",
+    bedding: "Double/Twin Bed",
+    roomAmenities: [
+      "Air conditioning",
+      "Balcony",
+      "Telephone with external line",
+      "Hair dryer",
+      "Internet access (WiFi)",
+      "Mini Bar",
+      "Private bathroom & WC",
+      "Safe box",
+      "Terrace",
+      "LCD TV",
+      "Satellite TV"
+    ],
     inclusions: [
-      "Luxury beachfront accommodation",
+      "All-inclusive dining (breakfast, lunch, dinner)",
+      "Luxury beachfront accommodation in Sea Front Room",
       "Full-service spa access",
       "Multiple dining options",
       "Pool and beach access",
-      "WiFi and resort facilities"
+      "WiFi and all resort facilities",
+      "Best Available Flexible Rate"
     ],
-    exclusions: ["International flights", "Travel insurance", "Personal expenses", "Excursions"],
-    description: "Luxury beachfront resort offering world-class spa services, multiple dining venues, and pristine beach access with elegant accommodations.",
+    exclusions: ["International flights", "Travel insurance", "Personal expenses", "Excursions", "Premium beverages"],
+    description: "Luxury all-inclusive beachfront resort offering world-class spa services, multiple dining venues, and pristine beach access. Stay in elegantly appointed Sea Front Rooms (31 SQM) with modern amenities including balcony, mini bar, LCD TV, and direct beach views.",
     dayCount: "3 Days",
     freeSightseeing: "Beach & Resort Activities",
-    diningOptions: ["Sails Beach Bar & Restaurant - fine seafood", "Resort restaurants - international cuisine"]
+    diningOptions: ["Sails Beach Bar & Restaurant - fine seafood", "Resort restaurants - international cuisine", "All-inclusive meal plan"]
   },
   {
     id: 4,
