@@ -67,12 +67,12 @@ const DianiPackages = () => {
               <div>
                 <h3 className="text-xl font-bold mb-4">Package Pricing</h3>
                 <div className="bg-card border rounded-lg p-6">
-                  <div className="flex items-center justify-between mb-4">
+                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <span className="text-3xl font-bold text-primary">{pkg.price}</span>
+                      <span className="text-3xl font-bold text-primary">{pkg.price.replace('Ksh', 'KSH ')}</span>
                       {pkg.originalPrice && (
                         <span className="text-lg text-muted-foreground line-through ml-2">
-                          {pkg.originalPrice}
+                          {pkg.originalPrice.replace('Ksh', 'KSH ')}
                         </span>
                       )}
                     </div>
@@ -176,7 +176,7 @@ const DianiPackages = () => {
           <div className="bg-accent/10 p-6 rounded-lg border border-accent/20">
             <div className="text-center">
               <div className="text-sm text-muted-foreground mb-2">Starting From</div>
-              <div className="text-3xl font-bold text-accent mb-4">{pkg.price}</div>
+              <div className="text-3xl font-bold text-accent mb-4">{pkg.price.replace('Ksh', 'KSH ')}</div>
               <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold mb-3">
                 BOOK NOW
               </Button>
@@ -249,7 +249,7 @@ const DianiPackages = () => {
                       </p>
                       <div className="flex items-center gap-2">
                         <span className="text-2xl font-bold text-primary">
-                          {pkg.price}
+                          {pkg.price.replace('Ksh', 'KSH ')}
                         </span>
                         {pkg.originalPrice && (
                           <span className="text-sm text-muted-foreground line-through">
