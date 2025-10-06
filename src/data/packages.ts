@@ -330,25 +330,55 @@ export const mombasaPackages = [
       "/lovable-uploads/3dd9b23c-49c3-4b2d-8813-e4945bdd5799.png",
       "/lovable-uploads/d4fcb5d3-5677-4dd2-a136-ff677a4488ce.png",
       "/lovable-uploads/mombasa-tusks.jpg",
-      "/lovable-uploads/mombasa-fort-jesus.jpg"
+      "/lovable-uploads/mombasa-fort-jesus.jpg",
+      "/lovable-uploads/pride-inn-1.jpg",
+      "/lovable-uploads/pride-inn-2.jpg",
+      "/lovable-uploads/pride-inn-3.jpg",
+      "/lovable-uploads/pride-inn-4.jpg",
+      "/lovable-uploads/pride-inn-5.jpg"
+    ],
+    roomType: "Superior Room",
+    roomSize: "Standard size with pool view",
+    bedding: "Double bed (single occupancy, max 1pax) / Double/Twin beds (double occupancy, max 2pax) / Triple bed options (triple occupancy, max 3pax)",
+    roomAmenities: [
+      "Air conditioning (individually controlled)",
+      "Private balcony with resort views",
+      "Satellite TV",
+      "WiFi connectivity",
+      "Mini Bar & Mini Fridge",
+      "Safe box",
+      "Coffee machine & Tea/coffee facilities",
+      "Hair dryer",
+      "Private bathroom with shower",
+      "Telephone with external line & voice mail",
+      "Laundry service",
+      "Reading desk",
+      "Moroccan style mosquito curtains",
+      "Complimentary mineral water (2 bottles)",
+      "Bath amenities (shampoo, shower gel, lotion, soap)",
+      "24hrs room service"
     ],
     inclusions: [
       "4 Nights accommodation at Pride Inn Paradise",
       "Travel insurance",
       "Return Transfers",
       "Return Economy SGR Tickets",
-      "Daily breakfast",
+      "Daily breakfast (Bed and breakfast rate: Ksh24,231.76 per night)",
       "Swimming pool access",
-      "Free WiFi"
+      "Free WiFi",
+      "Interconnecting rooms available on request",
+      "Extra bed and baby cot available on request (additional cost)"
     ],
-    exclusions: ["All Not Mentioned in the Inclusions", "Personal expenses", "Tips and gratuities", "Lunch and Dinner"],
-    description: "Experience the beauty of Mombasa's North Coast with luxurious accommodation at Pride Inn Paradise. Perfect for family school holidays with excellent amenities.",
+    exclusions: ["All Not Mentioned in the Inclusions", "Personal expenses", "Tips and gratuities", "Lunch and Dinner (Half board: Ksh25,059.85/night, Full board: Ksh26,717.33/night)"],
+    description: "Experience the beauty of Mombasa's North Coast with luxurious accommodation at Pride Inn Paradise. Superior Rooms offer pool views with limited ocean views, featuring private balconies facing the sea. Perfect for families with flexible bedding arrangements and interconnecting rooms available. Meal plan options: Bed & Breakfast (Ksh24,231.76), Half Board (Ksh25,059.85), or Full Board (Ksh26,717.33) per night.",
     dayCount: 5,
     freeSightseeing: "Free Sightseeing & Hotel",
     highlights: [
       "Beachfront location with private beach access",
       "Family-friendly facilities and activities",
-      "Cultural tours to Fort Jesus and Old Town"
+      "Cultural tours to Fort Jesus and Old Town",
+      "Superior rooms with pool and ocean views",
+      "Flexible bedding options for families"
     ]
   },
   {
