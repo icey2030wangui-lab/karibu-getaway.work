@@ -60,39 +60,39 @@ const SpecialOffers = () => {
 
                   {/* Urgency Badge */}
                   {offer.urgency && (
-                    <div className="absolute bottom-20 left-4 bg-destructive text-destructive-foreground px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                    <div className="absolute top-16 left-4 bg-destructive text-destructive-foreground px-3 py-1 rounded-full text-xs font-bold shadow-lg">
                       ⚡ {offer.urgency}
                     </div>
                   )}
 
                   {/* Content Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white bg-gradient-to-t from-black/90 to-transparent">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="bg-accent/20 backdrop-blur-sm p-2 rounded-full group-hover:scale-110 transition-transform">
-                        <IconComponent className="w-5 h-5 text-white" />
+                        <IconComponent className="w-4 h-4 text-white" />
                       </div>
-                      <Badge variant="outline" className="text-white border-white/50 bg-white/10">
+                      <Badge variant="outline" className="text-white border-white/50 bg-white/10 text-xs">
                         {offer.category}
                       </Badge>
                     </div>
                     
-                    <h3 className="text-xl font-bold mb-1 group-hover:text-accent transition-colors duration-300">{offer.subtitle}</h3>
-                    <p className="text-sm text-white/90 mb-3 line-clamp-2">{offer.description}</p>
+                    <h3 className="text-lg font-bold mb-1 group-hover:text-accent transition-colors duration-300 line-clamp-1">{offer.subtitle}</h3>
+                    <p className="text-xs text-white/90 mb-2 line-clamp-2">{offer.description}</p>
                     
                     {/* Rating with Reviews */}
-                    <div className="flex items-center gap-2 mb-3">
+                    <div className="flex items-center gap-2">
                       <div className="flex items-center gap-1">
                         {Array.from({ length: 5 }).map((_, i) => (
                           <Star
                             key={i}
-                            className={`w-4 h-4 transition-all duration-300 ${
+                            className={`w-3 h-3 transition-all duration-300 ${
                               i < Math.floor(offer.rating) 
-                                ? 'fill-yellow-400 text-yellow-400 scale-110' 
+                                ? 'fill-yellow-400 text-yellow-400' 
                                 : 'text-gray-400'
                             }`}
                           />
                         ))}
-                        <span className="text-sm ml-1 font-bold">({offer.rating})</span>
+                        <span className="text-xs ml-1 font-bold">({offer.rating})</span>
                       </div>
                       <span className="text-xs opacity-75">• {offer.reviews} reviews</span>
                     </div>
