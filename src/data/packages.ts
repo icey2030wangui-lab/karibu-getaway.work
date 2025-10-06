@@ -664,25 +664,49 @@ export const mombasaPackages = [
       "/lovable-uploads/9b1fb155-1bb2-4742-82f7-175ea124dea3.png",
       "/lovable-uploads/7b805240-9487-46d8-9571-b8dbf0f6f407.png",
       "/lovable-uploads/7c7ee04a-5962-4896-b374-97de360c5fc3.png",
-      "/lovable-uploads/922e6645-a097-4dea-ad1b-e9930460104c.png"
+      "/lovable-uploads/922e6645-a097-4dea-ad1b-e9930460104c.png",
+      "/lovable-uploads/neptune-1.jpg"
+    ],
+    roomType: "Master Suite with Ocean View",
+    roomSize: "28.4 m²",
+    bedding: "Max 3 Guests",
+    roomAmenities: [
+      "Air conditioning",
+      "Balcony with ocean view",
+      "Coffee machine",
+      "Telephone with external line",
+      "Hair dryer",
+      "Iron and ironing board (on request)",
+      "Private bathroom & WC",
+      "Safe box",
+      "TV",
+      "Satellite TV",
+      "Sea View",
+      "Non-smoking suite"
     ],
     inclusions: [
       "4 Nights accommodation at Neptune Beach",
       "Travel insurance",
       "Return Transfers",
       "Return Economy SGR Tickets",
-      "Daily breakfast",
+      "Master Suite with Ocean View (28.4 m²)",
+      "Bed and Breakfast: Ksh 41,250 per night",
+      "Half Board: Ksh 42,350 per night (breakfast & dinner)",
+      "All Inclusive: Ksh 44,550 per night",
+      "Breakfast, semi-flexible, taxes included",
       "Swimming pool access",
       "Beach volleyball court"
     ],
-    exclusions: ["All Not Mentioned in the Inclusions", "Lunch and dinner", "All-inclusive upgrade"],
-    description: "Beachfront resort with multiple accommodation options and the choice to upgrade to all-inclusive for the ultimate holiday experience.",
+    exclusions: ["All Not Mentioned in the Inclusions", "Premium beverages", "Spa services"],
+    description: "Beachfront resort offering Master Suites with stunning ocean views and balconies. This 28.4 sqm non-smoking suite accommodates up to 3 guests with flexible dining options: Bed & Breakfast (Ksh 41,250), Half Board (Ksh 42,350), or All Inclusive (Ksh 44,550) per night. Starting from Ksh 37,500, enjoy breakfast, semi-flexible booking with taxes included.",
     dayCount: 5,
     freeSightseeing: "Free Sightseeing & Hotel",
     highlights: [
-      "Multiple accommodation wings",
-      "All-inclusive upgrade available",
-      "Sports and recreation facilities"
+      "Master Suite with Ocean View and balcony (28.4 m²)",
+      "Flexible dining: Bed & Breakfast, Half Board, or All Inclusive",
+      "Starting from Ksh 37,500 per night",
+      "Sports and recreation facilities",
+      "Beachfront location on Malindi Road, Bamburi Beach"
     ]
   },
 ];
