@@ -109,7 +109,7 @@ export const dianiPackages = [
     price: "$230",
     originalPrice: null,
     duration: "Per Night (2 Adults)",
-    badge: "Lagoon Resort",
+    badge: "All Inclusive",
     rating: 4.4,
     reviews: 156,
     images: [
@@ -125,18 +125,42 @@ export const dianiPackages = [
       "/lovable-uploads/papillion-10.webp",
       "/lovable-uploads/papillion-11.jpg"
     ],
-    inclusions: [
-      "Lagoon-side accommodation",
-      "Swimming pool access",
-      "Beach proximity",
-      "Restaurant and bar",
-      "Basic amenities"
+    roomType: "Garden Rooms",
+    roomSize: "Standard with patio/balcony",
+    bedding: "2 Twin Beds or 1 Double Bed",
+    capacity: "Sleeps 3",
+    roomAmenities: [
+      "Air conditioning",
+      "Non-smoking rooms",
+      "Cots available",
+      "Hairdryer",
+      "High chair available",
+      "Linen and towels provided",
+      "Telephone",
+      "Room safe",
+      "Children's entertainment area",
+      "Interconnecting rooms",
+      "24hr security",
+      "Private bathroom with shower",
+      "Patio/Balcony",
+      "Garden view"
     ],
-    exclusions: ["All meals", "Airport transfers", "Water sports", "Excursions"],
-    description: "Charming lagoon resort offering comfortable accommodations with pool facilities and easy beach access in a tranquil setting.",
-    dayCount: "3 Days",
-    freeSightseeing: "Lagoon & Beach",
-    diningOptions: ["Lagoon restaurant - fresh seafood", "Bar - local drinks"]
+    inclusions: [
+      "All-inclusive meal plan (breakfast, lunch, dinner)",
+      "Garden Room accommodation with patio/balcony",
+      "Lagoon-side location",
+      "Swimming pool access",
+      "Beach proximity and beach access",
+      "Restaurant and bar facilities",
+      "Children's entertainment area",
+      "24-hour security",
+      "All resort amenities"
+    ],
+    exclusions: ["Airport transfers", "Water sports", "Premium excursions", "Personal expenses", "Spa services"],
+    description: "Family-friendly all-inclusive lagoon resort offering comfortable Garden Rooms with patio/balcony and garden views. Air-conditioned rooms accommodate up to 3 guests with flexible bedding (2 twins or 1 double bed), private bathroom with shower, and modern amenities. Perfect for families with children's entertainment area, interconnecting rooms available, and cots/high chairs provided. Enjoy hassle-free all-inclusive dining and full resort facilities in a tranquil beachside setting.",
+    dayCount: "Flexible",
+    freeSightseeing: "Lagoon & Beach Access",
+    diningOptions: ["All-inclusive dining - international cuisine", "Lagoon restaurant - fresh seafood", "Bar - cocktails and local drinks", "All meals included"]
   },
   {
     id: 6,
