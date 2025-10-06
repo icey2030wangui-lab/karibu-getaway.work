@@ -60,7 +60,7 @@ const SpecialOffers = () => {
 
                   {/* Urgency Badge */}
                   {offer.urgency && (
-                    <div className="absolute bottom-20 left-4 bg-destructive text-destructive-foreground px-3 py-1 rounded-full text-xs font-bold animate-bounce shadow-lg">
+                    <div className="absolute bottom-20 left-4 bg-destructive text-destructive-foreground px-3 py-1 rounded-full text-xs font-bold shadow-lg">
                       ⚡ {offer.urgency}
                     </div>
                   )}
