@@ -140,31 +140,56 @@ export const dianiPackages = [
   },
   {
     id: 6,
-    title: "Leopard Beach",
+    title: "Leopard Beach Resort & Spa",
     location: "Diani Beach",
-    price: "Ksh25,800",
+    price: "Ksh17,420",
     originalPrice: null,
-    duration: "3 Days Package",
-    badge: "Beach Resort",
+    duration: "Per Night (Bed & Breakfast)",
+    badge: "Beach Resort & Spa",
     rating: 4.5,
     reviews: 198,
     images: [
       "/lovable-uploads/leopard-beach-3.jpg",
       "/lovable-uploads/leopard-beach-1.jpg",
-      "/lovable-uploads/leopard-beach-2.jpeg"
+      "/lovable-uploads/leopard-beach-2.jpeg",
+      "/lovable-uploads/leopard-beach-4.jpg",
+      "/lovable-uploads/leopard-beach-5.jpg",
+      "/lovable-uploads/leopard-beach-6.jpg",
+      "/lovable-uploads/leopard-beach-7.jpg"
+    ],
+    roomType: "Superior Balcony",
+    roomSize: "29 m² + 5 m² furnished balcony",
+    bedding: "Double (1 King) / Twin (2 Single) / Triple (1 Queen + 1 Single)",
+    roomAmenities: [
+      "Air conditioning",
+      "Balcony",
+      "Coffee machine",
+      "Telephone with external line",
+      "Hair dryer",
+      "Iron and ironing board (on request)",
+      "Mini Bar",
+      "Private bathroom & WC",
+      "Safe box",
+      "TV",
+      "LCD TV",
+      "Satellite TV",
+      "Internet access (WiFi)",
+      "Laundry service",
+      "Park view"
     ],
     inclusions: [
-      "Beachfront accommodation",
+      "Superior Balcony room with garden view",
+      "Daily breakfast (Bed & Breakfast rate)",
       "Swimming pool access",
       "Beach activities",
-      "Restaurant facilities",
-      "WiFi and amenities"
+      "WiFi throughout resort",
+      "Modern room amenities"
     ],
-    exclusions: ["All meals", "Airport transfers", "Excursions", "Spa services"],
-    description: "Comfortable beachfront resort with excellent pool facilities, direct beach access, and modern amenities for a relaxing coastal experience.",
-    dayCount: "3 Days",
+    exclusions: ["Airport transfers", "Excursions", "Spa services", "Lunch and dinner (on B&B rate)"],
+    description: "Modern equipped resort rooms with garden view on the 1st floor. Superior Balcony rooms feature 29 m² of space plus a 5 m² furnished balcony with shower, toilet, air conditioning, telephone, minibar, flat screen SAT-TV, tea/coffee facilities, free Wi-Fi, and hairdryer. Multiple bedding configurations and meal plan options available including Half Board (Ksh18,200), Full Board (Ksh20,410), and All-Inclusive (Ksh23,790) per night.",
+    dayCount: "Flexible",
     freeSightseeing: "Beach Access & Pool",
-    diningOptions: ["Beach restaurant - coastal cuisine", "Pool bar - refreshments"]
+    diningOptions: ["Resort restaurant - international cuisine", "Beach bar - refreshments", "Multiple meal plan options available"]
   },
   {
     id: 8,
