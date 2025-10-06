@@ -553,7 +553,22 @@ export const mombasaPackages = [
       "/lovable-uploads/e6853cec-70d8-4e9e-9655-a536f4561b36.png",
       "/lovable-uploads/b70e728d-db71-4a23-a81c-ea4231e107c3.png",
       "/lovable-uploads/96e52dc7-6d49-435c-9568-5b1d07c958c3.png",
-      "/lovable-uploads/2ab48a20-1edc-48b1-b6b3-485d43db99f8.png"
+      "/lovable-uploads/2ab48a20-1edc-48b1-b6b3-485d43db99f8.png",
+      "/lovable-uploads/severin-1.jpg",
+      "/lovable-uploads/severin-2.jpg",
+      "/lovable-uploads/severin-3.jpg"
+    ],
+    roomType: "Standard Room",
+    roomSize: "30 m²",
+    bedding: "2 Adults max occupancy",
+    roomAmenities: [
+      "Air conditioning",
+      "Minibar",
+      "Private terrace with garden views",
+      "Private bathroom with walk-in shower",
+      "Spacious room layout",
+      "Garden view",
+      "Modern amenities"
     ],
     inclusions: [
       "4 Nights accommodation at Severin Sea Lodge",
@@ -561,16 +576,19 @@ export const mombasaPackages = [
       "Return Transfers",
       "Return Economy SGR Tickets",
       "Daily breakfast",
-      "Swimming pool access"
+      "Swimming pool access",
+      "Standard Room accommodation (30 m²) from KES 13,000 per person"
     ],
     exclusions: ["All Not Mentioned in the Inclusions", "Lunch and dinner", "Water sports"],
-    description: "Comfortable beachfront lodge offering great value for money with beautiful gardens and direct beach access.",
+    description: "Comfortable beachfront lodge offering great value for money with beautiful gardens and direct beach access. The spacious Standard Rooms feature air conditioning, a minibar, a terrace with garden views as well as a private bathroom boasting a walk-in shower. Starting from KES 13,000 per person, it's the perfect budget-friendly option for families.",
     dayCount: 5,
     freeSightseeing: "Free Sightseeing & Hotel",
     highlights: [
       "Beautiful tropical gardens",
       "Direct beach access",
-      "Affordable luxury experience"
+      "Spacious 30 m² Standard Rooms with terrace",
+      "Affordable luxury experience starting at KES 13,000 per person",
+      "Private bathrooms with walk-in showers"
     ]
   },
   {
