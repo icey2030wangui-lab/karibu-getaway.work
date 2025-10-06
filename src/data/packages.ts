@@ -117,7 +117,13 @@ export const dianiPackages = [
       "/lovable-uploads/papillion-2.jpg",
       "/lovable-uploads/papillion-3.webp",
       "/lovable-uploads/papillion-4.jpg",
-      "/lovable-uploads/papillion-5.webp"
+      "/lovable-uploads/papillion-5.webp",
+      "/lovable-uploads/papillion-6.jpg",
+      "/lovable-uploads/papillion-7.jpg",
+      "/lovable-uploads/papillion-8.jpg",
+      "/lovable-uploads/papillion-9.webp",
+      "/lovable-uploads/papillion-10.webp",
+      "/lovable-uploads/papillion-11.jpg"
     ],
     inclusions: [
       "Lagoon-side accommodation",
