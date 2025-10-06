@@ -38,11 +38,26 @@ const Footer = () => {
                 Quick Links
               </h4>
               <ul className="space-y-2">
-                {["Home", "All Destinations", "Safari Packages", "Beach Holidays", "Local Packages", "Contact Us"].map(link => <li key={link}>
-                    <a href="#" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
-                      {link}
-                    </a>
-                  </li>)}
+                <li>
+                  <a href="/" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="/#destinations" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                    All Destinations
+                  </a>
+                </li>
+                <li>
+                  <a href="/#packages" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                    Safari Packages
+                  </a>
+                </li>
+                <li>
+                  <a href="/faq" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                    FAQ
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -67,16 +82,40 @@ const Footer = () => {
               <div>
                 <h4 className="text-lg font-semibold mb-3 text-accent">Follow Our Adventures</h4>
                 <div className="flex gap-4">
-                  <a href="#" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                  <a 
+                    href="https://facebook.com/karibugateway" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200"
+                    aria-label="Follow us on Facebook"
+                  >
                     <Facebook className="w-6 h-6" />
                   </a>
-                  <a href="#" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                  <a 
+                    href="https://twitter.com/karibugateway" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200"
+                    aria-label="Follow us on Twitter"
+                  >
                     <Twitter className="w-6 h-6" />
                   </a>
-                  <a href="#" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                  <a 
+                    href="https://instagram.com/karibugateway" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200"
+                    aria-label="Follow us on Instagram"
+                  >
                     <Instagram className="w-6 h-6" />
                   </a>
-                  <a href="#" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                  <a 
+                    href="https://linkedin.com/company/karibugateway" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200"
+                    aria-label="Follow us on LinkedIn"
+                  >
                     <Linkedin className="w-6 h-6" />
                   </a>
                 </div>
@@ -101,10 +140,10 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-secondary-foreground/60">
             <p>© 2025 Karibu Gateways. All rights reserved.</p>
             <div className="flex gap-6 mt-2 md:mt-0">
-              <a href="#" className="hover:text-accent transition-colors duration-200">
+              <a href="/privacy" className="hover:text-accent transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-accent transition-colors duration-200">
+              <a href="/terms" className="hover:text-accent transition-colors duration-200">
                 Terms of Service
               </a>
             </div>
