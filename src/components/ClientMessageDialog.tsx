@@ -54,30 +54,6 @@ export const ClientMessageDialog = () => {
         }
       );
 
-      // Create conversation
-      const { data: conversation, error: convError } = await supabase
-        .from("conversations")
-        .insert({
-          client_name: validatedData.name,
-          client_email: validatedData.email,
-        })
-        .select()
-        .single();
-
-      if (convError) throw convError;
-
-      // Create message
-      const { error: msgError } = await supabase
-        .from("messages")
-        .insert({
-          conversation_id: conversation.id,
-          sender_type: "client",
-          sender_name: validatedData.name,
-          content: validatedData.message,
-        });
-
-      if (msgError) throw msgError;
-
       toast({
         title: "Message Sent!",
         description: "We'll get back to you as soon as possible.",
