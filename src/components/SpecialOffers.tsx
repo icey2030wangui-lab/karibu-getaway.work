@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star } from "lucide-react";
 import { specialOffers } from "@/data/offers";
+import { BookingDialog } from "@/components/BookingDialog";
 
 const SpecialOffers = () => {
   return (
@@ -94,12 +95,12 @@ const SpecialOffers = () => {
                       </div>
                       <span className="text-sm text-muted-foreground">per person</span>
                     </div>
-                    <Button 
-                      className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-                      size="sm"
-                    >
-                      Book Now
-                    </Button>
+                    <BookingDialog
+                      packageName={offer.subtitle}
+                      packagePrice={offer.price}
+                      buttonText="Book Now"
+                      buttonVariant="default"
+                    />
                   </div>
                 </CardContent>
               </Card>

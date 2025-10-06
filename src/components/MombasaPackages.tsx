@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 import { Star, MapPin, Calendar, Users, CheckCircle2, Building, Phone, Mail, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { mombasaPackages } from "@/data/packages";
+import { BookingDialog } from "@/components/BookingDialog";
 
 const MombasaPackages = () => {
   const [bookingDetails, setBookingDetails] = useState({
@@ -372,7 +373,12 @@ const MombasaPackages = () => {
                       <span className="text-sm">{pkg.location}</span>
                     </div>
                     <div className="text-2xl font-bold text-primary mb-2">{pkg.price}</div>
-                    <Button className="w-full bg-accent hover:bg-accent/90">BOOK</Button>
+                    <BookingDialog
+                      packageName={pkg.accommodation}
+                      packagePrice={pkg.price.replace('Ksh', '').replace(',', '')}
+                      buttonText="BOOK"
+                      buttonVariant="default"
+                    />
                   </div>
                 </div>
               </div>

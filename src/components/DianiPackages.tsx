@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Star, MapPin, Calendar, Users, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { dianiPackages } from "@/data/packages";
+import { BookingDialog } from "@/components/BookingDialog";
 
 const DianiPackages = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -117,9 +118,12 @@ const DianiPackages = () => {
                   <div className="text-sm text-muted-foreground mb-4">
                     Starting from • Per person sharing
                   </div>
-                  <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                    BOOK NOW
-                  </Button>
+                  <BookingDialog
+                    packageName={pkg.title}
+                    packagePrice={pkg.price.replace('Ksh', '').replace(',', '')}
+                    buttonText="BOOK NOW"
+                    buttonVariant="default"
+                  />
                 </div>
               </div>
             </TabsContent>
@@ -211,9 +215,14 @@ const DianiPackages = () => {
             <div className="text-center">
               <div className="text-sm text-muted-foreground mb-2">Starting From</div>
               <div className="text-3xl font-bold text-accent mb-4">{pkg.price.replace('Ksh', 'KSH ')}</div>
-              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold mb-3">
-                BOOK NOW
-              </Button>
+              <div className="mb-3">
+                <BookingDialog
+                  packageName={pkg.title}
+                  packagePrice={pkg.price.replace('Ksh', '').replace(',', '')}
+                  buttonText="BOOK NOW"
+                  buttonVariant="default"
+                />
+              </div>
               <Button variant="outline" className="w-full">
                 VIEW THIS PACKAGE
               </Button>
