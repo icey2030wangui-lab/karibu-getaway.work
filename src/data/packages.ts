@@ -610,23 +610,41 @@ export const mombasaPackages = [
       "/lovable-uploads/3d6057b4-9d5c-43b2-b8ad-fc568061b0ea.png",
       "/lovable-uploads/9873f05f-8c2e-400c-b05f-5758e118ae2d.png"
     ],
+    roomType: "Comfortable Room",
+    roomSize: "Standard",
+    bedding: "2 Adults, 1 room",
+    roomAmenities: [
+      "Air conditioning",
+      "Comfortable rooms",
+      "Unlimited access to Wi-Fi",
+      "Private bathroom",
+      "Modern amenities"
+    ],
     inclusions: [
       "4 Nights accommodation at Travellers Beach",
       "Travel insurance",
       "Return Transfers",
       "Return Economy SGR Tickets",
-      "Half board (breakfast & dinner)",
+      "Flexible Bed and Breakfast: Ksh 24,031 per night (was Ksh 32,041)",
+      "Flexible Half Board: Ksh 24,679 per night (breakfast & dinner)",
+      "Flexible Full Board: Ksh 31,008 per night (breakfast, lunch & dinner)",
+      "Free cancellation until 14 Oct",
+      "30% deposit required",
       "Swimming pool and beach access",
-      "Live entertainment"
+      "Live entertainment",
+      "Unlimited Wi-Fi access"
     ],
-    exclusions: ["All Not Mentioned in the Inclusions", "Lunch", "Premium beverages", "Spa services"],
-    description: "Premium beachfront hotel with half-board accommodation, live entertainment, and excellent service standards.",
+    exclusions: ["All Not Mentioned in the Inclusions", "Premium beverages", "Spa services", "Water sports"],
+    description: "Premium beachfront hotel offering flexible dining options with live entertainment and excellent service standards. Choose from Bed & Breakfast (Ksh 24,031), Half Board (Ksh 24,679), or Full Board (Ksh 31,008) per night. Enjoy accommodation in comfortable rooms with unlimited Wi-Fi access, breakfast, and the option to add lunch and dinner to your package.",
     dayCount: 5,
     freeSightseeing: "Free Sightseeing & Hotel",
     highlights: [
-      "Half-board dining included",
+      "Flexible dining options: Bed & Breakfast, Half Board, or Full Board",
+      "Starting from Ksh 24,031 per night",
+      "Free cancellation until 14 Oct",
       "Live entertainment shows",
-      "Premium beachfront location"
+      "Premium beachfront location",
+      "Unlimited Wi-Fi access"
     ]
   },
   {
