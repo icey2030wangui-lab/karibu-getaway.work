@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { MessageCircle } from "lucide-react";
 import { z } from "zod";
+import emailjs from "@emailjs/browser";
 
 const messageSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -38,6 +39,20 @@ export const ClientMessageDialog = () => {
       const validatedData = messageSchema.parse(formData);
       
       setLoading(true);
+
+      // Initialize EmailJS
+      emailjs.init("__RweeyFW9HroCBWW");
+
+      // Send email via EmailJS
+      await emailjs.send(
+        "service_j1lafcm",
+        "template_7vxh1h8",
+        {
+          from_name: validatedData.name,
+          from_email: validatedData.email,
+          message: validatedData.message,
+        }
+      );
 
       // Create conversation
       const { data: conversation, error: convError } = await supabase
