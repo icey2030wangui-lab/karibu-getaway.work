@@ -265,9 +265,9 @@ const MombasaPackages = () => {
                           {pkg.originalPrice}
                         </span>
                       )}
-                    </div>
-                    <Badge className="bg-green-500 text-white">
-                      {pkg.originalPrice && `Save Ksh${parseInt(pkg.originalPrice.replace(/[^\d]/g, '')) - parseInt(pkg.price.replace(/[^\d]/g, ''))}`}
+                  </div>
+                  <Badge className="bg-green-500 text-white">
+                    {pkg.originalPrice && `Save $${Math.abs(parseInt(pkg.originalPrice.replace(/[^\d]/g, '')) - parseInt(pkg.price.replace(/[^\d]/g, '')))}`}
                     </Badge>
                   </div>
                   <div className="text-sm text-muted-foreground mb-4">
@@ -283,7 +283,7 @@ const MombasaPackages = () => {
                     </div>
                     <div className="flex justify-between">
                       <span>Single Room Supplement:</span>
-                      <span>+Ksh15,000</span>
+                      <span>+$115</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Child (3-11 years):</span>
@@ -375,7 +375,7 @@ const MombasaPackages = () => {
                     <div className="text-2xl font-bold text-primary mb-2">{pkg.price}</div>
                     <BookingDialog
                       packageName={pkg.accommodation}
-                      packagePrice={pkg.price.replace('Ksh', '').replace(',', '')}
+                      packagePrice={pkg.price}
                       buttonText="BOOK"
                       buttonVariant="default"
                     />
@@ -435,7 +435,7 @@ const MombasaPackages = () => {
           <div className="bg-accent/10 p-6 rounded-lg border border-accent/20">
             <div className="text-center">
               <Badge className="mb-3 bg-green-500 text-white">
-                {pkg.originalPrice && `Save Ksh${parseInt(pkg.originalPrice.replace(/[^\d]/g, '')) - parseInt(pkg.price.replace(/[^\d]/g, ''))}`}
+                {pkg.originalPrice && `Save $${Math.abs(parseInt(pkg.originalPrice.replace(/[^\d]/g, '')) - parseInt(pkg.price.replace(/[^\d]/g, '')))}`}
               </Badge>
               <div className="text-sm text-muted-foreground mb-2">Starting From</div>
               <div className="text-3xl font-bold text-accent mb-2">{pkg.price}</div>

@@ -11,7 +11,7 @@ export const destinations = [
     image: masaiMara,
     packages: 24,
     description: "🦁 Witness the legendary Great Migration and encounter the Big Five in Africa's most spectacular wildlife theater. Experience nature's greatest show!",
-    price: "From KSh 35,000",
+    price: "From $269",
     badge: "🔥 Most Popular",
     emoji: "🦁",
     category: "Safari"
@@ -21,7 +21,7 @@ export const destinations = [
     image: dianiBeach,
     packages: 18,
     description: "🌴 Sink your toes into pristine white sand and dive into crystal-clear turquoise waters. Paradise found on Kenya's stunning south coast!",
-    price: "From KSh 15,000",
+    price: "From $115",
     badge: "⭐ Best Value",
     emoji: "🏖️",
     category: "Beach"
@@ -31,7 +31,7 @@ export const destinations = [
     image: amboseli,
     packages: 16,
     description: "🐘 Get up close with majestic elephant herds against the breathtaking backdrop of Mt. Kilimanjaro. Africa's most iconic safari view!",
-    price: "From KSh 28,000",
+    price: "From $215",
     badge: "📸 Insta-Worthy",
     emoji: "🐘",
     category: "Safari"
@@ -41,7 +41,7 @@ export const destinations = [
     image: malindi,
     packages: 21,
     description: "🐬 Swim with dolphins, dive into vibrant coral gardens, and stroll through charming Swahili streets. Historic coastal gems bursting with marine life!",
-    price: "From KSh 18,000",
+    price: "From $138",
     badge: "🌊 Marine Paradise",
     emoji: "🐠",
     category: "Coastal"
@@ -51,7 +51,7 @@ export const destinations = [
     image: mombasa,
     packages: 32,
     description: "🏙️ Discover Old Town's rich Swahili culture, explore spice markets and ancient forts, then unwind on pristine white-sand beaches. City meets paradise!",
-    price: "From KSh 12,000",
+    price: "From $92",
     badge: "💰 Budget Friendly",
     emoji: "🏰",
     category: "City Break"
@@ -61,7 +61,7 @@ export const destinations = [
     image: samburu,
     packages: 14,
     description: "🦒 Venture into Kenya's untamed north for rare wildlife encounters and authentic Samburu culture. Experience Africa's wild heart like never before!",
-    price: "From KSh 32,000",
+    price: "From $246",
     badge: "🎯 Exclusive",
     emoji: "🦒",
     category: "Adventure"
