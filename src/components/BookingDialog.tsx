@@ -62,27 +62,52 @@ export const BookingDialog = ({
         },
       });
 
+      // Handle Supabase client errors (network issues, 500 responses, etc.)
       if (error) {
-        console.error('Payment initiation error:', error);
-        throw new Error(error.message);
+        console.error('Supabase invocation error:', error);
+        // Try to extract a meaningful error message from the response
+        let errorMessage = 'There was an error processing your payment request.';
+        
+        if (error.message) {
+          errorMessage = error.message;
+        }
+        
+        throw new Error(errorMessage);
       }
 
-      if (data?.success && data?.redirectUrl) {
-        toast({
-          title: "Redirecting to payment...",
-          description: "You will be redirected to Pesapal to complete your payment.",
-        });
-        
-        // Redirect to Pesapal payment page
-        window.location.href = data.redirectUrl;
-      } else {
-        throw new Error(data?.error || 'Failed to initiate payment');
+      // Handle application-level errors from the edge function
+      if (!data?.success) {
+        const errorMessage = data?.error || 'Failed to initiate payment';
+        console.error('Payment initiation failed:', errorMessage);
+        throw new Error(errorMessage);
       }
+
+      // Check for redirect URL
+      if (!data?.redirectUrl) {
+        throw new Error('No payment redirect URL received');
+      }
+
+      // Success - redirect to Pesapal
+      toast({
+        title: "Redirecting to payment...",
+        description: "You will be redirected to Pesapal to complete your payment.",
+      });
+      
+      window.location.href = data.redirectUrl;
+      
     } catch (error) {
       console.error('Error initiating payment:', error);
+      
+      // Extract the most specific error message
+      let errorMessage = "There was an error processing your payment request.";
+      
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+      
       toast({
         title: "Payment Failed",
-        description: error instanceof Error ? error.message : "There was an error processing your payment request.",
+        description: errorMessage,
         variant: "destructive",
       });
       setLoading(false);
