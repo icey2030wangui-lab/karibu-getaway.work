@@ -397,25 +397,53 @@ export const mombasaPackages = [
       "/lovable-uploads/75633e98-537f-4fa8-a38b-a489e218828a.png",
       "/lovable-uploads/9d551d15-b948-4210-935a-12ce070c0897.png",
       "/lovable-uploads/mombasa-port.webp",
-      "/lovable-uploads/mombasa-old-town.jpeg"
+      "/lovable-uploads/mombasa-old-town.jpeg",
+      "/lovable-uploads/sarova-whitesands-1.jpg",
+      "/lovable-uploads/sarova-whitesands-2.jpg",
+      "/lovable-uploads/sarova-whitesands-3.jpg",
+      "/lovable-uploads/sarova-whitesands-4.jpg"
+    ],
+    roomType: "Pool Facing King Room",
+    roomSize: "Spacious with high ceilings",
+    bedding: "King Size Bed (x2 occupancy)",
+    roomAmenities: [
+      "Air conditioning",
+      "Private balcony overlooking pool and partially ocean",
+      "High ceilings with airy feel",
+      "Glass doors opening to balcony",
+      "Satellite TV",
+      "WiFi connectivity",
+      "Mini Bar",
+      "Safe box",
+      "Tea/coffee facilities",
+      "Hair dryer",
+      "Private bathroom",
+      "Telephone",
+      "Fresh colors with modern decor",
+      "View of colorful Ginger Lilies and frangipani trees",
+      "Picturesque palms pool view"
     ],
     inclusions: [
       "4 Nights accommodation at Sarova Whitesands",
       "Travel insurance",
       "Return Transfers",
       "Return Economy SGR Tickets",
-      "All meals (Full Board)",
+      "All meals (Full Board at KES 54,194.58/night)",
       "Swimming pool and beach access",
-      "Entertainment programs"
+      "Entertainment programs",
+      "Daily breakfast included"
     ],
-    exclusions: ["All Not Mentioned in the Inclusions", "Personal expenses", "Premium beverages"],
-    description: "Luxury beachfront resort experience at the renowned Sarova Whitesands with full board accommodation and premium amenities.",
+    exclusions: ["All Not Mentioned in the Inclusions", "Personal expenses", "Premium beverages", "Half Board (KES 47,784.85/night), All Inclusive (KES 73,167.69/night) - upgrades available"],
+    description: "Luxury beachfront resort experience at the renowned Sarova Whitesands. Pool Facing Rooms are located amongst colorful Ginger Lilies and frangipani trees overlooking the picturesque palms pool. The fresh colours and spacious rooms have an airy feel with high ceilings and glass doors that open up to your private balcony, overlooking the Pool, a myriad of trees and partially, the ocean. Multiple meal plan options: Bed & Breakfast (KES 40,792.43), Half Board (KES 47,784.85), Full Board (KES 54,194.58), or All Inclusive (KES 73,167.69) per night.",
     dayCount: 5,
     freeSightseeing: "Free Sightseeing & Hotel",
     highlights: [
       "Award-winning beachfront resort",
+      "Pool Facing Rooms with private balconies",
       "Full board dining experience",
-      "Professional entertainment and kids club"
+      "Professional entertainment and kids club",
+      "Scenic views of palms pool and ocean",
+      "Flexible meal plan options"
     ]
   },
   {
