@@ -127,7 +127,19 @@ serve(async (req) => {
     }
 
     const orderResult = await orderResponse.json();
-    console.log('Order submitted successfully:', orderResult);
+    console.log('Pesapal order response:', orderResult);
+
+    // Check if Pesapal returned an error
+    if (orderResult.error || orderResult.status === '500') {
+      const errorMessage = orderResult.error?.message || 'Payment processing failed';
+      console.error('Pesapal order error:', orderResult.error);
+      throw new Error(errorMessage);
+    }
+
+    // Verify we have a redirect URL
+    if (!orderResult.redirect_url) {
+      throw new Error('No payment redirect URL received from Pesapal');
+    }
 
     // Step 4: Save booking to database
     const { error: dbError } = await supabase
