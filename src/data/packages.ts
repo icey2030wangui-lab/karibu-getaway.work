@@ -17,7 +17,10 @@ export const dianiPackages = [
       "/lovable-uploads/6b39dced-187e-4b26-935f-a2b86b056fac.png", 
       "/lovable-uploads/da19a70d-35a6-47f6-be9c-0a3aedcf5ac9.png",
       "/lovable-uploads/cb84111e-b26f-4fa3-896f-b90640d06ec2.png",
-      "/lovable-uploads/9f86cdaf-4716-4d9b-b48d-0fb64aad7562.png"
+      "/lovable-uploads/9f86cdaf-4716-4d9b-b48d-0fb64aad7562.png",
+      "/lovable-uploads/baobab-1.avif",
+      "/lovable-uploads/baobab-bathroom.jpg",
+      "/lovable-uploads/baobab-suite.jpg"
     ],
     roomType: "Sea Front Room",
     roomSize: "31 SQM",
