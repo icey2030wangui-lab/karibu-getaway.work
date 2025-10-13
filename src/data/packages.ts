@@ -343,7 +343,7 @@ export const dianiPackages = [
 export const mombasaPackages = [
   {
     id: 1,
-    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    title: "Mombasa December School Holiday-SGR Deals 5 Days 4 Nights",
     location: "Mombasa/North Coast",
     accommodation: "Pride Inn Paradise",
     price: "$515",
@@ -410,7 +410,7 @@ export const mombasaPackages = [
   },
   {
     id: 2,
-    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    title: "Mombasa December School Holiday-SGR Deals 5 Days 4 Nights",
     location: "Mombasa/North Coast",
     accommodation: "Sarova Whitesands",
     price: "$554",
@@ -475,7 +475,7 @@ export const mombasaPackages = [
   },
   {
     id: 3,
-    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    title: "Mombasa December School Holiday-SGR Deals 5 Days 4 Nights",
     location: "Mombasa/North Coast",
     accommodation: "Flamingo Beach Resort",
     price: "$508",
@@ -566,7 +566,7 @@ export const mombasaPackages = [
   },
   {
     id: 5,
-    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    title: "Mombasa December School Holiday-SGR Deals 5 Days 4 Nights",
     location: "Mombasa/North Coast",
     accommodation: "Severin Sea Lodge",
     price: "$416",
@@ -620,7 +620,7 @@ export const mombasaPackages = [
   },
   {
     id: 6,
-    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    title: "Mombasa December School Holiday-SGR Deals 5 Days 4 Nights",
     location: "Mombasa/North Coast",
     accommodation: "Travellers Beach Hotel",
     price: "$578",
@@ -676,7 +676,7 @@ export const mombasaPackages = [
   },
   {
     id: 7,
-    title: "Mombasa August School Holiday-SGR Deals 5 Days 4 Nights",
+    title: "Mombasa December School Holiday-SGR Deals 5 Days 4 Nights",
     location: "Mombasa/North Coast",
     accommodation: "Neptune Beach Resort",
     price: "$468",
