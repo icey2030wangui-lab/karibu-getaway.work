@@ -44,10 +44,15 @@ serve(async (req) => {
     // Generate unique booking reference
     const bookingReference = `BK${Date.now()}`;
 
+    // Determine PayPal environment (use sandbox for testing)
+    const paypalBaseUrl = Deno.env.get('PAYPAL_MODE') === 'live' 
+      ? 'https://api-m.paypal.com' 
+      : 'https://api-m.sandbox.paypal.com';
+
     // Step 1: Get PayPal access token
-    console.log('Getting PayPal access token...');
+    console.log('Getting PayPal access token from:', paypalBaseUrl);
     const auth = btoa(`${clientId}:${clientSecret}`);
-    const tokenResponse = await fetch('https://api-m.paypal.com/v1/oauth2/token', {
+    const tokenResponse = await fetch(`${paypalBaseUrl}/v1/oauth2/token`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -91,7 +96,7 @@ serve(async (req) => {
       },
     };
 
-    const orderResponse = await fetch('https://api-m.paypal.com/v2/checkout/orders', {
+    const orderResponse = await fetch(`${paypalBaseUrl}/v2/checkout/orders`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
