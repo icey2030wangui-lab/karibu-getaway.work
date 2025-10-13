@@ -58,7 +58,8 @@ export const BookingDialog = ({
           email: formData.email,
           phone: formData.phone,
           packageName: packageName,
-          packagePrice: packagePrice.replace('$', '').replace(',', ''),
+          // Extract only the numeric value from price strings like "From 192" or "$192"
+          packagePrice: packagePrice.replace(/[^0-9.]/g, ''),
         },
       });
 
@@ -87,13 +88,16 @@ export const BookingDialog = ({
         throw new Error('No payment redirect URL received');
       }
 
-      // Success - redirect to PayPal
-      toast({
-        title: "Redirecting to payment...",
-        description: "You will be redirected to PayPal to complete your payment.",
-      });
+      // Success - redirect to PayPal immediately
+      console.log('Redirecting to PayPal:', data.redirectUrl);
       
-      window.location.href = data.redirectUrl;
+      // Close dialog first
+      setOpen(false);
+      
+      // Use a small delay to ensure state updates, then redirect
+      setTimeout(() => {
+        window.location.href = data.redirectUrl;
+      }, 100);
       
     } catch (error) {
       console.error('Error initiating payment:', error);
