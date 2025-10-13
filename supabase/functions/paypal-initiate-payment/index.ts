@@ -89,8 +89,8 @@ serve(async (req) => {
         },
       ],
       application_context: {
-        return_url: `${supabaseUrl}/functions/v1/paypal-payment-callback?reference=${bookingReference}`,
-        cancel_url: `${supabaseUrl.replace('.supabase.co', '.lovableproject.com')}/?payment=cancelled&reference=${bookingReference}`,
+        return_url: `https://xekqpliuvgiyhhyumrnc.supabase.co/functions/v1/paypal-payment-callback?reference=${bookingReference}`,
+        cancel_url: `https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com/?payment=cancelled&reference=${bookingReference}`,
         brand_name: 'Karibu Tours Kenya',
         landing_page: 'BILLING',
         user_action: 'PAY_NOW',

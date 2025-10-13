@@ -115,8 +115,8 @@ serve(async (req) => {
 
     // Redirect user to success or failure page based on payment status
     const redirectUrl = mappedStatus === 'completed' 
-      ? `${supabaseUrl.replace('.supabase.co', '.lovableproject.com')}/?payment=success&reference=${reference || token}`
-      : `${supabaseUrl.replace('.supabase.co', '.lovableproject.com')}/?payment=failed&reference=${reference || token}`;
+      ? `https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com/?payment=success&reference=${reference || token}`
+      : `https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com/?payment=failed&reference=${reference || token}`;
 
     return Response.redirect(redirectUrl, 302);
 
@@ -124,7 +124,7 @@ serve(async (req) => {
     console.error('Error in paypal-payment-callback:', error);
     
     // Redirect to error page
-    const errorUrl = `${Deno.env.get('SUPABASE_URL')?.replace('.supabase.co', '.lovableproject.com')}/?payment=error`;
+    const errorUrl = `https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com/?payment=error`;
     return Response.redirect(errorUrl, 302);
   }
 });
