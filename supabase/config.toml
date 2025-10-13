@@ -1,7 +1,7 @@
 project_id = "xekqpliuvgiyhhyumrnc"
 
-[functions.pesapal-initiate-payment]
+[functions.paypal-initiate-payment]
 verify_jwt = false
 
-[functions.pesapal-payment-callback]
+[functions.paypal-payment-callback]
 verify_jwt = false

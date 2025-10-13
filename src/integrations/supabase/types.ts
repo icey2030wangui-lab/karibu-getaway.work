@@ -26,8 +26,8 @@ export type Database = {
           package_name: string
           package_price: number
           payment_status: string
+          paypal_order_id: string | null
           pesapal_merchant_reference: string | null
-          pesapal_tracking_id: string | null
           updated_at: string
         }
         Insert: {
@@ -41,8 +41,8 @@ export type Database = {
           package_name: string
           package_price: number
           payment_status?: string
+          paypal_order_id?: string | null
           pesapal_merchant_reference?: string | null
-          pesapal_tracking_id?: string | null
           updated_at?: string
         }
         Update: {
@@ -56,8 +56,8 @@ export type Database = {
           package_name?: string
           package_price?: number
           payment_status?: string
+          paypal_order_id?: string | null
           pesapal_merchant_reference?: string | null
-          pesapal_tracking_id?: string | null
           updated_at?: string
         }
         Relationships: []

@@ -51,7 +51,7 @@ export const BookingDialog = ({
 
     try {
       // Call the edge function to initiate payment
-      const { data, error } = await supabase.functions.invoke('pesapal-initiate-payment', {
+      const { data, error } = await supabase.functions.invoke('paypal-initiate-payment', {
         body: {
           firstName: formData.firstName,
           lastName: formData.lastName,
@@ -87,10 +87,10 @@ export const BookingDialog = ({
         throw new Error('No payment redirect URL received');
       }
 
-      // Success - redirect to Pesapal
+      // Success - redirect to PayPal
       toast({
         title: "Redirecting to payment...",
-        description: "You will be redirected to Pesapal to complete your payment.",
+        description: "You will be redirected to PayPal to complete your payment.",
       });
       
       window.location.href = data.redirectUrl;
