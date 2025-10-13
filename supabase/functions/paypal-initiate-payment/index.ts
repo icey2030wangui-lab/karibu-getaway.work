@@ -94,9 +94,6 @@ serve(async (req) => {
         brand_name: 'Karibu Tours Kenya',
         landing_page: 'BILLING',
         shipping_preference: 'NO_SHIPPING',
-        payment_method: {
-          payee_preferred: 'UNRESTRICTED'
-        },
         user_action: 'PAY_NOW',
       },
     };
