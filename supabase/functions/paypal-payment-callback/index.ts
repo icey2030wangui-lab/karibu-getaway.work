@@ -7,6 +7,10 @@ const corsHeaders = {
 };
 
 serve(async (req) => {
+  console.log('=== PayPal Callback Triggered ===');
+  console.log('Request method:', req.method);
+  console.log('Request URL:', req.url);
+  
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
@@ -20,6 +24,7 @@ serve(async (req) => {
     console.log('Received PayPal callback:', { token, reference });
 
     if (!token) {
+      console.error('Missing token in callback');
       throw new Error('Missing PayPal order token in callback');
     }
 
