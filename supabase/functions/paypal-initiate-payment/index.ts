@@ -72,7 +72,8 @@ serve(async (req) => {
 
     // Step 2: Create PayPal order
     console.log('Creating PayPal order...');
-    const priceValue = packagePrice.replace('$', '').trim();
+    // Extract numeric value from price (handle formats like "$230", "US360", "230")
+    const priceValue = packagePrice.replace(/[^0-9.]/g, '').trim();
     
     const orderPayload = {
       intent: 'CAPTURE',
