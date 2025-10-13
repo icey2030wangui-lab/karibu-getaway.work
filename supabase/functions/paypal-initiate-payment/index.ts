@@ -121,12 +121,12 @@ serve(async (req) => {
       .from('bookings')
       .insert({
         booking_reference: bookingReference,
-        first_name: firstName,
-        last_name: lastName,
-        email: email,
-        phone: phone,
+        customer_first_name: firstName,
+        customer_last_name: lastName,
+        customer_email: email,
+        customer_phone: phone,
         package_name: packageName,
-        package_price: packagePrice,
+        package_price: priceValue,
         payment_status: 'pending',
         paypal_order_id: orderData.id,
       });
