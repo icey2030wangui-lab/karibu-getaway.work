@@ -92,8 +92,11 @@ serve(async (req) => {
         return_url: `https://xekqpliuvgiyhhyumrnc.supabase.co/functions/v1/paypal-payment-callback?reference=${bookingReference}`,
         cancel_url: `https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com/?payment=cancelled&reference=${bookingReference}`,
         brand_name: 'Karibu Tours Kenya',
-        landing_page: 'LOGIN',
+        landing_page: 'BILLING',
         shipping_preference: 'NO_SHIPPING',
+        payment_method: {
+          payee_preferred: 'UNRESTRICTED'
+        },
         user_action: 'PAY_NOW',
       },
     };
