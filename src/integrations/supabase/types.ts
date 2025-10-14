@@ -21,8 +21,9 @@ export type Database = {
           customer_email: string
           customer_first_name: string
           customer_last_name: string
-          customer_phone: string
           id: string
+          modified_at: string | null
+          modified_by: string | null
           package_name: string
           package_price: number
           payment_status: string
@@ -36,8 +37,9 @@ export type Database = {
           customer_email: string
           customer_first_name: string
           customer_last_name: string
-          customer_phone: string
           id?: string
+          modified_at?: string | null
+          modified_by?: string | null
           package_name: string
           package_price: number
           payment_status?: string
@@ -51,8 +53,9 @@ export type Database = {
           customer_email?: string
           customer_first_name?: string
           customer_last_name?: string
-          customer_phone?: string
           id?: string
+          modified_at?: string | null
+          modified_by?: string | null
           package_name?: string
           package_price?: number
           payment_status?: string
@@ -124,6 +127,33 @@ export type Database = {
           },
         ]
       }
+      rate_limits: {
+        Row: {
+          attempts: number | null
+          endpoint: string
+          first_attempt_at: string | null
+          id: string
+          identifier: string
+          last_attempt_at: string | null
+        }
+        Insert: {
+          attempts?: number | null
+          endpoint: string
+          first_attempt_at?: string | null
+          id?: string
+          identifier: string
+          last_attempt_at?: string | null
+        }
+        Update: {
+          attempts?: number | null
+          endpoint?: string
+          first_attempt_at?: string | null
+          id?: string
+          identifier?: string
+          last_attempt_at?: string | null
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string | null
@@ -150,6 +180,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      cleanup_old_rate_limits: {
+        Args: Record<PropertyKey, never>
+        Returns: undefined
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
