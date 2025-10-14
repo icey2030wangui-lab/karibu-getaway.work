@@ -35,7 +35,6 @@ export const BookingDialog = ({
     firstName: "",
     lastName: "",
     email: "",
-    phone: "",
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -56,7 +55,6 @@ export const BookingDialog = ({
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
-          phone: formData.phone,
           packageName: packageName,
           // Extract only the numeric value from price strings like "From 192" or "$192"
           packagePrice: packagePrice.replace(/[^0-9.]/g, ''),
@@ -165,19 +163,6 @@ export const BookingDialog = ({
               type="email"
               placeholder="john.doe@example.com"
               value={formData.email}
-              onChange={handleInputChange}
-              required
-              disabled={loading}
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="phone">Phone Number</Label>
-            <Input
-              id="phone"
-              name="phone"
-              type="tel"
-              placeholder="+254712345678"
-              value={formData.phone}
               onChange={handleInputChange}
               required
               disabled={loading}

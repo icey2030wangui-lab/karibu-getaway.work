@@ -16,7 +16,6 @@ serve(async (req) => {
       firstName, 
       lastName, 
       email, 
-      phone, 
       packageName, 
       packagePrice 
     } = await req.json();
@@ -24,7 +23,7 @@ serve(async (req) => {
     console.log('Initiating PayPal payment:', { firstName, lastName, email, packageName, packagePrice });
 
     // Validate required fields
-    if (!firstName || !lastName || !email || !phone || !packageName || !packagePrice) {
+    if (!firstName || !lastName || !email || !packageName || !packagePrice) {
       throw new Error('Missing required booking information');
     }
 
@@ -125,7 +124,6 @@ serve(async (req) => {
         customer_first_name: firstName,
         customer_last_name: lastName,
         customer_email: email,
-        customer_phone: phone,
         package_name: packageName,
         package_price: priceValue,
         payment_status: 'pending',
