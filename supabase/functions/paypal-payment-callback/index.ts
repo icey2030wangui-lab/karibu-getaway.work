@@ -6,6 +6,11 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+const ERROR_MESSAGES = {
+  PAYMENT_ERROR: 'Payment processing error occurred',
+  PAYMENT_FAILED: 'Payment was not completed successfully',
+};
+
 serve(async (req) => {
   console.log('=== PayPal Callback Triggered ===');
   console.log('Request method:', req.method);
@@ -59,9 +64,13 @@ serve(async (req) => {
     });
 
     if (!tokenResponse.ok) {
-      const errorText = await tokenResponse.text();
-      console.error('PayPal token error:', errorText);
-      throw new Error(`Failed to get PayPal token: ${tokenResponse.status}`);
+      console.error('PayPal token error');
+      const bookingReference = reference || token;
+      const frontendUrl = 'https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com';
+      return Response.redirect(
+        `${frontendUrl}/payment-status?payment=error&reference=${bookingReference}`,
+        303
+      );
     }
 
     const tokenData = await tokenResponse.json();
@@ -81,9 +90,13 @@ serve(async (req) => {
     );
 
     if (!captureResponse.ok) {
-      const errorText = await captureResponse.text();
-      console.error('Payment capture error:', errorText);
-      throw new Error(`Failed to capture payment: ${captureResponse.status}`);
+      console.error('PayPal capture error');
+      const bookingReference = reference || token;
+      const frontendUrl = 'https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com';
+      return Response.redirect(
+        `${frontendUrl}/payment-status?payment=failed&reference=${bookingReference}`,
+        303
+      );
     }
 
     const captureData = await captureResponse.json();

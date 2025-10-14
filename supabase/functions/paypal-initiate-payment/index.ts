@@ -6,6 +6,13 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+const ERROR_MESSAGES = {
+  VALIDATION: 'Invalid booking information provided',
+  RATE_LIMIT: 'Too many booking attempts. Please try again later',
+  PAYMENT: 'Payment processing error occurred',
+  DATABASE: 'Unable to save booking information',
+};
+
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
@@ -20,11 +27,93 @@ serve(async (req) => {
       packagePrice 
     } = await req.json();
 
-    console.log('Initiating PayPal payment:', { firstName, lastName, email, packageName, packagePrice });
+    console.log('Initiating PayPal payment for:', { email, packageName });
 
-    // Validate required fields
+    // Input validation
     if (!firstName || !lastName || !email || !packageName || !packagePrice) {
-      throw new Error('Missing required booking information');
+      return new Response(
+        JSON.stringify({ error: ERROR_MESSAGES.VALIDATION }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Validate input lengths
+    if (firstName.length > 50 || lastName.length > 50 || email.length > 255 || packageName.length > 200) {
+      return new Response(
+        JSON.stringify({ error: ERROR_MESSAGES.VALIDATION }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return new Response(
+        JSON.stringify({ error: ERROR_MESSAGES.VALIDATION }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Validate price format (must be numeric)
+    const priceValue = packagePrice.replace(/[^0-9.]/g, '').trim();
+    const priceNum = parseFloat(priceValue);
+    if (isNaN(priceNum) || priceNum <= 0 || priceNum > 100000) {
+      return new Response(
+        JSON.stringify({ error: ERROR_MESSAGES.VALIDATION }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Create Supabase client
+    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
+    const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+    // Rate limiting check
+    const rateLimitKey = `booking:${email}`;
+    const now = new Date();
+    const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
+
+    const { data: rateLimitData, error: rateLimitError } = await supabase
+      .from('rate_limits')
+      .select('attempts, last_attempt_at')
+      .eq('identifier', rateLimitKey)
+      .eq('endpoint', 'paypal-initiate-payment')
+      .gt('last_attempt_at', oneHourAgo.toISOString())
+      .maybeSingle();
+
+    if (rateLimitError && rateLimitError.code !== 'PGRST116') {
+      console.error('Rate limit check error:', rateLimitError);
+    }
+
+    // Allow max 5 bookings per hour per email
+    if (rateLimitData && rateLimitData.attempts >= 5) {
+      return new Response(
+        JSON.stringify({ error: ERROR_MESSAGES.RATE_LIMIT }),
+        { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Update rate limit
+    if (rateLimitData) {
+      await supabase
+        .from('rate_limits')
+        .update({
+          attempts: rateLimitData.attempts + 1,
+          last_attempt_at: now.toISOString(),
+        })
+        .eq('identifier', rateLimitKey)
+        .eq('endpoint', 'paypal-initiate-payment');
+    } else {
+      await supabase
+        .from('rate_limits')
+        .insert({
+          identifier: rateLimitKey,
+          endpoint: 'paypal-initiate-payment',
+          attempts: 1,
+          first_attempt_at: now.toISOString(),
+          last_attempt_at: now.toISOString(),
+        });
     }
 
     // Get PayPal credentials
@@ -32,13 +121,12 @@ serve(async (req) => {
     const clientSecret = Deno.env.get('PAYPAL_CLIENT_SECRET');
     
     if (!clientId || !clientSecret) {
-      throw new Error('PayPal credentials not configured');
+      console.error('PayPal credentials not configured');
+      return new Response(
+        JSON.stringify({ error: ERROR_MESSAGES.PAYMENT }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
     }
-
-    // Create Supabase client
-    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
-    const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
-    const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
     // Generate unique booking reference
     const bookingReference = `BK${Date.now()}`;
@@ -63,7 +151,10 @@ serve(async (req) => {
     if (!tokenResponse.ok) {
       const errorText = await tokenResponse.text();
       console.error('PayPal token error:', errorText);
-      throw new Error(`Failed to get PayPal token: ${tokenResponse.status}`);
+      return new Response(
+        JSON.stringify({ error: ERROR_MESSAGES.PAYMENT }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
     }
 
     const tokenData = await tokenResponse.json();
@@ -71,8 +162,6 @@ serve(async (req) => {
 
     // Step 2: Create PayPal order
     console.log('Creating PayPal order...');
-    // Extract numeric value from price (handle formats like "$230", "US360", "230")
-    const priceValue = packagePrice.replace(/[^0-9.]/g, '').trim();
     
     const orderPayload = {
       intent: 'CAPTURE',
@@ -109,7 +198,10 @@ serve(async (req) => {
     if (!orderResponse.ok) {
       const errorText = await orderResponse.text();
       console.error('PayPal order creation error:', errorText);
-      throw new Error(`Failed to create PayPal order: ${orderResponse.status}`);
+      return new Response(
+        JSON.stringify({ error: ERROR_MESSAGES.PAYMENT }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
     }
 
     const orderData = await orderResponse.json();
@@ -132,7 +224,10 @@ serve(async (req) => {
 
     if (insertError) {
       console.error('Database insert error:', insertError);
-      throw new Error(`Failed to save booking: ${insertError.message}`);
+      return new Response(
+        JSON.stringify({ error: ERROR_MESSAGES.DATABASE }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
     }
 
     console.log('Booking saved successfully');
@@ -141,7 +236,11 @@ serve(async (req) => {
     const approvalUrl = orderData.links.find((link: any) => link.rel === 'approve')?.href;
 
     if (!approvalUrl) {
-      throw new Error('No approval URL found in PayPal response');
+      console.error('No approval URL in PayPal response');
+      return new Response(
+        JSON.stringify({ error: ERROR_MESSAGES.PAYMENT }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
     }
 
     return new Response(
@@ -158,14 +257,8 @@ serve(async (req) => {
   } catch (error) {
     console.error('Error in paypal-initiate-payment:', error);
     return new Response(
-      JSON.stringify({
-        success: false,
-        error: error instanceof Error ? error.message : 'Unknown error occurred',
-      }),
-      {
-        status: 400,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      }
+      JSON.stringify({ error: ERROR_MESSAGES.PAYMENT }),
+      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }
 });

@@ -8,7 +8,6 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { MessageCircle } from "lucide-react";
 import { z } from "zod";
-import emailjs from "@emailjs/browser";
 
 const messageSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -40,19 +39,43 @@ export const ClientMessageDialog = () => {
       
       setLoading(true);
 
-      // Initialize EmailJS
-      emailjs.init("__RweeyFW9HroCBWW");
+      // First create a conversation
+      const { data: conversation, error: conversationError } = await supabase
+        .from("conversations")
+        .insert({
+          client_name: validatedData.name,
+          client_email: validatedData.email,
+        })
+        .select()
+        .single();
 
-      // Send email via EmailJS
-      await emailjs.send(
-        "service_j1lafcm",
-        "template_7vxh1h8",
-        {
-          from_name: validatedData.name,
-          from_email: validatedData.email,
+      if (conversationError) throw conversationError;
+
+      // Then create the message
+      const { error: messageError } = await supabase
+        .from("messages")
+        .insert({
+          conversation_id: conversation.id,
+          sender_type: 'client',
+          sender_name: validatedData.name,
+          content: validatedData.message,
+        });
+
+      if (messageError) throw messageError;
+
+      // Send email via secure edge function
+      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: validatedData.name,
+          email: validatedData.email,
           message: validatedData.message,
-        }
-      );
+        },
+      });
+
+      if (emailError) {
+        console.error("Email sending error:", emailError);
+        // Still show success since message was saved to DB
+      }
 
       toast({
         title: "Message Sent!",
