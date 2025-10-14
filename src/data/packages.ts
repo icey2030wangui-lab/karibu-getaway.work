@@ -692,7 +692,17 @@ export const mombasaPackages = [
       "/lovable-uploads/7b805240-9487-46d8-9571-b8dbf0f6f407.png",
       "/lovable-uploads/7c7ee04a-5962-4896-b374-97de360c5fc3.png",
       "/lovable-uploads/922e6645-a097-4dea-ad1b-e9930460104c.png",
-      "/lovable-uploads/neptune-1.jpg"
+      "/lovable-uploads/neptune-1.jpg",
+      "/lovable-uploads/neptune-6.jpg",
+      "/lovable-uploads/neptune-7.jpg",
+      "/lovable-uploads/neptune-8.jpg",
+      "/lovable-uploads/neptune-9.jpg",
+      "/lovable-uploads/neptune-10.jpg",
+      "/lovable-uploads/neptune-11.jpg",
+      "/lovable-uploads/neptune-12.webp",
+      "/lovable-uploads/neptune-13.jpg",
+      "/lovable-uploads/neptune-14.webp",
+      "/lovable-uploads/neptune-15.webp"
     ],
     roomType: "Master Suite with Ocean View",
     roomSize: "28.4 m²",
