@@ -40,6 +40,11 @@ export const ClientMessageDialog = () => {
       setLoading(true);
 
       // First create a conversation
+      console.log("Attempting to create conversation with:", {
+        client_name: validatedData.name,
+        client_email: validatedData.email
+      });
+      
       const { data: conversation, error: conversationError } = await supabase
         .from("conversations")
         .insert({
@@ -49,7 +54,12 @@ export const ClientMessageDialog = () => {
         .select()
         .single();
 
-      if (conversationError) throw conversationError;
+      console.log("Conversation insert result:", { conversation, conversationError });
+      
+      if (conversationError) {
+        console.error("Conversation insert error details:", conversationError);
+        throw conversationError;
+      }
 
       // Then create the message
       const { error: messageError } = await supabase
