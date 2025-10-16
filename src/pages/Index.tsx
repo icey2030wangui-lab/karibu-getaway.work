@@ -15,7 +15,9 @@ const Index = () => {
         <Hero />
         <PopularDestinations />
         <SpecialOffers />
-        <DianiPackages />
+        <div id="packages-section">
+          <DianiPackages />
+        </div>
         <MombasaPackages />
       </main>
       <Footer />

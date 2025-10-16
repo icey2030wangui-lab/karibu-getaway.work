@@ -30,6 +30,9 @@ const Hero = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+            onClick={() => {
+              document.getElementById('packages-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             Book Your Adventure
           </Button>
@@ -37,6 +40,9 @@ const Hero = () => {
             size="lg" 
             variant="outline"
             className="border-adventure-gold text-adventure-gold hover:bg-adventure-gold hover:text-foreground px-8 py-4 text-lg font-semibold backdrop-blur-sm shadow-lg hover:shadow-adventure-gold/50 transition-all duration-300"
+            onClick={() => {
+              document.getElementById('destinations-section')?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             Explore Destinations
           </Button>
