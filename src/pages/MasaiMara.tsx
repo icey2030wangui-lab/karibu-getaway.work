@@ -11,11 +11,15 @@ const accommodations = [
     name: "Mara Serena Safari Lodge",
     category: "Luxury+",
     type: "SAFARI LODGE",
-    image: "/lovable-uploads/masai.jpeg",
-    description: "Perched high on a bush-cloaked hill with panoramic views, Mara Serena Safari Lodge offers authentic safari elegance in the heart of the Masai Mara.",
-    rooms: 74,
-    location: "Masai Mara National Reserve",
-    features: ["Full Board", "Game Drives", "Swimming Pool", "Bar & Restaurant"]
+    image: "/lovable-uploads/mara-serena-room.jpeg",
+    description: "The Lodge is located within the mara triangle which gives it one of the best views of the mara especially during the wilderbeest migration. The lodge has 75 rooms including 8 sets interconnecting rooms, 1 suite, 28 rooms with king size beds and 38 twin rooms and 8 triple rooms (on request basis) all influenced by the Maasai heritage. Strategically located for amazing views of the Savannah and the river. The suite is the presidential, honeymoon or VIP venue - very spacious with uninterrupted views of the mara River. All rooms have free internet, ceiling fans, telephones, valet, laundry and shoe shine with 24hr room service.",
+    rooms: 75,
+    location: "Mara Triangle, Masai Mara National Reserve",
+    features: ["Full Board", "Free WiFi", "24hr Room Service", "King & Twin Rooms", "Presidential Suite", "River Views"],
+    pricing: {
+      lowSeason: "$266 per night",
+      highSeason: "$460 per night"
+    }
   },
   {
     name: "Mara Sopa Lodge",
@@ -147,9 +151,17 @@ const MasaiMara = () => {
                         ))}
                       </div>
 
+                      {accommodation.pricing && (
+                        <div className="mb-4 p-3 bg-muted/50 rounded-lg">
+                          <p className="text-sm font-semibold text-foreground mb-1">Pricing:</p>
+                          <p className="text-sm text-muted-foreground">Low Season: {accommodation.pricing.lowSeason}</p>
+                          <p className="text-sm text-muted-foreground">High Season: {accommodation.pricing.highSeason}</p>
+                        </div>
+                      )}
+
                       <BookingDialog
                         packageName={`${accommodation.name} - Masai Mara Safari`}
-                        packagePrice="$654"
+                        packagePrice={accommodation.pricing?.lowSeason || "$654"}
                         buttonText="Book Now"
                         buttonVariant="default"
                       />
