@@ -92,6 +92,62 @@ const MasaiMara = () => {
           </div>
         </section>
 
+        {/* Useful Information Section */}
+        <section className="py-16 px-4 bg-muted/20">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-10 text-center">
+              Useful Information on Maasai Mara
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Park Fees */}
+              <Card className="p-6">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Park Fees</h3>
+                <p className="text-muted-foreground mb-4">
+                  Maasai Mara park fee are paid to where you stay; if you are staying in the Mara Triangle and are driving through Sekenani Gate on the Narok side, do not pay park fee until you enter the Triangle at Purungat Bridge.
+                </p>
+                <p className="text-muted-foreground">
+                  All tickets can be purchased from KAPS online with a visa card, in Nairobi upon arrival in the Mara Triangle from the authorized KAPS employee stationed at either Purungat Bridge, Oloololo Gate or Serena Airstrip. Visa credit and debit cards are accepted at all Mara Triangle entry points.
+                </p>
+              </Card>
+
+              {/* Getting There */}
+              <Card className="p-6">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Getting There</h3>
+                <h4 className="font-semibold text-foreground mb-2">By Road</h4>
+                <p className="text-muted-foreground mb-4">
+                  Driving will take you about 5-6 hours. Nairobi to Narok will take you about 2 - 2.5 hours, the road is absolutely beautiful and smooth.
+                </p>
+                <p className="text-muted-foreground">
+                  In Narok there is a fuel station just across the river which is a great stop for food, toilet and snacks. Leaving Narok to Sekenani Gate will take you about 2-3.5 hours depending on the vehicle you are travelling with. The road is also very good.
+                </p>
+              </Card>
+
+              {/* Best Time to Visit */}
+              <Card className="p-6">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Best Time To Visit</h3>
+                <p className="text-muted-foreground mb-4">
+                  With the wildebeest migration in <span className="font-semibold">JULY - OCTOBER</span>, this is the best time to see this incredible movement of animals. Although it is not guaranteed that the wildebeest get to Maasai Mara, it has yet to let us down. Also, December to February are great times as it is dryer and good for the Big Cats.
+                </p>
+                <p className="text-sm text-muted-foreground italic">
+                  NOTE: The Maasai Mara is an all year-round destination with the big cats, and all the big game still in the Maasai Mara Ecosystem.
+                </p>
+              </Card>
+
+              {/* Vaccinations */}
+              <Card className="p-6">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Vaccinations</h3>
+                <p className="text-muted-foreground mb-4">
+                  Please check with your travel agent on the latest information on the COVID recommendations and protocols.
+                </p>
+                <p className="text-muted-foreground">
+                  It is recommended that all visitors see their doctor 4-8 weeks prior to departure for advice on medication and vaccinations. Hepatitis A and B, typhoid and polio are usually recommended vaccinations.
+                </p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Accommodations Section */}
         <section className="py-16 px-4 bg-muted/20">
           <div className="container mx-auto">
