@@ -2,12 +2,23 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { destinations } from "@/data/destinations";
+import { useNavigate } from "react-router-dom";
 
 const PopularDestinations = () => {
-  const scrollToDianiPackages = () => {
-    const dianiSection = document.getElementById('diani-packages');
-    if (dianiSection) {
-      dianiSection.scrollIntoView({ behavior: 'smooth' });
+  const navigate = useNavigate();
+
+  const handleViewDetails = (destinationName: string) => {
+    if (destinationName === "Diani Beach") {
+      const dianiSection = document.getElementById('diani-packages');
+      if (dianiSection) {
+        dianiSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (destinationName === "Maasai Mara") {
+      navigate("/masai-mara");
+    } else if (destinationName === "Amboseli National Park") {
+      navigate("/amboseli");
+    } else if (destinationName === "Samburu Reserve") {
+      navigate("/samburu");
     }
   };
 
@@ -70,20 +81,12 @@ const PopularDestinations = () => {
                   {destination.description}
                 </p>
                 
-                <div className="flex items-center justify-between">
-                  <div>
-                    <span className="text-2xl font-bold text-primary animate-pulse">
-                      {destination.price}
-                    </span>
-                    <span className="text-xs text-muted-foreground ml-1 block">
-                      per person
-                    </span>
-                  </div>
+                <div className="flex items-center justify-end">
                   <Button 
                     className="bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-110 hover:shadow-lg transition-all duration-300 group/btn"
-                    onClick={destination.name === "Diani Beach" ? scrollToDianiPackages : undefined}
+                    onClick={() => handleViewDetails(destination.name)}
                   >
-                    <span className="group-hover/btn:mr-1 transition-all">View Packages</span>
+                    <span className="group-hover/btn:mr-1 transition-all">View Details</span>
                     <span className="opacity-0 group-hover/btn:opacity-100 transition-opacity">→</span>
                   </Button>
                 </div>

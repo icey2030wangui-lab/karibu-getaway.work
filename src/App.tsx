@@ -12,6 +12,9 @@ import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import FAQ from "./pages/FAQ";
+import MasaiMara from "./pages/MasaiMara";
+import Amboseli from "./pages/Amboseli";
+import Samburu from "./pages/Samburu";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +32,9 @@ const App = () => (
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfService />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/masai-mara" element={<MasaiMara />} />
+            <Route path="/amboseli" element={<Amboseli />} />
+            <Route path="/samburu" element={<Samburu />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
