@@ -19,6 +19,8 @@ const PopularDestinations = () => {
       navigate("/amboseli");
     } else if (destinationName === "Samburu Reserve") {
       navigate("/samburu");
+    } else if (destinationName === "Mombasa") {
+      navigate("/mombasa");
     }
   };
 
