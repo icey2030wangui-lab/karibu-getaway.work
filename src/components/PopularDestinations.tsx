@@ -21,6 +21,8 @@ const PopularDestinations = () => {
       navigate("/samburu");
     } else if (destinationName === "Mombasa") {
       navigate("/mombasa");
+    } else if (destinationName === "Malindi & Watamu") {
+      navigate("/malindi");
     }
   };
 

@@ -16,6 +16,7 @@ import MasaiMara from "./pages/MasaiMara";
 import Amboseli from "./pages/Amboseli";
 import Samburu from "./pages/Samburu";
 import Mombasa from "./pages/Mombasa";
+import Malindi from "./pages/Malindi";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/amboseli" element={<Amboseli />} />
             <Route path="/samburu" element={<Samburu />} />
             <Route path="/mombasa" element={<Mombasa />} />
+            <Route path="/malindi" element={<Malindi />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
