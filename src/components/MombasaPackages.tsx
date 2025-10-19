@@ -8,7 +8,6 @@ import { Star, MapPin, Calendar, Users, CheckCircle2, Building, Phone, Mail, Clo
 import { useState } from "react";
 import { mombasaPackages } from "@/data/packages";
 import { BookingDialog } from "@/components/BookingDialog";
-
 const MombasaPackages = () => {
   const [bookingDetails, setBookingDetails] = useState({
     adults: 2,
@@ -16,24 +15,22 @@ const MombasaPackages = () => {
     checkIn: '',
     checkOut: ''
   });
-
-  const EnhancedBookingModal = ({ pkg }: { pkg: typeof mombasaPackages[0] }) => {
+  const EnhancedBookingModal = ({
+    pkg
+  }: {
+    pkg: typeof mombasaPackages[0];
+  }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    
     const nextImage = () => {
-      setCurrentImageIndex((prev) => (prev + 1) % pkg.images.length);
+      setCurrentImageIndex(prev => (prev + 1) % pkg.images.length);
     };
-    
     const previousImage = () => {
-      setCurrentImageIndex((prev) => (prev - 1 + pkg.images.length) % pkg.images.length);
+      setCurrentImageIndex(prev => (prev - 1 + pkg.images.length) % pkg.images.length);
     };
-    
     const goToImage = (index: number) => {
       setCurrentImageIndex(index);
     };
-
-    return (
-    <DialogContent className="max-w-5xl max-h-[95vh] overflow-y-auto">
+    return <DialogContent className="max-w-5xl max-h-[95vh] overflow-y-auto">
       <DialogHeader>
         <DialogTitle className="text-2xl font-bold flex items-center justify-between">
           <div>
@@ -44,16 +41,9 @@ const MombasaPackages = () => {
           </div>
           <div className="flex items-center gap-1">
             <div className="flex">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star
-                  key={i}
-                  className={`w-4 h-4 ${
-                    i < Math.floor(pkg.rating) 
-                      ? 'fill-yellow-400 text-yellow-400' 
-                      : 'text-gray-300'
-                  }`}
-                />
-              ))}
+              {Array.from({
+                length: 5
+              }).map((_, i) => <Star key={i} className={`w-4 h-4 ${i < Math.floor(pkg.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />)}
             </div>
             <span className="text-sm font-bold text-accent">{pkg.rating}</span>
             <span className="text-sm text-muted-foreground">({pkg.reviews} reviews)</span>
@@ -66,50 +56,26 @@ const MombasaPackages = () => {
           {/* Enhanced Image Gallery */}
           <div className="mb-6">
             <div className="relative overflow-hidden rounded-lg bg-muted group">
-              <div className="flex transition-transform duration-500 ease-in-out" 
-                   style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}>
-                {pkg.images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`${pkg.accommodation} - View ${index + 1}`}
-                    className="w-full h-80 object-cover flex-shrink-0"
-                  />
-                ))}
+              <div className="flex transition-transform duration-500 ease-in-out" style={{
+                transform: `translateX(-${currentImageIndex * 100}%)`
+              }}>
+                {pkg.images.map((image, index) => <img key={index} src={image} alt={`${pkg.accommodation} - View ${index + 1}`} className="w-full h-80 object-cover flex-shrink-0" />)}
               </div>
               
               {/* Navigation Buttons */}
-              {pkg.images.length > 1 && (
-                <>
-                  <button
-                    onClick={previousImage}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
-                  >
+              {pkg.images.length > 1 && <>
+                  <button onClick={previousImage} className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <ChevronLeft className="w-5 h-5" />
                   </button>
-                  <button
-                    onClick={nextImage}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
-                  >
+                  <button onClick={nextImage} className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <ChevronRight className="w-5 h-5" />
                   </button>
-                </>
-              )}
+                </>}
               
               {/* Dots Navigation */}
-              {pkg.images.length > 1 && (
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-                  {pkg.images.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => goToImage(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
-                      }`}
-                    />
-                  ))}
-                </div>
-              )}
+              {pkg.images.length > 1 && <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                  {pkg.images.map((_, index) => <button key={index} onClick={() => goToImage(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'}`} />)}
+                </div>}
               
               {/* Image Counter */}
               <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
@@ -119,26 +85,10 @@ const MombasaPackages = () => {
             
             {/* Thumbnail Gallery */}
             <div className="grid grid-cols-4 md:grid-cols-6 gap-2 mt-4">
-              {pkg.images.map((image, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToImage(index)}
-                  className={`relative overflow-hidden rounded-lg transition-all duration-300 ${
-                    index === currentImageIndex 
-                      ? 'ring-2 ring-primary scale-105' 
-                      : 'hover:scale-105 hover:opacity-75'
-                  }`}
-                >
-                  <img
-                    src={image}
-                    alt={`${pkg.accommodation} thumbnail ${index + 1}`}
-                    className="w-full h-16 object-cover"
-                  />
-                  {index === currentImageIndex && (
-                    <div className="absolute inset-0 bg-primary/20" />
-                  )}
-                </button>
-              ))}
+              {pkg.images.map((image, index) => <button key={index} onClick={() => goToImage(index)} className={`relative overflow-hidden rounded-lg transition-all duration-300 ${index === currentImageIndex ? 'ring-2 ring-primary scale-105' : 'hover:scale-105 hover:opacity-75'}`}>
+                  <img src={image} alt={`${pkg.accommodation} thumbnail ${index + 1}`} className="w-full h-16 object-cover" />
+                  {index === currentImageIndex && <div className="absolute inset-0 bg-primary/20" />}
+                </button>)}
             </div>
           </div>
 
@@ -163,12 +113,10 @@ const MombasaPackages = () => {
                     Package Highlights
                   </h4>
                   <ul className="space-y-1">
-                    {pkg.highlights.map((highlight, idx) => (
-                      <li key={idx} className="flex items-center gap-2">
+                    {pkg.highlights.map((highlight, idx) => <li key={idx} className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
                         <span className="text-sm">{highlight}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </div>
 
@@ -179,12 +127,10 @@ const MombasaPackages = () => {
                       Inclusions
                     </h4>
                     <ul className="space-y-2">
-                      {pkg.inclusions.map((item, idx) => (
-                        <li key={idx} className="flex items-center gap-2">
+                      {pkg.inclusions.map((item, idx) => <li key={idx} className="flex items-center gap-2">
                           <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                           <span className="text-sm">{item}</span>
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
                   
@@ -194,12 +140,10 @@ const MombasaPackages = () => {
                       Exclusions
                     </h4>
                     <ul className="space-y-2">
-                      {pkg.exclusions.map((item, idx) => (
-                        <li key={idx} className="flex items-center gap-2">
+                      {pkg.exclusions.map((item, idx) => <li key={idx} className="flex items-center gap-2">
                           <div className="w-4 h-4 rounded-full border-2 border-red-500 flex-shrink-0" />
                           <span className="text-sm">{item}</span>
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
                 </div>
@@ -260,11 +204,9 @@ const MombasaPackages = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <span className="text-3xl font-bold text-primary">{pkg.price}</span>
-                      {pkg.originalPrice && (
-                        <span className="text-lg text-muted-foreground line-through ml-2">
+                      {pkg.originalPrice && <span className="text-lg text-muted-foreground line-through ml-2">
                           {pkg.originalPrice}
-                        </span>
-                      )}
+                        </span>}
                   </div>
                   <Badge className="bg-green-500 text-white">
                     {pkg.originalPrice && `Save $${Math.abs(parseInt(pkg.originalPrice.replace(/[^\d]/g, '')) - parseInt(pkg.price.replace(/[^\d]/g, '')))}`}
@@ -332,9 +274,9 @@ const MombasaPackages = () => {
                   <div className="border rounded-lg p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="flex">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        ))}
+                        {Array.from({
+                          length: 5
+                        }).map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                       </div>
                       <span className="font-bold">Sarah M.</span>
                       <span className="text-sm text-muted-foreground">• 2 weeks ago</span>
@@ -345,9 +287,9 @@ const MombasaPackages = () => {
                   <div className="border rounded-lg p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <div className="flex">
-                        {Array.from({ length: 4 }).map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        ))}
+                        {Array.from({
+                          length: 4
+                        }).map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                         <Star className="w-4 h-4 text-gray-300" />
                       </div>
                       <span className="font-bold">John K.</span>
@@ -373,12 +315,7 @@ const MombasaPackages = () => {
                       <span className="text-sm">{pkg.location}</span>
                     </div>
                     <div className="text-2xl font-bold text-primary mb-2">{pkg.price}</div>
-                    <BookingDialog
-                      packageName={pkg.accommodation}
-                      packagePrice={pkg.price}
-                      buttonText="BOOK"
-                      buttonVariant="default"
-                    />
+                    <BookingDialog packageName={pkg.accommodation} packagePrice={pkg.price} buttonText="BOOK" buttonVariant="default" />
                   </div>
                 </div>
               </div>
@@ -467,33 +404,23 @@ const MombasaPackages = () => {
           </div>
         </div>
       </div>
-    </DialogContent>
-    );
+    </DialogContent>;
   };
-
-  return (
-    <section id="mombasa-packages" className="py-16 px-4 bg-muted/30">
+  return <section id="mombasa-packages" className="py-16 px-4 bg-muted/30">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Mombasa Beach Packages
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Mombasa Stay and </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Explore Kenya's coastal gem with our comprehensive Mombasa packages featuring premium beachfront accommodations
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {mombasaPackages.map((pkg) => (
-            <Dialog key={pkg.id}>
+          {mombasaPackages.map(pkg => <Dialog key={pkg.id}>
               <DialogTrigger asChild>
                 <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-card cursor-pointer">
                   <div className="relative overflow-hidden">
-                    <img
-                      src={pkg.images[0]}
-                      alt={pkg.accommodation}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
+                    <img src={pkg.images[0]} alt={pkg.accommodation} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute top-3 left-3">
                       <Badge className="bg-accent text-accent-foreground text-xs">
@@ -512,16 +439,9 @@ const MombasaPackages = () => {
                     <div className="mb-3">
                       <div className="flex items-center gap-1 mb-2">
                         <div className="flex">
-                          {Array.from({ length: 5 }).map((_, i) => (
-                            <Star
-                              key={i}
-                              className={`w-3 h-3 ${
-                                i < Math.floor(pkg.rating) 
-                                  ? 'fill-yellow-400 text-yellow-400' 
-                                  : 'text-gray-300'
-                              }`}
-                            />
-                          ))}
+                          {Array.from({
+                        length: 5
+                      }).map((_, i) => <Star key={i} className={`w-3 h-3 ${i < Math.floor(pkg.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />)}
                         </div>
                         <span className="text-xs text-muted-foreground">({pkg.reviews})</span>
                       </div>
@@ -529,39 +449,28 @@ const MombasaPackages = () => {
                         <span className="text-lg font-bold text-primary">
                           {pkg.price}
                         </span>
-                        {pkg.originalPrice && (
-                          <span className="text-xs text-muted-foreground line-through">
+                        {pkg.originalPrice && <span className="text-xs text-muted-foreground line-through">
                             {pkg.originalPrice}
-                          </span>
-                        )}
+                          </span>}
                       </div>
                     </div>
                     
-                    <Button 
-                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-sm py-2"
-                    >
+                    <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-sm py-2">
                       BOOK
                     </Button>
                   </CardContent>
                 </Card>
               </DialogTrigger>
               <EnhancedBookingModal pkg={pkg} />
-            </Dialog>
-          ))}
+            </Dialog>)}
         </div>
 
         <div className="text-center mt-12">
-          <Button 
-            size="lg" 
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8"
-          >
+          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8">
             View More Mombasa Packages
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default MombasaPackages;

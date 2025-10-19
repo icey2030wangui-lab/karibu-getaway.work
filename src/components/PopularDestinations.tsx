@@ -3,15 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { destinations } from "@/data/destinations";
 import { useNavigate } from "react-router-dom";
-
 const PopularDestinations = () => {
   const navigate = useNavigate();
-
   const handleViewDetails = (destinationName: string) => {
     if (destinationName === "Diani Beach") {
       const dianiSection = document.getElementById('diani-packages');
       if (dianiSection) {
-        dianiSection.scrollIntoView({ behavior: 'smooth' });
+        dianiSection.scrollIntoView({
+          behavior: 'smooth'
+        });
       }
     } else if (destinationName === "Maasai Mara") {
       navigate("/masai-mara");
@@ -25,9 +25,7 @@ const PopularDestinations = () => {
       navigate("/malindi");
     }
   };
-
-  return (
-    <section id="destinations-section" className="py-16 px-4 bg-muted/20">
+  return <section id="destinations-section" className="py-16 px-4 bg-muted/20">
       <div className="container mx-auto">
         <div className="text-center mb-12 animate-slide-up">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -45,14 +43,9 @@ const PopularDestinations = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {destinations.map((destination, index) => (
-            <Card key={index} className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-[1.02] bg-card animate-fade-in">
+          {destinations.map((destination, index) => <Card key={index} className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-[1.02] bg-card animate-fade-in">
               <div className="relative overflow-hidden">
-                <img
-                  src={destination.image}
-                  alt={destination.name}
-                  className="w-full h-64 object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-700"
-                />
+                <img src={destination.image} alt={destination.name} className="w-full h-64 object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 <div className="absolute top-4 left-4 animate-scale-in">
@@ -86,33 +79,20 @@ const PopularDestinations = () => {
                 </p>
                 
                 <div className="flex items-center justify-end">
-                  <Button 
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-110 hover:shadow-lg transition-all duration-300 group/btn"
-                    onClick={() => handleViewDetails(destination.name)}
-                  >
+                  <Button className="bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-110 hover:shadow-lg transition-all duration-300 group/btn" onClick={() => handleViewDetails(destination.name)}>
                     <span className="group-hover/btn:mr-1 transition-all">View Details</span>
                     <span className="opacity-0 group-hover/btn:opacity-100 transition-opacity">→</span>
                   </Button>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         <div className="text-center mt-12 animate-slide-up">
-          <Button 
-            size="lg" 
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 hover:scale-110 hover:shadow-xl transition-all duration-300 group/btn"
-          >
-            <span className="group-hover/btn:mr-2 transition-all">View All Destinations</span>
-            <span className="opacity-0 group-hover/btn:opacity-100 transition-opacity">🌟</span>
-          </Button>
+          
           <p className="text-sm text-muted-foreground mt-4">✨ 100+ destinations across Kenya • Expert local guides • Unforgettable experiences</p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PopularDestinations;
