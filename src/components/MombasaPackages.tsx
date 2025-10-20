@@ -466,9 +466,7 @@ const MombasaPackages = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8">
-            View More Mombasa Packages
-          </Button>
+          
         </div>
       </div>
     </section>;
