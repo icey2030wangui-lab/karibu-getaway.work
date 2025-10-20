@@ -14,18 +14,6 @@ import falconryKenya from "@/assets/falconry-kenya.jpg";
 import malindiSurfing from "@/assets/malindi-surfing.jpg";
 import watamuSnorkeling from "@/assets/watamu-snorkeling.jpg";
 import beachHorseRiding from "@/assets/beach-horse-riding.jpg";
-import hemingwaysWatamu from "@/assets/hemingways-watamu.jpg";
-import sandiesTropical from "@/assets/sandies-tropical.jpg";
-import sandiesMalindi from "@/assets/sandies-malindi.jpg";
-import diamondsDreams from "@/assets/diamonds-dreams.jpg";
-import leopardPoint from "@/assets/leopard-point.jpg";
-import turtleBay from "@/assets/turtle-bay.jpg";
-import medinaPalms from "@/assets/medina-palms.jpg";
-import oceanBeachResort from "@/assets/ocean-beach-resort.jpg";
-import cardamomHouse from "@/assets/cardamom-house.jpg";
-import silverPalmResort from "@/assets/silver-palm-resort.jpg";
-import { Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Malindi = () => {
   const packages = [
@@ -124,69 +112,6 @@ const Malindi = () => {
       description: "Ride along pristine beaches at sunrise or sunset, experiencing the coast from a unique perspective.",
       duration: "1.5 hours",
       includes: ["Horse rental", "Guide", "Safety equipment", "Beach access"]
-    }
-  ];
-
-  const hotels = [
-    {
-      name: "Hemingways Watamu",
-      image: hemingwaysWatamu,
-      rating: 5,
-      description: "Luxury beachfront resort with world-class amenities and stunning ocean views"
-    },
-    {
-      name: "Sandies Tropical Village",
-      image: sandiesTropical,
-      rating: 3,
-      description: "Charming tropical retreat with lush gardens and authentic coastal hospitality"
-    },
-    {
-      name: "Sandies Malindi Dream Garden",
-      image: sandiesMalindi,
-      rating: null,
-      description: "Serene garden oasis with pristine pools and modern coastal elegance"
-    },
-    {
-      name: "Diamonds Dreams of Africa",
-      image: diamondsDreams,
-      rating: 4,
-      description: "All-inclusive resort featuring unique architecture and extensive pool complex"
-    },
-    {
-      name: "Leopard Point Boutique Resort",
-      image: leopardPoint,
-      rating: 4,
-      description: "Exclusive boutique property with infinity pools and personalized service"
-    },
-    {
-      name: "Turtle Bay Watamu",
-      image: turtleBay,
-      rating: 4,
-      description: "Beachfront paradise with traditional thatched cottages and romantic ambiance"
-    },
-    {
-      name: "Medina Palms",
-      image: medinaPalms,
-      rating: 5,
-      description: "Mediterranean-inspired luxury villas with private pools and gourmet dining"
-    },
-    {
-      name: "Ocean Beach Resort & Spa",
-      image: oceanBeachResort,
-      rating: null,
-      description: "Tranquil spa retreat blending natural beauty with contemporary comfort"
-    },
-    {
-      name: "Cardamom House",
-      image: cardamomHouse,
-      rating: null,
-      description: "Boutique coastal hideaway with Moroccan-inspired design and intimate atmosphere"
-    },
-    {
-      name: "Silver Palm Spa and Resort",
-      image: silverPalmResort,
-      rating: 4,
-      description: "Romantic beachfront resort with spectacular sunsets and rejuvenating spa"
     }
   ];
 
@@ -294,63 +219,6 @@ const Malindi = () => {
                       packagePrice={pkg.price.toString()}
                       buttonText="Book Now"
                     />
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Hotels Section */}
-        <section className="py-16 px-4 bg-background">
-          <div className="container mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-primary font-semibold mb-2 uppercase tracking-wide">Hand-Picked</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Hotel Options in Watamu & Malindi
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {hotels.map((hotel, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                  <div className="relative h-48">
-                    <img
-                      src={hotel.image}
-                      alt={hotel.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  
-                  <CardContent className="p-4">
-                    <h3 className="text-lg font-bold mb-2 text-foreground text-center uppercase">
-                      {hotel.name}
-                    </h3>
-                    
-                    {hotel.rating && (
-                      <div className="flex justify-center gap-1 mb-3">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-4 h-4 ${
-                              i < hotel.rating
-                                ? "fill-yellow-400 text-yellow-400"
-                                : "fill-gray-300 text-gray-300"
-                            }`}
-                          />
-                        ))}
-                      </div>
-                    )}
-                    
-                    <p className="text-sm text-muted-foreground mb-4 text-center line-clamp-3">
-                      {hotel.description}
-                    </p>
-                    
-                    <div className="flex justify-center">
-                      <Button className="rounded-full px-6">
-                        Contact Us
-                      </Button>
-                    </div>
                   </CardContent>
                 </Card>
               ))}
