@@ -1,5 +1,16 @@
 import dianiBeach from "@/assets/diani-beach.jpg";
 import mombasa from "@/assets/mombasa.jpg";
+import dianiHorseRiding from "@/assets/diani-horse-riding.jpg";
+import dianiDolphins from "@/assets/diani-dolphins.jpg";
+import chaleIsland from "@/assets/chale-island.jpg";
+import wasiniIsland from "@/assets/wasini-island.jpg";
+import dianiKitesurfing from "@/assets/diani-kitesurfing.jpg";
+import dianiJetski from "@/assets/diani-jetski.jpg";
+import glassBottomBoat from "@/assets/glass-bottom-boat.jpg";
+import kongoRiverSunset from "@/assets/kongo-river-sunset.jpg";
+import dhowRide from "@/assets/dhow-ride.jpg";
+import shimbaHills from "@/assets/shimba-hills.jpg";
+import kayaKinondo from "@/assets/kaya-kinondo.jpg";
 
 export const dianiPackages = [
   {
@@ -341,6 +352,193 @@ export const dianiPackages = [
     dayCount: "Flexible",
     freeSightseeing: "Cultural Tours & Beach",
     diningOptions: ["The Salty Squid Beach Bar - budget beachside eats", "Nomad restaurant - fusion cuisine"]
+  },
+  {
+    id: 10,
+    title: "Horse Riding on Diani Beach",
+    location: "Diani Beach",
+    price: "$45",
+    originalPrice: null,
+    duration: "1-2 Hours",
+    badge: "Beach Activity",
+    rating: 4.7,
+    reviews: 89,
+    images: [dianiHorseRiding],
+    inclusions: ["Professional guide", "Horse equipment", "Safety briefing", "Beach ride experience"],
+    exclusions: ["Transport to beach", "Personal insurance", "Photography"],
+    description: "Experience the magic of horseback riding along the pristine white sands of Diani Beach. Enjoy stunning ocean views as you ride along the shoreline with gentle waves at your side.",
+    dayCount: "Half Day",
+    freeSightseeing: "Beach Views"
+  },
+  {
+    id: 11,
+    title: "Swimming with Dolphins",
+    location: "Diani Beach",
+    price: "$120",
+    originalPrice: null,
+    duration: "Half Day",
+    badge: "Marine Experience",
+    rating: 4.9,
+    reviews: 156,
+    images: [dianiDolphins],
+    inclusions: ["Boat trip", "Snorkeling gear", "Professional guide", "Life jackets", "Refreshments"],
+    exclusions: ["Hotel transfers", "Underwater camera", "Lunch"],
+    description: "An unforgettable encounter with wild dolphins in their natural habitat. Swim and snorkel alongside these magnificent creatures in the crystal-clear waters off Diani Beach.",
+    dayCount: "Half Day",
+    freeSightseeing: "Marine Life Viewing"
+  },
+  {
+    id: 12,
+    title: "Boat Ride to Chale Island",
+    location: "Diani Beach",
+    price: "$85",
+    originalPrice: null,
+    duration: "Full Day",
+    badge: "Island Tour",
+    rating: 4.6,
+    reviews: 112,
+    images: [chaleIsland],
+    inclusions: ["Dhow boat transport", "Island tour", "Snorkeling equipment", "Seafood lunch", "Guide services"],
+    exclusions: ["Hotel pickup", "Drinks", "Personal expenses"],
+    description: "Sail on a traditional dhow to the beautiful Chale Island. Explore pristine beaches, snorkel in coral gardens, and enjoy a delicious seafood lunch on this tropical paradise.",
+    dayCount: "Full Day",
+    freeSightseeing: "Island Exploration"
+  },
+  {
+    id: 13,
+    title: "Boat Ride to Wasini Island",
+    location: "Diani Beach",
+    price: "$95",
+    originalPrice: null,
+    duration: "Full Day",
+    badge: "Adventure",
+    rating: 4.8,
+    reviews: 134,
+    images: [wasiniIsland],
+    inclusions: ["Boat transport", "Kisite Marine Park entry", "Snorkeling gear", "Swahili lunch", "Dolphin watching", "Coral gardens tour"],
+    exclusions: ["Hotel transfers", "Drinks", "Tips"],
+    description: "Discover Wasini Island and the stunning Kisite Marine National Park. Snorkel among vibrant coral reefs, spot dolphins, and enjoy authentic Swahili cuisine in this pristine marine sanctuary.",
+    dayCount: "Full Day",
+    freeSightseeing: "Marine Park & Island"
+  },
+  {
+    id: 14,
+    title: "Kite Surfing Adventure",
+    location: "Diani Beach",
+    price: "$150",
+    originalPrice: null,
+    duration: "3 Hours",
+    badge: "Water Sports",
+    rating: 4.7,
+    reviews: 98,
+    images: [dianiKitesurfing],
+    inclusions: ["Professional instructor", "All equipment", "Safety gear", "Training session", "Beach access"],
+    exclusions: ["Transport", "Insurance", "Photos/videos"],
+    description: "Experience the thrill of kite surfing on Diani Beach's perfect winds and waves. Whether beginner or advanced, our certified instructors ensure an exciting and safe experience.",
+    dayCount: "Half Day",
+    freeSightseeing: "Beach Sports"
+  },
+  {
+    id: 15,
+    title: "Jet Ski Adventure",
+    location: "Diani Beach",
+    price: "$80",
+    originalPrice: null,
+    duration: "30 Minutes",
+    badge: "Adrenaline Rush",
+    rating: 4.5,
+    reviews: 167,
+    images: [dianiJetski],
+    inclusions: ["Jet ski rental", "Safety briefing", "Life jacket", "Fuel", "Instructor guidance"],
+    exclusions: ["Insurance", "Photos", "Extended time"],
+    description: "Feel the rush of adrenaline as you race across the turquoise waters of Diani Beach on a powerful jet ski. Perfect for thrill-seekers looking for an exciting water adventure.",
+    dayCount: "1 Hour",
+    freeSightseeing: "Coastal Waters"
+  },
+  {
+    id: 16,
+    title: "Glass Bottom Boat Tour",
+    location: "Diani Beach",
+    price: "$55",
+    originalPrice: null,
+    duration: "2 Hours",
+    badge: "Family Friendly",
+    rating: 4.6,
+    reviews: 145,
+    images: [glassBottomBoat],
+    inclusions: ["Glass bottom boat ride", "Marine guide", "Coral reef viewing", "Fish feeding", "Refreshments"],
+    exclusions: ["Hotel pickup", "Lunch", "Snorkeling gear"],
+    description: "Explore the underwater world without getting wet! View vibrant coral reefs and colorful tropical fish through the glass bottom of our boat. Perfect for all ages.",
+    dayCount: "Half Day",
+    freeSightseeing: "Coral Reef Viewing"
+  },
+  {
+    id: 17,
+    title: "Sunset Cruise on Kongo River",
+    location: "Diani Beach",
+    price: "$70",
+    originalPrice: null,
+    duration: "3 Hours",
+    badge: "Romantic",
+    rating: 4.9,
+    reviews: 178,
+    images: [kongoRiverSunset],
+    inclusions: ["Dhow cruise", "Sunset viewing", "Drinks & snacks", "Live music", "Mangrove tour"],
+    exclusions: ["Hotel transfers", "Dinner", "Tips"],
+    description: "Sail into the sunset on the serene Kongo River aboard a traditional dhow. Watch the sky transform into brilliant colors while gliding through mangrove forests.",
+    dayCount: "Evening",
+    freeSightseeing: "River & Mangroves"
+  },
+  {
+    id: 18,
+    title: "Traditional Dhow Sailing",
+    location: "Diani Beach",
+    price: "$65",
+    originalPrice: null,
+    duration: "3 Hours",
+    badge: "Cultural",
+    rating: 4.7,
+    reviews: 123,
+    images: [dhowRide],
+    inclusions: ["Traditional dhow boat", "Experienced crew", "Sailing lesson", "Refreshments", "Coastal tour"],
+    exclusions: ["Meals", "Hotel pickup", "Personal expenses"],
+    description: "Experience traditional sailing on an authentic wooden dhow boat. Learn about ancient sailing techniques while enjoying the beauty of the Kenyan coast.",
+    dayCount: "Half Day",
+    freeSightseeing: "Coastal Sailing"
+  },
+  {
+    id: 19,
+    title: "Shimba Hills National Reserve",
+    location: "Near Diani Beach",
+    price: "$110",
+    originalPrice: null,
+    duration: "Full Day",
+    badge: "Nature & Wildlife",
+    rating: 4.8,
+    reviews: 201,
+    images: [shimbaHills],
+    inclusions: ["Park entry fees", "Game drive", "Sheldrick Falls visit", "Lunch", "Professional guide", "Hotel transfers"],
+    exclusions: ["Drinks", "Tips", "Personal expenses"],
+    description: "Explore the lush Shimba Hills National Reserve, home to rare sable antelopes, elephants, and over 111 butterfly species. Visit the stunning Sheldrick Falls and enjoy panoramic views.",
+    dayCount: "Full Day",
+    freeSightseeing: "Wildlife & Waterfalls"
+  },
+  {
+    id: 20,
+    title: "Kaya Kinondo Sacred Forest",
+    location: "Diani Beach",
+    price: "$35",
+    originalPrice: null,
+    duration: "2-3 Hours",
+    badge: "Cultural Heritage",
+    rating: 4.5,
+    reviews: 87,
+    images: [kayaKinondo],
+    inclusions: ["Guided forest walk", "Cultural storytelling", "Traditional medicine tour", "Entry fees", "Local guide"],
+    exclusions: ["Transport", "Meals", "Donations (optional)"],
+    description: "Step into the mystical Kaya Kinondo Sacred Forest, a UNESCO World Heritage Site. Learn about the spiritual significance and traditional customs of the indigenous Digo people.",
+    dayCount: "Half Day",
+    freeSightseeing: "Sacred Forest & Culture"
   }
 ];
 
