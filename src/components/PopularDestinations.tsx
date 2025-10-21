@@ -7,12 +7,7 @@ const PopularDestinations = () => {
   const navigate = useNavigate();
   const handleViewDetails = (destinationName: string) => {
     if (destinationName === "Diani Beach") {
-      const dianiSection = document.getElementById('diani-packages');
-      if (dianiSection) {
-        dianiSection.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
+      navigate("/diani-beach");
     } else if (destinationName === "Maasai Mara") {
       navigate("/masai-mara");
     } else if (destinationName === "Amboseli National Park") {
