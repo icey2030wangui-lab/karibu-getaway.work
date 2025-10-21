@@ -4,7 +4,10 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BookingDialog } from "@/components/BookingDialog";
-import { MapPin, Users, Utensils, Bed } from "lucide-react";
+import { MapPin, Users, Utensils, Bed, Calendar, CheckCircle2 } from "lucide-react";
+import safariMasaiMara from "@/assets/safari-masai-mara.jpg";
+import safariLuxuryCamp from "@/assets/safari-luxury-camp.jpg";
+import safariBudgetTour from "@/assets/safari-budget-tour.jpg";
 
 const accommodations = [
   {
@@ -50,6 +53,135 @@ const accommodations = [
     rooms: 15,
     location: "Talek River, Masai Mara",
     features: ["Full Board", "Eco-friendly", "River Views", "Cultural Center"]
+  }
+];
+
+const safariPackages = [
+  {
+    title: "6-Day Maasai Mara-Nakuru-Amboseli Budget Safari",
+    price: "$790 to $990",
+    duration: "6 Days",
+    type: "Shared Tour (max 7 people)",
+    category: "Budget, Tented Camp & Hotel",
+    image: safariBudgetTour,
+    description: "Experience Kenya's most iconic parks on this budget-friendly safari. Visit Masai Mara for the Big Five, Lake Nakuru for flamingos and rhinos, and Amboseli for elephants with Mt. Kilimanjaro views.",
+    inclusions: [
+      "Park fees (For non-residents)",
+      "All activities (Unless labeled as optional)",
+      "All accommodation (Unless listed as upgrade)",
+      "A professional driver/guide",
+      "All transportation (Unless labeled as optional)",
+      "All Taxes/VAT",
+      "Meals",
+      "Drinks"
+    ],
+    exclusions: [
+      "International flights",
+      "Roundtrip airport transfer",
+      "Tips (Tipping guideline US$10.00 pp per day)",
+      "Personal items",
+      "Government imposed increase of taxes and/or park fees"
+    ]
+  },
+  {
+    title: "4-Day Masai Mara & Lake Nakuru High End Safari",
+    price: "$1,680 to $2,576",
+    duration: "4 Days",
+    type: "Private Tour",
+    category: "Mid-range, Lodge",
+    image: safariMasaiMara,
+    description: "Luxurious safari experience combining the legendary Masai Mara with the scenic Lake Nakuru. Stay in comfortable lodges and enjoy extensive game drives with expert guides.",
+    inclusions: [
+      "Park fees",
+      "All activities",
+      "All accommodation",
+      "Professional driver/guide",
+      "All transportation",
+      "All Taxes/VAT",
+      "Roundtrip airport transfer",
+      "Meals",
+      "Drinks"
+    ],
+    exclusions: [
+      "International flights",
+      "Tips",
+      "Personal items",
+      "Government imposed increase of taxes"
+    ]
+  },
+  {
+    title: "3-Day Masai Mara Wildlife Safari & Sundowners",
+    price: "$1,456 to $1,926",
+    duration: "3 Days",
+    type: "Private Tour",
+    category: "Mid-range, Tented Camp",
+    image: safariMasaiMara,
+    description: "Short but immersive Masai Mara experience with sunset sundowner experiences. Perfect for those with limited time wanting to witness the Great Migration and Big Five.",
+    inclusions: [
+      "Park fees",
+      "All activities",
+      "Tented camp accommodation",
+      "Professional driver/guide",
+      "All transportation",
+      "Meals & Drinks",
+      "Sundowner experiences"
+    ],
+    exclusions: [
+      "International flights",
+      "Airport transfers",
+      "Tips",
+      "Personal items"
+    ]
+  },
+  {
+    title: "8-Day Exceptional Luxury Safari",
+    price: "$4,050 to $4,319",
+    duration: "8 Days",
+    type: "Private Tour",
+    category: "Luxury, Lodge & Tented Camp",
+    image: safariLuxuryCamp,
+    description: "Ultimate luxury safari experience covering Kenya's premier wildlife destinations. Stay in exclusive lodges and camps with world-class service and amenities.",
+    inclusions: [
+      "Park fees",
+      "All activities",
+      "Luxury accommodation",
+      "Professional driver/guide",
+      "All transportation",
+      "All Taxes/VAT",
+      "Meals & Premium drinks",
+      "Spa services",
+      "Cultural visits"
+    ],
+    exclusions: [
+      "International flights",
+      "Tips",
+      "Personal items",
+      "Premium beverages"
+    ]
+  },
+  {
+    title: "4-Day Masai Mara & Lake Nakuru Budget Joining",
+    price: "$759 to $1,051",
+    duration: "4 Days",
+    type: "Shared Tour (max 8 people)",
+    category: "Budget, Tented Camp & Hotel",
+    image: safariBudgetTour,
+    description: "Affordable joining safari to Masai Mara and Lake Nakuru. Share the experience with other travelers while keeping costs low. Great for solo travelers and budget-conscious adventurers.",
+    inclusions: [
+      "Park fees",
+      "All activities",
+      "Budget accommodation",
+      "Professional driver/guide",
+      "All transportation",
+      "Meals"
+    ],
+    exclusions: [
+      "International flights",
+      "Airport transfers",
+      "Tips",
+      "Drinks",
+      "Personal items"
+    ]
   }
 ];
 
@@ -223,6 +355,76 @@ const MasaiMara = () => {
                       />
                     </CardContent>
                   </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Safari Packages Section */}
+        <section className="py-16 px-4 bg-background">
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Masai Mara Safari Packages
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Choose from our carefully curated safari packages, from budget-friendly group tours to exclusive luxury experiences
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {safariPackages.map((pkg, index) => (
+                <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                  <div className="relative overflow-hidden h-48">
+                    <img 
+                      src={pkg.image} 
+                      alt={pkg.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground">
+                      {pkg.category.split(',')[0]}
+                    </Badge>
+                    <div className="absolute bottom-4 left-4 text-white">
+                      <h3 className="text-lg font-bold mb-1">{pkg.title}</h3>
+                      <p className="text-sm">{pkg.duration}</p>
+                    </div>
+                  </div>
+
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <Badge variant="outline" className="mb-2 text-xs">{pkg.type}</Badge>
+                      <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                        {pkg.description}
+                      </p>
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-2xl font-bold text-primary">{pkg.price}</span>
+                        <span className="text-xs text-muted-foreground">pp (USD)</span>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3 mb-4">
+                      <div>
+                        <h4 className="text-xs font-semibold text-green-600 mb-2">Includes:</h4>
+                        <ul className="space-y-1">
+                          {pkg.inclusions.slice(0, 3).map((item, idx) => (
+                            <li key={idx} className="text-xs text-muted-foreground flex items-start gap-1">
+                              <CheckCircle2 className="w-3 h-3 text-green-500 mt-0.5 flex-shrink-0" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <BookingDialog
+                      packageName={pkg.title}
+                      packagePrice={pkg.price}
+                      buttonText="Get Quote"
+                      buttonVariant="default"
+                    />
+                  </CardContent>
                 </Card>
               ))}
             </div>

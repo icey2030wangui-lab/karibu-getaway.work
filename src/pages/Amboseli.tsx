@@ -4,7 +4,10 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BookingDialog } from "@/components/BookingDialog";
-import { MapPin, Users, Utensils, Bed } from "lucide-react";
+import { MapPin, Users, Utensils, Bed, CheckCircle2 } from "lucide-react";
+import safariAmboseli from "@/assets/safari-amboseli.jpg";
+import safariMasaiMara from "@/assets/safari-masai-mara.jpg";
+import safariBudgetTour from "@/assets/safari-budget-tour.jpg";
 
 const accommodations = [
   {
@@ -46,6 +49,107 @@ const accommodations = [
     rooms: 54,
     location: "Amboseli National Park",
     features: ["Full Board", "Swimming Pool", "Game Drives", "Conference Facilities"]
+  }
+];
+
+const safariPackages = [
+  {
+    title: "6-Day Amboseli, Lake Naivasha & Mara - Mid-Range",
+    price: "$2,220 to $2,810",
+    duration: "6 Days",
+    type: "Private Tour",
+    category: "Mid-range, Lodge & Hotel",
+    image: safariAmboseli,
+    description: "Comprehensive safari covering Amboseli's elephants with Kilimanjaro backdrop, Lake Naivasha's water birds, and Masai Mara's Big Five. Perfect balance of comfort and adventure.",
+    inclusions: [
+      "Park fees (For non-residents)",
+      "All activities",
+      "All accommodation",
+      "Professional driver/guide",
+      "All transportation",
+      "All Taxes/VAT",
+      "Meals",
+      "Drinks"
+    ],
+    exclusions: [
+      "International flights",
+      "Roundtrip airport transfer",
+      "Tips",
+      "Personal items",
+      "Government imposed taxes increase"
+    ]
+  },
+  {
+    title: "6-Day Big Five Tour: Mara, Nakuru, Amboseli",
+    price: "$1,942 to $1,962",
+    duration: "6 Days",
+    type: "Shared Tour (max 7 people)",
+    category: "Mid-range, Lodge",
+    image: safariMasaiMara,
+    description: "Ultimate Big Five safari experience combining three of Kenya's premier national parks. Witness the Great Migration, spot rhinos at Lake Nakuru, and photograph elephants against Mt. Kilimanjaro.",
+    inclusions: [
+      "Park fees",
+      "All activities",
+      "Accommodation in lodges",
+      "Professional driver/guide",
+      "All transportation",
+      "Meals & Drinks"
+    ],
+    exclusions: [
+      "International flights",
+      "Airport transfers",
+      "Tips",
+      "Personal items"
+    ]
+  },
+  {
+    title: "8-Day Mara-Nakuru-Naivasha-Amboseli Budget Safari",
+    price: "$1,088 to $1,350",
+    duration: "8 Days",
+    type: "Shared Tour (max 8 people)",
+    category: "Budget, Tented Camp & Hotel",
+    image: safariBudgetTour,
+    description: "Extended budget safari covering Kenya's top wildlife destinations. Great value for money with comprehensive game viewing opportunities across multiple ecosystems.",
+    inclusions: [
+      "Park fees",
+      "All activities",
+      "Budget accommodation",
+      "Professional driver/guide",
+      "All transportation",
+      "Meals"
+    ],
+    exclusions: [
+      "International flights",
+      "Roundtrip airport transfer",
+      "Tips",
+      "Drinks",
+      "Personal items"
+    ]
+  },
+  {
+    title: "7-Day Comfort Kenya Safari with Sopa Lodges",
+    price: "$2,318 to $3,279",
+    duration: "7 Days",
+    type: "Private Tour",
+    category: "Mid-range, Lodge",
+    image: safariAmboseli,
+    description: "Comfortable safari staying at renowned Sopa Lodges across Kenya's best parks. Includes Amboseli, Lake Nakuru, and Masai Mara with excellent amenities and service.",
+    inclusions: [
+      "Park fees",
+      "All activities",
+      "Sopa Lodge accommodation",
+      "Professional driver/guide",
+      "All transportation",
+      "All Taxes/VAT",
+      "Meals & Selected drinks",
+      "Swimming pool access"
+    ],
+    exclusions: [
+      "International flights",
+      "Tips",
+      "Personal items",
+      "Premium beverages"
+    ]
   }
 ];
 
@@ -155,6 +259,76 @@ const Amboseli = () => {
                       />
                     </CardContent>
                   </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Safari Packages Section */}
+        <section className="py-16 px-4 bg-background">
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Amboseli Safari Packages
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Explore safari packages featuring Amboseli National Park, combined with other premier Kenyan destinations
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {safariPackages.map((pkg, index) => (
+                <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                  <div className="relative overflow-hidden h-48">
+                    <img 
+                      src={pkg.image} 
+                      alt={pkg.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground">
+                      {pkg.category.split(',')[0]}
+                    </Badge>
+                    <div className="absolute bottom-4 left-4 text-white">
+                      <h3 className="text-lg font-bold mb-1">{pkg.title}</h3>
+                      <p className="text-sm">{pkg.duration}</p>
+                    </div>
+                  </div>
+
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <Badge variant="outline" className="mb-2 text-xs">{pkg.type}</Badge>
+                      <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                        {pkg.description}
+                      </p>
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-2xl font-bold text-primary">{pkg.price}</span>
+                        <span className="text-xs text-muted-foreground">pp (USD)</span>
+                      </div>
+                    </div>
+
+                    <div className="space-y-3 mb-4">
+                      <div>
+                        <h4 className="text-xs font-semibold text-green-600 mb-2">Includes:</h4>
+                        <ul className="space-y-1">
+                          {pkg.inclusions.slice(0, 3).map((item, idx) => (
+                            <li key={idx} className="text-xs text-muted-foreground flex items-start gap-1">
+                              <CheckCircle2 className="w-3 h-3 text-green-500 mt-0.5 flex-shrink-0" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <BookingDialog
+                      packageName={pkg.title}
+                      packagePrice={pkg.price}
+                      buttonText="Get Quote"
+                      buttonVariant="default"
+                    />
+                  </CardContent>
                 </Card>
               ))}
             </div>
