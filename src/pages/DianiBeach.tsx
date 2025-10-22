@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DianiPackages from "@/components/DianiPackages";
+import DianiStayDine from "@/components/DianiStayDine";
 import ChatIcon from "@/components/ChatIcon";
 import { Badge } from "@/components/ui/badge";
 import dianiBeach from "@/assets/diani-beach.jpg";
@@ -44,7 +45,10 @@ const DianiBeach = () => {
           </div>
         </section>
 
-        {/* Packages Section */}
+        {/* Stay & Dine Section */}
+        <DianiStayDine />
+
+        {/* Activities & Packages Section */}
         <DianiPackages />
       </main>
       <Footer />

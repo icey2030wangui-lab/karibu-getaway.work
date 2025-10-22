@@ -2,8 +2,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PopularDestinations from "@/components/PopularDestinations";
 import SpecialOffers from "@/components/SpecialOffers";
-import DianiPackages from "@/components/DianiPackages";
-import DianiStayDine from "@/components/DianiStayDine";
 import MombasaPackages from "@/components/MombasaPackages";
 import MalindiPackages from "@/components/MalindiPackages";
 import Footer from "@/components/Footer";
@@ -17,10 +15,6 @@ const Index = () => {
         <Hero />
         <PopularDestinations />
         <SpecialOffers />
-        <div id="packages-section">
-          <DianiPackages />
-        </div>
-        <DianiStayDine />
         <MombasaPackages />
         <MalindiPackages />
       </main>
