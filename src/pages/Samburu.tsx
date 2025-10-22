@@ -4,7 +4,10 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BookingDialog } from "@/components/BookingDialog";
-import { MapPin, Users, Utensils, Bed } from "lucide-react";
+import { MapPin, Users, Utensils, Bed, Check, X, Plane } from "lucide-react";
+import safariSamburuImg from "@/assets/safari-samburu.jpg";
+import samburuFlyingImg from "@/assets/samburu-flying-safari.jpg";
+import samburuLuxuryImg from "@/assets/samburu-luxury-camp.jpg";
 
 const accommodations = [
   {
@@ -56,6 +59,151 @@ const accommodations = [
     rooms: 48,
     location: "Samburu National Reserve",
     features: ["Full Board", "Game Drives", "Guided Tours", "Cultural Shows"]
+  }
+];
+
+const safariPackages = [
+  {
+    name: "3 Days Samburu Safari ~ Mid-Range",
+    image: safariSamburuImg,
+    duration: "3 Days / 2 Nights",
+    priceFrom: "$405",
+    priceTo: "$755",
+    description: "Experience the unique wildlife of Samburu with comfortable mid-range accommodation. Enjoy game drives to spot the Samburu Special Five and cultural visits.",
+    inclusions: [
+      "2 nights accommodation",
+      "All meals during safari",
+      "Game drives in 4x4 safari vehicle",
+      "Park entrance fees",
+      "Professional safari guide",
+      "Bottled water during drives"
+    ],
+    exclusions: [
+      "International flights",
+      "Travel insurance",
+      "Personal expenses",
+      "Tips and gratuities",
+      "Optional activities"
+    ]
+  },
+  {
+    name: "3 Days Samburu Safari ~ Luxury",
+    image: samburuLuxuryImg,
+    duration: "3 Days / 2 Nights",
+    priceFrom: "$455",
+    priceTo: "$935",
+    description: "Indulge in luxury while exploring Samburu's wilderness. Stay in premium lodges with exceptional service and enjoy exclusive wildlife encounters.",
+    inclusions: [
+      "2 nights luxury accommodation",
+      "Premium meals & sundowners",
+      "Private game drives",
+      "Park entrance fees",
+      "Expert safari guide",
+      "All beverages included",
+      "Cultural village visit"
+    ],
+    exclusions: [
+      "International flights",
+      "Travel insurance",
+      "Personal expenses",
+      "Tips and gratuities"
+    ]
+  },
+  {
+    name: "4 Days Samburu Safari ~ Luxury",
+    image: samburuLuxuryImg,
+    duration: "4 Days / 3 Nights",
+    priceFrom: "$1055",
+    priceTo: "$1815",
+    description: "Extended luxury safari in Samburu with more time to explore and relax. Perfect for wildlife enthusiasts seeking an immersive experience.",
+    inclusions: [
+      "3 nights luxury accommodation",
+      "All meals & premium drinks",
+      "Multiple game drives",
+      "Park entrance fees",
+      "Expert safari guide",
+      "Bush breakfast experience",
+      "Samburu cultural immersion",
+      "Night game drive"
+    ],
+    exclusions: [
+      "International flights",
+      "Travel insurance",
+      "Personal expenses",
+      "Tips and gratuities"
+    ]
+  },
+  {
+    name: "2 Days Samburu Fly-In Safari",
+    image: samburuFlyingImg,
+    duration: "2 Days / 1 Night",
+    priceFrom: "$620",
+    priceTo: "$775",
+    description: "Skip the long drive and fly directly to Samburu! Arrive at Wilson Airport in Nairobi and reach the reserve within 1.5 hours for an exclusive safari experience.",
+    inclusions: [
+      "Round-trip flights from Nairobi",
+      "1 night accommodation",
+      "All meals at lodge",
+      "Game drives in 4x4 vehicle",
+      "Park entrance fees",
+      "Airport transfers",
+      "Professional guide"
+    ],
+    exclusions: [
+      "International flights to Nairobi",
+      "Travel insurance",
+      "Personal expenses",
+      "Tips and gratuities"
+    ]
+  },
+  {
+    name: "3 Days Samburu Fly-In Safari",
+    image: samburuFlyingImg,
+    duration: "3 Days / 2 Nights",
+    priceFrom: "$945",
+    priceTo: "$1235",
+    description: "Convenient flying safari with more time to explore Samburu's unique ecosystem. Perfect for those seeking comfort and efficiency.",
+    inclusions: [
+      "Round-trip flights from Nairobi",
+      "2 nights accommodation",
+      "Full board meals",
+      "Multiple game drives",
+      "Park entrance fees",
+      "Airport transfers",
+      "Expert safari guide",
+      "Cultural village visit"
+    ],
+    exclusions: [
+      "International flights to Nairobi",
+      "Travel insurance",
+      "Personal expenses",
+      "Tips and gratuities"
+    ]
+  },
+  {
+    name: "4 Days Fly-In Safari",
+    image: samburuFlyingImg,
+    duration: "4 Days / 3 Nights",
+    priceFrom: "$970",
+    priceTo: "$1420",
+    description: "Extended flying safari offering the ultimate convenience and wildlife experience. Maximize your time in the reserve with comfortable aerial transfers.",
+    inclusions: [
+      "Round-trip flights from Nairobi",
+      "3 nights accommodation",
+      "All meals included",
+      "Extensive game drives",
+      "Park entrance fees",
+      "Airport transfers",
+      "Professional guide",
+      "Bush dinner experience",
+      "Night game drive"
+    ],
+    exclusions: [
+      "International flights to Nairobi",
+      "Travel insurance",
+      "Personal expenses",
+      "Tips and gratuities"
+    ]
   }
 ];
 
@@ -171,8 +319,99 @@ const Samburu = () => {
           </div>
         </section>
 
-        {/* What to Expect Section */}
+        {/* Safari Packages Section */}
         <section className="py-16 px-4 bg-background">
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Samburu Safari Packages
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Discover the unique wildlife of Samburu with our carefully curated safari packages
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {safariPackages.map((pkg, index) => (
+                <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                  <div className="relative h-64">
+                    <img
+                      src={pkg.image}
+                      alt={pkg.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-4 right-4">
+                      <Badge className="bg-primary text-primary-foreground">
+                        {pkg.duration}
+                      </Badge>
+                    </div>
+                    {pkg.name.includes("Fly-In") && (
+                      <div className="absolute top-4 left-4">
+                        <Badge className="bg-accent text-accent-foreground flex items-center gap-1">
+                          <Plane className="w-3 h-3" />
+                          Flying Safari
+                        </Badge>
+                      </div>
+                    )}
+                  </div>
+                  
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-foreground mb-2">
+                      {pkg.name}
+                    </h3>
+                    
+                    <div className="flex items-baseline gap-2 mb-4">
+                      <span className="text-2xl font-bold text-primary">{pkg.priceFrom}</span>
+                      <span className="text-muted-foreground">to</span>
+                      <span className="text-2xl font-bold text-primary">{pkg.priceTo}</span>
+                      <span className="text-sm text-muted-foreground">per person</span>
+                    </div>
+
+                    <p className="text-sm text-muted-foreground mb-4">
+                      {pkg.description}
+                    </p>
+
+                    <div className="space-y-3 mb-6">
+                      <div>
+                        <h4 className="font-semibold text-sm mb-2 flex items-center gap-2">
+                          <Check className="w-4 h-4 text-green-600" />
+                          Inclusions
+                        </h4>
+                        <ul className="text-xs text-muted-foreground space-y-1 ml-6">
+                          {pkg.inclusions.slice(0, 4).map((item, idx) => (
+                            <li key={idx}>• {item}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-sm mb-2 flex items-center gap-2">
+                          <X className="w-4 h-4 text-red-600" />
+                          Exclusions
+                        </h4>
+                        <ul className="text-xs text-muted-foreground space-y-1 ml-6">
+                          {pkg.exclusions.slice(0, 3).map((item, idx) => (
+                            <li key={idx}>• {item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <BookingDialog
+                      packageName={pkg.name}
+                      packagePrice={`${pkg.priceFrom} - ${pkg.priceTo}`}
+                      buttonText="Book Safari"
+                      buttonVariant="default"
+                    />
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* What to Expect Section */}
+        <section className="py-16 px-4 bg-muted/20">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">What to Expect</h2>
             <div className="grid md:grid-cols-2 gap-6">
