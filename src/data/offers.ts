@@ -195,7 +195,116 @@ export const specialOffers = [
     icon: Calendar,
     badge: "🎁 Special Deal",
     urgency: "Perfect for upcoming birthdays!",
-    reviews: 287
+    reviews: 287,
+    duration: "6 Days / 5 Nights",
+    location: "Amboseli & Maasai Mara, Kenya",
+    detailedDescription: "Celebrate your special day with an unforgettable safari adventure! This exclusive 6-day birthday package takes you through Kenya's most iconic wildlife destinations - from the elephant herds of Amboseli with Mt. Kilimanjaro backdrop to the Big 5 in the legendary Maasai Mara. Experience game drives, cultural encounters, and VIP birthday celebrations under African stars.",
+    inclusions: [
+      "✈️ Internal flights (Nairobi-Amboseli-Mara-Nairobi)",
+      "🚗 Airport & inter-park transfers",
+      "🏨 Luxury safari lodge accommodation (5 nights)",
+      "🍽️ Full board meals (breakfast, lunch, dinner)",
+      "🎂 Special birthday cake & champagne celebration",
+      "🚙 Daily game drives in 4x4 safari vehicles",
+      "👨‍✈️ Professional safari guide throughout",
+      "🎈 VIP birthday decorations & surprises",
+      "🏞️ Park entry fees for Amboseli & Maasai Mara",
+      "🌄 Observation Hill visit in Amboseli",
+      "👥 Maasai cultural village visits",
+      "🎁 Birthday gift package",
+      "📋 Structured 6-day safari program"
+    ],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrival & Transfer to Amboseli",
+        activities: [
+          "Pickup from Nairobi airport/hotel",
+          "Scenic 4-5 hour drive to Amboseli (or 45-min flight option)",
+          "Check-in at Amboseli Serena Safari Lodge/Tawi Lodge/Ol Tukai Lodge",
+          "Lunch and relaxation at the lodge",
+          "Afternoon game drive with Mt. Kilimanjaro views",
+          "Sundowner drinks as the sun sets over the savannah",
+          "Dinner at the lodge"
+        ]
+      },
+      {
+        day: "Day 2",
+        title: "Amboseli - Elephants & Kilimanjaro",
+        activities: [
+          "Early morning game drive (6-8 AM) - best time for elephant photos with Mt. Kilimanjaro",
+          "Breakfast at the lodge",
+          "Visit Observation Hill for panoramic park views",
+          "Optional birdwatching tour (over 400 species)",
+          "Lunch and midday rest",
+          "Afternoon nature walk with local Maasai guides",
+          "Evening game drive",
+          "Dinner under the stars"
+        ]
+      },
+      {
+        day: "Day 3",
+        title: "Amboseli Culture & Transfer to Mara",
+        activities: [
+          "Sunrise game drive",
+          "Breakfast and check-out",
+          "Cultural visit to Maasai village - traditions, beadwork, dances",
+          "Transfer to airstrip for flight to Maasai Mara (1 hour via Nairobi)",
+          "Arrival at Mara Serena/Angama Mara/Mara Intrepids Camp",
+          "Lunch at the lodge",
+          "Afternoon game drive in the legendary Mara",
+          "Dinner at camp"
+        ]
+      },
+      {
+        day: "Day 4",
+        title: "Maasai Mara - Big 5 Safari",
+        activities: [
+          "Early morning Big 5 game drive (lions, leopards, rhinos, elephants, buffalo)",
+          "Optional hot air balloon safari at sunrise (unforgettable!)",
+          "Bush breakfast in the wild",
+          "Return to lodge for brunch and relaxation",
+          "Afternoon game drive",
+          "Sundowner drinks on the savannah",
+          "Special birthday dinner celebration with cake & champagne"
+        ]
+      },
+      {
+        day: "Day 5",
+        title: "Mara Adventure & Culture",
+        activities: [
+          "Full day game drive with packed lunch",
+          "Great Migration viewing (July-October season)",
+          "Visit to Mara River crossing point",
+          "Optional nature walk or horseback safari in conservancies",
+          "Maasai cultural village visit - crafts and stories",
+          "Bush dinner under the stars",
+          "Night game drive (optional)"
+        ]
+      },
+      {
+        day: "Day 6",
+        title: "Final Game Drive & Departure",
+        activities: [
+          "Early morning final game drive",
+          "Breakfast at the lodge",
+          "Check-out and souvenir shopping",
+          "Transfer to airstrip for flight to Nairobi (1 hour)",
+          "Optional lunch in Nairobi before departure",
+          "Transfer to international airport"
+        ]
+      }
+    ],
+    highlights: [
+      "Elephants with Mt. Kilimanjaro backdrop in Amboseli",
+      "Big 5 game viewing in Maasai Mara",
+      "Great Migration experience (seasonal)",
+      "Maasai cultural encounters & village visits",
+      "VIP birthday celebrations with cake & champagne",
+      "Professional safari guides & luxury lodges",
+      "Over 400 bird species in Amboseli",
+      "Optional hot air balloon safari"
+    ]
   },
   {
     id: 4,
