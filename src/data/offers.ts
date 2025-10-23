@@ -320,7 +320,83 @@ export const specialOffers = [
     icon: GraduationCap,
     badge: "👪 Family Favorite",
     urgency: "School holidays filling up!",
-    reviews: 419
+    reviews: 419,
+    duration: "10 Days / 9 Nights",
+    location: "Amboseli • Maasai Mara • Samburu",
+    detailedDescription: "Experience the magic of Kenya's wilderness while learning about conservation, wildlife ecology, and local cultures. This educational safari is designed for students, schools, families, and nature enthusiasts who want to connect learning with adventure. You'll explore three iconic ecosystems — the wetlands of Amboseli, the rolling plains of the Maasai Mara, and the rugged beauty of Samburu — while engaging with wildlife experts, conservationists, and indigenous communities.",
+    inclusions: [
+      "✈️ All internal flights between parks",
+      "🚗 Ground transfers and park entry fees",
+      "🏨 Accommodation in safari lodges (9 nights)",
+      "🍽️ Full board meals throughout",
+      "👨‍🏫 Professional educational guides & wildlife experts",
+      "📚 Field journals and learning materials",
+      "🐘 Visit to Reteti Elephant Sanctuary",
+      "🌱 Tree planting & climate action activity",
+      "👥 Maasai & Samburu cultural workshops",
+      "🔬 Wildlife data recording sessions",
+      "🏞️ Conservation center visits",
+      "📜 Certificate of participation",
+      "💧 Bottled water during activities"
+    ],
+    itinerary: [
+      {
+        day: "Day 1-3",
+        title: "Amboseli National Park - 'The Elephant Classroom'",
+        activities: [
+          "Morning and evening game drives with wildlife guides",
+          "Ecology talk with Kenya Wildlife Service rangers about elephant behavior & conservation",
+          "Visit a local Maasai school and community center",
+          "Tree planting and climate action activity",
+          "Observation session at the foot of Mt. Kilimanjaro",
+          "Learning Focus: Ecosystem balance • Human–wildlife coexistence • Climate impact on savannahs"
+        ]
+      },
+      {
+        day: "Day 4-6",
+        title: "Maasai Mara National Reserve - 'Conservation in Action'",
+        activities: [
+          "Big 5 game drives and wildlife data recording (field journals provided)",
+          "Educational visit to Mara Elephant Project or Predator Conservation Program",
+          "Talk with park rangers on anti-poaching & tracking technology",
+          "Maasai cultural day – learn traditional conservation methods, songs, and dances",
+          "Optional hot air balloon safari at sunrise (extra cost)",
+          "Learning Focus: Wildlife research • Biodiversity • Sustainable tourism"
+        ]
+      },
+      {
+        day: "Day 7-9",
+        title: "Samburu National Reserve - 'People & Wildlife of the North'",
+        activities: [
+          "Game drives focusing on rare northern species (Samburu Special Five)",
+          "Visit Reteti Elephant Sanctuary for hands-on conservation learning",
+          "Walking safari with Samburu warriors",
+          "Cultural workshop with Samburu women's beadwork group",
+          "Group reflection session and certificate presentation",
+          "Learning Focus: Animal adaptation • Community-based conservation • Indigenous knowledge"
+        ]
+      },
+      {
+        day: "Day 10",
+        title: "Departure",
+        activities: [
+          "Morning leisure time and final packing",
+          "Check-out from lodge",
+          "Flight back to Nairobi",
+          "Transfer to international airport"
+        ]
+      }
+    ],
+    highlights: [
+      "Three iconic ecosystems in one journey",
+      "Hands-on conservation experiences",
+      "Wildlife expert talks and field sessions",
+      "Cultural immersion with Maasai & Samburu communities",
+      "Certificate of participation",
+      "Perfect for students, schools & nature enthusiasts",
+      "Educational materials and field journals included",
+      "Visit to Reteti Elephant Sanctuary"
+    ]
   },
   {
     id: 5,
