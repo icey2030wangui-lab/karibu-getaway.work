@@ -4,6 +4,7 @@ import PopularDestinations from "@/components/PopularDestinations";
 import SpecialOffers from "@/components/SpecialOffers";
 import MombasaPackages from "@/components/MombasaPackages";
 import MalindiPackages from "@/components/MalindiPackages";
+import DianiStayDine from "@/components/DianiStayDine";
 import Footer from "@/components/Footer";
 import ChatIcon from "@/components/ChatIcon";
 
@@ -17,6 +18,7 @@ const Index = () => {
         <SpecialOffers />
         <MombasaPackages />
         <MalindiPackages />
+        <DianiStayDine />
       </main>
       <Footer />
       <ChatIcon />
