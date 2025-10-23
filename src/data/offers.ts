@@ -92,7 +92,94 @@ export const specialOffers = [
     icon: Heart,
     badge: "🏆 Best Seller",
     urgency: "Book now - Peak season!",
-    reviews: 521
+    reviews: 521,
+    duration: "5 Days / 4 Nights",
+    location: "Lamu Island, Kenya",
+    detailedDescription: "Experience the ultimate romantic escape in Lamu, a UNESCO World Heritage island paradise. This exclusive 5-day honeymoon package combines luxury accommodation, intimate experiences, and unforgettable memories. Perfect for newlyweds seeking a private, romantic getaway in one of Africa's most enchanting destinations.",
+    inclusions: [
+      "✈️ Flight to Lamu & private boat transfers",
+      "🏖️ Luxury private villa accommodation",
+      "🌺 Welcome drink, flowers & romantic setup",
+      "🍽️ Daily breakfast by the sea",
+      "🌅 Sunset beach dinner for two",
+      "🚶 Guided walk through Shela village & Lamu Old Town",
+      "💆 Private couples' massage session",
+      "⛵ Private dhow cruise to Manda Toto/Kipungani Beach",
+      "🥂 Sunset champagne cruise",
+      "🍾 Picnic lunch & snorkeling equipment",
+      "🕯️ Private candlelit dinner with live entertainment",
+      "📸 Optional yoga or photography session",
+      "🎁 Honeymoon gift package"
+    ],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrival & Welcome",
+        activities: [
+          "Flight to Lamu International Airport",
+          "Private boat transfer to your luxury villa",
+          "Check-in with welcome drink and flower arrangement",
+          "Relax and settle into your romantic retreat",
+          "Evening: Sunset beach dinner for two",
+          "Overnight in your private villa"
+        ]
+      },
+      {
+        day: "Day 2",
+        title: "Explore & Unwind",
+        activities: [
+          "Breakfast by the sea with ocean views",
+          "Morning: Guided walk through historic Shela village",
+          "Explore Lamu Old Town's narrow streets and culture",
+          "Afternoon: Private couples' massage at the villa",
+          "Evening at leisure",
+          "Dinner at villa or local restaurant"
+        ]
+      },
+      {
+        day: "Day 3",
+        title: "Romantic Adventure",
+        activities: [
+          "Breakfast at the villa",
+          "Morning dhow sailing to Manda Toto or Kipungani Beach",
+          "Picnic lunch on a secluded beach",
+          "Snorkeling in crystal-clear waters",
+          "Afternoon: Sunset champagne cruise",
+          "Return to villa for dinner"
+        ]
+      },
+      {
+        day: "Day 4",
+        title: "Beach Bliss",
+        activities: [
+          "Leisure morning - sleep in or enjoy the beach",
+          "Optional yoga session or couples' photography shoot",
+          "Free time to relax by the pool or explore",
+          "Afternoon spa treatment (optional)",
+          "Evening: Private candlelit dinner with Swahili band or violinist",
+          "Stargazing on the beach"
+        ]
+      },
+      {
+        day: "Day 5",
+        title: "Farewell with Love",
+        activities: [
+          "Sunrise walk along the pristine beach",
+          "Breakfast in bed with ocean views",
+          "Final moments of relaxation",
+          "Check-out and fond farewells",
+          "Private boat and flight transfer back to airport"
+        ]
+      }
+    ],
+    highlights: [
+      "UNESCO World Heritage Lamu Island",
+      "Luxury private villa with beach access",
+      "All romantic experiences included",
+      "Private boat and dhow cruises",
+      "Authentic Swahili cultural immersion",
+      "Perfect for honeymoons and anniversaries"
+    ]
   },
   {
     id: 3,
