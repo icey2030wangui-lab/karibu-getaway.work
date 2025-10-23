@@ -1,10 +1,21 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Star } from "lucide-react";
+import { Star, MapPin, Calendar, Check } from "lucide-react";
 import { specialOffers } from "@/data/offers";
 import { BookingDialog } from "@/components/BookingDialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useState } from "react";
 const SpecialOffers = () => {
+  const [selectedOffer, setSelectedOffer] = useState<any>(null);
+
   return <section className="py-16 px-4 bg-gradient-to-br from-primary/5 to-accent/10">
       <div className="container mx-auto">
         <div className="text-center mb-12 animate-slide-up">
@@ -92,7 +103,130 @@ const SpecialOffers = () => {
                       </div>
                       <span className="text-xs text-muted-foreground">per person</span>
                     </div>
-                    <BookingDialog packageName={offer.subtitle} packagePrice={offer.price} buttonText="Book Now" buttonVariant="default" />
+                    {offer.inclusions ? (
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button variant="outline" onClick={() => setSelectedOffer(offer)}>
+                            View Details
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                          <DialogHeader>
+                            <DialogTitle className="text-2xl font-bold">{offer.subtitle}</DialogTitle>
+                          </DialogHeader>
+                          
+                          <div className="space-y-6">
+                            {/* Header Image */}
+                            <div className="relative h-64 rounded-lg overflow-hidden">
+                              <img src={offer.image} alt={offer.title} className="w-full h-full object-cover" />
+                              <div className="absolute top-4 right-4">
+                                <Badge className="bg-accent text-accent-foreground font-bold text-lg px-4 py-2">
+                                  {offer.discount}
+                                </Badge>
+                              </div>
+                            </div>
+
+                            {/* Quick Info */}
+                            <div className="grid grid-cols-3 gap-4 text-center">
+                              <div className="space-y-1">
+                                <Calendar className="w-5 h-5 mx-auto text-primary" />
+                                <p className="text-sm font-semibold">{offer.duration}</p>
+                              </div>
+                              <div className="space-y-1">
+                                <MapPin className="w-5 h-5 mx-auto text-primary" />
+                                <p className="text-sm font-semibold">{offer.location}</p>
+                              </div>
+                              <div className="space-y-1">
+                                <Star className="w-5 h-5 mx-auto text-yellow-400 fill-yellow-400" />
+                                <p className="text-sm font-semibold">{offer.rating} ({offer.reviews} reviews)</p>
+                              </div>
+                            </div>
+
+                            {/* Tabs */}
+                            <Tabs defaultValue="overview" className="w-full">
+                              <TabsList className="grid w-full grid-cols-3">
+                                <TabsTrigger value="overview">Overview</TabsTrigger>
+                                <TabsTrigger value="inclusions">What's Included</TabsTrigger>
+                                <TabsTrigger value="itinerary">Itinerary</TabsTrigger>
+                              </TabsList>
+
+                              <TabsContent value="overview" className="space-y-4">
+                                <div>
+                                  <h3 className="font-semibold text-lg mb-2">About This Package</h3>
+                                  <p className="text-muted-foreground">{offer.detailedDescription}</p>
+                                </div>
+                                <div>
+                                  <h3 className="font-semibold text-lg mb-3">Package Highlights</h3>
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                    {offer.highlights.map((highlight: string, idx: number) => (
+                                      <div key={idx} className="flex items-start gap-2">
+                                        <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                        <span className="text-sm">{highlight}</span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              </TabsContent>
+
+                              <TabsContent value="inclusions" className="space-y-3">
+                                <h3 className="font-semibold text-lg mb-3">What's Included in Your Package</h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                  {offer.inclusions.map((inclusion: string, idx: number) => (
+                                    <div key={idx} className="flex items-start gap-2 p-3 bg-primary/5 rounded-lg">
+                                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                                      <span className="text-sm">{inclusion}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              </TabsContent>
+
+                              <TabsContent value="itinerary" className="space-y-4">
+                                <h3 className="font-semibold text-lg mb-3">3-Day Activity Program</h3>
+                                {offer.itinerary.map((day: any, idx: number) => (
+                                  <div key={idx} className="border rounded-lg p-4 space-y-2">
+                                    <div className="flex items-center gap-2">
+                                      <Badge variant="outline">{day.day}</Badge>
+                                      <h4 className="font-semibold">{day.title}</h4>
+                                    </div>
+                                    <ul className="space-y-2 ml-4">
+                                      {day.activities.map((activity: string, actIdx: number) => (
+                                        <li key={actIdx} className="flex items-start gap-2 text-sm">
+                                          <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                                          <span>{activity}</span>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                ))}
+                              </TabsContent>
+                            </Tabs>
+
+                            {/* Pricing & Booking */}
+                            <div className="border-t pt-6 flex items-center justify-between">
+                              <div>
+                                <div className="flex items-center gap-2">
+                                  <span className="text-3xl font-bold text-primary">{offer.price}</span>
+                                  {offer.originalPrice && (
+                                    <span className="text-lg text-muted-foreground line-through">
+                                      {offer.originalPrice}
+                                    </span>
+                                  )}
+                                </div>
+                                <span className="text-sm text-muted-foreground">per person • {offer.duration}</span>
+                              </div>
+                              <BookingDialog 
+                                packageName={offer.subtitle} 
+                                packagePrice={offer.price} 
+                                buttonText="Book Now" 
+                                buttonVariant="default" 
+                              />
+                            </div>
+                          </div>
+                        </DialogContent>
+                      </Dialog>
+                    ) : (
+                      <BookingDialog packageName={offer.subtitle} packagePrice={offer.price} buttonText="Book Now" buttonVariant="default" />
+                    )}
                   </div>
                 </CardContent>
               </Card>;

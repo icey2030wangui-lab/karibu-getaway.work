@@ -19,7 +19,64 @@ export const specialOffers = [
     icon: Gift,
     badge: "⏰ Limited Spots",
     urgency: "Only 8 spots left!",
-    reviews: 342
+    reviews: 342,
+    duration: "3 Days / 2 Nights",
+    location: "Diani Beach, Kenya",
+    detailedDescription: "Experience the magic of Christmas at Kenya's stunning coastline! Our exclusive 3-day coastal Christmas package combines luxury accommodation, exciting activities, and unforgettable memories. Perfect for families, couples, and groups looking for a unique holiday celebration.",
+    inclusions: [
+      "🏨 BNB accommodation with rooftop swimming pool",
+      "🚤 Boat ride along the pristine coastline",
+      "🍳 Daily breakfast buffet",
+      "🐴 Horse riding on the beach",
+      "🚂 SGR railway transfers",
+      "✈️ Airport transfers (round trip)",
+      "🌊 Wild Waters waterpark access",
+      "🎄 Christmas special dinner & entertainment",
+      "📋 Well-structured 3-day activity program",
+      "🎁 Welcome gift package"
+    ],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrival & Welcome",
+        activities: [
+          "Airport/SGR pickup and transfer to BNB",
+          "Check-in and welcome refreshments",
+          "Afternoon: Rooftop pool relaxation",
+          "Evening: Beach sunset walk",
+          "Dinner at the hotel"
+        ]
+      },
+      {
+        day: "Day 2",
+        title: "Adventure & Activities",
+        activities: [
+          "Breakfast at rooftop restaurant",
+          "Morning: Horse riding along the beach",
+          "Afternoon: Wild Waters waterpark experience",
+          "Evening: Boat ride along the coast",
+          "Christmas special dinner & bonfire"
+        ]
+      },
+      {
+        day: "Day 3",
+        title: "Final Day & Departure",
+        activities: [
+          "Leisurely breakfast",
+          "Last swim at rooftop pool",
+          "Check-out and souvenir shopping",
+          "Transfer to airport/SGR station"
+        ]
+      }
+    ],
+    highlights: [
+      "Luxury BNB with stunning rooftop pool",
+      "All transfers included (SGR & Airport)",
+      "Full breakfast daily",
+      "Multiple exciting activities",
+      "Perfect for families & groups",
+      "Christmas special celebrations"
+    ]
   },
   {
     id: 2,
