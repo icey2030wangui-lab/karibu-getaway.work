@@ -488,17 +488,97 @@ export const specialOffers = [
   {
     id: 6,
     title: "New Year Special",
-    subtitle: "🎆 Welcome 2025 in Paradise",
+    subtitle: "🎆 Welcome to 2026 Paradise",
     category: "Christmas Deals",
     image: mombasa,
     rating: 4.8,
     discount: "40% OFF",
-    price: "From $269",
-    originalPrice: "$446",
-    description: "🥂 Ring in the new year with fireworks on the beach, live music, and unforgettable celebrations. Start 2025 in paradise!",
+    price: "From $2,000",
+    originalPrice: "$3,200",
+    description: "🥂 Step into 2026 surrounded by breathtaking landscapes, golden sunsets, and unforgettable adventures. Celebrate life, nature, and new beginnings in true African style!",
     icon: Gift,
     badge: "🔥 Hot Deal",
     urgency: "Almost sold out!",
-    reviews: 456
+    reviews: 456,
+    duration: "7-10 Days",
+    location: "Maasai Mara • Amboseli • Diani / Watamu • Samburu",
+    detailedDescription: "Step into 2026 surrounded by breathtaking landscapes, golden sunsets, and unforgettable adventures. 'Welcome to 2026 Paradise' is not just a trip — it's your gateway to renewal, joy, and connection. From safari plains to tropical beaches, Karibu Gateway invites you to celebrate life, nature, and new beginnings in true African style.",
+    inclusions: [
+      "✈️ All internal flights between destinations",
+      "🚗 All ground transfers and park entry fees",
+      "🏨 Full-board lodges & beach resorts (7-10 nights)",
+      "🍽️ All meals (breakfast, lunch, dinner)",
+      "🎊 New Year's Eve Gala under the African sky",
+      "🎈 Hot air balloon ride over Mara plains with champagne breakfast",
+      "🐘 Multiple game drives in 4x4 safari vehicles",
+      "👨‍✈️ Professional safari guides throughout",
+      "🌅 Sunset dhow cruise with cocktails & live music",
+      "🏖️ Beach bonfire '2026 Paradise Party' with Swahili dinner",
+      "🧘 Morning yoga or meditation facing Mt. Kilimanjaro",
+      "🎨 'Paint Your 2026 Vision' creative activity",
+      "👥 Maasai cultural visits and new year blessings",
+      "🏞️ Optional spa day or adventure activities",
+      "📸 Professional photo package of your safari & celebrations",
+      "📜 'Paradise Passport' souvenir with destination stamps",
+      "🎁 Karibu Vision Workshop for 2026 goal setting",
+      "💧 Bottled water during all activities"
+    ],
+    itinerary: [
+      {
+        day: "Day 1-3",
+        title: "Maasai Mara - Wild Beginnings",
+        activities: [
+          "Sunrise game drives to spot lions, leopards, and elephants",
+          "Hot air balloon ride over the Mara plains followed by champagne breakfast",
+          "Maasai cultural dance under the stars – welcome to 2026 celebration night",
+          "Bush dinner & bonfire reflections on the year ahead",
+          "Vibe: Adventure • Gratitude • Renewal"
+        ]
+      },
+      {
+        day: "Day 4-5",
+        title: "Amboseli - Serenity at the Foot of Kilimanjaro",
+        activities: [
+          "Morning yoga or meditation facing Mt. Kilimanjaro",
+          "Game drives among Amboseli's giant elephant herds",
+          "Visit Maasai villages for cultural immersion and blessings for the new year",
+          "'Paint Your 2026 Vision' activity — each guest paints or writes their new-year goals in nature",
+          "Vibe: Mindfulness • Grounding • Inspiration"
+        ]
+      },
+      {
+        day: "Day 6-9",
+        title: "Diani or Watamu - Paradise on the Coast",
+        activities: [
+          "White-sand beach relaxation & snorkeling at coral reefs",
+          "Sunset dhow cruise with cocktails and live coastal music",
+          "Beach bonfire '2026 Paradise Party' with Swahili dinner & lanterns",
+          "Optional spa day, skydiving, or deep-sea diving",
+          "Vibe: Celebration • Relaxation • Luxury"
+        ]
+      },
+      {
+        day: "Day 10",
+        title: "Optional Samburu Extension - Wild North",
+        activities: [
+          "Explore the arid landscapes of Samburu",
+          "Visit the Reteti Elephant Sanctuary",
+          "Sunset camel ride along the Ewaso Nyiro River",
+          "Return to Nairobi and departure"
+        ]
+      }
+    ],
+    highlights: [
+      "New Year's Eve Gala under the African sky",
+      "Karibu Vision Workshop: guided reflection for your 2026 goals",
+      "'Paradise Passport' Souvenir: stamp each destination you visit",
+      "Professional photo package of your safari & celebration moments",
+      "Hot air balloon safari over Maasai Mara",
+      "Beach paradise at Diani or Watamu",
+      "Cultural immersion with Maasai communities",
+      "Luxury accommodations: Angama Mara, Basecamp Explorer, Mara Intrepids, Tawi Lodge, Ol Tukai Lodge, Amboseli Serena, Swahili Beach Resort, Medina Palms, Leopard Beach",
+      "Optional Samburu extension available",
+      "Perfect for celebrating new beginnings"
+    ]
   }
 ];
