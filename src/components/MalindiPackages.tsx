@@ -81,10 +81,41 @@ const MalindiPackages = () => {
     {
       name: "Sandies Tropical Village",
       image: sandiesTropical,
-      rating: 3,
-      description: "Charming tropical retreat with lush gardens and authentic coastal hospitality",
-      location: "Malindi Beach",
-      priceRange: "Contact for rates"
+      rating: 4,
+      description: "Charming tropical retreat with authentic Swahili architecture, lush gardens, and warm coastal hospitality. This intimate resort features traditional thatched roofs and elegant interiors with four-poster beds.",
+      location: "Malindi Beach, 2.5 km from centre",
+      priceRange: "From KES 12,000 per night",
+      roomTypes: [
+        "Deluxe Double or Twin Room - 1 extra-large double bed or 2 single beds",
+        "Junior Suite - 1 extra-large double bed with separate living area",
+        "Family Room - Multiple bed configurations available"
+      ],
+      amenities: [
+        "Beachfront location with private beach access",
+        "Swimming pool with sun terrace",
+        "Traditional Swahili architecture",
+        "Restaurant with local and international cuisine",
+        "Bar and lounge area",
+        "Free WiFi",
+        "Air conditioning in all rooms",
+        "Garden views",
+        "Daily housekeeping"
+      ],
+      dining: [
+        "Main restaurant with buffet and à la carte options",
+        "Beach bar serving cocktails and snacks",
+        "Traditional Swahili cuisine nights",
+        "Fresh seafood specialties",
+        "Breakfast, lunch, and dinner included"
+      ],
+      gallery: [
+        "/lovable-uploads/sandies-tropical-1.webp",
+        "/lovable-uploads/sandies-tropical-2.webp",
+        "/lovable-uploads/sandies-tropical-3.jpg",
+        "/lovable-uploads/sandies-tropical-4.jpg",
+        "/lovable-uploads/sandies-tropical-5.webp",
+        "/lovable-uploads/sandies-tropical-6.webp"
+      ]
     },
     {
       name: "Sandies Malindi Dream Garden",
