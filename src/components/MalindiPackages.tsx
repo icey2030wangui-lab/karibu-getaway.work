@@ -120,10 +120,50 @@ const MalindiPackages = () => {
     {
       name: "Sandies Malindi Dream Garden",
       image: sandiesMalindi,
-      rating: null,
-      description: "Serene garden oasis with pristine pools and modern coastal elegance",
-      location: "Malindi",
-      priceRange: "Contact for rates"
+      rating: 4,
+      description: "Serene garden oasis featuring pristine swimming pools, elegant traditional architecture, and modern coastal comfort. This tranquil retreat offers spacious suites with garden views and a peaceful atmosphere.",
+      location: "Malindi, 1.5 km from centre",
+      priceRange: "From KES 10,000 per night",
+      roomTypes: [
+        "Suite - 2 sofa beds",
+        "Deluxe Room - Room size: 20 m²/215 ft², 1 queen bed",
+        "Suite Single Room",
+        "Suite Double Bed",
+        "Suite King Bed Sofa Bed",
+        "Deluxe Double Room Double Bed"
+      ],
+      amenities: [
+        "Beachfront location with private beach access",
+        "Large swimming pool with sun loungers",
+        "Tropical garden setting",
+        "Fitness center and gym",
+        "Full-service spa and massage",
+        "Spa/sauna facilities",
+        "Free WiFi in all rooms and public areas",
+        "Air conditioning in all rooms",
+        "Daily housekeeping",
+        "24-hour front desk",
+        "Elevator access",
+        "Gift/souvenir shop",
+        "Smoking area",
+        "Airport transfer available",
+        "On-site car park"
+      ],
+      dining: [
+        "Main restaurant with buffet and à la carte options",
+        "Open-air dining pavilion with traditional Swahili architecture",
+        "Bar serving cocktails and refreshments",
+        "International and local cuisine",
+        "Fresh seafood specialties",
+        "All-inclusive packages available"
+      ],
+      gallery: [
+        "/lovable-uploads/sandies-malindi-1.jpg",
+        "/lovable-uploads/sandies-malindi-2.webp",
+        "/lovable-uploads/sandies-malindi-3.webp",
+        "/lovable-uploads/sandies-malindi-4.webp",
+        "/lovable-uploads/sandies-malindi-5.jpg"
+      ]
     },
     {
       name: "Diamonds Dreams of Africa",
