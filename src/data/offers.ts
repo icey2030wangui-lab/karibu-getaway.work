@@ -412,7 +412,78 @@ export const specialOffers = [
     icon: Users,
     badge: "🏢 Corporate Choice",
     urgency: "Great for Q1 team events!",
-    reviews: 194
+    reviews: 194,
+    duration: "3-5 Days",
+    location: "Amboseli • Maasai Mara • Samburu",
+    detailedDescription: "Reignite team spirit in the wild! This safari combines wildlife exploration, outdoor challenges, and cultural immersion to help teams build trust, improve communication, and strengthen leadership — all while surrounded by Kenya's breathtaking landscapes. Whether it's strategizing during a scavenger hunt, working together on a conservation project, or sharing stories around a campfire, every moment is designed to bring your team closer together.",
+    inclusions: [
+      "🏨 Accommodation on full board basis",
+      "🎫 Park fees and game drives",
+      "🎯 Team-building equipment & facilitation",
+      "👥 Professional facilitator (optional)",
+      "🌱 Cultural visits and conservation activities",
+      "🚗 Transport & transfers between parks",
+      "🍽️ All meals (breakfast, lunch, dinner)",
+      "🐘 Wildlife conservation activities",
+      "🔥 Evening bonfire sessions",
+      "📜 Team Spirit Awards certificates",
+      "📸 Group photo souvenirs",
+      "💧 Bottled water during activities"
+    ],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrival & Icebreakers - Amboseli National Park",
+        activities: [
+          "Welcome orientation and team icebreaker games at the lodge",
+          "Group challenge: 'Safari Scavenger Hunt' – teams identify animals, plants, and landmarks",
+          "Evening bonfire with reflection session",
+          "Optional short nature walk led by Maasai guide",
+          "Team Focus: Communication • Observation • Breaking Silos"
+        ]
+      },
+      {
+        day: "Day 2-3",
+        title: "Maasai Mara - Leadership in the Wild",
+        activities: [
+          "Early morning game drive + photo challenge ('Who spots the Big 5 first?')",
+          "Team challenge: 'Conservation Quest' – each team works on a mock wildlife protection plan",
+          "Cultural Exchange Activity – build Maasai-style huts or learn fire-making as a group",
+          "Bush dinner under the stars with group skits and awards",
+          "Team Focus: Leadership • Problem-Solving • Creativity"
+        ]
+      },
+      {
+        day: "Day 4",
+        title: "Samburu - Strength & Strategy",
+        activities: [
+          "Obstacle course or mini 'wild rally' challenge within the camp area",
+          "Community volunteering activity – assist at Reteti Elephant Sanctuary or local school",
+          "Sunset yoga / reflection session to wind down",
+          "Team Focus: Strategy • Collaboration • Emotional intelligence"
+        ]
+      },
+      {
+        day: "Day 5",
+        title: "Wrap-Up & Awards",
+        activities: [
+          "Group reflection & feedback circle",
+          "Certificate ceremony: 'Team Spirit Awards'",
+          "Return to Nairobi with optional stop at Giraffe Centre or Carnivore Restaurant",
+          "Farewell lunch and departure"
+        ]
+      }
+    ],
+    highlights: [
+      "Custom group challenges & workshops",
+      "Professional team-building facilitator available",
+      "Conservation or CSR activities (tree planting, school support)",
+      "Team awards & photo souvenirs",
+      "Perfect for corporate retreats and conferences",
+      "Flexible 3-5 day packages",
+      "Accommodations: Ol Tukai Lodge, Mara Intrepids Camp, Samburu Intrepids",
+      "Suitable for groups of 10-20 people"
+    ]
   },
   {
     id: 6,
