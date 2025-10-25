@@ -65,7 +65,7 @@ const Header = () => {
                   document.getElementById('packages-section')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Experiences
+                Stay and Dine Selection
               </a>
               <Link 
                 to="/team-building" 
