@@ -212,7 +212,38 @@ const MalindiPackages = () => {
       rating: 4,
       description: "Exclusive boutique property with infinity pools and personalized service",
       location: "Watamu",
-      priceRange: "Contact for rates"
+      priceRange: "Contact for rates",
+      roomTypes: [
+        "Deluxe Room - 269 sq ft, Sleeps 2, Soundproofed with flat-screen TV, premium bedding, separate bedroom, bidet, hair dryer, bathrobes, electric kettle",
+        "Superior Room - 301 sq ft, 1 bedroom, Sleeps 2, Soundproofed with flat-screen TV, separate bedroom, premium bedding, bidet, hair dryer, bathrobes, electric kettle",
+        "Suite Garden View - 269 sq ft, 1 bedroom, Sleeps 2, Soundproofed with flat-screen TV, separate bedroom, premium bedding, bidet, hair dryer, bathrobes, electric kettle",
+        "Villa, 3 Bedrooms - 1076 sq ft, 3 bedrooms, Soundproofed with private pool, flat-screen TV, separate bedroom, premium bedding, hair dryer, bidet, bathrobes",
+        "Villa, 4 Bedrooms - 1292 sq ft, 4 bedrooms, Sleeps 8, Soundproofed with private pool, flat-screen TV, separate bedroom, premium bedding, hair dryer, bidet, bathrobes",
+        "Deluxe Villa - 3767 sq ft, Sleeps 8, Separate sitting area, soundproofed, air conditioning, flat-screen TV, premium bedding, separate bedroom, hair dryer, bidet",
+        "Premium Villa - 3767 sq ft, Sleeps 6, 1 King Bed, Separate sitting area, soundproofed, air conditioning, flat-screen TV, premium bedding, separate bedroom, hair dryer, bidet",
+        "Deluxe Suite - 484 sq ft, Sleeps 2, 1 King Bed, Soundproofed, air conditioning, flat-screen TV, premium bedding, separate bedroom, hair dryer, bidet, bathrobes",
+        "Premium Suite - 484 sq ft, Sleeps 2, 2 Twin Beds, Separate sitting area, soundproofed, air conditioning, flat-screen TV, premium bedding, separate bedroom, hair dryer, bidet"
+      ],
+      amenities: [
+        "Beachfront location with private beach access",
+        "Infinity pools",
+        "Private pools in select villas",
+        "Boutique personalized service",
+        "Soundproofed rooms",
+        "Premium bedding and linens",
+        "Air conditioning",
+        "Flat-screen TV in all rooms",
+        "Free WiFi",
+        "Spa services available",
+        "Hair dryers and bathrobes",
+        "Electric kettles"
+      ],
+      dining: [
+        "On-site restaurant",
+        "Personalized dining experiences",
+        "Fresh seafood specialties",
+        "International and local cuisine"
+      ]
     },
     {
       name: "Turtle Bay Watamu",
