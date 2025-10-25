@@ -125,12 +125,10 @@ const MalindiPackages = () => {
       location: "Malindi, 1.5 km from centre",
       priceRange: "From KES 10,000 per night",
       roomTypes: [
-        "Suite - 2 sofa beds",
-        "Deluxe Room - Room size: 20 m²/215 ft², 1 queen bed",
-        "Suite Single Room",
-        "Suite Double Bed",
-        "Suite King Bed Sofa Bed",
-        "Deluxe Double Room Double Bed"
+        "Diamonds Suite with Private Pool - Separate living room, rooms with hydromassage jacuzzi baths and private terrace with comfortable Balinese sun loungers",
+        "Masai Superior Room - Built on two levels in a semicircular building with private balconies on the first floor and covered terraces for rooms on the ground floor, perfect fusion of English and Lamu design",
+        "Pool Garden Deluxe Room - Built on two levels in a semicircular building with private balconies on the first floor and covered terraces for ground floor rooms, indo-arabic style",
+        "Masai Deluxe Family Room - Built on the first floor in a semicircular building with private balconies, exclusive suites offering room-service breakfast"
       ],
       amenities: [
         "Beachfront location with private beach access",
@@ -162,7 +160,13 @@ const MalindiPackages = () => {
         "/lovable-uploads/sandies-malindi-2.webp",
         "/lovable-uploads/sandies-malindi-3.webp",
         "/lovable-uploads/sandies-malindi-4.webp",
-        "/lovable-uploads/sandies-malindi-5.jpg"
+        "/lovable-uploads/sandies-malindi-5.jpg",
+        "/lovable-uploads/sandies-malindi-6.jpg",
+        "/lovable-uploads/sandies-malindi-7.jpg",
+        "/lovable-uploads/sandies-malindi-8.jpg",
+        "/lovable-uploads/sandies-malindi-9.jpg",
+        "/lovable-uploads/sandies-malindi-10.webp",
+        "/lovable-uploads/sandies-malindi-11.jpg"
       ]
     },
     {
