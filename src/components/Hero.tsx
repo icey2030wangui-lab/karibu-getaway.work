@@ -4,47 +4,46 @@ import heroBeach from "@/assets/hero-beach.jpg";
 const Hero = () => {
   return (
     <section className="relative h-[80vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with Sunset Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-fade-in"
         style={{
           backgroundImage: `url(${heroBeach})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/20" />
+        {/* Sunset gradient overlay - golden orange to deep blue */}
+        <div className="absolute inset-0 bg-gradient-to-b from-orange-600/30 via-purple-900/40 to-black/70" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          Discover Kenya's
-          <span className="block text-accent"> Hidden Treasures</span>
+      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 animate-fade-in">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight font-serif">
+          Welcome to 2026 Paradise
         </h1>
         
-        <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-          From pristine beaches to majestic wildlife safaris, experience unforgettable adventures 
-          with Kenya's most trusted travel partner
+        <p className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto opacity-95 font-light">
+          Begin your year with breathtaking adventures — from safaris in Amboseli to coastal escapes in Malindi
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             onClick={() => {
               document.getElementById('packages-section')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            Book Your Adventure
+            Book Your Holiday
           </Button>
           <Button 
             size="lg" 
             variant="outline"
-            className="border-adventure-gold text-adventure-gold hover:bg-adventure-gold hover:text-foreground px-8 py-4 text-lg font-semibold backdrop-blur-sm shadow-lg hover:shadow-adventure-gold/50 transition-all duration-300"
+            className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 text-lg font-semibold backdrop-blur-sm shadow-lg hover:shadow-white/50 transition-all duration-300 hover:scale-105"
             onClick={() => {
               document.getElementById('destinations-section')?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            Explore Destinations
+            Explore Kenya
           </Button>
         </div>
         
