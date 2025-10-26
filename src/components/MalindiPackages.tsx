@@ -264,9 +264,43 @@ const MalindiPackages = () => {
       name: "Turtle Bay Watamu",
       image: turtleBay,
       rating: 4,
-      description: "Beachfront paradise with traditional thatched cottages and romantic ambiance",
+      description: "Award-winning all-inclusive beachfront resort. Turtle Bay was chosen as Best All Inclusive Hotel in Africa by TripAdvisor® in its 2012 Travelers' Choice® awards. This prestigious accolade honors the world's best hotels, earning their distinction from real travelers.",
       location: "Watamu Beach",
-      priceRange: "Contact for rates"
+      priceRange: "Contact for rates",
+      roomTypes: [
+        "Lamu Rooms - 41 Rooms: Swahili style units with ocean or garden views, split unit air conditioning and ceiling fan, coffee and tea facilities, room safe (free of charge), hair dryer, ensuite bath and shower or showers only, body soap provided, twin beds (or Queen size on request) and mosquito proof sleeping area, patio or terrace. Suitable for 2 adults.",
+        "Sea View Suites - 2 Suites: Swahili style units with ocean or garden views, split unit air conditioning and ceiling fan, coffee and tea facilities, room safe (free of charge), hair dryer, ensuite bath and shower or showers only, body soap provided, twin beds (or Queen size on request) and mosquito proof sleeping area, patio or terrace. Suitable for 2 adults.",
+        "Super Club Rooms - 89 Rooms: Separate bath and showers, balcony, split unit air-conditioning, coffee and tea facilities, room safe (free of charge), hair dryer, body soap provided and a complete mosquito proof sleeping area. Equipped with a double and single bed; some rooms have interconnecting doors and 3 have been specifically designed for physically handicapped clients with showers only."
+      ],
+      amenities: [
+        "Beachfront location with private beach access",
+        "Traditional thatched cottage architecture",
+        "All-inclusive packages available",
+        "Swimming pools",
+        "Split unit air conditioning and ceiling fans in all rooms",
+        "Coffee and tea facilities",
+        "Room safe (free of charge)",
+        "Hair dryers",
+        "Mosquito proof sleeping areas",
+        "Balconies, patios or terraces",
+        "Free WiFi",
+        "Accessible rooms available",
+        "TripAdvisor Travelers' Choice Award winner"
+      ],
+      dining: [
+        "All-inclusive dining options",
+        "Multiple restaurants and bars",
+        "Fresh seafood specialties",
+        "International and local cuisine",
+        "Beachfront dining experiences"
+      ],
+      gallery: [
+        "/lovable-uploads/turtle-bay-1.webp",
+        "/lovable-uploads/turtle-bay-2.webp",
+        "/lovable-uploads/turtle-bay-3.webp",
+        "/lovable-uploads/turtle-bay-4.jpg",
+        "/lovable-uploads/turtle-bay-5.webp"
+      ]
     },
     {
       name: "Medina Palms",
