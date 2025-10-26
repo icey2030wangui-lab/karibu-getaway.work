@@ -322,9 +322,39 @@ const MalindiPackages = () => {
       name: "Medina Palms",
       image: medinaPalms,
       rating: 5,
-      description: "Mediterranean-inspired luxury villas with private pools and gourmet dining",
+      description: "Indulge in a world of opulence and sophistication at Medina Palms, a lavish and stylish Swahili-style hotel nestled along the pristine shores of Watamu. Experience the epitome of luxury accommodation as you immerse yourself in the beauty of our meticulously designed resort. Every moment is infused with luxury and relaxation, featuring world-class amenities including sparkling swimming pools, a rejuvenating spa, and a selection of fine dining options.",
       location: "Watamu",
-      priceRange: "Contact for rates"
+      priceRange: "Contact for rates",
+      roomTypes: [
+        "Two bedroom suite",
+        "Luxury two bedroom penthouse",
+        "Luxury three bedroom ocean lodge",
+        "One bedroom suite",
+        "Luxury three bedroom villa",
+        "Luxury four bedroom villa",
+        "Amani Signature Villa"
+      ],
+      amenities: [
+        "Private swimming pools",
+        "Rejuvenating spa",
+        "World-class fine dining",
+        "Beach access",
+        "Concierge services",
+        "Water sports facilities"
+      ],
+      dining: [
+        "Fine dining restaurant offering gourmet cuisine",
+        "Fresh local ingredients and international flavors",
+        "Elegant dining settings with ocean views",
+        "Private dining experiences available"
+      ],
+      gallery: [
+        "/lovable-uploads/medina-palms-1.jpeg",
+        "/lovable-uploads/medina-palms-2.jpeg",
+        "/lovable-uploads/medina-palms-3.jpeg",
+        "/lovable-uploads/medina-palms-4.jpeg",
+        "/lovable-uploads/medina-palms-5.jpeg"
+      ]
     },
     {
       name: "Ocean Beach Resort & Spa",
