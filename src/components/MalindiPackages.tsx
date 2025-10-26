@@ -264,19 +264,24 @@ const MalindiPackages = () => {
       name: "Turtle Bay Watamu",
       image: turtleBay,
       rating: 4,
-      description: "Award-winning all-inclusive beachfront resort. Turtle Bay was chosen as Best All Inclusive Hotel in Africa by TripAdvisor® in its 2012 Travelers' Choice® awards. This prestigious accolade honors the world's best hotels, earning their distinction from real travelers.",
+      description: "Award-winning all-inclusive beachfront resort. Turtle Bay was chosen as Best All Inclusive Hotel in Africa by TripAdvisor® in its 2012 Travelers' Choice® awards. Silver winner of the Best for Beach Tourism category at the World Responsible Tourism Awards 2015. The resort has an excellent record of commitment to the environment and community issues through the Community and Conservation office.",
       location: "Watamu Beach",
       priceRange: "Contact for rates",
       roomTypes: [
-        "Lamu Rooms - 41 Rooms: Swahili style units with ocean or garden views, split unit air conditioning and ceiling fan, coffee and tea facilities, room safe (free of charge), hair dryer, ensuite bath and shower or showers only, body soap provided, twin beds (or Queen size on request) and mosquito proof sleeping area, patio or terrace. Suitable for 2 adults.",
-        "Sea View Suites - 2 Suites: Swahili style units with ocean or garden views, split unit air conditioning and ceiling fan, coffee and tea facilities, room safe (free of charge), hair dryer, ensuite bath and shower or showers only, body soap provided, twin beds (or Queen size on request) and mosquito proof sleeping area, patio or terrace. Suitable for 2 adults.",
-        "Super Club Rooms - 89 Rooms: Separate bath and showers, balcony, split unit air-conditioning, coffee and tea facilities, room safe (free of charge), hair dryer, body soap provided and a complete mosquito proof sleeping area. Equipped with a double and single bed; some rooms have interconnecting doors and 3 have been specifically designed for physically handicapped clients with showers only."
+        "Super Club Rooms - 89 Rooms: Separate bath and showers, balcony, split unit air-conditioning, coffee and tea facilities, room safe (free of charge), hair dryer, body soap provided and a complete mosquito proof sleeping area. Equipped with a double and single bed; some rooms have interconnecting doors and 3 have been specifically designed for physically handicapped clients with showers only.",
+        "Lamu Rooms - 40 Rooms: Swahili style units with ocean or garden views, split unit air conditioning and ceiling fan, coffee and tea facilities, room safe (free of charge), hair dryer, ensuite bath and shower or showers only, body soap provided, twin beds (or Queen size on request) and mosquito proof sleeping area, patio or terrace. Suitable for 2 adults.",
+        "Ocean Front Rooms - 14 Rooms: Premium beachfront units with stunning ocean views, traditional Swahili architecture, enhanced amenities and direct beach access.",
+        "Sea View Suites - 2 Suites: Swahili style units with ocean or garden views, split unit air conditioning and ceiling fan, coffee and tea facilities, room safe (free of charge), hair dryer, ensuite bath and shower or showers only, body soap provided, twin beds (or Queen size on request) and mosquito proof sleeping area, patio or terrace. Suitable for 2 adults."
       ],
       amenities: [
         "Beachfront location with private beach access",
         "Traditional thatched cottage architecture",
         "All-inclusive packages available",
-        "Swimming pools",
+        "Swimming pools with daily planned activities",
+        "Watersport and dive centre on grounds - professional tuition available for beginners and experts",
+        "Kids Club - supervised club open daily from 10 am – 1pm and 3pm-9pm, all kids between 4-12 years",
+        "Bird watching - Watamu-Malindi area extremely rich for diversity of birds, with over 450 species recorded",
+        "Conference room - brand new facility that can accommodate a maximum of 150 delegates",
         "Split unit air conditioning and ceiling fans in all rooms",
         "Coffee and tea facilities",
         "Room safe (free of charge)",
@@ -284,14 +289,18 @@ const MalindiPackages = () => {
         "Mosquito proof sleeping areas",
         "Balconies, patios or terraces",
         "Free WiFi",
-        "Accessible rooms available",
-        "TripAdvisor Travelers' Choice Award winner"
+        "Accessible rooms available (3 specially designed rooms)",
+        "TripAdvisor Travelers' Choice Award winner",
+        "World Responsible Tourism Awards 2015 - Silver Winner",
+        "Community and environmental conservation programs"
       ],
       dining: [
-        "All-inclusive dining options",
-        "Multiple restaurants and bars",
+        "The Blue Turtle Restaurant - Fine dining experience",
+        "The Pizza Restaurant - Authentic Italian pizzas and casual dining",
+        "The Main Restaurant - All-inclusive buffet dining with international and local cuisine",
+        "The Snack Bar - Light bites and refreshments throughout the day",
+        "Multiple bars throughout the resort",
         "Fresh seafood specialties",
-        "International and local cuisine",
         "Beachfront dining experiences"
       ],
       gallery: [
@@ -299,7 +308,14 @@ const MalindiPackages = () => {
         "/lovable-uploads/turtle-bay-2.webp",
         "/lovable-uploads/turtle-bay-3.webp",
         "/lovable-uploads/turtle-bay-4.jpg",
-        "/lovable-uploads/turtle-bay-5.webp"
+        "/lovable-uploads/turtle-bay-5.webp",
+        "/lovable-uploads/turtle-bay-6.webp",
+        "/lovable-uploads/turtle-bay-7.webp",
+        "/lovable-uploads/turtle-bay-8.webp",
+        "/lovable-uploads/turtle-bay-9.webp",
+        "/lovable-uploads/turtle-bay-10.webp",
+        "/lovable-uploads/turtle-bay-11.webp",
+        "/lovable-uploads/turtle-bay-12.webp"
       ]
     },
     {
