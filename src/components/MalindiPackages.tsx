@@ -210,8 +210,8 @@ const MalindiPackages = () => {
       name: "Leopard Point Boutique Resort",
       image: leopardPoint,
       rating: 4,
-      description: "Exclusive boutique property with infinity pools and personalized service",
-      location: "Watamu",
+      description: "The 5-star Kasa Malindi (Formerly Leopard Point Beach Resort) features 8 luxury rooms with views of the Indian Ocean. Located within a 6-km distance of Vasco da Gama Pillar, this exclusive boutique property offers an outdoor swimming pool and personalized service in a stunning coastal setting.",
+      location: "Watamu, near Malindi Marine National Park (2.1 km)",
       priceRange: "Contact for rates",
       roomTypes: [
         "Deluxe Room - 269 sq ft, Sleeps 2, Soundproofed with flat-screen TV, premium bedding, separate bedroom, bidet, hair dryer, bathrobes, electric kettle",
@@ -226,23 +226,38 @@ const MalindiPackages = () => {
       ],
       amenities: [
         "Beachfront location with private beach access",
+        "Outdoor swimming pool with ocean views",
         "Infinity pools",
         "Private pools in select villas",
-        "Boutique personalized service",
+        "Boutique personalized service with only 8 rooms",
         "Soundproofed rooms",
         "Premium bedding and linens",
-        "Air conditioning",
-        "Flat-screen TV in all rooms",
+        "Air conditioning in all rooms",
+        "Flat-screen TV with mini-bar",
         "Free WiFi",
         "Spa services available",
-        "Hair dryers and bathrobes",
-        "Electric kettles"
+        "Hair dryers, bathrobes, and dressing gowns",
+        "Electric kettles, refrigerators, and glassware",
+        "Balconies and dressing rooms in select rooms",
+        "Roll-in shower and hot tub in bathrooms",
+        "Pool views from rooms"
       ],
       dining: [
-        "On-site restaurant",
+        "On-site restaurant with made-to-order breakfast",
+        "Lounge bar",
         "Personalized dining experiences",
         "Fresh seafood specialties",
         "International and local cuisine"
+      ],
+      gallery: [
+        "/lovable-uploads/leopard-point-1.jpg",
+        "/lovable-uploads/leopard-point-2.webp",
+        "/lovable-uploads/leopard-point-3.jpg",
+        "/lovable-uploads/leopard-point-4.jpg",
+        "/lovable-uploads/leopard-point-5.jpg",
+        "/lovable-uploads/leopard-point-6.jpg",
+        "/lovable-uploads/leopard-point-7.webp",
+        "/lovable-uploads/leopard-point-8.jpeg"
       ]
     },
     {
