@@ -436,9 +436,42 @@ const MalindiPackages = () => {
       name: "Silver Palm Spa and Resort",
       image: silverPalmResort,
       rating: 4,
-      description: "Romantic beachfront resort with spectacular sunsets and rejuvenating spa",
-      location: "Watamu",
-      priceRange: "Contact for rates"
+      description: "Boasting a private beach area, an outdoor swimming pool and a spa, Silver Palm Spa & Resort is set in Kilifi. The air-conditioned rooms feature a balcony offering ocean and pool views, each fitted with modern amenities. Guests can enjoy continental and full English/Irish breakfast options, while the onsite restaurant specializes in Swahili, Kenyan, African and international cuisines.",
+      location: "Kilifi",
+      priceRange: "$100-$200",
+      roomTypes: [
+        "Deluxe Double Room - 25 m² with 2 double beds, sea and pool views",
+        "Standard Rooms - Comfortable accommodations with essential amenities",
+        "Family Rooms - Spacious options for families",
+        "Suite Options - Enhanced comfort with private kitchenettes"
+      ],
+      amenities: [
+        "Private beach area",
+        "2 outdoor swimming pools",
+        "Full-service spa and wellness center",
+        "Fitness center",
+        "Tennis court",
+        "Business facilities",
+        "24-hour front desk",
+        "Free WiFi",
+        "Free private parking on-site",
+        "Airport shuttle service available",
+        "Water sports facilities",
+        "Non-smoking rooms"
+      ],
+      dining: [
+        "Restaurant serving Swahili, Kenyan, African and international cuisine",
+        "Continental and full English/Irish breakfast options",
+        "Bar service available",
+        "In-room dining options"
+      ],
+      gallery: [
+        "/lovable-uploads/silver-palm-1.webp",
+        "/lovable-uploads/silver-palm-2.webp",
+        "/lovable-uploads/silver-palm-3.webp",
+        "/lovable-uploads/silver-palm-4.webp",
+        "/lovable-uploads/silver-palm-5.webp"
+      ]
     }
   ];
 
