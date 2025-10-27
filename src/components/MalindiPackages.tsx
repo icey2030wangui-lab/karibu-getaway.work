@@ -359,10 +359,41 @@ const MalindiPackages = () => {
     {
       name: "Ocean Beach Resort & Spa",
       image: oceanBeachResort,
-      rating: null,
-      description: "Tranquil spa retreat blending natural beauty with contemporary comfort",
+      rating: 5,
+      description: "Discover Malindi's Most Enchanting Retreat at Ocean Beach Resort & Spa, where your Kenyan dream is just a click away. This tranquil beachfront sanctuary seamlessly blends natural coastal beauty with contemporary comfort, offering an unforgettable escape along Kenya's stunning shoreline.",
       location: "Malindi",
-      priceRange: "Contact for rates"
+      priceRange: "Contact for rates",
+      roomTypes: [
+        "Superior Rooms - Comfortable accommodations with modern amenities",
+        "Junior Suites - Spacious suites perfect for families",
+        "Suites - Elegant suites with enhanced living space",
+        "Deluxe Suites - Premium suites with luxury furnishings",
+        "Family Superior Room - Specially designed for family comfort",
+        "Honeymoon Suite - Romantic retreat for newlyweds",
+        "Garden View Villa - Private villa with lush garden views"
+      ],
+      amenities: [
+        "Full-service spa and wellness center",
+        "Beachfront location with direct beach access",
+        "Multiple swimming pools",
+        "Conference and meeting facilities",
+        "Water sports and activities",
+        "Fitness center",
+        "Gift shop and boutique"
+      ],
+      dining: [
+        "Main restaurant offering international and local cuisine",
+        "Beachside dining with ocean views",
+        "Bar and lounge services",
+        "Al fresco dining options"
+      ],
+      gallery: [
+        "/lovable-uploads/ocean-beach-1.webp",
+        "/lovable-uploads/ocean-beach-2.webp",
+        "/lovable-uploads/ocean-beach-3.webp",
+        "/lovable-uploads/ocean-beach-4.webp",
+        "/lovable-uploads/ocean-beach-5.webp"
+      ]
     },
     {
       name: "Cardamom House",
