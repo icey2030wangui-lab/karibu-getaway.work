@@ -398,10 +398,39 @@ const MalindiPackages = () => {
     {
       name: "Cardamom House",
       image: cardamomHouse,
-      rating: null,
-      description: "Boutique coastal hideaway with Moroccan-inspired design and intimate atmosphere",
+      rating: 5,
+      description: "Experience barefoot luxury at Cardamom House, a secluded eco-retreat nestled along Malindi's pristine coastline. This intimate boutique property embodies natural elegance with its authentic Swahili-inspired design, seamlessly blending traditional architecture with contemporary comfort. Built around ancient trees and surrounded by lush tropical gardens, Cardamom House offers an exclusive sanctuary for discerning travelers seeking tranquility and authentic coastal charm.",
       location: "Watamu",
-      priceRange: "Contact for rates"
+      priceRange: "Contact for rates",
+      roomTypes: [
+        "Ocean View Suites - Spacious accommodations with stunning sea vistas",
+        "Garden Rooms - Intimate spaces surrounded by tropical greenery",
+        "Private Pool Villas - Exclusive villas with personal plunge pools",
+        "Tower Suites - Unique architectural rooms with panoramic views"
+      ],
+      amenities: [
+        "Private beachfront access",
+        "Individual plunge pools in select rooms",
+        "Eco-friendly sustainable design",
+        "Organic tropical gardens",
+        "Spa and wellness treatments",
+        "Traditional Swahili architecture",
+        "Intimate boutique setting"
+      ],
+      dining: [
+        "Open-air dining with ocean views",
+        "Fresh seafood and local Kenyan cuisine",
+        "Organic ingredients from on-site gardens",
+        "Private dining experiences available"
+      ],
+      gallery: [
+        "/lovable-uploads/cardamom-house-1.webp",
+        "/lovable-uploads/cardamom-house-2.webp",
+        "/lovable-uploads/cardamom-house-3.webp",
+        "/lovable-uploads/cardamom-house-4.webp",
+        "/lovable-uploads/cardamom-house-5.webp",
+        "/lovable-uploads/cardamom-house-6.webp"
+      ]
     },
     {
       name: "Silver Palm Spa and Resort",
