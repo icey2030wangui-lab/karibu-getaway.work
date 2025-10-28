@@ -12,7 +12,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Loader2 } from "lucide-react";
+import { Loader2, CreditCard } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface BookingDialogProps {
   packageName: string;
@@ -44,55 +45,35 @@ export const BookingDialog = ({
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handlePayPalSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      // Call the edge function to initiate payment
       const { data, error } = await supabase.functions.invoke('paypal-initiate-payment', {
         body: {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
           packageName: packageName,
-          // Extract only the numeric value from price strings like "From 192" or "$192"
           packagePrice: packagePrice.replace(/[^0-9.]/g, ''),
         },
       });
 
-      // Handle Supabase client errors (network issues, 500 responses, etc.)
       if (error) {
         console.error('Supabase invocation error:', error);
-        // Try to extract a meaningful error message from the response
-        let errorMessage = 'There was an error processing your payment request.';
-        
-        if (error.message) {
-          errorMessage = error.message;
-        }
-        
-        throw new Error(errorMessage);
+        throw new Error(error.message || 'There was an error processing your payment request.');
       }
 
-      // Handle application-level errors from the edge function
       if (!data?.success) {
-        const errorMessage = data?.error || 'Failed to initiate payment';
-        console.error('Payment initiation failed:', errorMessage);
-        throw new Error(errorMessage);
+        throw new Error(data?.error || 'Failed to initiate payment');
       }
 
-      // Check for redirect URL
       if (!data?.redirectUrl) {
         throw new Error('No payment redirect URL received');
       }
 
-      // Success - redirect to PayPal immediately
-      console.log('Redirecting to PayPal:', data.redirectUrl);
-      
-      // Close dialog first
       setOpen(false);
-      
-      // Use a small delay to ensure state updates, then redirect
       setTimeout(() => {
         window.location.href = data.redirectUrl;
       }, 100);
@@ -100,16 +81,54 @@ export const BookingDialog = ({
     } catch (error) {
       console.error('Error initiating payment:', error);
       
-      // Extract the most specific error message
-      let errorMessage = "There was an error processing your payment request.";
-      
-      if (error instanceof Error) {
-        errorMessage = error.message;
+      toast({
+        title: "Payment Failed",
+        description: error instanceof Error ? error.message : "There was an error processing your payment request.",
+        variant: "destructive",
+      });
+      setLoading(false);
+    }
+  };
+
+  const handlePaystackSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('paystack-initiate-payment', {
+        body: {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          packageName: packageName,
+          packagePrice: packagePrice.replace(/[^0-9.]/g, ''),
+        },
+      });
+
+      if (error) {
+        console.error('Supabase invocation error:', error);
+        throw new Error(error.message || 'There was an error processing your payment request.');
       }
+
+      if (!data?.success) {
+        throw new Error(data?.error || 'Failed to initiate payment');
+      }
+
+      if (!data?.authorization_url) {
+        throw new Error('No payment redirect URL received');
+      }
+
+      setOpen(false);
+      setTimeout(() => {
+        window.location.href = data.authorization_url;
+      }, 100);
+      
+    } catch (error) {
+      console.error('Error initiating payment:', error);
       
       toast({
         title: "Payment Failed",
-        description: errorMessage,
+        description: error instanceof Error ? error.message : "There was an error processing your payment request.",
         variant: "destructive",
       });
       setLoading(false);
@@ -121,14 +140,14 @@ export const BookingDialog = ({
       <DialogTrigger asChild>
         <Button variant={buttonVariant}>{buttonText}</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
           <DialogTitle>Book Your Package</DialogTitle>
           <DialogDescription>
-            Complete your details to proceed with booking {packageName}
+            Complete your details and choose your payment method
           </DialogDescription>
         </DialogHeader>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="firstName">First Name</Label>
@@ -173,22 +192,63 @@ export const BookingDialog = ({
               <span className="text-sm text-muted-foreground">Package:</span>
               <span className="font-medium">{packageName}</span>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center mb-4">
               <span className="text-sm text-muted-foreground">Total Amount:</span>
               <span className="text-xl font-bold text-primary">{packagePrice}</span>
             </div>
           </div>
-          <Button type="submit" className="w-full" disabled={loading}>
-            {loading ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Processing...
-              </>
-            ) : (
-              "Proceed to Payment"
-            )}
-          </Button>
-        </form>
+          
+          <Tabs defaultValue="card" className="w-full">
+            <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger value="card">
+                <CreditCard className="mr-2 h-4 w-4" />
+                Card Payment
+              </TabsTrigger>
+              <TabsTrigger value="paypal">PayPal</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="card" className="mt-4">
+              <form onSubmit={handlePaystackSubmit}>
+                <Button
+                  type="submit"
+                  className="w-full"
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Processing...
+                    </>
+                  ) : (
+                    <>
+                      <CreditCard className="mr-2 h-4 w-4" />
+                      Pay with Card
+                    </>
+                  )}
+                </Button>
+              </form>
+            </TabsContent>
+            
+            <TabsContent value="paypal" className="mt-4">
+              <form onSubmit={handlePayPalSubmit}>
+                <Button
+                  type="submit"
+                  className="w-full"
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Processing...
+                    </>
+                  ) : (
+                    "Pay with PayPal"
+                  )}
+                </Button>
+              </form>
+            </TabsContent>
+          </Tabs>
+        </div>
       </DialogContent>
     </Dialog>
   );

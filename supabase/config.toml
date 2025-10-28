@@ -6,5 +6,11 @@ verify_jwt = false
 [functions.paypal-payment-callback]
 verify_jwt = false
 
+[functions.paystack-initiate-payment]
+verify_jwt = false
+
+[functions.paystack-payment-callback]
+verify_jwt = false
+
 [functions.send-contact-email]
 verify_jwt = false
