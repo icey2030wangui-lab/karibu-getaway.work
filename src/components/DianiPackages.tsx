@@ -207,12 +207,12 @@ const DianiPackages = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {activityPackages.map(pkg => <Dialog key={pkg.id}>)
               <DialogTrigger asChild>
-                <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-card cursor-pointer">
+                <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-card cursor-pointer">
                   <div className="relative overflow-hidden">
-                    <img src={pkg.images[0]} alt={pkg.title} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img src={pkg.images[0]} alt={pkg.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-accent text-accent-foreground">
@@ -227,9 +227,9 @@ const DianiPackages = () => {
                     </div>
                   </div>
                   
-                  <CardContent className="p-6">
-                    <div className="mb-4">
-                      <div className="flex items-center gap-2 mb-2">
+                  <CardContent className="p-4">
+                    <div className="mb-3">
+                      <div className="flex items-center gap-1 mb-2">
                         <div className="flex items-center gap-1">
                           {Array.from({
                         length: 5
@@ -237,20 +237,20 @@ const DianiPackages = () => {
                         </div>
                         <span className="text-xs text-muted-foreground">({pkg.reviews})</span>
                       </div>
-                      <p className="text-sm text-muted-foreground mb-2">
-                        Location: {pkg.location}
+                      <p className="text-xs text-muted-foreground mb-2">
+                        {pkg.location}
                       </p>
                       <div className="flex items-center gap-2">
-                        <span className="text-2xl font-bold text-primary">
+                        <span className="text-xl font-bold text-primary">
                           {pkg.price}
                         </span>
-                        {pkg.originalPrice && <span className="text-sm text-muted-foreground line-through">
+                        {pkg.originalPrice && <span className="text-xs text-muted-foreground line-through">
                             {pkg.originalPrice}
                           </span>}
                       </div>
                     </div>
                     
-                    <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                    <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-sm py-2">
                       VIEW DETAILS
                     </Button>
                   </CardContent>
