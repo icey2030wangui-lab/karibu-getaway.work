@@ -7,13 +7,12 @@ const Header = () => {
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex flex-col group">
-            <span className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-none">
-              KARIBU
-            </span>
-            <span className="text-2xl md:text-3xl font-bold text-white tracking-tight leading-none">
-              GETAWAYS
-            </span>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src={karibuLogo} 
+              alt="Karibu Getaways Logo" 
+              className="h-16 md:h-20 w-auto"
+            />
           </Link>
 
           {/* Navigation Links */}
