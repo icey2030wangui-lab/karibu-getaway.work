@@ -39,7 +39,7 @@ const MalindiPackages = () => {
       rating: 5,
       description: "Luxury beachfront resort with world-class amenities and stunning ocean views. Located on the pristine shores of Watamu, this exclusive resort offers an unforgettable coastal experience.",
       location: "Watamu Beach, 1.7 km from centre",
-      priceRange: "From KES 44,574 per night",
+      priceRange: "From $700+ per person per night",
       roomTypes: [
         "Double Room with Sea View - 1 extra-large double bed or 1 single bed",
         "Deluxe Double Room - 1 extra-large double bed",
@@ -84,7 +84,7 @@ const MalindiPackages = () => {
       rating: 4,
       description: "Charming tropical retreat with authentic Swahili architecture, lush gardens, and warm coastal hospitality. This intimate resort features traditional thatched roofs and elegant interiors with four-poster beds.",
       location: "Malindi Beach, 2.5 km from centre",
-      priceRange: "From KES 12,000 per night",
+      priceRange: "From $345 per person per night",
       roomTypes: [
         "Deluxe Double or Twin Room - 1 extra-large double bed or 2 single beds",
         "Junior Suite - 1 extra-large double bed with separate living area",
@@ -123,7 +123,7 @@ const MalindiPackages = () => {
       rating: 4,
       description: "Serene garden oasis featuring pristine swimming pools, elegant traditional architecture, and modern coastal comfort. This tranquil retreat offers spacious suites with garden views and a peaceful atmosphere.",
       location: "Malindi, 1.5 km from centre",
-      priceRange: "From KES 10,000 per night",
+      priceRange: "From $345 per person per night",
       roomTypes: [
         "Suite - 2 sofa beds",
         "Deluxe Room - Room size: 20 m²/215 ft², 1 queen bed",
@@ -171,7 +171,7 @@ const MalindiPackages = () => {
       rating: 4,
       description: "All-inclusive resort featuring unique architecture and extensive pool complex with luxurious suites and exceptional amenities",
       location: "Malindi Beach",
-      priceRange: "Contact for rates",
+      priceRange: "From $440 per person per night",
       roomTypes: [
         "Diamonds Suite with Private Pool - Separate living room, rooms with hydromassage jacuzzi baths and private terrace with comfortable Balinese sun loungers",
         "Masai Superior Room - Built on two levels in a semicircular building with private balconies on the first floor and covered terraces for rooms on the ground floor, perfect fusion of English and Lamu design",
@@ -212,7 +212,7 @@ const MalindiPackages = () => {
       rating: 4,
       description: "The 5-star Kasa Malindi (Formerly Leopard Point Beach Resort) features 8 luxury rooms with views of the Indian Ocean. Located within a 6-km distance of Vasco da Gama Pillar, this exclusive boutique property offers an outdoor swimming pool and personalized service in a stunning coastal setting.",
       location: "Watamu, near Malindi Marine National Park (2.1 km)",
-      priceRange: "Contact for rates",
+      priceRange: "From $700+ per person per night",
       roomTypes: [
         "Deluxe Room - 269 sq ft, Sleeps 2, Soundproofed with flat-screen TV, premium bedding, separate bedroom, bidet, hair dryer, bathrobes, electric kettle",
         "Superior Room - 301 sq ft, 1 bedroom, Sleeps 2, Soundproofed with flat-screen TV, separate bedroom, premium bedding, bidet, hair dryer, bathrobes, electric kettle",
@@ -266,7 +266,7 @@ const MalindiPackages = () => {
       rating: 4,
       description: "Award-winning all-inclusive beachfront resort. Turtle Bay was chosen as Best All Inclusive Hotel in Africa by TripAdvisor® in its 2012 Travelers' Choice® awards. Silver winner of the Best for Beach Tourism category at the World Responsible Tourism Awards 2015. The resort has an excellent record of commitment to the environment and community issues through the Community and Conservation office.",
       location: "Watamu Beach",
-      priceRange: "Contact for rates",
+      priceRange: "From $310 per person per night",
       roomTypes: [
         "Super Club Rooms - 89 Rooms: Separate bath and showers, balcony, split unit air-conditioning, coffee and tea facilities, room safe (free of charge), hair dryer, body soap provided and a complete mosquito proof sleeping area. Equipped with a double and single bed; some rooms have interconnecting doors and 3 have been specifically designed for physically handicapped clients with showers only.",
         "Lamu Rooms - 40 Rooms: Swahili style units with ocean or garden views, split unit air conditioning and ceiling fan, coffee and tea facilities, room safe (free of charge), hair dryer, ensuite bath and shower or showers only, body soap provided, twin beds (or Queen size on request) and mosquito proof sleeping area, patio or terrace. Suitable for 2 adults.",
@@ -324,7 +324,7 @@ const MalindiPackages = () => {
       rating: 5,
       description: "Indulge in a world of opulence and sophistication at Medina Palms, a lavish and stylish Swahili-style hotel nestled along the pristine shores of Watamu. Experience the epitome of luxury accommodation as you immerse yourself in the beauty of our meticulously designed resort. Every moment is infused with luxury and relaxation, featuring world-class amenities including sparkling swimming pools, a rejuvenating spa, and a selection of fine dining options.",
       location: "Watamu",
-      priceRange: "Contact for rates",
+      priceRange: "From $550 per person per night",
       roomTypes: [
         "Two bedroom suite",
         "Luxury two bedroom penthouse",
@@ -362,7 +362,7 @@ const MalindiPackages = () => {
       rating: 5,
       description: "Discover Malindi's Most Enchanting Retreat at Ocean Beach Resort & Spa, where your Kenyan dream is just a click away. This tranquil beachfront sanctuary seamlessly blends natural coastal beauty with contemporary comfort, offering an unforgettable escape along Kenya's stunning shoreline.",
       location: "Malindi",
-      priceRange: "Contact for rates",
+      priceRange: "From $360 per person per night",
       roomTypes: [
         "Superior Rooms - Comfortable accommodations with modern amenities",
         "Junior Suites - Spacious suites perfect for families",
@@ -401,7 +401,7 @@ const MalindiPackages = () => {
       rating: 5,
       description: "Experience barefoot luxury at Cardamom House, a secluded eco-retreat nestled along Malindi's pristine coastline. This intimate boutique property embodies natural elegance with its authentic Swahili-inspired design, seamlessly blending traditional architecture with contemporary comfort. Built around ancient trees and surrounded by lush tropical gardens, Cardamom House offers an exclusive sanctuary for discerning travelers seeking tranquility and authentic coastal charm.",
       location: "Watamu",
-      priceRange: "Contact for rates",
+      priceRange: "From $830 per person per night",
       roomTypes: [
         "Ocean View Suites - Spacious accommodations with stunning sea vistas",
         "Garden Rooms - Intimate spaces surrounded by tropical greenery",
@@ -438,7 +438,7 @@ const MalindiPackages = () => {
       rating: 4,
       description: "Boasting a private beach area, an outdoor swimming pool and a spa, Silver Palm Spa & Resort is set in Kilifi. The air-conditioned rooms feature a balcony offering ocean and pool views, each fitted with modern amenities. Guests can enjoy continental and full English/Irish breakfast options, while the onsite restaurant specializes in Swahili, Kenyan, African and international cuisines.",
       location: "Kilifi",
-      priceRange: "$100-$200",
+      priceRange: "From $360 per person per night",
       roomTypes: [
         "Deluxe Double Room - 25 m² with 2 double beds, sea and pool views",
         "Standard Rooms - Comfortable accommodations with essential amenities",
