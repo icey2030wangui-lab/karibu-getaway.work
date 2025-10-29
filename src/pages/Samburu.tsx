@@ -18,7 +18,8 @@ const accommodations = [
     description: "Luxurious tented camp on the banks of the Ewaso Nyiro River offering an intimate safari experience with stunning wildlife viewing and Samburu cultural encounters.",
     rooms: 28,
     location: "Samburu National Reserve",
-    features: ["Full Board", "River Views", "Swimming Pool", "Cultural Visits"]
+    features: ["Full Board", "River Views", "Swimming Pool", "Cultural Visits"],
+    pricing: "$840 full board per person per night"
   },
   {
     name: "Sarova Shaba Game Lodge",
@@ -28,7 +29,8 @@ const accommodations = [
     description: "Set amidst indigenous trees overlooking a natural spring and waterhole. This lodge offers panoramic views of the Shaba Reserve and Mt. Kenya in the distance.",
     rooms: 85,
     location: "Shaba National Reserve",
-    features: ["Full Board", "Natural Spring Views", "Game Drives", "Conference Facilities"]
+    features: ["Full Board", "Natural Spring Views", "Game Drives", "Conference Facilities"],
+    pricing: "$423 full board per person sharing"
   },
   {
     name: "Elephant Bedroom Camp",
@@ -38,7 +40,8 @@ const accommodations = [
     description: "An exclusive tented camp along the Ewaso Nyiro River, offering personal service and exceptional wildlife encounters including the unique Samburu Special Five.",
     rooms: 12,
     location: "Samburu National Reserve",
-    features: ["Full Board", "Bush Walks", "Eco-friendly", "Riverside Dining"]
+    features: ["Full Board", "Bush Walks", "Eco-friendly", "Riverside Dining"],
+    pricing: "$850 per person per night sharing"
   },
   {
     name: "Samburu Sopa Lodge",
@@ -48,7 +51,8 @@ const accommodations = [
     description: "Perched on a hill overlooking Samburu National Reserve, this lodge combines comfort with spectacular views and easy access to wildlife-rich plains.",
     rooms: 60,
     location: "Samburu National Reserve",
-    features: ["Full Board", "Swimming Pool", "Cultural Performances", "Bar & Restaurant"]
+    features: ["Full Board", "Swimming Pool", "Cultural Performances", "Bar & Restaurant"],
+    pricing: "$395 per person per night sharing"
   },
   {
     name: "Samburu Simba Lodge",
@@ -58,7 +62,8 @@ const accommodations = [
     description: "Affordable lodge offering comfortable accommodation and authentic safari experiences. Perfect for budget-conscious travelers seeking Samburu's unique wildlife.",
     rooms: 48,
     location: "Samburu National Reserve",
-    features: ["Full Board", "Game Drives", "Guided Tours", "Cultural Shows"]
+    features: ["Full Board", "Game Drives", "Guided Tours", "Cultural Shows"],
+    pricing: "$200 per person per night"
   }
 ];
 
@@ -67,8 +72,8 @@ const safariPackages = [
     name: "3 Days Samburu Safari ~ Mid-Range",
     image: safariSamburuImg,
     duration: "3 Days / 2 Nights",
-    priceFrom: "$405",
-    priceTo: "$755",
+    priceFrom: "$1,150",
+    priceTo: "$1,150",
     description: "Experience the unique wildlife of Samburu with comfortable mid-range accommodation. Enjoy game drives to spot the Samburu Special Five and cultural visits.",
     inclusions: [
       "2 nights accommodation",
@@ -90,8 +95,8 @@ const safariPackages = [
     name: "3 Days Samburu Safari ~ Luxury",
     image: samburuLuxuryImg,
     duration: "3 Days / 2 Nights",
-    priceFrom: "$455",
-    priceTo: "$935",
+    priceFrom: "$1,900",
+    priceTo: "$1,900",
     description: "Indulge in luxury while exploring Samburu's wilderness. Stay in premium lodges with exceptional service and enjoy exclusive wildlife encounters.",
     inclusions: [
       "2 nights luxury accommodation",
@@ -113,8 +118,8 @@ const safariPackages = [
     name: "4 Days Samburu Safari ~ Luxury",
     image: samburuLuxuryImg,
     duration: "4 Days / 3 Nights",
-    priceFrom: "$1055",
-    priceTo: "$1815",
+    priceFrom: "$3,450",
+    priceTo: "$3,450",
     description: "Extended luxury safari in Samburu with more time to explore and relax. Perfect for wildlife enthusiasts seeking an immersive experience.",
     inclusions: [
       "3 nights luxury accommodation",
@@ -137,8 +142,8 @@ const safariPackages = [
     name: "2 Days Samburu Fly-In Safari",
     image: samburuFlyingImg,
     duration: "2 Days / 1 Night",
-    priceFrom: "$620",
-    priceTo: "$775",
+    priceFrom: "$1,200",
+    priceTo: "$1,200",
     description: "Skip the long drive and fly directly to Samburu! Arrive at Wilson Airport in Nairobi and reach the reserve within 1.5 hours for an exclusive safari experience.",
     inclusions: [
       "Round-trip flights from Nairobi",
@@ -160,8 +165,8 @@ const safariPackages = [
     name: "3 Days Samburu Fly-In Safari",
     image: samburuFlyingImg,
     duration: "3 Days / 2 Nights",
-    priceFrom: "$945",
-    priceTo: "$1235",
+    priceFrom: "$1,750",
+    priceTo: "$1,750",
     description: "Convenient flying safari with more time to explore Samburu's unique ecosystem. Perfect for those seeking comfort and efficiency.",
     inclusions: [
       "Round-trip flights from Nairobi",
@@ -184,8 +189,8 @@ const safariPackages = [
     name: "4 Days Fly-In Safari",
     image: samburuFlyingImg,
     duration: "4 Days / 3 Nights",
-    priceFrom: "$970",
-    priceTo: "$1420",
+    priceFrom: "$3,600",
+    priceTo: "$3,600",
     description: "Extended flying safari offering the ultimate convenience and wildlife experience. Maximize your time in the reserve with comfortable aerial transfers.",
     inclusions: [
       "Round-trip flights from Nairobi",
@@ -307,7 +312,7 @@ const Samburu = () => {
 
                       <BookingDialog
                         packageName={`${accommodation.name} - Samburu Safari`}
-                        packagePrice="$600"
+                        packagePrice={accommodation.pricing || "$600"}
                         buttonText="Book Now"
                         buttonVariant="default"
                       />

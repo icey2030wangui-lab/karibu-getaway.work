@@ -18,7 +18,8 @@ const accommodations = [
     description: "Located in the heart of Amboseli with breathtaking views of Mt. Kilimanjaro. The lodge offers elegant accommodation and exceptional wildlife viewing opportunities.",
     rooms: 80,
     location: "Amboseli National Park",
-    features: ["Full Board", "Kilimanjaro Views", "Swimming Pool", "Spa Services"]
+    features: ["Full Board", "Kilimanjaro Views", "Swimming Pool", "Spa Services"],
+    pricing: "$500 per person sharing per night"
   },
   {
     name: "Amboseli Serena Safari Lodge",
@@ -28,7 +29,8 @@ const accommodations = [
     description: "Maasai-inspired architecture with sweeping views of Africa's highest mountain. Offers world-class amenities and unforgettable safari experiences.",
     rooms: 96,
     location: "Amboseli National Park",
-    features: ["Full Board", "Game Drives", "Cultural Visits", "Bar & Lounge"]
+    features: ["Full Board", "Game Drives", "Cultural Visits", "Bar & Lounge"],
+    pricing: "$580 per person per night"
   },
   {
     name: "Kibo Safari Camp",
@@ -38,7 +40,8 @@ const accommodations = [
     description: "Comfortable tented accommodation in the Amboseli ecosystem, offering authentic bush experiences with stunning mountain backdrops.",
     rooms: 73,
     location: "Amboseli National Park",
-    features: ["Full Board", "Tented Suites", "Bush Dining", "Wildlife Viewing"]
+    features: ["Full Board", "Tented Suites", "Bush Dining", "Wildlife Viewing"],
+    pricing: "$460 per person sharing per night"
   },
   {
     name: "Sentrim Amboseli Lodge",
@@ -48,14 +51,15 @@ const accommodations = [
     description: "Well-appointed lodge offering comfortable rooms and excellent service. Perfect base for exploring Amboseli's elephant herds and diverse wildlife.",
     rooms: 54,
     location: "Amboseli National Park",
-    features: ["Full Board", "Swimming Pool", "Game Drives", "Conference Facilities"]
+    features: ["Full Board", "Swimming Pool", "Game Drives", "Conference Facilities"],
+    pricing: "$370 per person sharing per night"
   }
 ];
 
 const safariPackages = [
   {
     title: "6-Day Amboseli, Lake Naivasha & Mara - Mid-Range",
-    price: "$2,220 to $2,810",
+    price: "$1,790 per person",
     duration: "6 Days",
     type: "Private Tour",
     category: "Mid-range, Lodge & Hotel",
@@ -81,7 +85,7 @@ const safariPackages = [
   },
   {
     title: "6-Day Big Five Tour: Mara, Nakuru, Amboseli",
-    price: "$1,942 to $1,962",
+    price: "$1,800 per person",
     duration: "6 Days",
     type: "Shared Tour (max 7 people)",
     category: "Mid-range, Lodge",
@@ -104,7 +108,7 @@ const safariPackages = [
   },
   {
     title: "8-Day Mara-Nakuru-Naivasha-Amboseli Budget Safari",
-    price: "$1,088 to $1,350",
+    price: "$2,083 per person",
     duration: "8 Days",
     type: "Shared Tour (max 8 people)",
     category: "Budget, Tented Camp & Hotel",
@@ -128,7 +132,7 @@ const safariPackages = [
   },
   {
     title: "7-Day Comfort Kenya Safari with Sopa Lodges",
-    price: "$2,318 to $3,279",
+    price: "$2,500 per person",
     duration: "7 Days",
     type: "Private Tour",
     category: "Mid-range, Lodge",
@@ -253,7 +257,7 @@ const Amboseli = () => {
 
                       <BookingDialog
                         packageName={`${accommodation.name} - Amboseli Safari`}
-                        packagePrice="$554"
+                        packagePrice={accommodation.pricing || "$554"}
                         buttonText="Book Now"
                         buttonVariant="default"
                       />

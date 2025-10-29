@@ -20,8 +20,7 @@ const accommodations = [
     location: "Mara Triangle, Masai Mara National Reserve",
     features: ["Full Board", "Free WiFi", "24hr Room Service", "King & Twin Rooms", "Presidential Suite", "River Views"],
     pricing: {
-      lowSeason: "$266 per night",
-      highSeason: "$460 per night"
+      perPerson: "$749 per person per night"
     }
   },
   {
@@ -32,7 +31,10 @@ const accommodations = [
     description: "Set on the slopes of the Oloolaimutia Hills, Mara Sopa Lodge provides stunning views over the rolling plains of the Masai Mara.",
     rooms: 100,
     location: "Masai Mara National Reserve",
-    features: ["Full Board", "Game Drives", "Swimming Pool", "Cultural Visits"]
+    features: ["Full Board", "Game Drives", "Swimming Pool", "Cultural Visits"],
+    pricing: {
+      perPerson: "$300 per person per night (2 people sharing)"
+    }
   },
   {
     name: "Mara Leisure Camp",
@@ -42,7 +44,10 @@ const accommodations = [
     description: "An intimate tented camp offering comfortable accommodation and authentic safari experiences at affordable rates.",
     rooms: 20,
     location: "Masai Mara National Reserve",
-    features: ["Full Board", "Game Drives", "Bush Dining", "Campfire Nights"]
+    features: ["Full Board", "Game Drives", "Bush Dining", "Campfire Nights"],
+    pricing: {
+      perPerson: "$200 per person per night (2 people sharing)"
+    }
   },
   {
     name: "Basecamp Masai Mara",
@@ -52,14 +57,17 @@ const accommodations = [
     description: "Eco-friendly tented camp along the Talek River, combining sustainability with comfort and authentic Maasai cultural experiences.",
     rooms: 15,
     location: "Talek River, Masai Mara",
-    features: ["Full Board", "Eco-friendly", "River Views", "Cultural Center"]
+    features: ["Full Board", "Eco-friendly", "River Views", "Cultural Center"],
+    pricing: {
+      perPerson: "$400 per person per night (2 people sharing)"
+    }
   }
 ];
 
 const safariPackages = [
   {
     title: "6-Day Maasai Mara-Nakuru-Amboseli Budget Safari",
-    price: "$790 to $990",
+    price: "$1,100 per person",
     duration: "6 Days",
     type: "Shared Tour (max 7 people)",
     category: "Budget, Tented Camp & Hotel",
@@ -85,7 +93,7 @@ const safariPackages = [
   },
   {
     title: "4-Day Masai Mara & Lake Nakuru High End Safari",
-    price: "$1,680 to $2,576",
+    price: "$3,500 per person",
     duration: "4 Days",
     type: "Private Tour",
     category: "Mid-range, Lodge",
@@ -111,7 +119,7 @@ const safariPackages = [
   },
   {
     title: "3-Day Masai Mara Wildlife Safari & Sundowners",
-    price: "$1,456 to $1,926",
+    price: "$2,000 per person",
     duration: "3 Days",
     type: "Private Tour",
     category: "Mid-range, Tented Camp",
@@ -161,7 +169,7 @@ const safariPackages = [
   },
   {
     title: "4-Day Masai Mara & Lake Nakuru Budget Joining",
-    price: "$759 to $1,051",
+    price: "$1,500 per person",
     duration: "4 Days",
     type: "Shared Tour (max 8 people)",
     category: "Budget, Tented Camp & Hotel",
@@ -342,14 +350,13 @@ const MasaiMara = () => {
                       {accommodation.pricing && (
                         <div className="mb-4 p-3 bg-muted/50 rounded-lg">
                           <p className="text-sm font-semibold text-foreground mb-1">Pricing:</p>
-                          <p className="text-sm text-muted-foreground">Low Season: {accommodation.pricing.lowSeason}</p>
-                          <p className="text-sm text-muted-foreground">High Season: {accommodation.pricing.highSeason}</p>
+                          <p className="text-sm text-muted-foreground">{accommodation.pricing.perPerson}</p>
                         </div>
                       )}
 
                       <BookingDialog
                         packageName={`${accommodation.name} - Masai Mara Safari`}
-                        packagePrice={accommodation.pricing?.lowSeason || "$654"}
+                        packagePrice={accommodation.pricing?.perPerson || "$654"}
                         buttonText="Book Now"
                         buttonVariant="default"
                       />
