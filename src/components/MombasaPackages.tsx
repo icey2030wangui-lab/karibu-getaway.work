@@ -456,7 +456,7 @@ const MombasaPackages = () => {
                     </div>
                     
                     <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-sm py-2">
-                      BOOK
+                      VIEW DETAILS
                     </Button>
                   </CardContent>
                 </Card>
