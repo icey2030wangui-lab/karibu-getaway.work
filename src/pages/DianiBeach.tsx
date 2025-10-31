@@ -32,9 +32,9 @@ const DianiBeach = () => {
         </section>
 
         {/* About Section */}
-        <section className="py-12 px-4 bg-background">
+        <section className="py-8 px-4 bg-background">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-foreground mb-6">About Diani Beach</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">About Diani Beach</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               Diani Beach is consistently rated as one of Africa's finest beaches, featuring 17 kilometers of pristine white coral sand and warm turquoise waters. Located 30 km south of Mombasa on Kenya's Indian Ocean coast, this tropical paradise offers the perfect blend of relaxation and adventure.
             </p>

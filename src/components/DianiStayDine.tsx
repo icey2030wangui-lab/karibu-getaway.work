@@ -210,9 +210,9 @@ const DianiStayDine = () => {
     </DialogContent>;
 
   return (
-    <section id="diani-stay-dine" className="py-16 px-4 bg-background">
+    <section id="diani-stay-dine" className="py-8 px-4 bg-background">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Diani Stay & Dine Selection
           </h2>
@@ -221,7 +221,7 @@ const DianiStayDine = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {hotelPackages.map(pkg => 
             <Dialog key={pkg.id}>
               <DialogTrigger asChild>
