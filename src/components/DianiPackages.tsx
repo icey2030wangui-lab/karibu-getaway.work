@@ -196,10 +196,10 @@ const DianiPackages = () => {
         </div>
       </div>
     </DialogContent>;
-  return <section id="diani-packages" className="py-8 px-4 bg-background">
+  return <section id="diani-packages" className="py-4 px-4 bg-background">
       <div className="container mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
             Diani Beach Packages
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -207,7 +207,7 @@ const DianiPackages = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
           {activityPackages.map(pkg => <Dialog key={pkg.id}>)
               <DialogTrigger asChild>
                 <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-card cursor-pointer">
