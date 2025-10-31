@@ -210,64 +210,48 @@ const DianiStayDine = () => {
     </DialogContent>;
 
   return (
-    <section id="diani-stay-dine" className="py-4 px-4 bg-background">
-      <div className="container mx-auto">
-        <div className="text-center mb-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+    <section id="diani-stay-dine" className="py-16 px-4 bg-background">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Diani Stay & Dine Selection
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Curated collection of premium accommodations paired with memorable dining experiences at Kenya's premier beach destination
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {hotelPackages.map(pkg => 
             <Dialog key={pkg.id}>
               <DialogTrigger asChild>
-                <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-card cursor-pointer">
-                  <div className="relative overflow-hidden">
-                    <img src={pkg.images[0]} alt={pkg.title} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <div className="absolute top-4 left-4">
-                      <Badge className="bg-accent text-accent-foreground">
-                        {pkg.badge}
+                <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-card cursor-pointer rounded-2xl">
+                  <div className="relative overflow-hidden h-80">
+                    <img src={pkg.images[0]} alt={pkg.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div className="absolute top-4 right-4">
+                      <Badge className="bg-accent text-white text-lg px-4 py-2 rounded-full font-bold">
+                        {pkg.price}
                       </Badge>
-                    </div>
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h3 className="text-lg font-bold mb-1 line-clamp-2">
-                        {pkg.title}
-                      </h3>
-                      <p className="text-sm opacity-90">{pkg.duration}</p>
                     </div>
                   </div>
                   
                   <CardContent className="p-6">
-                    <div className="mb-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="flex items-center gap-1">
-                          {Array.from({ length: 5 }).map((_, i) => 
-                            <Star key={i} className={`w-3 h-3 ${i < Math.floor(pkg.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
-                          )}
-                        </div>
-                        <span className="text-xs text-muted-foreground">({pkg.reviews})</span>
-                      </div>
-                      <p className="text-sm text-muted-foreground mb-2">
-                        Location: {pkg.location}
-                      </p>
-                      <div className="flex items-center gap-2">
-                        <span className="text-2xl font-bold text-primary">
-                          {pkg.price}
-                        </span>
-                        {pkg.originalPrice && <span className="text-sm text-muted-foreground line-through">
-                            {pkg.originalPrice}
-                          </span>}
-                      </div>
+                    <h3 className="text-2xl font-bold mb-3 text-foreground">
+                      {pkg.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-4 line-clamp-3">
+                      {pkg.description}
+                    </p>
+                    <div className="flex items-center gap-2 text-muted-foreground mb-3">
+                      <span className="flex items-center gap-1">
+                        📍 {pkg.location}
+                      </span>
                     </div>
-                    
-                    <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                      VIEW DETAILS
-                    </Button>
+                    <div className="text-sm text-muted-foreground">
+                      <strong>Includes:</strong>
+                      <ul className="mt-2 space-y-1">
+                        {pkg.inclusions.slice(0, 3).map((item, idx) => 
+                          <li key={idx}>• {item}</li>
+                        )}
+                      </ul>
+                    </div>
                   </CardContent>
                 </Card>
               </DialogTrigger>
