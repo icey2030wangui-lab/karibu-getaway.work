@@ -28,14 +28,14 @@ const Header = () => {
               Destinations
             </a>
             <a 
-              href="#packages-section" 
+              href="#diani-stay-dine" 
               className="text-white hover:text-accent transition-colors duration-300 font-normal"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('packages-section')?.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('diani-stay-dine')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Experiences
+              Stay and Dine Selection
             </a>
             <a 
               href="#footer" 
