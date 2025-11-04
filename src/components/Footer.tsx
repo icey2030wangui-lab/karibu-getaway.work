@@ -19,7 +19,7 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-accent" />
-                  <span>info@karibugateway.com</span>
+                  <span>info@karibugetaway.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-accent" />
@@ -82,40 +82,16 @@ const Footer = () => {
               <div>
                 <h4 className="text-lg font-semibold mb-3 text-accent">Follow Our Adventures</h4>
                 <div className="flex gap-4">
-                  <a 
-                    href="https://facebook.com/karibugateway" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200"
-                    aria-label="Follow us on Facebook"
-                  >
+                  <a href="https://facebook.com/karibugateway" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200" aria-label="Follow us on Facebook">
                     <Facebook className="w-6 h-6" />
                   </a>
-                  <a 
-                    href="https://twitter.com/karibugateway" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200"
-                    aria-label="Follow us on Twitter"
-                  >
+                  <a href="https://twitter.com/karibugateway" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200" aria-label="Follow us on Twitter">
                     <Twitter className="w-6 h-6" />
                   </a>
-                  <a 
-                    href="https://instagram.com/karibugateway" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200"
-                    aria-label="Follow us on Instagram"
-                  >
+                  <a href="https://instagram.com/karibugateway" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200" aria-label="Follow us on Instagram">
                     <Instagram className="w-6 h-6" />
                   </a>
-                  <a 
-                    href="https://linkedin.com/company/karibugateway" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200"
-                    aria-label="Follow us on LinkedIn"
-                  >
+                  <a href="https://linkedin.com/company/karibugateway" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200" aria-label="Follow us on LinkedIn">
                     <Linkedin className="w-6 h-6" />
                   </a>
                 </div>
