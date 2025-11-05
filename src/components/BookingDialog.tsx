@@ -47,6 +47,17 @@ export const BookingDialog = ({
 
   const handlePayPalSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate form
+    if (!formData.firstName || !formData.lastName || !formData.email) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all fields before proceeding.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -92,6 +103,17 @@ export const BookingDialog = ({
 
   const handlePaystackSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate form
+    if (!formData.firstName || !formData.lastName || !formData.email) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all fields before proceeding.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setLoading(true);
 
     try {
