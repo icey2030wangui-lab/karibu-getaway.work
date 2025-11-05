@@ -28,6 +28,7 @@ export type Database = {
           package_price: number
           payment_status: string
           paypal_order_id: string | null
+          paystack_reference: string | null
           pesapal_merchant_reference: string | null
           updated_at: string
         }
@@ -44,6 +45,7 @@ export type Database = {
           package_price: number
           payment_status?: string
           paypal_order_id?: string | null
+          paystack_reference?: string | null
           pesapal_merchant_reference?: string | null
           updated_at?: string
         }
@@ -60,6 +62,7 @@ export type Database = {
           package_price?: number
           payment_status?: string
           paypal_order_id?: string | null
+          paystack_reference?: string | null
           pesapal_merchant_reference?: string | null
           updated_at?: string
         }
@@ -180,10 +183,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      cleanup_old_rate_limits: {
-        Args: Record<PropertyKey, never>
-        Returns: undefined
-      }
+      cleanup_old_rate_limits: { Args: never; Returns: undefined }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
