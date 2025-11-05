@@ -48,7 +48,7 @@ serve(async (req) => {
     const { data: recentBookings, error: rateLimitError } = await supabase
       .from('bookings')
       .select('id')
-      .eq('email', email)
+      .eq('customer_email', email)
       .gte('created_at', oneHourAgo);
 
     if (rateLimitError) {
@@ -104,9 +104,10 @@ serve(async (req) => {
     const { data: booking, error: insertError } = await supabase
       .from('bookings')
       .insert({
-        first_name: firstName,
-        last_name: lastName,
-        email: email,
+        booking_reference: reference,
+        customer_first_name: firstName,
+        customer_last_name: lastName,
+        customer_email: email,
         package_name: packageName,
         package_price: packagePrice,
         payment_status: 'pending',
