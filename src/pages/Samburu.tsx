@@ -39,7 +39,14 @@ const accommodations = [
     rooms: 85,
     location: "Shaba National Reserve",
     features: ["Full Board", "Natural Spring Views", "Game Drives", "Conference Facilities"],
-    pricing: "$423 full board per person sharing"
+    pricing: "$423 full board per person sharing",
+    gallery: [
+      { url: "/lovable-uploads/samburu-lodge.jpg", caption: "Lodge exterior and grounds" },
+      { url: "/lovable-uploads/samburu-suite.webp", caption: "Deluxe suite interior" },
+      { url: "/lovable-uploads/samburu-wildlife.jpg", caption: "Wildlife viewing from lodge" },
+      { url: "/lovable-uploads/samburu-intrepids-pool.jpeg", caption: "Swimming pool area" },
+      { url: "/lovable-uploads/samburu-elephant.jpeg", caption: "Elephant at waterhole" }
+    ]
   },
   {
     name: "Elephant Bedroom Camp",
@@ -50,7 +57,14 @@ const accommodations = [
     rooms: 12,
     location: "Samburu National Reserve",
     features: ["Full Board", "Bush Walks", "Eco-friendly", "Riverside Dining"],
-    pricing: "$850 per person per night sharing"
+    pricing: "$850 per person per night sharing",
+    gallery: [
+      { url: "/lovable-uploads/samburu-elephant.jpeg", caption: "Elephant viewing from camp" },
+      { url: "/lovable-uploads/samburu-intrepids-tent.jpeg", caption: "Luxury tent bedroom" },
+      { url: "/lovable-uploads/samburu-intrepids-view.webp", caption: "River view from tent deck" },
+      { url: "/lovable-uploads/samburu-intrepids-interior.webp", caption: "Spacious tent interior" },
+      { url: "/lovable-uploads/samburu-wildlife.jpg", caption: "Wildlife on the riverbank" }
+    ]
   },
   {
     name: "Samburu Sopa Lodge",
@@ -61,7 +75,14 @@ const accommodations = [
     rooms: 60,
     location: "Samburu National Reserve",
     features: ["Full Board", "Swimming Pool", "Cultural Performances", "Bar & Restaurant"],
-    pricing: "$395 per person per night sharing"
+    pricing: "$395 per person per night sharing",
+    gallery: [
+      { url: "/lovable-uploads/samburu-suite.webp", caption: "Comfortable suite bedroom" },
+      { url: "/lovable-uploads/samburu-lodge.jpg", caption: "Lodge building and grounds" },
+      { url: "/lovable-uploads/samburu-intrepids-pool.jpeg", caption: "Pool with evening lighting" },
+      { url: "/lovable-uploads/samburu-intrepids-culture.jpg", caption: "Cultural dance performance" },
+      { url: "/lovable-uploads/samburu-intrepids-giraffe.jpeg", caption: "Game drive experience" }
+    ]
   },
   {
     name: "Samburu Simba Lodge",
@@ -72,7 +93,14 @@ const accommodations = [
     rooms: 48,
     location: "Samburu National Reserve",
     features: ["Full Board", "Game Drives", "Guided Tours", "Cultural Shows"],
-    pricing: "$200 per person per night"
+    pricing: "$200 per person per night",
+    gallery: [
+      { url: "/lovable-uploads/samburu-warriors.webp", caption: "Samburu warriors welcome" },
+      { url: "/lovable-uploads/samburu-wildlife.jpg", caption: "Wildlife viewing opportunities" },
+      { url: "/lovable-uploads/samburu-lodge.jpg", caption: "Lodge facilities" },
+      { url: "/lovable-uploads/samburu-intrepids-culture.jpg", caption: "Traditional cultural performances" },
+      { url: "/lovable-uploads/samburu-elephant.jpeg", caption: "Elephant encounters" }
+    ]
   }
 ];
 
