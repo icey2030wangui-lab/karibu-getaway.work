@@ -19,7 +19,16 @@ const accommodations = [
     rooms: 28,
     location: "Samburu National Reserve",
     features: ["Full Board", "River Views", "Swimming Pool", "Cultural Visits"],
-    pricing: "$840 full board per person per night"
+    pricing: "$840 full board per person per night",
+    gallery: [
+      { url: "/lovable-uploads/samburu-intrepids-giraffe.jpeg", caption: "Game drive with giraffe encounter" },
+      { url: "/lovable-uploads/samburu-intrepids-culture.jpg", caption: "Samburu cultural performance" },
+      { url: "/lovable-uploads/samburu-intrepids-elephant.webp", caption: "Elephant viewing from camp deck" },
+      { url: "/lovable-uploads/samburu-intrepids-pool.jpeg", caption: "Pool area at night" },
+      { url: "/lovable-uploads/samburu-intrepids-tent.jpeg", caption: "Luxury tent interior" },
+      { url: "/lovable-uploads/samburu-intrepids-interior.webp", caption: "Spacious tented suite" },
+      { url: "/lovable-uploads/samburu-intrepids-view.webp", caption: "Tent deck with stunning views" }
+    ]
   },
   {
     name: "Sarova Shaba Game Lodge",
