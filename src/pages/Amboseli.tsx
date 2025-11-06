@@ -65,7 +65,7 @@ const accommodations = [
     name: "Kibo Safari Camp",
     category: "Mid-range",
     type: "TENTED CAMP",
-    image: "/lovable-uploads/amboseli-map-1.jpg",
+    image: "/lovable-uploads/kibo-entrance.jpg",
     description: "Comfortable tented accommodation in the Amboseli ecosystem, offering authentic bush experiences with stunning mountain backdrops.",
     rooms: 73,
     location: "Amboseli National Park",
