@@ -71,7 +71,7 @@ const activities = [
     name: "Mombasa Marine Park",
     category: "Marine Activities",
     type: "MARINE RESERVE",
-    image: "/lovable-uploads/neptune-3.jpg",
+    image: "/lovable-uploads/mombasa-marine-park.jpeg",
     description: "Protected marine reserve offering pristine coral reefs, diverse marine life, and crystal-clear waters. Perfect for snorkeling, diving, and glass-bottom boat tours. Experience the vibrant underwater ecosystem of the Indian Ocean.",
     duration: "4-6 hours",
     rating: 4.5,
