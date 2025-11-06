@@ -83,7 +83,7 @@ const activities = [
     name: "Jet Ski Adventure",
     category: "Water Sports",
     type: "JET SKI RENTAL",
-    image: "/lovable-uploads/neptune-5.jpg",
+    image: "/lovable-uploads/jetski-adventure.jpg",
     description: "Experience the thrill of riding jet skis along Mombasa's stunning coastline. Feel the adrenaline as you speed across the turquoise waters of the Indian Ocean with professional instructors and safety equipment provided.",
     duration: "30 min - 1 hour",
     rating: 4.6,
