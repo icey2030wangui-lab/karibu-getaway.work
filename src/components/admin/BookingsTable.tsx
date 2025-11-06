@@ -20,8 +20,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, Trash2, Search, Calendar } from "lucide-react";
+import { Loader2, Trash2, Search, Calendar, Eye } from "lucide-react";
 import { format } from "date-fns";
+import { BookingDetailsModal } from "./BookingDetailsModal";
 
 type Booking = {
   id: string;
@@ -41,6 +42,8 @@ export const BookingsTable = () => {
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [dateFilter, setDateFilter] = useState<string>("");
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [selectedBookingId, setSelectedBookingId] = useState<string | null>(null);
+  const [detailsOpen, setDetailsOpen] = useState(false);
 
   const { data: bookings, isLoading } = useQuery({
     queryKey: ["admin-bookings"],
@@ -82,13 +85,24 @@ export const BookingsTable = () => {
   });
 
   const updateStatusMutation = useMutation({
-    mutationFn: async ({ id, status }: { id: string; status: string }) => {
+    mutationFn: async ({ id, status, oldStatus }: { id: string; status: string; oldStatus: string }) => {
+      const { data: { user } } = await supabase.auth.getUser();
+      
       const { error } = await supabase
         .from("bookings")
         .update({ payment_status: status })
         .eq("id", id);
 
       if (error) throw error;
+
+      // Log the activity
+      await supabase.from("booking_activity_logs").insert({
+        booking_id: id,
+        action: "Status Updated",
+        old_value: oldStatus,
+        new_value: status,
+        changed_by: user?.id || null,
+      });
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["admin-bookings"] });
@@ -136,8 +150,19 @@ export const BookingsTable = () => {
     );
   }
 
+  const handleViewDetails = (bookingId: string) => {
+    setSelectedBookingId(bookingId);
+    setDetailsOpen(true);
+  };
+
   return (
     <div className="space-y-4">
+      <BookingDetailsModal
+        bookingId={selectedBookingId}
+        open={detailsOpen}
+        onOpenChange={setDetailsOpen}
+      />
+      
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <h2 className="text-xl font-semibold">Bookings Management</h2>
         <div className="flex flex-col gap-2 sm:flex-row">
@@ -208,7 +233,11 @@ export const BookingsTable = () => {
                     <Select
                       value={booking.payment_status}
                       onValueChange={(status) =>
-                        updateStatusMutation.mutate({ id: booking.id, status })
+                        updateStatusMutation.mutate({ 
+                          id: booking.id, 
+                          status,
+                          oldStatus: booking.payment_status 
+                        })
                       }
                     >
                       <SelectTrigger className="w-[130px]">
@@ -223,14 +252,23 @@ export const BookingsTable = () => {
                   </TableCell>
                   <TableCell>{format(new Date(booking.created_at), "MMM dd, yyyy")}</TableCell>
                   <TableCell className="text-right">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => deleteMutation.mutate(booking.id)}
-                      disabled={deleteMutation.isPending}
-                    >
-                      <Trash2 className="h-4 w-4 text-destructive" />
-                    </Button>
+                    <div className="flex justify-end gap-1">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => handleViewDetails(booking.id)}
+                      >
+                        <Eye className="h-4 w-4" />
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => deleteMutation.mutate(booking.id)}
+                        disabled={deleteMutation.isPending}
+                      >
+                        <Trash2 className="h-4 w-4 text-destructive" />
+                      </Button>
+                    </div>
                   </TableCell>
                 </TableRow>
               ))
