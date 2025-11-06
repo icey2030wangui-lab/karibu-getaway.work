@@ -35,7 +35,7 @@ const activities = [
     name: "Haller Park",
     category: "Nature & Wildlife",
     type: "NATURE & WILDLIFE AREAS",
-    image: "/lovable-uploads/Screenshot_107.png",
+    image: "/lovable-uploads/haller-park.webp",
     description: "Three hippos, few ageing crocodiles, butterflies, cute giant tortoises and the six giraffes in the park. A nature park transformed from limestone quarry into an ecological paradise. Home to various wildlife including giraffes, hippos, crocodiles, and numerous bird species. Perfect for family visits and nature walks.",
     duration: "2-3 hours",
     rating: 4.1,
