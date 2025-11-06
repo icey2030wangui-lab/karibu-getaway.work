@@ -46,6 +46,12 @@ import severinSea3 from "@/assets/severin-sea-3.webp";
 import severinSea4 from "@/assets/severin-sea-4.jpeg";
 import severinSea5 from "@/assets/severin-sea-5.jpeg";
 import severinSea6 from "@/assets/severin-sea-6.webp";
+import travellersBeach1 from "@/assets/travellers-beach-1.jpeg";
+import travellersBeach2 from "@/assets/travellers-beach-2.jpg";
+import travellersBeach3 from "@/assets/travellers-beach-3.webp";
+import travellersBeach4 from "@/assets/travellers-beach-4.jpg";
+import travellersBeach5 from "@/assets/travellers-beach-5.jpg";
+import travellersBeach6 from "@/assets/travellers-beach-6.jpg";
 
 export const dianiPackages = [
   {
@@ -886,6 +892,12 @@ export const mombasaPackages = [
     rating: 4.7,
     reviews: 167,
     images: [
+      travellersBeach1,
+      travellersBeach2,
+      travellersBeach3,
+      travellersBeach4,
+      travellersBeach5,
+      travellersBeach6,
       "/lovable-uploads/82dec078-64ae-449b-bfe9-da0d158bb0b9.png",
       "/lovable-uploads/4b17e36e-0376-446d-9593-f67c55b200b6.png",
       "/lovable-uploads/70d79873-7697-42e4-ba90-dd87dbeae2f6.png",
