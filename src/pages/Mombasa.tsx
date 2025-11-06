@@ -119,7 +119,7 @@ const activities = [
     name: "Paddle Boat Experience",
     category: "Water Sports",
     type: "PADDLE BOAT RENTAL",
-    image: "/lovable-uploads/neptune-10.jpg",
+    image: "/lovable-uploads/paddle-boat.jpg",
     description: "Enjoy a leisurely paddle boat ride along the calm waters of Mombasa's beaches. Perfect for families and couples seeking a relaxed water activity with scenic coastal views.",
     duration: "1 hour",
     rating: 4.2,
