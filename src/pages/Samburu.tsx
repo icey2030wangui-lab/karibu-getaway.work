@@ -65,11 +65,16 @@ const accommodations = [
     features: ["Full Board", "Bush Walks", "Eco-friendly", "Riverside Dining"],
     pricing: "$850 per person per night sharing",
     gallery: [
-      { url: "/lovable-uploads/samburu-elephant.jpeg", caption: "Elephant viewing from camp" },
-      { url: "/lovable-uploads/samburu-intrepids-tent.jpeg", caption: "Luxury tent bedroom" },
-      { url: "/lovable-uploads/samburu-intrepids-view.webp", caption: "River view from tent deck" },
-      { url: "/lovable-uploads/samburu-intrepids-interior.webp", caption: "Spacious tent interior" },
-      { url: "/lovable-uploads/samburu-wildlife.jpg", caption: "Wildlife on the riverbank" }
+      { url: "/lovable-uploads/elephant-bedroom-welcome.webp", caption: "Elephant Bedroom Camp welcome sign" },
+      { url: "/lovable-uploads/elephant-bedroom-deck-evening.webp", caption: "Evening deck with river views" },
+      { url: "/lovable-uploads/elephant-bedroom-plunge-pool.webp", caption: "Private deck plunge pool overlooking Ewaso Nyiro" },
+      { url: "/lovable-uploads/elephant-bedroom-pool-closeup.jpg", caption: "Relaxing plunge pool" },
+      { url: "/lovable-uploads/elephant-bedroom-tent-interior.webp", caption: "Luxury tented bedroom with canopy bed" },
+      { url: "/lovable-uploads/elephant-bedroom-lounge.webp", caption: "Main deck lounge area" },
+      { url: "/lovable-uploads/elephant-bedroom-elephants.webp", caption: "Elephant herd near the camp" },
+      { url: "/lovable-uploads/elephant-bedroom-exterior.webp", caption: "Tented camp exterior" },
+      { url: "/lovable-uploads/elephant-bedroom-bathroom.webp", caption: "Spacious bathroom with double vanity" },
+      { url: "/lovable-uploads/elephant-bedroom-sunset-deck.webp", caption: "Sunset views from main deck" }
     ]
   },
   {
