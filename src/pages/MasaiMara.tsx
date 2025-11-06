@@ -11,271 +11,217 @@ import { useState } from "react";
 import safariMasaiMara from "@/assets/safari-masai-mara.jpg";
 import safariLuxuryCamp from "@/assets/safari-luxury-camp.jpg";
 import safariBudgetTour from "@/assets/safari-budget-tour.jpg";
-
-const accommodations = [
-  {
-    name: "Mara Serena Safari Lodge",
-    category: "Luxury+",
-    type: "SAFARI LODGE",
-    image: "/lovable-uploads/mara-serena-entrance.webp",
-    description: "The Lodge is located within the mara triangle which gives it one of the best views of the mara especially during the wilderbeest migration. The lodge has 75 rooms including 8 sets interconnecting rooms, 1 suite, 28 rooms with king size beds and 38 twin rooms and 8 triple rooms (on request basis) all influenced by the Maasai heritage. Strategically located for amazing views of the Savannah and the river. The suite is the presidential, honeymoon or VIP venue - very spacious with uninterrupted views of the mara River. All rooms have free internet, ceiling fans, telephones, valet, laundry and shoe shine with 24hr room service.",
-    rooms: 75,
-    location: "Mara Triangle, Masai Mara National Reserve",
-    features: ["Full Board", "Free WiFi", "24hr Room Service", "King & Twin Rooms", "Presidential Suite", "River Views"],
-    pricing: {
-      perPerson: "$749 per person per night"
-    },
-    gallery: [
-      { url: "/lovable-uploads/mara-serena-entrance.webp", caption: "Main Entrance" },
-      { url: "/lovable-uploads/mara-serena-1.webp", caption: "Lodge Exterior" },
-      { url: "/lovable-uploads/mara-serena-room-1.webp", caption: "Deluxe Room Interior" },
-      { url: "/lovable-uploads/mara-serena-room-2.webp", caption: "King Size Room" },
-      { url: "/lovable-uploads/mara-serena-pool.webp", caption: "Swimming Pool at Sunset" },
-      { url: "/lovable-uploads/mara-serena-exterior.webp", caption: "Exterior Gardens" },
-      { url: "/lovable-uploads/mara-serena-bathroom.webp", caption: "En-suite Bathroom" },
-      { url: "/lovable-uploads/mara-serena-leopard.webp", caption: "Wildlife Viewing - Leopard" },
-      { url: "/lovable-uploads/mara-serena-migration.webp", caption: "Wildebeest Migration" }
-    ]
+const accommodations = [{
+  name: "Mara Serena Safari Lodge",
+  category: "Luxury+",
+  type: "SAFARI LODGE",
+  image: "/lovable-uploads/mara-serena-entrance.webp",
+  description: "The Lodge is located within the mara triangle which gives it one of the best views of the mara especially during the wilderbeest migration. The lodge has 75 rooms including 8 sets interconnecting rooms, 1 suite, 28 rooms with king size beds and 38 twin rooms and 8 triple rooms (on request basis) all influenced by the Maasai heritage. Strategically located for amazing views of the Savannah and the river. The suite is the presidential, honeymoon or VIP venue - very spacious with uninterrupted views of the mara River. All rooms have free internet, ceiling fans, telephones, valet, laundry and shoe shine with 24hr room service.",
+  rooms: 75,
+  location: "Mara Triangle, Masai Mara National Reserve",
+  features: ["Full Board", "Free WiFi", "24hr Room Service", "King & Twin Rooms", "Presidential Suite", "River Views"],
+  pricing: {
+    perPerson: "$749 per person per night"
   },
-  {
-    name: "Mara Sopa Lodge",
-    category: "Mid-range",
-    type: "SAFARI LODGE",
-    image: "/lovable-uploads/mara-sopa-1.webp",
-    description: "Set on the slopes of the Oloolaimutia Hills, Mara Sopa Lodge provides stunning views over the rolling plains of the Masai Mara.",
-    rooms: 100,
-    location: "Masai Mara National Reserve",
-    features: ["Full Board", "Game Drives", "Swimming Pool", "Cultural Visits"],
-    pricing: {
-      perPerson: "$300 per person per night (2 people sharing)"
-    }
-  },
-  {
-    name: "Mara Leisure Camp",
-    category: "Budget",
-    type: "TENTED CAMP",
-    image: "/lovable-uploads/mara-leisure-entrance.webp",
-    description: "An intimate tented camp offering comfortable accommodation and authentic safari experiences at affordable rates.",
-    rooms: 20,
-    location: "Masai Mara National Reserve",
-    features: ["Full Board", "Game Drives", "Bush Dining", "Campfire Nights"],
-    pricing: {
-      perPerson: "$200 per person per night (2 people sharing)"
-    },
-    gallery: [
-      { url: "/lovable-uploads/mara-leisure-entrance.webp", caption: "Main Entrance" },
-      { url: "/lovable-uploads/mara-leisure-tents.webp", caption: "Tented Accommodations" },
-      { url: "/lovable-uploads/mara-leisure-safari.webp", caption: "Game Drive Safari" },
-      { url: "/lovable-uploads/mara-leisure-lounge.webp", caption: "Reception & Lounge Area" },
-      { url: "/lovable-uploads/mara-leisure-room.webp", caption: "Twin Tent Interior" },
-      { url: "/lovable-uploads/mara-leisure-pool.webp", caption: "Swimming Pool Area" },
-      { url: "/lovable-uploads/mara-leisure-bathroom.webp", caption: "En-suite Bathroom" },
-      { url: "/lovable-uploads/mara-leisure-veranda.webp", caption: "Private Tent Veranda" }
-    ]
-  },
-  {
-    name: "Basecamp Masai Mara",
-    category: "Mid-range",
-    type: "TENTED CAMP",
-    image: "/lovable-uploads/basecamp-evening-deck.jpg",
-    description: "Eco-friendly tented camp along the Talek River, combining sustainability with comfort and authentic Maasai cultural experiences.",
-    rooms: 15,
-    location: "Talek River, Masai Mara",
-    features: ["Full Board", "Eco-friendly", "River Views", "Cultural Center"],
-    pricing: {
-      perPerson: "$400 per person per night (2 people sharing)"
-    },
-    gallery: [
-      { url: "/lovable-uploads/basecamp-evening-deck.jpg", caption: "Evening at Tent Deck" },
-      { url: "/lovable-uploads/basecamp-tent-deck.jpg", caption: "Luxury Tent with Private Deck" },
-      { url: "/lovable-uploads/basecamp-exterior.jpg", caption: "Eco-friendly Tent Exterior" },
-      { url: "/lovable-uploads/basecamp-tent-room.jpg", caption: "Tent Interior & Bedroom" },
-      { url: "/lovable-uploads/basecamp-bathroom.jpg", caption: "En-suite Bathroom" },
-      { url: "/lovable-uploads/basecamp-tent-view.jpg", caption: "Tent with Savannah Views" },
-      { url: "/lovable-uploads/basecamp-restaurant.jpg", caption: "Restaurant & Dining Area" },
-      { url: "/lovable-uploads/basecamp-terrace.jpg", caption: "Terrace Seating Area" },
-      { url: "/lovable-uploads/basecamp-pool.jpg", caption: "Pool with Maasai Warrior" },
-      { url: "/lovable-uploads/basecamp-pool-dining.jpg", caption: "Pool & Outdoor Dining" }
-    ]
+  gallery: [{
+    url: "/lovable-uploads/mara-serena-entrance.webp",
+    caption: "Main Entrance"
+  }, {
+    url: "/lovable-uploads/mara-serena-1.webp",
+    caption: "Lodge Exterior"
+  }, {
+    url: "/lovable-uploads/mara-serena-room-1.webp",
+    caption: "Deluxe Room Interior"
+  }, {
+    url: "/lovable-uploads/mara-serena-room-2.webp",
+    caption: "King Size Room"
+  }, {
+    url: "/lovable-uploads/mara-serena-pool.webp",
+    caption: "Swimming Pool at Sunset"
+  }, {
+    url: "/lovable-uploads/mara-serena-exterior.webp",
+    caption: "Exterior Gardens"
+  }, {
+    url: "/lovable-uploads/mara-serena-bathroom.webp",
+    caption: "En-suite Bathroom"
+  }, {
+    url: "/lovable-uploads/mara-serena-leopard.webp",
+    caption: "Wildlife Viewing - Leopard"
+  }, {
+    url: "/lovable-uploads/mara-serena-migration.webp",
+    caption: "Wildebeest Migration"
+  }]
+}, {
+  name: "Mara Sopa Lodge",
+  category: "Mid-range",
+  type: "SAFARI LODGE",
+  image: "/lovable-uploads/mara-sopa-1.webp",
+  description: "Set on the slopes of the Oloolaimutia Hills, Mara Sopa Lodge provides stunning views over the rolling plains of the Masai Mara.",
+  rooms: 100,
+  location: "Masai Mara National Reserve",
+  features: ["Full Board", "Game Drives", "Swimming Pool", "Cultural Visits"],
+  pricing: {
+    perPerson: "$300 per person per night (2 people sharing)"
   }
-];
-
-const safariPackages = [
-  {
-    title: "6-Day Maasai Mara-Nakuru-Amboseli Budget Safari",
-    price: "$1,100 per person",
-    duration: "6 Days",
-    type: "Shared Tour (max 7 people)",
-    category: "Budget, Tented Camp & Hotel",
-    image: safariBudgetTour,
-    description: "Experience Kenya's most iconic parks on this budget-friendly safari. Visit Masai Mara for the Big Five, Lake Nakuru for flamingos and rhinos, and Amboseli for elephants with Mt. Kilimanjaro views.",
-    inclusions: [
-      "Park fees (For non-residents)",
-      "All activities (Unless labeled as optional)",
-      "All accommodation (Unless listed as upgrade)",
-      "A professional driver/guide",
-      "All transportation (Unless labeled as optional)",
-      "All Taxes/VAT",
-      "Meals",
-      "Drinks"
-    ],
-    exclusions: [
-      "International flights",
-      "Roundtrip airport transfer",
-      "Tips (Tipping guideline US$10.00 pp per day)",
-      "Personal items",
-      "Government imposed increase of taxes and/or park fees"
-    ]
+}, {
+  name: "Mara Leisure Camp",
+  category: "Budget",
+  type: "TENTED CAMP",
+  image: "/lovable-uploads/mara-leisure-entrance.webp",
+  description: "An intimate tented camp offering comfortable accommodation and authentic safari experiences at affordable rates.",
+  rooms: 20,
+  location: "Masai Mara National Reserve",
+  features: ["Full Board", "Game Drives", "Bush Dining", "Campfire Nights"],
+  pricing: {
+    perPerson: "$200 per person per night (2 people sharing)"
   },
-  {
-    title: "4-Day Masai Mara & Lake Nakuru High End Safari",
-    price: "$3,500 per person",
-    duration: "4 Days",
-    type: "Private Tour",
-    category: "Mid-range, Lodge",
-    image: safariMasaiMara,
-    description: "Luxurious safari experience combining the legendary Masai Mara with the scenic Lake Nakuru. Stay in comfortable lodges and enjoy extensive game drives with expert guides.",
-    inclusions: [
-      "Park fees",
-      "All activities",
-      "All accommodation",
-      "Professional driver/guide",
-      "All transportation",
-      "All Taxes/VAT",
-      "Roundtrip airport transfer",
-      "Meals",
-      "Drinks"
-    ],
-    exclusions: [
-      "International flights",
-      "Tips",
-      "Personal items",
-      "Government imposed increase of taxes"
-    ]
+  gallery: [{
+    url: "/lovable-uploads/mara-leisure-entrance.webp",
+    caption: "Main Entrance"
+  }, {
+    url: "/lovable-uploads/mara-leisure-tents.webp",
+    caption: "Tented Accommodations"
+  }, {
+    url: "/lovable-uploads/mara-leisure-safari.webp",
+    caption: "Game Drive Safari"
+  }, {
+    url: "/lovable-uploads/mara-leisure-lounge.webp",
+    caption: "Reception & Lounge Area"
+  }, {
+    url: "/lovable-uploads/mara-leisure-room.webp",
+    caption: "Twin Tent Interior"
+  }, {
+    url: "/lovable-uploads/mara-leisure-pool.webp",
+    caption: "Swimming Pool Area"
+  }, {
+    url: "/lovable-uploads/mara-leisure-bathroom.webp",
+    caption: "En-suite Bathroom"
+  }, {
+    url: "/lovable-uploads/mara-leisure-veranda.webp",
+    caption: "Private Tent Veranda"
+  }]
+}, {
+  name: "Basecamp Masai Mara",
+  category: "Mid-range",
+  type: "TENTED CAMP",
+  image: "/lovable-uploads/basecamp-evening-deck.jpg",
+  description: "Eco-friendly tented camp along the Talek River, combining sustainability with comfort and authentic Maasai cultural experiences.",
+  rooms: 15,
+  location: "Talek River, Masai Mara",
+  features: ["Full Board", "Eco-friendly", "River Views", "Cultural Center"],
+  pricing: {
+    perPerson: "$400 per person per night (2 people sharing)"
   },
-  {
-    title: "3-Day Masai Mara Wildlife Safari & Sundowners",
-    price: "$2,000 per person",
-    duration: "3 Days",
-    type: "Private Tour",
-    category: "Mid-range, Tented Camp",
-    image: safariMasaiMara,
-    description: "Short but immersive Masai Mara experience with sunset sundowner experiences. Perfect for those with limited time wanting to witness the Great Migration and Big Five.",
-    inclusions: [
-      "Park fees",
-      "All activities",
-      "Tented camp accommodation",
-      "Professional driver/guide",
-      "All transportation",
-      "Meals & Drinks",
-      "Sundowner experiences"
-    ],
-    exclusions: [
-      "International flights",
-      "Airport transfers",
-      "Tips",
-      "Personal items"
-    ]
-  },
-  {
-    title: "8-Day Exceptional Luxury Safari",
-    price: "$4,050 to $4,319",
-    duration: "8 Days",
-    type: "Private Tour",
-    category: "Luxury, Lodge & Tented Camp",
-    image: safariLuxuryCamp,
-    description: "Ultimate luxury safari experience covering Kenya's premier wildlife destinations. Stay in exclusive lodges and camps with world-class service and amenities.",
-    inclusions: [
-      "Park fees",
-      "All activities",
-      "Luxury accommodation",
-      "Professional driver/guide",
-      "All transportation",
-      "All Taxes/VAT",
-      "Meals & Premium drinks",
-      "Spa services",
-      "Cultural visits"
-    ],
-    exclusions: [
-      "International flights",
-      "Tips",
-      "Personal items",
-      "Premium beverages"
-    ]
-  },
-  {
-    title: "4-Day Masai Mara & Lake Nakuru Budget Joining",
-    price: "$1,500 per person",
-    duration: "4 Days",
-    type: "Shared Tour (max 8 people)",
-    category: "Budget, Tented Camp & Hotel",
-    image: safariBudgetTour,
-    description: "Affordable joining safari to Masai Mara and Lake Nakuru. Share the experience with other travelers while keeping costs low. Great for solo travelers and budget-conscious adventurers.",
-    inclusions: [
-      "Park fees",
-      "All activities",
-      "Budget accommodation",
-      "Professional driver/guide",
-      "All transportation",
-      "Meals"
-    ],
-    exclusions: [
-      "International flights",
-      "Airport transfers",
-      "Tips",
-      "Drinks",
-      "Personal items"
-    ]
-  }
-];
-
+  gallery: [{
+    url: "/lovable-uploads/basecamp-evening-deck.jpg",
+    caption: "Evening at Tent Deck"
+  }, {
+    url: "/lovable-uploads/basecamp-tent-deck.jpg",
+    caption: "Luxury Tent with Private Deck"
+  }, {
+    url: "/lovable-uploads/basecamp-exterior.jpg",
+    caption: "Eco-friendly Tent Exterior"
+  }, {
+    url: "/lovable-uploads/basecamp-tent-room.jpg",
+    caption: "Tent Interior & Bedroom"
+  }, {
+    url: "/lovable-uploads/basecamp-bathroom.jpg",
+    caption: "En-suite Bathroom"
+  }, {
+    url: "/lovable-uploads/basecamp-tent-view.jpg",
+    caption: "Tent with Savannah Views"
+  }, {
+    url: "/lovable-uploads/basecamp-restaurant.jpg",
+    caption: "Restaurant & Dining Area"
+  }, {
+    url: "/lovable-uploads/basecamp-terrace.jpg",
+    caption: "Terrace Seating Area"
+  }, {
+    url: "/lovable-uploads/basecamp-pool.jpg",
+    caption: "Pool with Maasai Warrior"
+  }, {
+    url: "/lovable-uploads/basecamp-pool-dining.jpg",
+    caption: "Pool & Outdoor Dining"
+  }]
+}];
+const safariPackages = [{
+  title: "6-Day Maasai Mara-Nakuru-Amboseli Budget Safari",
+  price: "$1,100 per person",
+  duration: "6 Days",
+  type: "Shared Tour (max 7 people)",
+  category: "Budget, Tented Camp & Hotel",
+  image: safariBudgetTour,
+  description: "Experience Kenya's most iconic parks on this budget-friendly safari. Visit Masai Mara for the Big Five, Lake Nakuru for flamingos and rhinos, and Amboseli for elephants with Mt. Kilimanjaro views.",
+  inclusions: ["Park fees (For non-residents)", "All activities (Unless labeled as optional)", "All accommodation (Unless listed as upgrade)", "A professional driver/guide", "All transportation (Unless labeled as optional)", "All Taxes/VAT", "Meals", "Drinks"],
+  exclusions: ["International flights", "Roundtrip airport transfer", "Tips (Tipping guideline US$10.00 pp per day)", "Personal items", "Government imposed increase of taxes and/or park fees"]
+}, {
+  title: "4-Day Masai Mara & Lake Nakuru High End Safari",
+  price: "$3,500 per person",
+  duration: "4 Days",
+  type: "Private Tour",
+  category: "Mid-range, Lodge",
+  image: safariMasaiMara,
+  description: "Luxurious safari experience combining the legendary Masai Mara with the scenic Lake Nakuru. Stay in comfortable lodges and enjoy extensive game drives with expert guides.",
+  inclusions: ["Park fees", "All activities", "All accommodation", "Professional driver/guide", "All transportation", "All Taxes/VAT", "Roundtrip airport transfer", "Meals", "Drinks"],
+  exclusions: ["International flights", "Tips", "Personal items", "Government imposed increase of taxes"]
+}, {
+  title: "3-Day Masai Mara Wildlife Safari & Sundowners",
+  price: "$2,000 per person",
+  duration: "3 Days",
+  type: "Private Tour",
+  category: "Mid-range, Tented Camp",
+  image: safariMasaiMara,
+  description: "Short but immersive Masai Mara experience with sunset sundowner experiences. Perfect for those with limited time wanting to witness the Great Migration and Big Five.",
+  inclusions: ["Park fees", "All activities", "Tented camp accommodation", "Professional driver/guide", "All transportation", "Meals & Drinks", "Sundowner experiences"],
+  exclusions: ["International flights", "Airport transfers", "Tips", "Personal items"]
+}, {
+  title: "8-Day Exceptional Luxury Safari",
+  price: "$4,050 to $4,319",
+  duration: "8 Days",
+  type: "Private Tour",
+  category: "Luxury, Lodge & Tented Camp",
+  image: safariLuxuryCamp,
+  description: "Ultimate luxury safari experience covering Kenya's premier wildlife destinations. Stay in exclusive lodges and camps with world-class service and amenities.",
+  inclusions: ["Park fees", "All activities", "Luxury accommodation", "Professional driver/guide", "All transportation", "All Taxes/VAT", "Meals & Premium drinks", "Spa services", "Cultural visits"],
+  exclusions: ["International flights", "Tips", "Personal items", "Premium beverages"]
+}, {
+  title: "4-Day Masai Mara & Lake Nakuru Budget Joining",
+  price: "$1,500 per person",
+  duration: "4 Days",
+  type: "Shared Tour (max 8 people)",
+  category: "Budget, Tented Camp & Hotel",
+  image: safariBudgetTour,
+  description: "Affordable joining safari to Masai Mara and Lake Nakuru. Share the experience with other travelers while keeping costs low. Great for solo travelers and budget-conscious adventurers.",
+  inclusions: ["Park fees", "All activities", "Budget accommodation", "Professional driver/guide", "All transportation", "Meals"],
+  exclusions: ["International flights", "Airport transfers", "Tips", "Drinks", "Personal items"]
+}];
 const MasaiMara = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [selectedAccommodation, setSelectedAccommodation] = useState<number | null>(null);
   const maraSopaGallery = accommodations[1].gallery || [];
-
   const openLightbox = (index: number) => {
     setLightboxIndex(index);
     setLightboxOpen(true);
   };
-
   const openAccommodationDetails = (index: number) => {
     setSelectedAccommodation(index);
   };
-
   const closeAccommodationDetails = () => {
     setSelectedAccommodation(null);
   };
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       
       {/* Lightbox Modal */}
-      <ImageLightbox
-        images={maraSopaGallery}
-        initialIndex={lightboxIndex}
-        isOpen={lightboxOpen}
-        onClose={() => setLightboxOpen(false)}
-      />
+      <ImageLightbox images={maraSopaGallery} initialIndex={lightboxIndex} isOpen={lightboxOpen} onClose={() => setLightboxOpen(false)} />
 
       {/* Accommodation Details Dialog */}
-      {selectedAccommodation !== null && (
-        <AccommodationDetailsDialog
-          {...accommodations[selectedAccommodation]}
-          isOpen={true}
-          onClose={closeAccommodationDetails}
-        />
-      )}
+      {selectedAccommodation !== null && <AccommodationDetailsDialog {...accommodations[selectedAccommodation]} isOpen={true} onClose={closeAccommodationDetails} />}
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-[60vh] overflow-hidden">
-          <img
-            src="/lovable-uploads/masai.jpeg"
-            alt="Masai Mara"
-            className="w-full h-full object-cover"
-          />
+          <img src="/lovable-uploads/masai.jpeg" alt="Masai Mara" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white px-4">
@@ -372,15 +318,10 @@ const MasaiMara = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {accommodations.map((accommodation, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              {accommodations.map((accommodation, index) => <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
                   <div className="flex flex-col md:flex-row">
                     <div className="md:w-1/3 relative">
-                      <img
-                        src={accommodation.image}
-                        alt={accommodation.name}
-                        className="w-full h-64 md:h-full object-cover"
-                      />
+                      <img src={accommodation.image} alt={accommodation.name} className="w-full h-64 md:h-full object-cover" />
                       <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
                         {accommodation.category}
                       </Badge>
@@ -411,30 +352,22 @@ const MasaiMara = () => {
                       </div>
 
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {accommodation.features.map((feature, idx) => (
-                          <Badge key={idx} variant="secondary" className="text-xs">
+                        {accommodation.features.map((feature, idx) => <Badge key={idx} variant="secondary" className="text-xs">
                             {feature}
-                          </Badge>
-                        ))}
+                          </Badge>)}
                       </div>
 
-                      {accommodation.pricing && (
-                        <div className="mb-4 p-3 bg-muted/50 rounded-lg">
+                      {accommodation.pricing && <div className="mb-4 p-3 bg-muted/50 rounded-lg">
                           <p className="text-sm font-semibold text-foreground mb-1">Pricing:</p>
                           <p className="text-sm text-muted-foreground">{accommodation.pricing.perPerson}</p>
-                        </div>
-                      )}
+                        </div>}
 
-                      <Button 
-                        onClick={() => openAccommodationDetails(index)}
-                        className="w-full"
-                      >
+                      <Button onClick={() => openAccommodationDetails(index)} className="w-full">
                         View Details & Photos
                       </Button>
                     </CardContent>
                   </div>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -442,50 +375,22 @@ const MasaiMara = () => {
         {/* Mara Sopa Lodge Photo Gallery - Keep for direct access */}
         <section className="py-16 px-4 bg-background">
           <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Mara Sopa Lodge Gallery
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Experience the beauty and comfort of Mara Sopa Lodge through these stunning images
-              </p>
-            </div>
+            
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {accommodations[1].gallery?.map((photo, index) => (
-                <button
-                  key={index}
-                  onClick={() => openLightbox(index)}
-                  className="relative overflow-hidden rounded-lg group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                >
-                  <img
-                    src={photo.url}
-                    alt={photo.caption}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
+              {accommodations[1].gallery?.map((photo, index) => <button key={index} onClick={() => openLightbox(index)} className="relative overflow-hidden rounded-lg group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                  <img src={photo.url} alt={photo.caption} className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <p className="text-white text-sm p-4 font-medium">{photo.caption}</p>
                   </div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-8 w-8 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                        />
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
                       </svg>
                     </div>
                   </div>
-                </button>
-              ))}
+                </button>)}
             </div>
           </div>
         </section>
@@ -503,14 +408,9 @@ const MasaiMara = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {safariPackages.map((pkg, index) => (
-                <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+              {safariPackages.map((pkg, index) => <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
                   <div className="relative overflow-hidden h-48">
-                    <img 
-                      src={pkg.image} 
-                      alt={pkg.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
+                    <img src={pkg.image} alt={pkg.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground">
                       {pkg.category.split(',')[0]}
@@ -537,25 +437,17 @@ const MasaiMara = () => {
                       <div>
                         <h4 className="text-xs font-semibold text-green-600 mb-2">Includes:</h4>
                         <ul className="space-y-1">
-                          {pkg.inclusions.slice(0, 3).map((item, idx) => (
-                            <li key={idx} className="text-xs text-muted-foreground flex items-start gap-1">
+                          {pkg.inclusions.slice(0, 3).map((item, idx) => <li key={idx} className="text-xs text-muted-foreground flex items-start gap-1">
                               <CheckCircle2 className="w-3 h-3 text-green-500 mt-0.5 flex-shrink-0" />
                               <span>{item}</span>
-                            </li>
-                          ))}
+                            </li>)}
                         </ul>
                       </div>
                     </div>
 
-                    <BookingDialog
-                      packageName={pkg.title}
-                      packagePrice={pkg.price}
-                      buttonText="Get Quote"
-                      buttonVariant="default"
-                    />
+                    <BookingDialog packageName={pkg.title} packagePrice={pkg.price} buttonText="Get Quote" buttonVariant="default" />
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </section>
@@ -588,8 +480,6 @@ const MasaiMara = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default MasaiMara;
