@@ -59,7 +59,7 @@ const activities = [
     name: "Wild Waters",
     category: "Adventure & Recreation",
     type: "WATER PARK",
-    image: "/lovable-uploads/mombasa-tusks.jpg",
+    image: "/lovable-uploads/wild-waters.jpeg",
     description: "Kenya's premier water park featuring thrilling water slides, wave pools, and family-friendly attractions. Perfect for a fun day out with exciting rides and water activities for all ages.",
     duration: "Full Day",
     rating: 4.2,
