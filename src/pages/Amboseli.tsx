@@ -40,7 +40,7 @@ const accommodations = [
     name: "Amboseli Serena Safari Lodge",
     category: "Luxury+",
     type: "SAFARI LODGE",
-    image: "/lovable-uploads/amboseli1.jpeg",
+    image: "/lovable-uploads/amboseli-serena-aerial.jpg",
     description: "Maasai-inspired architecture with sweeping views of Africa's highest mountain. Offers world-class amenities and unforgettable safari experiences.",
     rooms: 96,
     location: "Amboseli National Park",
