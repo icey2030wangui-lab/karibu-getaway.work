@@ -64,14 +64,24 @@ const accommodations = [
     name: "Mara Leisure Camp",
     category: "Budget",
     type: "TENTED CAMP",
-    image: "/lovable-uploads/masai_11.jpeg",
+    image: "/lovable-uploads/mara-leisure-entrance.webp",
     description: "An intimate tented camp offering comfortable accommodation and authentic safari experiences at affordable rates.",
     rooms: 20,
     location: "Masai Mara National Reserve",
     features: ["Full Board", "Game Drives", "Bush Dining", "Campfire Nights"],
     pricing: {
       perPerson: "$200 per person per night (2 people sharing)"
-    }
+    },
+    gallery: [
+      { url: "/lovable-uploads/mara-leisure-entrance.webp", caption: "Main Entrance" },
+      { url: "/lovable-uploads/mara-leisure-tents.webp", caption: "Tented Accommodations" },
+      { url: "/lovable-uploads/mara-leisure-safari.webp", caption: "Game Drive Safari" },
+      { url: "/lovable-uploads/mara-leisure-lounge.webp", caption: "Reception & Lounge Area" },
+      { url: "/lovable-uploads/mara-leisure-room.webp", caption: "Twin Tent Interior" },
+      { url: "/lovable-uploads/mara-leisure-pool.webp", caption: "Swimming Pool Area" },
+      { url: "/lovable-uploads/mara-leisure-bathroom.webp", caption: "En-suite Bathroom" },
+      { url: "/lovable-uploads/mara-leisure-veranda.webp", caption: "Private Tent Veranda" }
+    ]
   },
   {
     name: "Basecamp Masai Mara",
