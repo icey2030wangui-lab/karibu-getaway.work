@@ -90,14 +90,26 @@ const accommodations = [
     name: "Sentrim Amboseli Lodge",
     category: "Mid-range",
     type: "SAFARI LODGE",
-    image: "/lovable-uploads/masai_11.jpeg",
+    image: "/lovable-uploads/sentrim-entrance.jpg",
     description: "Well-appointed lodge offering comfortable rooms and excellent service. Perfect base for exploring Amboseli's elephant herds and diverse wildlife.",
     rooms: 54,
     location: "Amboseli National Park",
     features: ["Full Board", "Swimming Pool", "Game Drives", "Conference Facilities"],
     pricing: {
       perPerson: "$370 per person sharing per night"
-    }
+    },
+    gallery: [
+      { url: "/lovable-uploads/sentrim-entrance.jpg", caption: "Lodge Entrance Gate" },
+      { url: "/lovable-uploads/sentrim-tent-kilimanjaro.webp", caption: "Tent Deck with Kilimanjaro Views" },
+      { url: "/lovable-uploads/sentrim-tent-exterior.jpg", caption: "Safari Tent Exterior" },
+      { url: "/lovable-uploads/sentrim-tent-deck.jpg", caption: "Tent with Private Deck" },
+      { url: "/lovable-uploads/sentrim-tent-interior.jpeg", caption: "Comfortable Tent Interior" },
+      { url: "/lovable-uploads/sentrim-campfire.jpeg", caption: "Traditional Campfire Gathering" },
+      { url: "/lovable-uploads/sentrim-canopy-bed.jpg", caption: "Luxury Canopy Bed" },
+      { url: "/lovable-uploads/sentrim-pool-bar.jpg", caption: "Pool Bar and Lounge" },
+      { url: "/lovable-uploads/sentrim-pool-kilimanjaro.jpg", caption: "Swimming Pool with Mountain Views" },
+      { url: "/lovable-uploads/sentrim-luxury-tent.jpeg", caption: "Spacious Luxury Tent Suite" }
+    ]
   }
 ];
 
