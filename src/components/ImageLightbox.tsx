@@ -25,10 +25,26 @@ export const ImageLightbox = ({ images, initialIndex, isOpen, onClose }: ImageLi
   // Minimum swipe distance (in px) to trigger navigation
   const minSwipeDistance = 50;
 
+  // Safety check: if images array is empty or undefined, close the lightbox
+  useEffect(() => {
+    if (!images || images.length === 0) {
+      onClose();
+    }
+  }, [images, onClose]);
+
   // Reset index when initialIndex changes
   useEffect(() => {
     setCurrentIndex(initialIndex);
   }, [initialIndex]);
+
+  // Safety check: ensure currentIndex is within bounds
+  const safeIndex = Math.max(0, Math.min(currentIndex, (images?.length || 1) - 1));
+  const currentImage = images?.[safeIndex];
+
+  // If no valid image, don't render
+  if (!currentImage) {
+    return null;
+  }
 
   const handlePrevious = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -132,8 +148,8 @@ export const ImageLightbox = ({ images, initialIndex, isOpen, onClose }: ImageLi
               }}
             >
               <img
-                src={images[currentIndex].url}
-                alt={images[currentIndex].caption}
+                src={currentImage.url}
+                alt={currentImage.caption}
                 className="max-w-full max-h-[80vh] object-contain rounded-lg select-none"
                 draggable="false"
               />
@@ -155,10 +171,10 @@ export const ImageLightbox = ({ images, initialIndex, isOpen, onClose }: ImageLi
             {/* Caption */}
             <div className="mt-6 text-center">
               <p className="text-white text-lg font-medium mb-2">
-                {images[currentIndex].caption}
+                {currentImage.caption}
               </p>
               <p className="text-white/70 text-sm">
-                {currentIndex + 1} / {images.length}
+                {safeIndex + 1} / {images.length}
               </p>
             </div>
           </div>
@@ -180,7 +196,7 @@ export const ImageLightbox = ({ images, initialIndex, isOpen, onClose }: ImageLi
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                  currentIndex === index
+                  safeIndex === index
                     ? "border-white scale-110"
                     : "border-white/30 hover:border-white/60"
                 }`}
