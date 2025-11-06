@@ -87,14 +87,26 @@ const accommodations = [
     name: "Basecamp Masai Mara",
     category: "Mid-range",
     type: "TENTED CAMP",
-    image: "/lovable-uploads/maasaai.jpeg",
+    image: "/lovable-uploads/basecamp-evening-deck.jpg",
     description: "Eco-friendly tented camp along the Talek River, combining sustainability with comfort and authentic Maasai cultural experiences.",
     rooms: 15,
     location: "Talek River, Masai Mara",
     features: ["Full Board", "Eco-friendly", "River Views", "Cultural Center"],
     pricing: {
       perPerson: "$400 per person per night (2 people sharing)"
-    }
+    },
+    gallery: [
+      { url: "/lovable-uploads/basecamp-evening-deck.jpg", caption: "Evening at Tent Deck" },
+      { url: "/lovable-uploads/basecamp-tent-deck.jpg", caption: "Luxury Tent with Private Deck" },
+      { url: "/lovable-uploads/basecamp-exterior.jpg", caption: "Eco-friendly Tent Exterior" },
+      { url: "/lovable-uploads/basecamp-tent-room.jpg", caption: "Tent Interior & Bedroom" },
+      { url: "/lovable-uploads/basecamp-bathroom.jpg", caption: "En-suite Bathroom" },
+      { url: "/lovable-uploads/basecamp-tent-view.jpg", caption: "Tent with Savannah Views" },
+      { url: "/lovable-uploads/basecamp-restaurant.jpg", caption: "Restaurant & Dining Area" },
+      { url: "/lovable-uploads/basecamp-terrace.jpg", caption: "Terrace Seating Area" },
+      { url: "/lovable-uploads/basecamp-pool.jpg", caption: "Pool with Maasai Warrior" },
+      { url: "/lovable-uploads/basecamp-pool-dining.jpg", caption: "Pool & Outdoor Dining" }
+    ]
   }
 ];
 
