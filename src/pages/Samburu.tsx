@@ -88,11 +88,15 @@ const accommodations = [
     features: ["Full Board", "Swimming Pool", "Cultural Performances", "Bar & Restaurant"],
     pricing: "$395 per person per night sharing",
     gallery: [
-      { url: "/lovable-uploads/samburu-suite.webp", caption: "Comfortable suite bedroom" },
-      { url: "/lovable-uploads/samburu-lodge.jpg", caption: "Lodge building and grounds" },
-      { url: "/lovable-uploads/samburu-intrepids-pool.jpeg", caption: "Pool with evening lighting" },
-      { url: "/lovable-uploads/samburu-intrepids-culture.jpg", caption: "Cultural dance performance" },
-      { url: "/lovable-uploads/samburu-intrepids-giraffe.jpeg", caption: "Game drive experience" }
+      { url: "/lovable-uploads/samburu-sopa-pool.webp", caption: "Stunning infinity pool with savannah views" },
+      { url: "/lovable-uploads/samburu-sopa-celebration.webp", caption: "Special celebration setup by the pool" },
+      { url: "/lovable-uploads/samburu-sopa-safari-vehicle.webp", caption: "Game drive at golden hour" },
+      { url: "/lovable-uploads/samburu-sopa-giraffes.webp", caption: "Reticulated giraffes in Samburu" },
+      { url: "/lovable-uploads/samburu-sopa-interior-arch.webp", caption: "Traditional architecture with pool views" },
+      { url: "/lovable-uploads/samburu-sopa-dining.webp", caption: "Outdoor dining with scenic overlook" },
+      { url: "/lovable-uploads/samburu-sopa-elephants.webp", caption: "Elephant family in the reserve" },
+      { url: "/lovable-uploads/samburu-sopa-rooms.webp", caption: "Comfortable twin bedroom accommodation" },
+      { url: "/lovable-uploads/samburu-sopa-exterior.webp", caption: "Lodge exterior blending with nature" }
     ]
   },
   {
