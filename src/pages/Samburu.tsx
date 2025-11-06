@@ -110,11 +110,14 @@ const accommodations = [
     features: ["Full Board", "Game Drives", "Guided Tours", "Cultural Shows"],
     pricing: "$200 per person per night",
     gallery: [
-      { url: "/lovable-uploads/samburu-warriors.webp", caption: "Samburu warriors welcome" },
-      { url: "/lovable-uploads/samburu-wildlife.jpg", caption: "Wildlife viewing opportunities" },
-      { url: "/lovable-uploads/samburu-lodge.jpg", caption: "Lodge facilities" },
-      { url: "/lovable-uploads/samburu-intrepids-culture.jpg", caption: "Traditional cultural performances" },
-      { url: "/lovable-uploads/samburu-elephant.jpeg", caption: "Elephant encounters" }
+      { url: "/lovable-uploads/samburu-simba-exterior.webp", caption: "Lodge building with balconies and hillside setting" },
+      { url: "/lovable-uploads/samburu-simba-room-view.webp", caption: "Spacious twin room with traditional decor" },
+      { url: "/lovable-uploads/samburu-simba-room-interior.webp", caption: "Comfortable room interior with savannah views" },
+      { url: "/lovable-uploads/samburu-simba-balcony.webp", caption: "Private balcony seating with bush views" },
+      { url: "/lovable-uploads/samburu-simba-corridor.webp", caption: "Traditional architecture with walkways" },
+      { url: "/lovable-uploads/samburu-simba-pool-view.webp", caption: "Infinity pool overlooking the savannah" },
+      { url: "/lovable-uploads/samburu-simba-pool-evening.webp", caption: "Pool at sunset with atmospheric lighting" },
+      { url: "/lovable-uploads/samburu-simba-pool-complex.webp", caption: "Multi-level pool complex with swim-up bar" }
     ]
   }
 ];
