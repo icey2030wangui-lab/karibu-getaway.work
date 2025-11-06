@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BookingDialog } from "@/components/BookingDialog";
+import { AccommodationDetailsDialog } from "@/components/AccommodationDetailsDialog";
 import { MapPin, Users, Utensils, Bed, CheckCircle2 } from "lucide-react";
 import safariAmboseli from "@/assets/safari-amboseli.jpg";
 import safariMasaiMara from "@/assets/safari-masai-mara.jpg";
@@ -19,7 +21,20 @@ const accommodations = [
     rooms: 80,
     location: "Amboseli National Park",
     features: ["Full Board", "Kilimanjaro Views", "Swimming Pool", "Spa Services"],
-    pricing: "$500 per person sharing per night"
+    pricing: {
+      perPerson: "$500 per person sharing per night"
+    },
+    gallery: [
+      { url: "/lovable-uploads/ol-tukai-entrance.jpg", caption: "Lodge Entrance" },
+      { url: "/lovable-uploads/ol-tukai-grounds.webp", caption: "Beautiful Lodge Grounds" },
+      { url: "/lovable-uploads/ol-tukai-bar.jpg", caption: "Cozy Bar Area" },
+      { url: "/lovable-uploads/ol-tukai-elephant-bar.jpg", caption: "Iconic Elephant Bar" },
+      { url: "/lovable-uploads/ol-tukai-evening.webp", caption: "Evening at the Lodge" },
+      { url: "/lovable-uploads/ol-tukai-aerial.webp", caption: "Aerial View" },
+      { url: "/lovable-uploads/ol-tukai-room.jpg", caption: "Twin Room" },
+      { url: "/lovable-uploads/ol-tukai-restaurant.jpg", caption: "Restaurant Dining Area" },
+      { url: "/lovable-uploads/ol-tukai-triple-room.webp", caption: "Triple Room Suite" }
+    ]
   },
   {
     name: "Amboseli Serena Safari Lodge",
@@ -30,7 +45,9 @@ const accommodations = [
     rooms: 96,
     location: "Amboseli National Park",
     features: ["Full Board", "Game Drives", "Cultural Visits", "Bar & Lounge"],
-    pricing: "$580 per person per night"
+    pricing: {
+      perPerson: "$580 per person per night"
+    }
   },
   {
     name: "Kibo Safari Camp",
@@ -41,7 +58,9 @@ const accommodations = [
     rooms: 73,
     location: "Amboseli National Park",
     features: ["Full Board", "Tented Suites", "Bush Dining", "Wildlife Viewing"],
-    pricing: "$460 per person sharing per night"
+    pricing: {
+      perPerson: "$460 per person sharing per night"
+    }
   },
   {
     name: "Sentrim Amboseli Lodge",
@@ -52,7 +71,9 @@ const accommodations = [
     rooms: 54,
     location: "Amboseli National Park",
     features: ["Full Board", "Swimming Pool", "Game Drives", "Conference Facilities"],
-    pricing: "$370 per person sharing per night"
+    pricing: {
+      perPerson: "$370 per person sharing per night"
+    }
   }
 ];
 
@@ -158,6 +179,8 @@ const safariPackages = [
 ];
 
 const Amboseli = () => {
+  const [selectedAccommodation, setSelectedAccommodation] = useState<typeof accommodations[0] | null>(null);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -255,12 +278,20 @@ const Amboseli = () => {
                         ))}
                       </div>
 
-                      <BookingDialog
-                        packageName={`${accommodation.name} - Amboseli Safari`}
-                        packagePrice={accommodation.pricing || "$554"}
-                        buttonText="Book Now"
-                        buttonVariant="default"
-                      />
+                      <div className="flex gap-2">
+                        <Button 
+                          onClick={() => setSelectedAccommodation(accommodation)}
+                          variant="outline"
+                        >
+                          View Details
+                        </Button>
+                        <BookingDialog
+                          packageName={`${accommodation.name} - Amboseli Safari`}
+                          packagePrice={accommodation.pricing.perPerson}
+                          buttonText="Book Now"
+                          buttonVariant="default"
+                        />
+                      </div>
                     </CardContent>
                   </div>
                 </Card>
@@ -367,6 +398,24 @@ const Amboseli = () => {
         </section>
       </main>
       <Footer />
+      
+      {/* Accommodation Details Dialog */}
+      {selectedAccommodation && (
+        <AccommodationDetailsDialog
+          name={selectedAccommodation.name}
+          category={selectedAccommodation.category}
+          type={selectedAccommodation.type}
+          image={selectedAccommodation.image}
+          description={selectedAccommodation.description}
+          rooms={selectedAccommodation.rooms}
+          location={selectedAccommodation.location}
+          features={selectedAccommodation.features}
+          pricing={selectedAccommodation.pricing}
+          gallery={selectedAccommodation.gallery}
+          isOpen={!!selectedAccommodation}
+          onClose={() => setSelectedAccommodation(null)}
+        />
+      )}
     </div>
   );
 };
