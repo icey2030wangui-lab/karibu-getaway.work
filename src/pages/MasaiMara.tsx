@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BookingDialog } from "@/components/BookingDialog";
 import { ImageLightbox } from "@/components/ImageLightbox";
+import { AccommodationDetailsDialog } from "@/components/AccommodationDetailsDialog";
 import { MapPin, Users, Utensils, Bed, Calendar, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import safariMasaiMara from "@/assets/safari-masai-mara.jpg";
@@ -208,11 +209,20 @@ const safariPackages = [
 const MasaiMara = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [selectedAccommodation, setSelectedAccommodation] = useState<number | null>(null);
   const maraSopaGallery = accommodations[1].gallery || [];
 
   const openLightbox = (index: number) => {
     setLightboxIndex(index);
     setLightboxOpen(true);
+  };
+
+  const openAccommodationDetails = (index: number) => {
+    setSelectedAccommodation(index);
+  };
+
+  const closeAccommodationDetails = () => {
+    setSelectedAccommodation(null);
   };
 
   return (
@@ -226,6 +236,15 @@ const MasaiMara = () => {
         isOpen={lightboxOpen}
         onClose={() => setLightboxOpen(false)}
       />
+
+      {/* Accommodation Details Dialog */}
+      {selectedAccommodation !== null && (
+        <AccommodationDetailsDialog
+          {...accommodations[selectedAccommodation]}
+          isOpen={true}
+          onClose={closeAccommodationDetails}
+        />
+      )}
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-[60vh] overflow-hidden">
@@ -383,12 +402,12 @@ const MasaiMara = () => {
                         </div>
                       )}
 
-                      <BookingDialog
-                        packageName={`${accommodation.name} - Masai Mara Safari`}
-                        packagePrice={accommodation.pricing?.perPerson || "$654"}
-                        buttonText="Book Now"
-                        buttonVariant="default"
-                      />
+                      <Button 
+                        onClick={() => openAccommodationDetails(index)}
+                        className="w-full"
+                      >
+                        View Details & Photos
+                      </Button>
                     </CardContent>
                   </div>
                 </Card>
@@ -397,7 +416,7 @@ const MasaiMara = () => {
           </div>
         </section>
 
-        {/* Mara Sopa Lodge Photo Gallery */}
+        {/* Mara Sopa Lodge Photo Gallery - Keep for direct access */}
         <section className="py-16 px-4 bg-background">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
