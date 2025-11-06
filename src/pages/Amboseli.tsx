@@ -72,7 +72,19 @@ const accommodations = [
     features: ["Full Board", "Tented Suites", "Bush Dining", "Wildlife Viewing"],
     pricing: {
       perPerson: "$460 per person sharing per night"
-    }
+    },
+    gallery: [
+      { url: "/lovable-uploads/kibo-restaurant.webp", caption: "Evening Dining at the Camp" },
+      { url: "/lovable-uploads/kibo-bar-exterior.webp", caption: "Bar and Lounge Area at Dusk" },
+      { url: "/lovable-uploads/kibo-pathway.webp", caption: "Scenic Pathway" },
+      { url: "/lovable-uploads/kibo-maasai-performance.webp", caption: "Traditional Maasai Cultural Performance" },
+      { url: "/lovable-uploads/kibo-tent-interior.webp", caption: "Comfortable Tent Interior" },
+      { url: "/lovable-uploads/kibo-pool-dining.webp", caption: "Poolside Dining Experience" },
+      { url: "/lovable-uploads/kibo-pool.webp", caption: "Swimming Pool with Savannah Views" },
+      { url: "/lovable-uploads/kibo-double-room.webp", caption: "Luxury Double Room with Canopy Bed" },
+      { url: "/lovable-uploads/kibo-bar-interior.webp", caption: "Spacious Bar and Lounge Interior" },
+      { url: "/lovable-uploads/kibo-family-tent.webp", caption: "Family Tent with Pool View" }
+    ]
   },
   {
     name: "Sentrim Amboseli Lodge",
