@@ -20,6 +20,16 @@ import prideInn6 from "@/assets/pride-inn-paradise-6.webp";
 import prideInn7 from "@/assets/pride-inn-paradise-7.webp";
 import prideInn8 from "@/assets/pride-inn-paradise-8.webp";
 import prideInn9 from "@/assets/pride-inn-paradise-9.webp";
+import sarovaWhitesands5 from "@/assets/sarova-whitesands-5.webp";
+import sarovaWhitesands6 from "@/assets/sarova-whitesands-6.webp";
+import sarovaWhitesands7 from "@/assets/sarova-whitesands-7.webp";
+import sarovaWhitesands8 from "@/assets/sarova-whitesands-8.webp";
+import sarovaWhitesands9 from "@/assets/sarova-whitesands-9.webp";
+import sarovaWhitesands10 from "@/assets/sarova-whitesands-10.webp";
+import sarovaWhitesands11 from "@/assets/sarova-whitesands-11.webp";
+import sarovaWhitesands12 from "@/assets/sarova-whitesands-12.webp";
+import sarovaWhitesands13 from "@/assets/sarova-whitesands-13.webp";
+import sarovaWhitesands14 from "@/assets/sarova-whitesands-14.webp";
 
 export const dianiPackages = [
   {
@@ -635,11 +645,16 @@ export const mombasaPackages = [
     rating: 4.8,
     reviews: 189,
     images: [
-      "/lovable-uploads/132ca583-4bfa-48d9-913d-64a6bb7d6aba.png",
-      "/lovable-uploads/75633e98-537f-4fa8-a38b-a489e218828a.png",
-      "/lovable-uploads/9d551d15-b948-4210-935a-12ce070c0897.png",
-      "/lovable-uploads/mombasa-port.webp",
-      "/lovable-uploads/mombasa-old-town.jpeg",
+      sarovaWhitesands14,
+      sarovaWhitesands7,
+      sarovaWhitesands5,
+      sarovaWhitesands8,
+      sarovaWhitesands9,
+      sarovaWhitesands10,
+      sarovaWhitesands11,
+      sarovaWhitesands12,
+      sarovaWhitesands13,
+      sarovaWhitesands6,
       "/lovable-uploads/sarova-whitesands-1.jpg",
       "/lovable-uploads/sarova-whitesands-2.jpg",
       "/lovable-uploads/sarova-whitesands-3.jpg",
