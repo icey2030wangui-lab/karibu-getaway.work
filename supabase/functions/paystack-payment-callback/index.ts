@@ -18,6 +18,7 @@ serve(async (req) => {
   try {
     const url = new URL(req.url);
     const reference = url.searchParams.get('reference');
+    const frontendUrl = url.searchParams.get('frontend_url') || 'https://lovable.app';
     
     console.log('Received Paystack callback with reference:', reference);
 
@@ -47,7 +48,6 @@ serve(async (req) => {
 
     if (!verifyResponse.ok) {
       console.error('Paystack verification failed');
-      const frontendUrl = 'https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com';
       return Response.redirect(
         `${frontendUrl}/payment-status?payment=error&reference=${reference}`,
         303
@@ -87,7 +87,6 @@ serve(async (req) => {
     console.log('Booking updated successfully');
 
     // Redirect user based on payment status
-    const frontendUrl = 'https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com';
     const redirectUrl = mappedStatus === 'completed' 
       ? `${frontendUrl}/payment-status?payment=success&reference=${reference}`
       : `${frontendUrl}/payment-status?payment=failed&reference=${reference}`;
@@ -97,7 +96,9 @@ serve(async (req) => {
   } catch (error) {
     console.error('Error in paystack-payment-callback:', error);
     
-    const errorUrl = `https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com/payment-status?payment=error`;
+    const url = new URL(req.url);
+    const frontendUrl = url.searchParams.get('frontend_url') || 'https://lovable.app';
+    const errorUrl = `${frontendUrl}/payment-status?payment=error`;
     return Response.redirect(errorUrl, 302);
   }
 });

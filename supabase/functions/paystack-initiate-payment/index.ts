@@ -66,6 +66,10 @@ serve(async (req) => {
       throw new Error('Paystack credentials not configured');
     }
 
+    // Get frontend URL from Referer header
+    const referer = req.headers.get('referer') || '';
+    const frontendUrl = referer ? new URL(referer).origin : 'https://lovable.app';
+
     // Initialize Paystack transaction
     const amount = Math.round(packagePrice * 100); // Convert to kobo/cents
     const reference = `booking_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -82,7 +86,7 @@ serve(async (req) => {
         email: email,
         amount: amount,
         reference: reference,
-        callback_url: `${supabaseUrl}/functions/v1/paystack-payment-callback`,
+        callback_url: `${supabaseUrl}/functions/v1/paystack-payment-callback?frontend_url=${encodeURIComponent(frontendUrl)}`,
         metadata: {
           firstName,
           lastName,

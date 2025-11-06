@@ -131,6 +131,10 @@ serve(async (req) => {
     // Generate unique booking reference
     const bookingReference = `BK${Date.now()}`;
 
+    // Get frontend URL from Referer header or use a default
+    const referer = req.headers.get('referer') || '';
+    const frontendUrl = referer ? new URL(referer).origin : 'https://lovable.app';
+
     // Determine PayPal environment (use sandbox for testing)
     const paypalBaseUrl = Deno.env.get('PAYPAL_MODE') === 'live' 
       ? 'https://api-m.paypal.com' 
@@ -177,8 +181,8 @@ serve(async (req) => {
         },
       ],
       application_context: {
-        return_url: `https://xekqpliuvgiyhhyumrnc.supabase.co/functions/v1/paypal-payment-callback?reference=${bookingReference}`,
-        cancel_url: `https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com/payment-status?payment=cancelled&reference=${bookingReference}`,
+        return_url: `https://xekqpliuvgiyhhyumrnc.supabase.co/functions/v1/paypal-payment-callback?reference=${bookingReference}&frontend_url=${encodeURIComponent(frontendUrl)}`,
+        cancel_url: `${frontendUrl}/payment-status?payment=cancelled&reference=${bookingReference}`,
         brand_name: 'Karibu Tours Kenya',
         landing_page: 'BILLING',
         shipping_preference: 'NO_SHIPPING',

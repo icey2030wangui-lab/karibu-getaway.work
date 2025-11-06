@@ -25,8 +25,9 @@ serve(async (req) => {
     const url = new URL(req.url);
     const token = url.searchParams.get('token'); // PayPal order ID
     const reference = url.searchParams.get('reference'); // Our booking reference
+    const frontendUrl = url.searchParams.get('frontend_url') || 'https://lovable.app';
     
-    console.log('Received PayPal callback:', { token, reference });
+    console.log('Received PayPal callback:', { token, reference, frontendUrl });
 
     if (!token) {
       console.error('Missing token in callback');
@@ -66,7 +67,6 @@ serve(async (req) => {
     if (!tokenResponse.ok) {
       console.error('PayPal token error');
       const bookingReference = reference || token;
-      const frontendUrl = 'https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com';
       return Response.redirect(
         `${frontendUrl}/payment-status?payment=error&reference=${bookingReference}`,
         303
@@ -92,7 +92,6 @@ serve(async (req) => {
     if (!captureResponse.ok) {
       console.error('PayPal capture error');
       const bookingReference = reference || token;
-      const frontendUrl = 'https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com';
       return Response.redirect(
         `${frontendUrl}/payment-status?payment=failed&reference=${bookingReference}`,
         303
@@ -133,8 +132,8 @@ serve(async (req) => {
 
     // Redirect user to success or failure page based on payment status
     const redirectUrl = mappedStatus === 'completed' 
-      ? `https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com/payment-status?payment=success&reference=${reference || token}`
-      : `https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com/payment-status?payment=failed&reference=${reference || token}`;
+      ? `${frontendUrl}/payment-status?payment=success&reference=${reference || token}`
+      : `${frontendUrl}/payment-status?payment=failed&reference=${reference || token}`;
 
     return Response.redirect(redirectUrl, 302);
 
@@ -142,7 +141,9 @@ serve(async (req) => {
     console.error('Error in paypal-payment-callback:', error);
     
     // Redirect to error page
-    const errorUrl = `https://e3743a47-54c8-43bb-be94-a1816ffc7bb8.lovableproject.com/payment-status?payment=error`;
+    const url = new URL(req.url);
+    const frontendUrl = url.searchParams.get('frontend_url') || 'https://lovable.app';
+    const errorUrl = `${frontendUrl}/payment-status?payment=error`;
     return Response.redirect(errorUrl, 302);
   }
 });
