@@ -6,6 +6,15 @@ import { Star, MapPin, Calendar, Info } from "lucide-react";
 import { useState } from "react";
 import { BookingDialog } from "./BookingDialog";
 import hemingwaysWatamu from "@/assets/hemingways-watamu.jpg";
+import hemingwaysPoolVariety from "@/assets/hemingways-pool-variety.webp";
+import hemingwaysBeachView from "@/assets/hemingways-beach-view.webp";
+import hemingwaysResidences from "@/assets/hemingways-residences.webp";
+import hemingwaysOceanRoom from "@/assets/hemingways-ocean-room.webp";
+import hemingwaysExterior from "@/assets/hemingways-exterior.webp";
+import hemingwaysCoffeeShop from "@/assets/hemingways-coffee-shop.webp";
+import hemingwaysBathroom from "@/assets/hemingways-bathroom.webp";
+import hemingwaysEntrance from "@/assets/hemingways-entrance.webp";
+import hemingwaysBeachfrontRoom from "@/assets/hemingways-beachfront-room.webp";
 import sandiesTropical from "@/assets/sandies-tropical.jpg";
 import sandiesMalindi from "@/assets/sandies-malindi.jpg";
 import diamondsDreams from "@/assets/diamonds-dreams.jpg";
@@ -68,6 +77,15 @@ const MalindiPackages = () => {
         "Fresh seafood and international cuisine"
       ],
       gallery: [
+        hemingwaysPoolVariety,
+        hemingwaysBeachView,
+        hemingwaysResidences,
+        hemingwaysOceanRoom,
+        hemingwaysExterior,
+        hemingwaysCoffeeShop,
+        hemingwaysBathroom,
+        hemingwaysEntrance,
+        hemingwaysBeachfrontRoom,
         "/lovable-uploads/hemingways-pool.webp",
         "/lovable-uploads/hemingways-ocean-view.webp",
         "/lovable-uploads/hemingways-suite.webp",
