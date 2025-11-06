@@ -16,7 +16,7 @@ const accommodations = [
     name: "Ol Tukai Lodge",
     category: "Luxury+",
     type: "SAFARI LODGE",
-    image: "/lovable-uploads/amboseli-elephants.jpg",
+    image: "/lovable-uploads/ol-tukai-entrance.jpg",
     description: "Located in the heart of Amboseli with breathtaking views of Mt. Kilimanjaro. The lodge offers elegant accommodation and exceptional wildlife viewing opportunities.",
     rooms: 80,
     location: "Amboseli National Park",
