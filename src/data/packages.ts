@@ -11,6 +11,15 @@ import kongoRiverSunset from "@/assets/kongo-river-sunset.jpg";
 import dhowRide from "@/assets/dhow-ride.jpg";
 import shimbaHills from "@/assets/shimba-hills.jpg";
 import kayaKinondo from "@/assets/kaya-kinondo.jpg";
+import prideInn1 from "@/assets/pride-inn-paradise-1.webp";
+import prideInn2 from "@/assets/pride-inn-paradise-2.webp";
+import prideInn3 from "@/assets/pride-inn-paradise-3.webp";
+import prideInn4 from "@/assets/pride-inn-paradise-4.webp";
+import prideInn5 from "@/assets/pride-inn-paradise-5.webp";
+import prideInn6 from "@/assets/pride-inn-paradise-6.webp";
+import prideInn7 from "@/assets/pride-inn-paradise-7.webp";
+import prideInn8 from "@/assets/pride-inn-paradise-8.webp";
+import prideInn9 from "@/assets/pride-inn-paradise-9.webp";
 
 export const dianiPackages = [
   {
@@ -555,11 +564,15 @@ export const mombasaPackages = [
     rating: 4.6,
     reviews: 142,
     images: [
-      "/lovable-uploads/ead104a0-4a30-467c-8759-0661a035fca5.png",
-      "/lovable-uploads/3dd9b23c-49c3-4b2d-8813-e4945bdd5799.png",
-      "/lovable-uploads/d4fcb5d3-5677-4dd2-a136-ff677a4488ce.png",
-      "/lovable-uploads/mombasa-tusks.jpg",
-      "/lovable-uploads/mombasa-fort-jesus.jpg",
+      prideInn8,
+      prideInn1,
+      prideInn2,
+      prideInn3,
+      prideInn4,
+      prideInn5,
+      prideInn6,
+      prideInn7,
+      prideInn9,
       "/lovable-uploads/pride-inn-1.jpg",
       "/lovable-uploads/pride-inn-2.jpg",
       "/lovable-uploads/pride-inn-3.jpg",
