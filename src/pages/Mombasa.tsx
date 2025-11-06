@@ -107,7 +107,7 @@ const activities = [
     name: "Snorkeling Excursion",
     category: "Marine Activities",
     type: "SNORKELING TOUR",
-    image: "/lovable-uploads/neptune-8.jpg",
+    image: "/lovable-uploads/snorkeling.jpg",
     description: "Discover the colorful underwater world of Mombasa's coral reefs. Swim alongside tropical fish, spot sea turtles, and explore vibrant coral gardens. All equipment and guidance provided for a safe and memorable experience.",
     duration: "3-4 hours",
     rating: 4.5,
