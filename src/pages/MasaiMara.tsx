@@ -48,17 +48,7 @@ const accommodations = [
     features: ["Full Board", "Game Drives", "Swimming Pool", "Cultural Visits"],
     pricing: {
       perPerson: "$300 per person per night (2 people sharing)"
-    },
-    gallery: [
-      { url: "/lovable-uploads/mara-sopa-1.webp", caption: "Welcome to Mara Sopa Lodge" },
-      { url: "/lovable-uploads/mara-sopa-2.webp", caption: "Swimming Pool Area" },
-      { url: "/lovable-uploads/mara-sopa-3.webp", caption: "Pool Access" },
-      { url: "/lovable-uploads/mara-sopa-4.webp", caption: "Lodge Exterior" },
-      { url: "/lovable-uploads/mara-sopa-5.webp", caption: "Pool View" },
-      { url: "/lovable-uploads/mara-sopa-room.webp", caption: "Room Interior" },
-      { url: "/lovable-uploads/mara-sopa-giraffes.webp", caption: "Giraffes in the Reserve" },
-      { url: "/lovable-uploads/mara-sopa-buffalo.webp", caption: "Buffalo Herd" }
-    ]
+    }
   },
   {
     name: "Mara Leisure Camp",
