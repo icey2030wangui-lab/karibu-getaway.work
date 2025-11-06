@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BookingDialog } from "@/components/BookingDialog";
+import { AccommodationDetailsDialog } from "@/components/AccommodationDetailsDialog";
 import { MapPin, Users, Utensils, Bed, Check, X, Plane } from "lucide-react";
 import safariSamburuImg from "@/assets/safari-samburu.jpg";
 import samburuFlyingImg from "@/assets/samburu-flying-safari.jpg";
@@ -250,6 +252,8 @@ const safariPackages = [
 ];
 
 const Samburu = () => {
+  const [selectedAccommodation, setSelectedAccommodation] = useState<typeof accommodations[0] | null>(null);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -347,12 +351,12 @@ const Samburu = () => {
                         ))}
                       </div>
 
-                      <BookingDialog
-                        packageName={`${accommodation.name} - Samburu Safari`}
-                        packagePrice={accommodation.pricing || "$600"}
-                        buttonText="View Details"
-                        buttonVariant="default"
-                      />
+                      <Button 
+                        onClick={() => setSelectedAccommodation(accommodation)}
+                        className="w-full"
+                      >
+                        View Details
+                      </Button>
                     </CardContent>
                   </div>
                 </Card>
@@ -480,6 +484,23 @@ const Samburu = () => {
         </section>
       </main>
       <Footer />
+      
+      {selectedAccommodation && (
+        <AccommodationDetailsDialog
+          name={selectedAccommodation.name}
+          category={selectedAccommodation.category}
+          type={selectedAccommodation.type}
+          image={selectedAccommodation.image}
+          description={selectedAccommodation.description}
+          rooms={selectedAccommodation.rooms}
+          location={selectedAccommodation.location}
+          features={selectedAccommodation.features}
+          pricing={{ perPerson: selectedAccommodation.pricing }}
+          gallery={selectedAccommodation.gallery}
+          isOpen={!!selectedAccommodation}
+          onClose={() => setSelectedAccommodation(null)}
+        />
+      )}
     </div>
   );
 };
