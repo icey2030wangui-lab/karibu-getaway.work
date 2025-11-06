@@ -52,6 +52,12 @@ import travellersBeach3 from "@/assets/travellers-beach-3.webp";
 import travellersBeach4 from "@/assets/travellers-beach-4.jpg";
 import travellersBeach5 from "@/assets/travellers-beach-5.jpg";
 import travellersBeach6 from "@/assets/travellers-beach-6.jpg";
+import neptune1 from "@/assets/neptune-1.jpg";
+import neptune2 from "@/assets/neptune-2.jpg";
+import neptune3 from "@/assets/neptune-3.jpg";
+import neptune4 from "@/assets/neptune-4.jpg";
+import neptune5 from "@/assets/neptune-5.jpg";
+import neptune6 from "@/assets/neptune-6.jpg";
 
 export const dianiPackages = [
   {
@@ -954,6 +960,12 @@ export const mombasaPackages = [
     rating: 4.3,
     reviews: 145,
     images: [
+      neptune1,
+      neptune2,
+      neptune3,
+      neptune4,
+      neptune5,
+      neptune6,
       "/lovable-uploads/8785a5f6-d901-43b2-a870-0be0612308b2.png",
       "/lovable-uploads/df722116-1d5e-49a1-88d9-b3281c46a2b5.png",
       "/lovable-uploads/9b1fb155-1bb2-4742-82f7-175ea124dea3.png",
