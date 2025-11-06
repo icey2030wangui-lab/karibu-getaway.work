@@ -96,7 +96,13 @@ const accommodations = [
       { url: "/lovable-uploads/samburu-sopa-dining.webp", caption: "Outdoor dining with scenic overlook" },
       { url: "/lovable-uploads/samburu-sopa-elephants.webp", caption: "Elephant family in the reserve" },
       { url: "/lovable-uploads/samburu-sopa-rooms.webp", caption: "Comfortable twin bedroom accommodation" },
-      { url: "/lovable-uploads/samburu-sopa-exterior.webp", caption: "Lodge exterior blending with nature" }
+      { url: "/lovable-uploads/samburu-sopa-exterior.webp", caption: "Lodge exterior blending with nature" },
+      { url: "/lovable-uploads/samburu-sopa-bathroom.webp", caption: "En-suite bathroom with shower" },
+      { url: "/lovable-uploads/samburu-sopa-twin-room.webp", caption: "Twin room with traditional Samburu decor" },
+      { url: "/lovable-uploads/samburu-sopa-canopy-beds.webp", caption: "Twin beds with mosquito net canopy" },
+      { url: "/lovable-uploads/samburu-sopa-lounge-area.webp", caption: "Lounge area with unique architectural windows" },
+      { url: "/lovable-uploads/samburu-sopa-room-view.webp", caption: "Room with savannah views and mosquito nets" },
+      { url: "/lovable-uploads/samburu-sopa-lodge-exterior.webp", caption: "Multi-level lodge building nestled in nature" }
     ]
   },
   {
