@@ -90,7 +90,7 @@ const accommodations = [
     name: "Sentrim Amboseli Lodge",
     category: "Mid-range",
     type: "SAFARI LODGE",
-    image: "/lovable-uploads/sentrim-entrance.jpg",
+    image: "/lovable-uploads/sentrim-pool-kilimanjaro.jpg",
     description: "Well-appointed lodge offering comfortable rooms and excellent service. Perfect base for exploring Amboseli's elephant herds and diverse wildlife.",
     rooms: 54,
     location: "Amboseli National Park",
