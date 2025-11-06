@@ -350,7 +350,7 @@ const Samburu = () => {
                       <BookingDialog
                         packageName={`${accommodation.name} - Samburu Safari`}
                         packagePrice={accommodation.pricing || "$600"}
-                        buttonText="Book Now"
+                        buttonText="View Details"
                         buttonVariant="default"
                       />
                     </CardContent>
