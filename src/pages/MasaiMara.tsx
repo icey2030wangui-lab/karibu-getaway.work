@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BookingDialog } from "@/components/BookingDialog";
+import { ImageLightbox } from "@/components/ImageLightbox";
 import { MapPin, Users, Utensils, Bed, Calendar, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
 import safariMasaiMara from "@/assets/safari-masai-mara.jpg";
 import safariLuxuryCamp from "@/assets/safari-luxury-camp.jpg";
 import safariBudgetTour from "@/assets/safari-budget-tour.jpg";
@@ -204,9 +206,26 @@ const safariPackages = [
 ];
 
 const MasaiMara = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+  const maraSopaGallery = accommodations[1].gallery || [];
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      
+      {/* Lightbox Modal */}
+      <ImageLightbox
+        images={maraSopaGallery}
+        initialIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+      />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-[60vh] overflow-hidden">
@@ -392,7 +411,11 @@ const MasaiMara = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {accommodations[1].gallery?.map((photo, index) => (
-                <div key={index} className="relative overflow-hidden rounded-lg group">
+                <button
+                  key={index}
+                  onClick={() => openLightbox(index)}
+                  className="relative overflow-hidden rounded-lg group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                >
                   <img
                     src={photo.url}
                     alt={photo.caption}
@@ -401,7 +424,25 @@ const MasaiMara = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <p className="text-white text-sm p-4 font-medium">{photo.caption}</p>
                   </div>
-                </div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-8 w-8 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </button>
               ))}
             </div>
           </div>
