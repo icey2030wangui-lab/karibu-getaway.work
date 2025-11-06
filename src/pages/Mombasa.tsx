@@ -95,7 +95,7 @@ const activities = [
     name: "Kite Surfing",
     category: "Water Sports",
     type: "KITE SURFING LESSONS",
-    image: "/lovable-uploads/neptune-7.jpg",
+    image: "/lovable-uploads/kite-surfing.webp",
     description: "Learn kite surfing or improve your skills with certified instructors on Mombasa's beautiful beaches. The consistent coastal winds and shallow waters make this an ideal location for both beginners and experienced kite surfers.",
     duration: "2-3 hours",
     rating: 4.7,
