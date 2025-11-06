@@ -30,6 +30,16 @@ import sarovaWhitesands11 from "@/assets/sarova-whitesands-11.webp";
 import sarovaWhitesands12 from "@/assets/sarova-whitesands-12.webp";
 import sarovaWhitesands13 from "@/assets/sarova-whitesands-13.webp";
 import sarovaWhitesands14 from "@/assets/sarova-whitesands-14.webp";
+import flamingo5 from "@/assets/flamingo-5.webp";
+import flamingo6 from "@/assets/flamingo-6.webp";
+import flamingo7 from "@/assets/flamingo-7.webp";
+import flamingo8 from "@/assets/flamingo-8.webp";
+import flamingo9 from "@/assets/flamingo-9.webp";
+import flamingo10 from "@/assets/flamingo-10.webp";
+import flamingo11 from "@/assets/flamingo-11.webp";
+import flamingo12 from "@/assets/flamingo-12.webp";
+import flamingo13 from "@/assets/flamingo-13.webp";
+import flamingo14 from "@/assets/flamingo-14.webp";
 
 export const dianiPackages = [
   {
@@ -715,12 +725,16 @@ export const mombasaPackages = [
     rating: 4.5,
     reviews: 156,
     images: [
-      "/lovable-uploads/22445433-5f5e-4c53-88c9-ed69b91c549f.png",
-      "/lovable-uploads/ba9fd9b9-7270-433a-8c6e-e17c8096cb88.png",
-      "/lovable-uploads/930ae9f0-305d-4c23-bb2a-3861a6dd2a0a.png",
-      "/lovable-uploads/a1a82f23-135c-40d4-86b0-701d5c0dd9ae.png",
-      "/lovable-uploads/1ae69be0-81d4-4e42-aa04-3ef4004ec9b5.png",
-      "/lovable-uploads/85de9d45-ae0a-4412-a3b5-b297ecdec9c3.png",
+      flamingo14,
+      flamingo11,
+      flamingo6,
+      flamingo12,
+      flamingo13,
+      flamingo5,
+      flamingo7,
+      flamingo8,
+      flamingo9,
+      flamingo10,
       "/lovable-uploads/flamingo-1.jpg",
       "/lovable-uploads/flamingo-2.jpg",
       "/lovable-uploads/flamingo-3.jpg",
