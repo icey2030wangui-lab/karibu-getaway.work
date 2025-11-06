@@ -38,24 +38,24 @@ const Footer = () => {
               </h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="/" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                  <Link to="/" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#destinations" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                  <Link to="/#destinations" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
                     All Destinations
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/#packages" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                  <Link to="/#packages" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
                     Safari Packages
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/faq" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                  <Link to="/faq" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
                     FAQ
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -122,12 +122,12 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-secondary-foreground/60">
             <p>© 2025 Karibu Gateways. All rights reserved.</p>
             <div className="flex gap-6 mt-2 md:mt-0">
-              <a href="/privacy" className="hover:text-accent transition-colors duration-200">
+              <Link to="/privacy" className="hover:text-accent transition-colors duration-200">
                 Privacy Policy
-              </a>
-              <a href="/terms" className="hover:text-accent transition-colors duration-200">
+              </Link>
+              <Link to="/terms" className="hover:text-accent transition-colors duration-200">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>
