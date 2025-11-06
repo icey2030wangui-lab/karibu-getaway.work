@@ -47,7 +47,19 @@ const accommodations = [
     features: ["Full Board", "Game Drives", "Cultural Visits", "Bar & Lounge"],
     pricing: {
       perPerson: "$580 per person per night"
-    }
+    },
+    gallery: [
+      { url: "/lovable-uploads/amboseli-serena-aerial.jpg", caption: "Aerial View of the Lodge" },
+      { url: "/lovable-uploads/amboseli-serena-exterior.jpg", caption: "Lodge Exterior with Savannah Views" },
+      { url: "/lovable-uploads/amboseli-serena-grounds.jpg", caption: "Beautiful Lodge Grounds" },
+      { url: "/lovable-uploads/amboseli-serena-view.jpg", caption: "Panoramic Kilimanjaro Views" },
+      { url: "/lovable-uploads/amboseli-serena-rooms.jpg", caption: "Comfortable Room Exteriors" },
+      { url: "/lovable-uploads/amboseli-serena-reception.jpg", caption: "Traditional Reception Area" },
+      { url: "/lovable-uploads/amboseli-serena-lodge.jpg", caption: "Lodge Terrace" },
+      { url: "/lovable-uploads/amboseli-serena-pool.webp", caption: "Swimming Pool with Views" },
+      { url: "/lovable-uploads/amboseli-serena-suite.jpg", caption: "Luxury Suite Interior" },
+      { url: "/lovable-uploads/amboseli-serena-lounge.jpg", caption: "Maasai-Inspired Lounge" }
+    ]
   },
   {
     name: "Kibo Safari Camp",
