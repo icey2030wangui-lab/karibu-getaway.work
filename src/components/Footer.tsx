@@ -71,8 +71,7 @@ const Footer = () => {
                   { name: "Diani Beach", path: "/diani-beach" },
                   { name: "Amboseli", path: "/amboseli" },
                   { name: "Mombasa", path: "/mombasa" },
-                  { name: "Samburu", path: "/samburu" },
-                  { name: "Mount Kenya", path: "/#destinations" }
+                  { name: "Samburu", path: "/samburu" }
                 ].map(destination => <li key={destination.name}>
                     <Link to={destination.path} className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
                       {destination.name}
