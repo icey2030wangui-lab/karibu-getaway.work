@@ -40,6 +40,12 @@ import flamingo11 from "@/assets/flamingo-11.webp";
 import flamingo12 from "@/assets/flamingo-12.webp";
 import flamingo13 from "@/assets/flamingo-13.webp";
 import flamingo14 from "@/assets/flamingo-14.webp";
+import severinSea1 from "@/assets/severin-sea-1.jpeg";
+import severinSea2 from "@/assets/severin-sea-2.jpg";
+import severinSea3 from "@/assets/severin-sea-3.webp";
+import severinSea4 from "@/assets/severin-sea-4.jpeg";
+import severinSea5 from "@/assets/severin-sea-5.jpeg";
+import severinSea6 from "@/assets/severin-sea-6.webp";
 
 export const dianiPackages = [
   {
@@ -820,6 +826,12 @@ export const mombasaPackages = [
     rating: 4.2,
     reviews: 134,
     images: [
+      severinSea1,
+      severinSea2,
+      severinSea3,
+      severinSea4,
+      severinSea5,
+      severinSea6,
       "/lovable-uploads/6be3b9de-9642-4ee9-a350-9ccc729898e4.png",
       "/lovable-uploads/e6853cec-70d8-4e9e-9655-a536f4561b36.png",
       "/lovable-uploads/b70e728d-db71-4a23-a81c-ea4231e107c3.png",
