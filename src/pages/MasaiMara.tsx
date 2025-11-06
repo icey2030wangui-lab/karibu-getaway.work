@@ -30,7 +30,7 @@ const accommodations = [
     name: "Mara Sopa Lodge",
     category: "Mid-range",
     type: "SAFARI LODGE",
-    image: "/lovable-uploads/masai_2.jpeg",
+    image: "/lovable-uploads/mara-sopa-1.webp",
     description: "Set on the slopes of the Oloolaimutia Hills, Mara Sopa Lodge provides stunning views over the rolling plains of the Masai Mara.",
     rooms: 100,
     location: "Masai Mara National Reserve",
