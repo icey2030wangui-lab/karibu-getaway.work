@@ -34,7 +34,17 @@ const accommodations = [
     features: ["Full Board", "Game Drives", "Swimming Pool", "Cultural Visits"],
     pricing: {
       perPerson: "$300 per person per night (2 people sharing)"
-    }
+    },
+    gallery: [
+      { url: "/lovable-uploads/mara-sopa-1.webp", caption: "Welcome to Mara Sopa Lodge" },
+      { url: "/lovable-uploads/mara-sopa-2.webp", caption: "Swimming Pool Area" },
+      { url: "/lovable-uploads/mara-sopa-3.webp", caption: "Pool Access" },
+      { url: "/lovable-uploads/mara-sopa-4.webp", caption: "Lodge Exterior" },
+      { url: "/lovable-uploads/mara-sopa-5.webp", caption: "Pool View" },
+      { url: "/lovable-uploads/mara-sopa-room.webp", caption: "Room Interior" },
+      { url: "/lovable-uploads/mara-sopa-giraffes.webp", caption: "Giraffes in the Reserve" },
+      { url: "/lovable-uploads/mara-sopa-buffalo.webp", caption: "Buffalo Herd" }
+    ]
   },
   {
     name: "Mara Leisure Camp",
@@ -363,6 +373,35 @@ const MasaiMara = () => {
                     </CardContent>
                   </div>
                 </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Mara Sopa Lodge Photo Gallery */}
+        <section className="py-16 px-4 bg-background">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Mara Sopa Lodge Gallery
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Experience the beauty and comfort of Mara Sopa Lodge through these stunning images
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {accommodations[1].gallery?.map((photo, index) => (
+                <div key={index} className="relative overflow-hidden rounded-lg group">
+                  <img
+                    src={photo.url}
+                    alt={photo.caption}
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <p className="text-white text-sm p-4 font-medium">{photo.caption}</p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
