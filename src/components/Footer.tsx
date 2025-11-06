@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return <footer className="bg-secondary text-secondary-foreground">
       {/* Main footer content */}
@@ -65,10 +66,17 @@ const Footer = () => {
                 Top Destinations
               </h4>
               <ul className="space-y-2">
-                {["Maasai Mara", "Diani Beach", "Amboseli", "Mombasa", "Samburu", "Mount Kenya"].map(destination => <li key={destination}>
-                    <a href="#" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
-                      {destination}
-                    </a>
+                {[
+                  { name: "Maasai Mara", path: "/masai-mara" },
+                  { name: "Diani Beach", path: "/diani-beach" },
+                  { name: "Amboseli", path: "/amboseli" },
+                  { name: "Mombasa", path: "/mombasa" },
+                  { name: "Samburu", path: "/samburu" },
+                  { name: "Mount Kenya", path: "/#destinations" }
+                ].map(destination => <li key={destination.name}>
+                    <Link to={destination.path} className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                      {destination.name}
+                    </Link>
                   </li>)}
               </ul>
             </div>
