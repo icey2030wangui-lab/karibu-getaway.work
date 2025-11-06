@@ -47,7 +47,7 @@ const activities = [
     name: "Mamba Village",
     category: "Nature & Wildlife",
     type: "CROCODILE FARM",
-    image: "/lovable-uploads/mombasa-port.webp",
+    image: "/lovable-uploads/mamba-village.jpeg",
     description: "East Africa's largest crocodile farm featuring hundreds of Nile crocodiles. Watch feeding demonstrations, learn about crocodile conservation, and enjoy the botanical gardens. The facility also includes a restaurant and aquarium.",
     duration: "2-3 hours",
     rating: 4.0,
