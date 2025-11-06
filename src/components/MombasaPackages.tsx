@@ -33,12 +33,7 @@ const MombasaPackages = () => {
     return <DialogContent className="max-w-5xl max-h-[95vh] overflow-y-auto">
       <DialogHeader>
         <DialogTitle className="text-2xl font-bold flex items-center justify-between">
-          <div>
-            {pkg.title}
-            <div className="text-sm text-muted-foreground font-normal mt-1">
-              {pkg.accommodation} • {pkg.location}
-            </div>
-          </div>
+          
           <div className="flex items-center gap-1">
             <div className="flex">
               {Array.from({
