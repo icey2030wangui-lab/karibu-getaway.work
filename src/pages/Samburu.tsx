@@ -43,11 +43,15 @@ const accommodations = [
     features: ["Full Board", "Natural Spring Views", "Game Drives", "Conference Facilities"],
     pricing: "$423 full board per person sharing",
     gallery: [
-      { url: "/lovable-uploads/samburu-lodge.jpg", caption: "Lodge exterior and grounds" },
-      { url: "/lovable-uploads/samburu-suite.webp", caption: "Deluxe suite interior" },
-      { url: "/lovable-uploads/samburu-wildlife.jpg", caption: "Wildlife viewing from lodge" },
-      { url: "/lovable-uploads/samburu-intrepids-pool.jpeg", caption: "Swimming pool area" },
-      { url: "/lovable-uploads/samburu-elephant.jpeg", caption: "Elephant at waterhole" }
+      { url: "/lovable-uploads/sarova-shaba-entrance.webp", caption: "Sarova Shaba Game Lodge entrance sign" },
+      { url: "/lovable-uploads/sarova-shaba-river.webp", caption: "Natural spring and waterhole views" },
+      { url: "/lovable-uploads/sarova-shaba-exterior.webp", caption: "Lodge exterior with lush gardens" },
+      { url: "/lovable-uploads/sarova-shaba-pool.webp", caption: "Main swimming pool area" },
+      { url: "/lovable-uploads/sarova-shaba-pool-evening.webp", caption: "Pool at dusk with atmospheric lighting" },
+      { url: "/lovable-uploads/sarova-shaba-pool-guests.webp", caption: "Guests enjoying the pool" },
+      { url: "/lovable-uploads/sarova-shaba-jacuzzi.webp", caption: "Born Free Suite private jacuzzi" },
+      { url: "/lovable-uploads/sarova-shaba-kids-pool.webp", caption: "Children's pool area" },
+      { url: "/lovable-uploads/sarova-shaba-pool-panorama.webp", caption: "Panoramic view of pool and grounds" }
     ]
   },
   {
