@@ -509,7 +509,7 @@ const MalindiPackages = () => {
           </TabsList>
           
           <TabsContent value="overview" className="space-y-4">
-            <img src={hotel.image} alt={hotel.name} className="w-full h-64 object-cover rounded-lg" />
+            <img src={hotel.image} alt={hotel.name} loading="lazy" decoding="async" className="w-full h-64 object-cover rounded-lg" />
             
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-1">
@@ -611,7 +611,7 @@ const MalindiPackages = () => {
                 ))}
               </div>
             ) : (
-              <img src={hotel.image} alt={hotel.name} className="w-full h-64 object-cover rounded-lg" />
+              <img src={hotel.image} alt={hotel.name} loading="lazy" decoding="async" className="w-full h-64 object-cover rounded-lg" />
             )}
           </TabsContent>
         </Tabs>

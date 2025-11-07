@@ -167,7 +167,7 @@ const DianiStayDine = () => {
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {pkg.images.map((img, idx) => 
                     <div key={idx} className="relative overflow-hidden rounded-lg aspect-video">
-                      <img src={img} alt={`${pkg.title} image ${idx + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+                      <img src={img} alt={`${pkg.title} image ${idx + 1}`} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
                     </div>
                   )}
                 </div>
@@ -271,7 +271,7 @@ const DianiStayDine = () => {
               <DialogTrigger asChild>
                 <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-card cursor-pointer">
                   <div className="relative overflow-hidden">
-                    <img src={pkg.images[0]} alt={pkg.title} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img src={pkg.images[0]} alt={pkg.title} loading="lazy" decoding="async" className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-accent text-accent-foreground">

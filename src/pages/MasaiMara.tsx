@@ -257,7 +257,7 @@ const MasaiMara = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-[60vh] overflow-hidden">
-          <img src="/lovable-uploads/masai.jpeg" alt="Masai Mara" className="w-full h-full object-cover" />
+          <img src="/lovable-uploads/masai.jpeg" alt="Masai Mara" loading="eager" decoding="async" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white px-4">
@@ -357,7 +357,7 @@ const MasaiMara = () => {
               {accommodations.map((accommodation, index) => <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
                   <div className="flex flex-col md:flex-row">
                     <div className="md:w-1/3 relative">
-                      <img src={accommodation.image} alt={accommodation.name} className="w-full h-64 md:h-full object-cover" />
+                      <img src={accommodation.image} alt={accommodation.name} loading="lazy" decoding="async" className="w-full h-64 md:h-full object-cover" />
                       <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
                         {accommodation.category}
                       </Badge>
@@ -442,7 +442,7 @@ const MasaiMara = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {safariPackages.map((pkg, index) => <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
                   <div className="relative overflow-hidden h-48">
-                    <img src={pkg.image} alt={pkg.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img src={pkg.image} alt={pkg.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground">
                       {pkg.category.split(',')[0]}

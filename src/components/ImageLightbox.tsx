@@ -204,6 +204,8 @@ export const ImageLightbox = ({ images, initialIndex, isOpen, onClose }: ImageLi
                 <img
                   src={image.url}
                   alt={image.caption}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
               </button>
