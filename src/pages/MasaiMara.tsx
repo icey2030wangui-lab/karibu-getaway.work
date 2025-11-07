@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { BookingDialog } from "@/components/BookingDialog";
 import { ImageLightbox } from "@/components/ImageLightbox";
 import { AccommodationDetailsDialog } from "@/components/AccommodationDetailsDialog";
+import { QuickBookingModal } from "@/components/QuickBookingModal";
 import { MapPin, Users, Utensils, Bed, Calendar, CheckCircle2, Image } from "lucide-react";
 import { useState } from "react";
 import safariMasaiMara from "@/assets/safari-masai-mara.jpg";
@@ -210,6 +211,8 @@ const MasaiMara = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxGallery, setLightboxGallery] = useState<{ url: string; caption: string }[]>([]);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [quickBookingOpen, setQuickBookingOpen] = useState(false);
+  const [quickBookingAccommodation, setQuickBookingAccommodation] = useState<typeof accommodations[0] | null>(null);
   
   const openAccommodationDetails = (index: number) => {
     setSelectedAccommodation(index);
@@ -222,6 +225,11 @@ const MasaiMara = () => {
     setLightboxGallery(gallery);
     setLightboxIndex(index);
     setLightboxOpen(true);
+  };
+
+  const openQuickBooking = (accommodation: typeof accommodations[0]) => {
+    setQuickBookingAccommodation(accommodation);
+    setQuickBookingOpen(true);
   };
   return <div className="min-h-screen flex flex-col">
       <Header />
@@ -236,6 +244,16 @@ const MasaiMara = () => {
 
       {/* Accommodation Details Dialog */}
       {selectedAccommodation !== null && <AccommodationDetailsDialog {...accommodations[selectedAccommodation]} isOpen={true} onClose={closeAccommodationDetails} />}
+      
+      {/* Quick Booking Modal */}
+      {quickBookingAccommodation && (
+        <QuickBookingModal
+          isOpen={quickBookingOpen}
+          onClose={() => setQuickBookingOpen(false)}
+          accommodationName={quickBookingAccommodation.name}
+          pricePerPerson={quickBookingAccommodation.pricing.perPerson}
+        />
+      )}
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-[60vh] overflow-hidden">
@@ -380,18 +398,27 @@ const MasaiMara = () => {
                           <p className="text-sm text-muted-foreground">{accommodation.pricing.perPerson}</p>
                         </div>}
 
-                      <div className="flex flex-wrap gap-2">
+                      <div className="space-y-2">
                         <Button 
-                          onClick={() => openGallery(accommodation.gallery || [], 0)} 
-                          variant="outline"
-                          className="flex-1"
+                          onClick={() => openQuickBooking(accommodation)} 
+                          className="w-full"
                         >
-                          <Image className="w-4 h-4 mr-2" />
-                          View All Photos
+                          <Calendar className="w-4 h-4 mr-2" />
+                          Quick Book Now
                         </Button>
-                        <Button onClick={() => openAccommodationDetails(index)} className="flex-1">
-                          View Details
-                        </Button>
+                        <div className="flex gap-2">
+                          <Button 
+                            onClick={() => openGallery(accommodation.gallery || [], 0)} 
+                            variant="outline"
+                            className="flex-1"
+                          >
+                            <Image className="w-4 h-4 mr-2" />
+                            Photos
+                          </Button>
+                          <Button onClick={() => openAccommodationDetails(index)} variant="outline" className="flex-1">
+                            Details
+                          </Button>
+                        </div>
                       </div>
                     </CardContent>
                   </div>
