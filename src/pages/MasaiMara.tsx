@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BookingDialog } from "@/components/BookingDialog";
+import { ImageLightbox } from "@/components/ImageLightbox";
 import { AccommodationDetailsDialog } from "@/components/AccommodationDetailsDialog";
-import { MapPin, Users, Utensils, Bed, Calendar, CheckCircle2 } from "lucide-react";
+import { MapPin, Users, Utensils, Bed, Calendar, CheckCircle2, Image } from "lucide-react";
 import { useState } from "react";
 import safariMasaiMara from "@/assets/safari-masai-mara.jpg";
 import safariLuxuryCamp from "@/assets/safari-luxury-camp.jpg";
@@ -206,6 +207,9 @@ const safariPackages = [{
 }];
 const MasaiMara = () => {
   const [selectedAccommodation, setSelectedAccommodation] = useState<number | null>(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxGallery, setLightboxGallery] = useState<{ url: string; caption: string }[]>([]);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
   
   const openAccommodationDetails = (index: number) => {
     setSelectedAccommodation(index);
@@ -213,9 +217,23 @@ const MasaiMara = () => {
   const closeAccommodationDetails = () => {
     setSelectedAccommodation(null);
   };
+
+  const openGallery = (gallery: { url: string; caption: string }[], index: number = 0) => {
+    setLightboxGallery(gallery);
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
   return <div className="min-h-screen flex flex-col">
       <Header />
       
+      {/* Image Lightbox */}
+      <ImageLightbox 
+        images={lightboxGallery} 
+        initialIndex={lightboxIndex} 
+        isOpen={lightboxOpen} 
+        onClose={() => setLightboxOpen(false)} 
+      />
+
       {/* Accommodation Details Dialog */}
       {selectedAccommodation !== null && <AccommodationDetailsDialog {...accommodations[selectedAccommodation]} isOpen={true} onClose={closeAccommodationDetails} />}
       <main className="flex-1">
@@ -362,9 +380,19 @@ const MasaiMara = () => {
                           <p className="text-sm text-muted-foreground">{accommodation.pricing.perPerson}</p>
                         </div>}
 
-                      <Button onClick={() => openAccommodationDetails(index)} className="w-full">
-                        View Details & Photos
-                      </Button>
+                      <div className="flex flex-wrap gap-2">
+                        <Button 
+                          onClick={() => openGallery(accommodation.gallery || [], 0)} 
+                          variant="outline"
+                          className="flex-1"
+                        >
+                          <Image className="w-4 h-4 mr-2" />
+                          View All Photos
+                        </Button>
+                        <Button onClick={() => openAccommodationDetails(index)} className="flex-1">
+                          View Details
+                        </Button>
+                      </div>
                     </CardContent>
                   </div>
                 </Card>)}
