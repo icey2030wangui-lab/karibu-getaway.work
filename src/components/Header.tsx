@@ -53,6 +53,9 @@ const Header = () => {
               src={karibuLogo} 
               alt="Karibu Getaways Logo" 
               className="h-16 md:h-20 w-auto"
+              loading="eager"
+              decoding="sync"
+              style={{ imageRendering: 'crisp-edges' }}
             />
           </Link>
 
