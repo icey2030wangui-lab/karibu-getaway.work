@@ -54,7 +54,7 @@ const MombasaPackages = () => {
               <div className="flex transition-transform duration-500 ease-in-out" style={{
                 transform: `translateX(-${currentImageIndex * 100}%)`
               }}>
-                {pkg.images.map((image, index) => <img key={index} src={image} alt={`${pkg.accommodation} - View ${index + 1}`} loading="lazy" decoding="async" className="w-full h-80 object-cover flex-shrink-0" />)}
+                {pkg.images.map((image, index) => <img key={index} src={image} alt={`${pkg.accommodation} - View ${index + 1}`} className="w-full h-80 object-cover flex-shrink-0" />)}
               </div>
               
               {/* Navigation Buttons */}
@@ -81,7 +81,7 @@ const MombasaPackages = () => {
             {/* Thumbnail Gallery */}
             <div className="grid grid-cols-4 md:grid-cols-6 gap-2 mt-4">
               {pkg.images.map((image, index) => <button key={index} onClick={() => goToImage(index)} className={`relative overflow-hidden rounded-lg transition-all duration-300 ${index === currentImageIndex ? 'ring-2 ring-primary scale-105' : 'hover:scale-105 hover:opacity-75'}`}>
-                  <img src={image} alt={`${pkg.accommodation} thumbnail ${index + 1}`} loading="lazy" decoding="async" className="w-full h-16 object-cover" />
+                  <img src={image} alt={`${pkg.accommodation} thumbnail ${index + 1}`} className="w-full h-16 object-cover" />
                   {index === currentImageIndex && <div className="absolute inset-0 bg-primary/20" />}
                 </button>)}
             </div>
@@ -415,7 +415,7 @@ const MombasaPackages = () => {
               <DialogTrigger asChild>
                 <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-card cursor-pointer">
                   <div className="relative overflow-hidden">
-                    <img src={pkg.images[0]} alt={pkg.accommodation} loading="lazy" decoding="async" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img src={pkg.images[0]} alt={pkg.accommodation} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute top-3 left-3">
                       <Badge className="bg-accent text-accent-foreground text-xs">

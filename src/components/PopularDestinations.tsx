@@ -40,7 +40,7 @@ const PopularDestinations = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {destinations.map((destination, index) => <Card key={index} className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-[1.02] bg-card animate-fade-in">
               <div className="relative overflow-hidden">
-                <img src={destination.image} alt={destination.name} loading="lazy" decoding="async" className="w-full h-64 object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-700" />
+                <img src={destination.image} alt={destination.name} className="w-full h-64 object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 <div className="absolute top-4 left-4 animate-scale-in">

@@ -137,7 +137,7 @@ const DianiPackages = () => {
                 <h3 className="text-xl font-bold mb-4">Photo Gallery</h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {pkg.images.map((img, idx) => <div key={idx} className="relative overflow-hidden rounded-lg aspect-video">
-                      <img src={img} alt={`${pkg.title} image ${idx + 1}`} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+                      <img src={img} alt={`${pkg.title} image ${idx + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
                     </div>)}
                 </div>
               </div>
@@ -210,7 +210,7 @@ const DianiPackages = () => {
               <DialogTrigger asChild>
                 <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-card cursor-pointer rounded-2xl">
                   <div className="relative overflow-hidden h-80">
-                    <img src={pkg.images[0]} alt={pkg.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img src={pkg.images[0]} alt={pkg.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute top-4 right-4">
                       <Badge className="bg-accent text-white text-lg px-4 py-2 rounded-full font-bold">
                         {pkg.price}

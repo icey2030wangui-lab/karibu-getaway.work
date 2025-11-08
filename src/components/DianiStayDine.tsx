@@ -9,27 +9,8 @@ import { dianiPackages } from "@/data/packages";
 import { BookingDialog } from "@/components/BookingDialog";
 
 const DianiStayDine = () => {
-  const [selectedCategory, setSelectedCategory] = useState<'destinations' | 'stay' | 'dine'>('stay');
-  
-  // Filter packages based on category
+  // Filter only hotel packages (IDs 2, 4, 5, 6, 8, 9)
   const hotelPackages = dianiPackages.filter(pkg => [2, 4, 5, 6, 8, 9].includes(pkg.id));
-  const destinationPackages = dianiPackages.filter(pkg => [1, 3, 7].includes(pkg.id));
-  const diningPackages = dianiPackages.filter(pkg => pkg.diningOptions && pkg.diningOptions.length > 0);
-  
-  const getCurrentPackages = () => {
-    switch (selectedCategory) {
-      case 'destinations':
-        return destinationPackages;
-      case 'stay':
-        return hotelPackages;
-      case 'dine':
-        return diningPackages;
-      default:
-        return hotelPackages;
-    }
-  };
-  
-  const currentPackages = getCurrentPackages();
 
   const PackageDetailModal = ({
     pkg
@@ -167,7 +148,7 @@ const DianiStayDine = () => {
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {pkg.images.map((img, idx) => 
                     <div key={idx} className="relative overflow-hidden rounded-lg aspect-video">
-                      <img src={img} alt={`${pkg.title} image ${idx + 1}`} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+                      <img src={img} alt={`${pkg.title} image ${idx + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
                     </div>
                   )}
                 </div>
@@ -231,47 +212,22 @@ const DianiStayDine = () => {
   return (
     <section id="diani-stay-dine" className="py-4 px-4 bg-background">
       <div className="container mx-auto">
-        <div className="text-center mb-6">
+        <div className="text-center mb-4">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-            Explore Our Collection
+            Diani Stay & Dine Selection
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-            Discover top destinations, premium accommodations, and memorable dining experiences
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Curated collection of premium accommodations paired with memorable dining experiences at Kenya's premier beach destination
           </p>
-          
-          {/* Category Filter Buttons */}
-          <div className="flex justify-center gap-4 mb-6">
-            <Button
-              onClick={() => setSelectedCategory('destinations')}
-              variant={selectedCategory === 'destinations' ? 'default' : 'outline'}
-              className="px-8"
-            >
-              Top Destinations
-            </Button>
-            <Button
-              onClick={() => setSelectedCategory('stay')}
-              variant={selectedCategory === 'stay' ? 'default' : 'outline'}
-              className="px-8"
-            >
-              Stay
-            </Button>
-            <Button
-              onClick={() => setSelectedCategory('dine')}
-              variant={selectedCategory === 'dine' ? 'default' : 'outline'}
-              className="px-8"
-            >
-              Dine
-            </Button>
-          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-          {currentPackages.map(pkg =>
+          {hotelPackages.map(pkg => 
             <Dialog key={pkg.id}>
               <DialogTrigger asChild>
                 <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-card cursor-pointer">
                   <div className="relative overflow-hidden">
-                    <img src={pkg.images[0]} alt={pkg.title} loading="lazy" decoding="async" className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img src={pkg.images[0]} alt={pkg.title} className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-accent text-accent-foreground">

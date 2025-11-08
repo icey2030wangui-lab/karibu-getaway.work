@@ -41,7 +41,7 @@ const SpecialOffers = () => {
             animationDelay: `${index * 100}ms`
           }}>
                 <div className="relative overflow-hidden">
-                  <img src={offer.image} alt={offer.title} loading="lazy" decoding="async" className="w-full h-64 object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-700" />
+                  <img src={offer.image} alt={offer.title} className="w-full h-64 object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-700" />
                   
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -118,7 +118,7 @@ const SpecialOffers = () => {
                           <div className="space-y-6">
                             {/* Header Image */}
                             <div className="relative h-64 rounded-lg overflow-hidden">
-                              <img src={offer.image} alt={offer.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                              <img src={offer.image} alt={offer.title} className="w-full h-full object-cover" />
                               <div className="absolute top-4 right-4">
                                 <Badge className="bg-accent text-accent-foreground font-bold text-lg px-4 py-2">
                                   {offer.discount}

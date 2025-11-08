@@ -4,10 +4,8 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BookingDialog } from "@/components/BookingDialog";
-import { ImageLightbox } from "@/components/ImageLightbox";
 import { AccommodationDetailsDialog } from "@/components/AccommodationDetailsDialog";
-import { QuickBookingModal } from "@/components/QuickBookingModal";
-import { MapPin, Users, Utensils, Bed, Calendar, CheckCircle2, Image } from "lucide-react";
+import { MapPin, Users, Utensils, Bed, Calendar, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import safariMasaiMara from "@/assets/safari-masai-mara.jpg";
 import safariLuxuryCamp from "@/assets/safari-luxury-camp.jpg";
@@ -208,11 +206,6 @@ const safariPackages = [{
 }];
 const MasaiMara = () => {
   const [selectedAccommodation, setSelectedAccommodation] = useState<number | null>(null);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxGallery, setLightboxGallery] = useState<{ url: string; caption: string }[]>([]);
-  const [lightboxIndex, setLightboxIndex] = useState(0);
-  const [quickBookingOpen, setQuickBookingOpen] = useState(false);
-  const [quickBookingAccommodation, setQuickBookingAccommodation] = useState<typeof accommodations[0] | null>(null);
   
   const openAccommodationDetails = (index: number) => {
     setSelectedAccommodation(index);
@@ -220,44 +213,15 @@ const MasaiMara = () => {
   const closeAccommodationDetails = () => {
     setSelectedAccommodation(null);
   };
-
-  const openGallery = (gallery: { url: string; caption: string }[], index: number = 0) => {
-    setLightboxGallery(gallery);
-    setLightboxIndex(index);
-    setLightboxOpen(true);
-  };
-
-  const openQuickBooking = (accommodation: typeof accommodations[0]) => {
-    setQuickBookingAccommodation(accommodation);
-    setQuickBookingOpen(true);
-  };
   return <div className="min-h-screen flex flex-col">
       <Header />
       
-      {/* Image Lightbox */}
-      <ImageLightbox 
-        images={lightboxGallery} 
-        initialIndex={lightboxIndex} 
-        isOpen={lightboxOpen} 
-        onClose={() => setLightboxOpen(false)} 
-      />
-
       {/* Accommodation Details Dialog */}
       {selectedAccommodation !== null && <AccommodationDetailsDialog {...accommodations[selectedAccommodation]} isOpen={true} onClose={closeAccommodationDetails} />}
-      
-      {/* Quick Booking Modal */}
-      {quickBookingAccommodation && (
-        <QuickBookingModal
-          isOpen={quickBookingOpen}
-          onClose={() => setQuickBookingOpen(false)}
-          accommodationName={quickBookingAccommodation.name}
-          pricePerPerson={quickBookingAccommodation.pricing.perPerson}
-        />
-      )}
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-[60vh] overflow-hidden">
-          <img src="/lovable-uploads/masai.jpeg" alt="Masai Mara" loading="eager" decoding="async" className="w-full h-full object-cover" />
+          <img src="/lovable-uploads/masai.jpeg" alt="Masai Mara" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white px-4">
@@ -357,7 +321,7 @@ const MasaiMara = () => {
               {accommodations.map((accommodation, index) => <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
                   <div className="flex flex-col md:flex-row">
                     <div className="md:w-1/3 relative">
-                      <img src={accommodation.image} alt={accommodation.name} loading="lazy" decoding="async" className="w-full h-64 md:h-full object-cover" />
+                      <img src={accommodation.image} alt={accommodation.name} className="w-full h-64 md:h-full object-cover" />
                       <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
                         {accommodation.category}
                       </Badge>
@@ -398,28 +362,9 @@ const MasaiMara = () => {
                           <p className="text-sm text-muted-foreground">{accommodation.pricing.perPerson}</p>
                         </div>}
 
-                      <div className="space-y-2">
-                        <Button 
-                          onClick={() => openQuickBooking(accommodation)} 
-                          className="w-full"
-                        >
-                          <Calendar className="w-4 h-4 mr-2" />
-                          Quick Book Now
-                        </Button>
-                        <div className="flex gap-2">
-                          <Button 
-                            onClick={() => openGallery(accommodation.gallery || [], 0)} 
-                            variant="outline"
-                            className="flex-1"
-                          >
-                            <Image className="w-4 h-4 mr-2" />
-                            Photos
-                          </Button>
-                          <Button onClick={() => openAccommodationDetails(index)} variant="outline" className="flex-1">
-                            Details
-                          </Button>
-                        </div>
-                      </div>
+                      <Button onClick={() => openAccommodationDetails(index)} className="w-full">
+                        View Details & Photos
+                      </Button>
                     </CardContent>
                   </div>
                 </Card>)}
@@ -442,7 +387,7 @@ const MasaiMara = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {safariPackages.map((pkg, index) => <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
                   <div className="relative overflow-hidden h-48">
-                    <img src={pkg.image} alt={pkg.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img src={pkg.image} alt={pkg.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <Badge className="absolute top-4 right-4 bg-accent text-accent-foreground">
                       {pkg.category.split(',')[0]}
