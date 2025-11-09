@@ -52,7 +52,7 @@ const Header = () => {
             <img 
               src={karibuLogo} 
               alt="Karibu Getaways Logo" 
-              className="h-16 md:h-20 w-auto"
+              className="h-16 md:h-20 w-auto drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.5)]"
             />
           </Link>
 
