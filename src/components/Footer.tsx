@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -9,142 +9,128 @@ const Footer = () => {
     }
   };
 
-  return <footer className="bg-secondary text-secondary-foreground">
-      {/* Main footer content */}
-      <div className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Company Info */}
-            <div className="lg:col-span-2">
-              <h3 className="text-2xl font-bold mb-4 text-accent">KARIBU GETAWAYS</h3>
-              <p className="text-secondary-foreground/80 mb-6 leading-relaxed">
-                Kenya's leading tour and travel company with over 15 years of experience. 
-                We've successfully served 30,000+ travelers with unforgettable experiences 
-                across Kenya and East Africa. Your adventure begins with us.
-              </p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-accent" />
-                  <span>info@karibugetaway.com</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-accent" />
-                  <span className="font-bold">+254742128101</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-accent" />
-                  <span>Nairobi, Kenya</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-accent">
-                Quick Links
-              </h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => scrollToSection('destinations-section')}
-                    className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200 text-left"
-                  >
-                    All Destinations
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => scrollToSection('destinations-section')}
-                    className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200 text-left"
-                  >
-                    Safari Packages
-                  </button>
-                </li>
-                <li>
-                  <Link to="/faq" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
-                    FAQ
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Popular Destinations */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4 text-accent">
-                Top Destinations
-              </h4>
-              <ul className="space-y-2">
-                {[
-                  { name: "Maasai Mara", path: "/masai-mara" },
-                  { name: "Diani Beach", path: "/diani-beach" },
-                  { name: "Amboseli", path: "/amboseli" },
-                  { name: "Mombasa", path: "/mombasa" },
-                  { name: "Samburu", path: "/samburu" }
-                ].map(destination => <li key={destination.name}>
-                    <Link to={destination.path} className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
-                      {destination.name}
-                    </Link>
-                  </li>)}
-              </ul>
-            </div>
+  return (
+    <footer className="bg-footer-dark text-footer-text py-10 px-4 font-['Poppins',sans-serif]">
+      <div className="container mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
+          
+          {/* About Section */}
+          <div className="min-w-[250px]">
+            <h2 className="text-sunset-orange text-xl font-semibold mb-3">KARIBU GETAWAYS</h2>
+            <p className="leading-relaxed text-sm">
+              Your next unforgettable adventure starts here — explore Kenya with us.
+              Kenya's leading tour and travel company with over 15 years of experience.
+            </p>
           </div>
-
-          {/* Social Media & Newsletter */}
-          <div className="mt-12 pt-8 border-t border-secondary-foreground/20">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <div>
-                <h4 className="text-lg font-semibold mb-3 text-accent">Follow Our Adventures</h4>
-                <div className="flex gap-4">
-                  <a href="https://facebook.com/karibugateway" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200" aria-label="Follow us on Facebook">
-                    <Facebook className="w-6 h-6" />
-                  </a>
-                  <a href="https://twitter.com/karibugateway" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200" aria-label="Follow us on Twitter">
-                    <Twitter className="w-6 h-6" />
-                  </a>
-                  <a href="https://instagram.com/karibugateway" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200" aria-label="Follow us on Instagram">
-                    <Instagram className="w-6 h-6" />
-                  </a>
-                  <a href="https://linkedin.com/company/karibugateway" target="_blank" rel="noopener noreferrer" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200" aria-label="Follow us on LinkedIn">
-                    <Linkedin className="w-6 h-6" />
-                  </a>
-                </div>
+          
+          {/* Contact Section */}
+          <div className="min-w-[250px]">
+            <h3 className="text-sunset-orange text-lg font-semibold mb-3">Contact Us</h3>
+            <div className="space-y-2 text-sm">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Nairobi, Kenya</span>
               </div>
-
-              <div className="text-center md:text-right">
-                <p className="text-sm text-secondary-foreground/60">
-                  Licensed by Kenya Tourism Board
-                </p>
-                <p className="text-sm text-secondary-foreground/60 mt-1">
-                  KATO Member • Bonded & Insured
-                </p>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <a href="tel:+254742128101" className="hover:text-sunset-orange transition-colors">
+                  +254 742 128 101
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <a href="mailto:info@karibugetaway.com" className="hover:text-sunset-orange transition-colors">
+                  info@karibugetaway.com
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Globe className="w-4 h-4" />
+                <a 
+                  href="https://www.karibugetaway.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-sunset-orange transition-colors"
+                >
+                  www.karibugetaway.com
+                </a>
               </div>
             </div>
           </div>
+          
+          {/* Quick Links */}
+          <div className="min-w-[200px]">
+            <h3 className="text-sunset-orange text-lg font-semibold mb-3">Quick Links</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/" className="hover:text-sunset-orange transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('destinations-section')}
+                  className="hover:text-sunset-orange transition-colors text-left"
+                >
+                  Destinations
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('destinations-section')}
+                  className="hover:text-sunset-orange transition-colors text-left"
+                >
+                  Safari Packages
+                </button>
+              </li>
+              <li>
+                <Link to="/faq" className="hover:text-sunset-orange transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-sunset-orange transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Social / Trust */}
+          <div className="min-w-[200px]">
+            <h3 className="text-sunset-orange text-lg font-semibold mb-3">Follow Us</h3>
+            <p className="text-sm mb-4">
+              <a 
+                href="https://www.tiktok.com/@karibugetaways" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-sunset-orange transition-colors"
+              >
+                🎶 TikTok: @karibugetaways
+              </a>
+            </p>
+            <p className="text-sm leading-relaxed">
+              Licensed by Kenya Tourism Board<br />
+              KATO Member • Bonded & Insured
+            </p>
+          </div>
+
+        </div>
+        
+        {/* Copyright */}
+        <div className="text-center mt-8 pt-4 border-t border-footer-text/20 text-sm text-footer-text/70">
+          <p>
+            © 2025 Karibu Getaways. All Rights Reserved. | {" "}
+            <Link to="/privacy" className="hover:text-sunset-orange transition-colors">
+              Privacy Policy
+            </Link>
+            {" "} | {" "}
+            <Link to="/terms" className="hover:text-sunset-orange transition-colors">
+              Terms of Service
+            </Link>
+          </p>
         </div>
       </div>
-
-      {/* Copyright */}
-      <div className="bg-secondary/80 py-4 px-4 border-t border-secondary-foreground/10">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-secondary-foreground/60">
-            <p>© 2025 Karibu Gateways. All rights reserved.</p>
-            <div className="flex gap-6 mt-2 md:mt-0">
-              <Link to="/privacy" className="hover:text-accent transition-colors duration-200">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="hover:text-accent transition-colors duration-200">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>;
+    </footer>
+  );
 };
 export default Footer;
