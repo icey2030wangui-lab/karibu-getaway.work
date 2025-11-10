@@ -67,20 +67,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('destinations-section')}
-                  className="hover:text-sunset-orange transition-colors text-left"
-                >
+                <Link to="/" onClick={() => scrollToSection('destinations-section')} className="hover:text-sunset-orange transition-colors">
                   Destinations
-                </button>
+                </Link>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('destinations-section')}
-                  className="hover:text-sunset-orange transition-colors text-left"
-                >
+                <Link to="/" onClick={() => scrollToSection('destinations-section')} className="hover:text-sunset-orange transition-colors">
                   Safari Packages
-                </button>
+                </Link>
               </li>
               <li>
                 <Link to="/faq" className="hover:text-sunset-orange transition-colors">
