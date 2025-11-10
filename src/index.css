@@ -90,8 +90,9 @@ All colors MUST be HSL.
     --ocean-blue: 206 84% 15%;
     --sunset-orange: 25 95% 53%;
     --nature-green: 142 76% 36%;
-    --footer-dark: 220 40% 12%;
-    --footer-text: 210 40% 96%;
+    --footer-dark: 210 60% 8%;
+    --footer-text: 48 100% 96%;
+    --footer-accent: 45 100% 60%;
     
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--sunset-orange)), hsl(var(--adventure-gold)));

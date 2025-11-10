@@ -54,6 +54,7 @@ export default {
         "nature-green": "hsl(var(--nature-green))",
         "footer-dark": "hsl(var(--footer-dark))",
         "footer-text": "hsl(var(--footer-text))",
+        "footer-accent": "hsl(var(--footer-accent))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
