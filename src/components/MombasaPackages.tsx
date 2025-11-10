@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
-import { Star, MapPin, Calendar, Users, CheckCircle2, Building, Phone, Mail, Clock, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, MapPin, Calendar, Users, CheckCircle2, Building, Phone, Mail, Clock, ChevronLeft, ChevronRight, Eye } from "lucide-react";
 import { useState } from "react";
 import { mombasaPackages } from "@/data/packages";
 import { BookingDialog } from "@/components/BookingDialog";
@@ -451,6 +451,7 @@ const MombasaPackages = () => {
                     </div>
                     
                     <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-sm py-2">
+                      <Eye className="w-4 h-4 mr-2 text-sunset-orange" />
                       VIEW DETAILS
                     </Button>
                   </CardContent>

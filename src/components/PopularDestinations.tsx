@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { destinations } from "@/data/destinations";
 import { useNavigate } from "react-router-dom";
+import { Eye } from "lucide-react";
 const PopularDestinations = () => {
   const navigate = useNavigate();
   const handleViewDetails = (destinationName: string) => {
@@ -75,6 +76,7 @@ const PopularDestinations = () => {
                 
                 <div className="flex items-center justify-end">
                   <Button className="bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-110 hover:shadow-lg transition-all duration-300 group/btn" onClick={() => handleViewDetails(destination.name)}>
+                    <Eye className="w-4 h-4 mr-2 text-sunset-orange" />
                     <span className="group-hover/btn:mr-1 transition-all">View Details</span>
                     <span className="opacity-0 group-hover/btn:opacity-100 transition-opacity">→</span>
                   </Button>

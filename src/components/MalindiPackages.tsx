@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Star, MapPin, Calendar, Info } from "lucide-react";
+import { Star, MapPin, Calendar, Info, Eye } from "lucide-react";
 import { useState } from "react";
 import { BookingDialog } from "./BookingDialog";
 import hemingwaysWatamu from "@/assets/hemingways-watamu.jpg";
@@ -673,6 +673,7 @@ const MalindiPackages = () => {
                 
                 <div className="flex justify-center">
                   <Button className="rounded-full px-6">
+                    <Eye className="w-4 h-4 mr-2 text-sunset-orange" />
                     View Details
                   </Button>
                 </div>

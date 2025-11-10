@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Star, MapPin, Calendar, CheckCircle2 } from "lucide-react";
+import { Star, MapPin, Calendar, CheckCircle2, Eye } from "lucide-react";
 import { useState } from "react";
 import { dianiPackages } from "@/data/packages";
 import { BookingDialog } from "@/components/BookingDialog";
@@ -266,6 +266,7 @@ const DianiStayDine = () => {
                     </div>
                     
                     <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                      <Eye className="w-4 h-4 mr-2 text-sunset-orange" />
                       VIEW DETAILS
                     </Button>
                   </CardContent>

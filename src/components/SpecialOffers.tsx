@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Star, MapPin, Calendar, Check } from "lucide-react";
+import { Star, MapPin, Calendar, Check, Eye } from "lucide-react";
 import { specialOffers } from "@/data/offers";
 import { BookingDialog } from "@/components/BookingDialog";
 import {
@@ -107,6 +107,7 @@ const SpecialOffers = () => {
                       <Dialog>
                         <DialogTrigger asChild>
                           <Button variant="outline" onClick={() => setSelectedOffer(offer)}>
+                            <Eye className="w-4 h-4 mr-2 text-sunset-orange" />
                             View Details
                           </Button>
                         </DialogTrigger>
