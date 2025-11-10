@@ -1,6 +1,14 @@
 import { Mail, MapPin, Phone, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return <footer className="bg-secondary text-secondary-foreground">
       {/* Main footer content */}
       <div className="py-16 px-4">
@@ -43,14 +51,20 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/#destinations" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                  <button 
+                    onClick={() => scrollToSection('destinations-section')}
+                    className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200 text-left"
+                  >
                     All Destinations
-                  </Link>
+                  </button>
                 </li>
                 <li>
-                  <Link to="/#packages" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
+                  <button 
+                    onClick={() => scrollToSection('destinations-section')}
+                    className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200 text-left"
+                  >
                     Safari Packages
-                  </Link>
+                  </button>
                 </li>
                 <li>
                   <Link to="/faq" className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200">
