@@ -13,7 +13,7 @@ export const specialOffers = [
     image: dianiBeach,
     rating: 4.8,
     discount: "30% OFF",
-    price: "From $230",
+    price: "From $215",
     originalPrice: "$269",
     description: "🎅 Celebrate Christmas by the ocean with bonfires, beach parties, and festive Swahili feasts. Create magical memories under tropical stars!",
     icon: Gift,
