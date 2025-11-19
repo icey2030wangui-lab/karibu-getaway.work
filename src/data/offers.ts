@@ -3,6 +3,7 @@ import dianiBeach from "@/assets/diani-beach.jpg";
 import masaiMara from "@/assets/masai-mara.jpg";
 import mombasa from "@/assets/mombasa.jpg";
 import samburu from "@/assets/samburu.jpg";
+import teamBuilding from "@/assets/team-building.jpg";
 
 export const specialOffers = [
   {
@@ -403,7 +404,7 @@ export const specialOffers = [
     title: "Corporate & Conference",
     subtitle: "🤝 Team Building Adventures",
     category: "Corporate And Conference",
-    image: dianiBeach,
+    image: teamBuilding,
     rating: 4.5,
     discount: "15% OFF",
     price: "From $1500",
