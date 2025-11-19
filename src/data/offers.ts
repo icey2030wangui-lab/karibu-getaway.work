@@ -4,6 +4,7 @@ import masaiMara from "@/assets/masai-mara.jpg";
 import mombasa from "@/assets/mombasa.jpg";
 import samburu from "@/assets/samburu.jpg";
 import teamBuilding from "@/assets/team-building.jpg";
+import newYear2026 from "@/assets/new-year-2026.jpg";
 
 export const specialOffers = [
   {
@@ -491,7 +492,7 @@ export const specialOffers = [
     title: "New Year Special",
     subtitle: "🎆 Welcome to 2026 Paradise",
     category: "Christmas Deals",
-    image: mombasa,
+    image: newYear2026,
     rating: 4.8,
     discount: "40% OFF",
     price: "From $2,000",
