@@ -7,6 +7,7 @@ import teamBuilding from "@/assets/team-building.jpg";
 import newYear2026 from "@/assets/new-year-2026.jpg";
 import christmasCoastal from "@/assets/christmas-coastal.jpg";
 import honeymoon from "@/assets/honeymoon.jpg";
+import educationalSafari from "@/assets/educational-safari.jpg";
 
 export const specialOffers = [
   {
@@ -315,7 +316,7 @@ export const specialOffers = [
     title: "School Holiday Deals",
     subtitle: "👨‍👩‍👧 Educational Safari Tours",
     category: "School Holiday Deals",
-    image: samburu,
+    image: educationalSafari,
     rating: 4.6,
     discount: "35% OFF",
     price: "From $700",
