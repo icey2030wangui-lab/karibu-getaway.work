@@ -6,6 +6,7 @@ import samburu from "@/assets/samburu.jpg";
 import teamBuilding from "@/assets/team-building.jpg";
 import newYear2026 from "@/assets/new-year-2026.jpg";
 import christmasCoastal from "@/assets/christmas-coastal.jpg";
+import honeymoon from "@/assets/honeymoon.jpg";
 
 export const specialOffers = [
   {
@@ -86,7 +87,7 @@ export const specialOffers = [
     title: "Romantic Holiday",
     subtitle: "💑 Luxury Island Honeymoon",
     category: "Romantic Holiday",
-    image: mombasa,
+    image: honeymoon,
     rating: 4.9,
     discount: "25% OFF",
     price: "From $2500",
