@@ -5,6 +5,7 @@ import mombasa from "@/assets/mombasa.jpg";
 import samburu from "@/assets/samburu.jpg";
 import teamBuilding from "@/assets/team-building.jpg";
 import newYear2026 from "@/assets/new-year-2026.jpg";
+import christmasCoastal from "@/assets/christmas-coastal.jpg";
 
 export const specialOffers = [
   {
@@ -12,7 +13,7 @@ export const specialOffers = [
     title: "Christmas Holiday Special",
     subtitle: "🎄 Magical Coastal Christmas",
     category: "Christmas Deals",
-    image: dianiBeach,
+    image: christmasCoastal,
     rating: 4.8,
     discount: "30% OFF",
     price: "From $215",
