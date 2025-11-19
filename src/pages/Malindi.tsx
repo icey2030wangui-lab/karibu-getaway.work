@@ -14,6 +14,7 @@ import falconryKenya from "@/assets/falconry-kenya.jpg";
 import malindiSurfing from "@/assets/malindi-surfing.jpg";
 import watamuSnorkeling from "@/assets/watamu-snorkeling.jpg";
 import beachHorseRiding from "@/assets/beach-horse-riding.jpg";
+import watamuMalindiBeach from "@/assets/watamu-malindi-beach.jpg";
 
 const Malindi = () => {
   const packages = [
@@ -124,7 +125,7 @@ const Malindi = () => {
         <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0">
             <img
-              src={malindiMarine}
+              src={watamuMalindiBeach}
               alt="Malindi & Watamu"
               className="w-full h-full object-cover"
             />
