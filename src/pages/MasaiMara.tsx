@@ -10,6 +10,7 @@ import { useState } from "react";
 import safariMasaiMara from "@/assets/safari-masai-mara.jpg";
 import safariLuxuryCamp from "@/assets/safari-luxury-camp.jpg";
 import safariBudgetTour from "@/assets/safari-budget-tour.jpg";
+import masaiMaraHero from "@/assets/masai-mara-hero.jpg";
 const accommodations = [{
   name: "Mara Serena Safari Lodge",
   category: "Luxury+",
@@ -221,7 +222,7 @@ const MasaiMara = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-[60vh] overflow-hidden">
-          <img src="/lovable-uploads/masai.jpeg" alt="Masai Mara" className="w-full h-full object-cover" />
+          <img src={masaiMaraHero} alt="Masai Mara" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white px-4">
