@@ -97,9 +97,6 @@ const SpecialOffers = () => {
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="text-2xl font-bold text-primary animate-pulse">{offer.price}</span>
-                        {offer.originalPrice && <span className="text-sm text-muted-foreground line-through opacity-75">
-                            {offer.originalPrice}
-                          </span>}
                       </div>
                       <span className="text-xs text-muted-foreground">per person</span>
                     </div>
@@ -207,15 +204,10 @@ const SpecialOffers = () => {
                               <div>
                                 <div className="flex items-center gap-2">
                                   <span className="text-3xl font-bold text-primary">{offer.price}</span>
-                                  {offer.originalPrice && (
-                                    <span className="text-lg text-muted-foreground line-through">
-                                      {offer.originalPrice}
-                                    </span>
-                                  )}
                                 </div>
                                 <span className="text-sm text-muted-foreground">per person • {offer.duration}</span>
                               </div>
-                              <BookingDialog 
+                              <BookingDialog
                                 packageName={offer.subtitle} 
                                 packagePrice={offer.price} 
                                 buttonText="Book Now" 
