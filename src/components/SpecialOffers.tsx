@@ -93,13 +93,7 @@ const SpecialOffers = () => {
                 </div>
                 
                 <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-2xl font-bold text-primary animate-pulse">{offer.price}</span>
-                      </div>
-                      <span className="text-xs text-muted-foreground">per person</span>
-                    </div>
+                  <div className="flex items-center justify-center">
                     {offer.inclusions ? (
                       <Dialog>
                         <DialogTrigger asChild>
