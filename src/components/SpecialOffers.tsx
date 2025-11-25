@@ -97,8 +97,8 @@ const SpecialOffers = () => {
                     {offer.inclusions ? (
                       <Dialog>
                         <DialogTrigger asChild>
-                          <Button variant="outline" onClick={() => setSelectedOffer(offer)}>
-                            <Eye className="w-4 h-4 mr-2 text-sunset-orange" />
+                          <Button variant="default" onClick={() => setSelectedOffer(offer)}>
+                            <Eye className="w-4 h-4 mr-2" />
                             View Details
                           </Button>
                         </DialogTrigger>
