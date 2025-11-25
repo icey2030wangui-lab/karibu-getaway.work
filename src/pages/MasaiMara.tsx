@@ -60,7 +60,7 @@ const accommodations = [{
   location: "Masai Mara National Reserve",
   features: ["Full Board", "Game Drives", "Swimming Pool", "Cultural Visits"],
   pricing: {
-    perPerson: "$300 per person per night (2 people sharing)"
+    perPerson: "$300 per person per night"
   },
   gallery: [
     { url: "/lovable-uploads/mara-sopa-1.webp", caption: "Lodge Exterior" },
@@ -82,7 +82,7 @@ const accommodations = [{
   location: "Masai Mara National Reserve",
   features: ["Full Board", "Game Drives", "Bush Dining", "Campfire Nights"],
   pricing: {
-    perPerson: "$200 per person per night (2 people sharing)"
+    perPerson: "$200 per person per night"
   },
   gallery: [{
     url: "/lovable-uploads/mara-leisure-entrance.webp",
@@ -119,7 +119,7 @@ const accommodations = [{
   location: "Talek River, Masai Mara",
   features: ["Full Board", "Eco-friendly", "River Views", "Cultural Center"],
   pricing: {
-    perPerson: "$400 per person per night (2 people sharing)"
+    perPerson: "$400 per person per night"
   },
   gallery: [{
     url: "/lovable-uploads/basecamp-evening-deck.jpg",
