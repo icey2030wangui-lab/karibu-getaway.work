@@ -97,8 +97,8 @@ const SpecialOffers = () => {
                     {offer.inclusions ? (
                       <Dialog>
                         <DialogTrigger asChild>
-                          <Button variant="default" onClick={() => setSelectedOffer(offer)}>
-                            <Eye className="w-4 h-4 mr-2" />
+                          <Button variant="default" size="lg" onClick={() => setSelectedOffer(offer)}>
+                            <Eye className="w-5 h-5 mr-2" />
                             View Details
                           </Button>
                         </DialogTrigger>
@@ -212,7 +212,7 @@ const SpecialOffers = () => {
                         </DialogContent>
                       </Dialog>
                     ) : (
-                      <BookingDialog packageName={offer.subtitle} packagePrice={offer.price} buttonText="Book Now" buttonVariant="default" />
+                      <BookingDialog packageName={offer.subtitle} packagePrice={offer.price} buttonText="Book Now" buttonVariant="default" buttonSize="lg" />
                     )}
                   </div>
                 </CardContent>

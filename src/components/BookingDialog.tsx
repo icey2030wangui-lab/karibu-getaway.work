@@ -20,13 +20,15 @@ interface BookingDialogProps {
   packagePrice: string;
   buttonText?: string;
   buttonVariant?: "default" | "outline" | "secondary";
+  buttonSize?: "default" | "sm" | "lg" | "icon";
 }
 
 export const BookingDialog = ({ 
   packageName, 
   packagePrice, 
   buttonText = "Book Now",
-  buttonVariant = "default" 
+  buttonVariant = "default",
+  buttonSize = "default"
 }: BookingDialogProps) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -160,7 +162,7 @@ export const BookingDialog = ({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant={buttonVariant}>{buttonText}</Button>
+        <Button variant={buttonVariant} size={buttonSize}>{buttonText}</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
