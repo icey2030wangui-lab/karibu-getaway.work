@@ -440,14 +440,6 @@ const MombasaPackages = () => {
                         </div>
                         <span className="text-xs text-muted-foreground">({pkg.reviews})</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-lg font-bold text-primary">
-                          {pkg.price}
-                        </span>
-                        {pkg.originalPrice && <span className="text-xs text-muted-foreground line-through">
-                            {pkg.originalPrice}
-                          </span>}
-                      </div>
                     </div>
                     
                     <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-sm py-2">

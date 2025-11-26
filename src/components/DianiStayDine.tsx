@@ -255,14 +255,6 @@ const DianiStayDine = () => {
                       <p className="text-sm text-muted-foreground mb-2">
                         Location: {pkg.location}
                       </p>
-                      <div className="flex items-center gap-2">
-                        <span className="text-2xl font-bold text-primary">
-                          {pkg.price}
-                        </span>
-                        {pkg.originalPrice && <span className="text-sm text-muted-foreground line-through">
-                            {pkg.originalPrice}
-                          </span>}
-                      </div>
                     </div>
                     
                     <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
