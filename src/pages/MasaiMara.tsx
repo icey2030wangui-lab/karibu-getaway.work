@@ -83,7 +83,7 @@ const accommodations = [{
   location: "Masai Mara National Reserve",
   features: ["Full Board", "Game Drives", "Bush Dining", "Campfire Nights"],
   pricing: {
-    perPerson: "$200 per person per night"
+    perPerson: "$270 per person per night"
   },
   gallery: [{
     url: "/lovable-uploads/mara-leisure-entrance.webp",
