@@ -58,7 +58,7 @@ const accommodations = [
     name: "Elephant Bedroom Camp",
     category: "Mid-range",
     type: "TENTED CAMP",
-    image: "/lovable-uploads/samburu-elephant.jpeg",
+    image: "/lovable-uploads/elephant-bedroom-camp-main.jpg",
     description: "An exclusive tented camp along the Ewaso Nyiro River, offering personal service and exceptional wildlife encounters including the unique Samburu Special Five.",
     rooms: 12,
     location: "Samburu National Reserve",
