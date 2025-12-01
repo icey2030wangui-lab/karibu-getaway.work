@@ -9,8 +9,8 @@ import { dianiPackages } from "@/data/packages";
 import { BookingDialog } from "@/components/BookingDialog";
 
 const DianiStayDine = () => {
-  // Filter only hotel packages (IDs 2, 4, 5, 6, 8, 9)
-  const hotelPackages = dianiPackages.filter(pkg => [2, 4, 5, 6, 8, 9].includes(pkg.id));
+  // Filter only hotel packages (IDs 5, 6, 8, 9) - removed 3 Days packages
+  const hotelPackages = dianiPackages.filter(pkg => [5, 6, 8, 9].includes(pkg.id));
 
   const PackageDetailModal = ({
     pkg
