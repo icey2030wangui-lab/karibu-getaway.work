@@ -103,7 +103,7 @@ const Footer = () => {
               </a>
               <br />
               <a 
-                href="https://www.instagram.com/karibu2getaways?igsh=MWhkaXZuMm5teXpqcA%3D%3D&utm_source=qr" 
+                href="https://www.instagram.com/karibu2getaways" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-footer-accent transition-colors"
