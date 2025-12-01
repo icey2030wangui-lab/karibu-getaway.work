@@ -94,12 +94,12 @@ const Footer = () => {
             <h3 className="text-footer-accent text-lg font-semibold mb-3">Follow Us</h3>
             <p className="text-sm mb-4">
               <a 
-                href="https://www.tiktok.com/@karibugetaways" 
+                href="https://www.tiktok.com/@karibu_2_getaways?_r=1&_t=ZM-91r3Ql5jqDE" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-footer-accent transition-colors"
               >
-                🎶 TikTok: @karibugetaways
+                🎶 TikTok: @karibu_2_getaways
               </a>
             </p>
             <p className="text-sm leading-relaxed">
