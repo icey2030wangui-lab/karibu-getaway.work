@@ -101,6 +101,15 @@ const Footer = () => {
               >
                 🎶 TikTok: @karibu_2_getaways
               </a>
+              <br />
+              <a 
+                href="https://www.instagram.com/karibu2getaways?igsh=MWhkaXZuMm5teXpqcA%3D%3D&utm_source=qr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-footer-accent transition-colors"
+              >
+                📸 Instagram: @karibu2getaways
+              </a>
             </p>
             <p className="text-sm leading-relaxed">
               Licensed by Kenya Tourism Board<br />
