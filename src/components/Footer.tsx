@@ -2,10 +2,16 @@ import { Mail, MapPin, Phone, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const handleScrollToSection = (sectionId: string) => {
+    // If already on home page, scroll directly
+    if (window.location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Navigate to home page first, then scroll after a short delay
+      window.location.href = `/#${sectionId}`;
     }
   };
 
@@ -62,27 +68,33 @@ const Footer = () => {
             <h3 className="text-footer-accent text-lg font-semibold mb-3">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/" className="hover:text-footer-accent transition-colors">
+                <Link to="/" className="hover:text-footer-accent transition-colors cursor-pointer">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/" onClick={() => scrollToSection('destinations-section')} className="hover:text-footer-accent transition-colors">
+                <button 
+                  onClick={() => handleScrollToSection('destinations-section')} 
+                  className="hover:text-footer-accent transition-colors cursor-pointer text-left"
+                >
                   Destinations
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/" onClick={() => scrollToSection('destinations-section')} className="hover:text-footer-accent transition-colors">
+                <button 
+                  onClick={() => handleScrollToSection('destinations-section')} 
+                  className="hover:text-footer-accent transition-colors cursor-pointer text-left"
+                >
                   Safari Packages
-                </Link>
+                </button>
               </li>
               <li>
-                <Link to="/faq" className="hover:text-footer-accent transition-colors">
+                <Link to="/faq" className="hover:text-footer-accent transition-colors cursor-pointer">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-footer-accent transition-colors">
+                <Link to="/contact" className="hover:text-footer-accent transition-colors cursor-pointer">
                   Contact
                 </Link>
               </li>
