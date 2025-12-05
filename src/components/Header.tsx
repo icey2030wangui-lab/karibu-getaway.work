@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Drawer,
   DrawerClose,
@@ -15,10 +17,11 @@ import {
 const Header = () => {
   const [open, setOpen] = useState(false);
   const isMobile = useIsMobile();
+  const { t } = useLanguage();
 
   const navLinks = [
     { 
-      label: "Destinations", 
+      label: t('nav.destinations'), 
       id: "destinations-section",
       onClick: () => {
         document.getElementById('destinations-section')?.scrollIntoView({ behavior: 'smooth' });
@@ -34,7 +37,7 @@ const Header = () => {
       }
     },
     { 
-      label: "About", 
+      label: t('footer.about'), 
       id: "footer",
       onClick: () => {
         document.querySelector('footer')?.scrollIntoView({ behavior: 'smooth' });
@@ -71,6 +74,9 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
+            <div className="text-white">
+              <LanguageSwitcher />
+            </div>
           </nav>
 
           {/* Mobile Menu */}
@@ -106,6 +112,9 @@ const Header = () => {
                       {link.label}
                     </button>
                   ))}
+                  <div className="text-white pt-4 border-t border-accent/20">
+                    <LanguageSwitcher />
+                  </div>
                 </nav>
               </DrawerContent>
             </Drawer>

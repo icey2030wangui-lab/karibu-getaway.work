@@ -1,7 +1,10 @@
 import { Mail, MapPin, Phone, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   const handleScrollToSection = (sectionId: string) => {
     // If already on home page, scroll directly
     if (window.location.pathname === '/') {
@@ -24,14 +27,13 @@ const Footer = () => {
           <div className="min-w-[250px]">
             <h2 className="text-footer-accent text-xl font-semibold mb-3">KARIBU GETAWAYS</h2>
             <p className="leading-relaxed text-sm">
-              Your next unforgettable adventure starts here — explore Kenya with us.
-              Kenya's leading tour and travel company with over 15 years of experience.
+              {t('footer.aboutText')}
             </p>
           </div>
           
           {/* Contact Section */}
           <div className="min-w-[250px]">
-            <h3 className="text-footer-accent text-lg font-semibold mb-3">Contact Us</h3>
+            <h3 className="text-footer-accent text-lg font-semibold mb-3">{t('footer.contactUs')}</h3>
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
@@ -65,11 +67,11 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div className="min-w-[200px]">
-            <h3 className="text-footer-accent text-lg font-semibold mb-3">Quick Links</h3>
+            <h3 className="text-footer-accent text-lg font-semibold mb-3">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/" className="hover:text-footer-accent transition-colors cursor-pointer">
-                  Home
+                  {t('nav.home')}
                 </Link>
               </li>
               <li>
@@ -77,7 +79,7 @@ const Footer = () => {
                   onClick={() => handleScrollToSection('destinations-section')} 
                   className="hover:text-footer-accent transition-colors cursor-pointer text-left"
                 >
-                  Destinations
+                  {t('nav.destinations')}
                 </button>
               </li>
               <li>
@@ -85,17 +87,17 @@ const Footer = () => {
                   onClick={() => handleScrollToSection('destinations-section')} 
                   className="hover:text-footer-accent transition-colors cursor-pointer text-left"
                 >
-                  Safari Packages
+                  {t('nav.safariPackages')}
                 </button>
               </li>
               <li>
                 <Link to="/faq" className="hover:text-footer-accent transition-colors cursor-pointer">
-                  FAQ
+                  {t('nav.faq')}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-footer-accent transition-colors cursor-pointer">
-                  Contact
+                  {t('nav.contact')}
                 </Link>
               </li>
             </ul>
@@ -103,7 +105,7 @@ const Footer = () => {
           
           {/* Social / Trust */}
           <div className="min-w-[200px]">
-            <h3 className="text-footer-accent text-lg font-semibold mb-3">Follow Us</h3>
+            <h3 className="text-footer-accent text-lg font-semibold mb-3">{t('footer.followUs')}</h3>
             <div className="space-y-2 text-sm mb-4">
               <div>
                 <a 
@@ -127,8 +129,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm leading-relaxed">
-              Licensed by Kenya Tourism Board<br />
-              KATO Member • Bonded & Insured
+              {t('footer.licensedBy')}<br />
+              {t('footer.memberOf')} • Bonded & Insured
             </p>
           </div>
 
@@ -137,13 +139,13 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center mt-8 pt-4 border-t border-footer-text/20 text-sm text-footer-text/70">
           <p>
-            © 2025 Karibu Getaways. All Rights Reserved. | {" "}
+            © 2025 Karibu Getaways. {t('footer.allRightsReserved')} | {" "}
             <Link to="/privacy" className="hover:text-footer-accent transition-colors">
-              Privacy Policy
+              {t('footer.privacyPolicy')}
             </Link>
             {" "} | {" "}
             <Link to="/terms" className="hover:text-footer-accent transition-colors">
-              Terms of Service
+              {t('footer.termsOfService')}
             </Link>
           </p>
         </div>
