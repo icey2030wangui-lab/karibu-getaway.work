@@ -3,29 +3,30 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Star, MapPin, Calendar, Users, CheckCircle2 } from "lucide-react";
+import { Star, MapPin, Calendar, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { dianiPackages } from "@/data/packages";
 import { BookingDialog } from "@/components/BookingDialog";
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const DianiPackages = () => {
+  const { t } = useLanguage();
   // Filter only activity packages (IDs 10-20)
   const activityPackages = dianiPackages.filter(pkg => pkg.id >= 10 && pkg.id <= 20);
-  const PackageDetailModal = ({
-    pkg
-  }: {
-    pkg: typeof dianiPackages[0];
-  }) => <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+
+  const PackageDetailModal = ({ pkg }: { pkg: typeof dianiPackages[0] }) => (
+    <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
       <DialogHeader>
         <DialogTitle className="text-2xl font-bold flex items-center gap-2">
           {pkg.title}
           <div className="flex items-center gap-1">
             <div className="flex">
-              {Array.from({
-              length: 5
-            }).map((_, i) => <Star key={i} className={`w-4 h-4 ${i < Math.floor(pkg.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />)}
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className={`w-4 h-4 ${i < Math.floor(pkg.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+              ))}
             </div>
             <span className="text-sm font-bold text-accent">{pkg.rating}</span>
-            <span className="text-sm text-muted-foreground">({pkg.reviews} reviews)</span>
+            <span className="text-sm text-muted-foreground">({pkg.reviews} {t('common.reviews')})</span>
           </div>
         </DialogTitle>
       </DialogHeader>
@@ -34,52 +35,60 @@ const DianiPackages = () => {
         <div className="lg:col-span-2">
           <Tabs defaultValue="overview" className="w-full">
             <TabsList className="grid w-full grid-cols-4 mb-6">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="pricing">Pricing</TabsTrigger>
-              <TabsTrigger value="inclusions">Inclusions</TabsTrigger>
-              <TabsTrigger value="gallery">Gallery</TabsTrigger>
+              <TabsTrigger value="overview">{t('package.overview')}</TabsTrigger>
+              <TabsTrigger value="pricing">{t('package.pricing')}</TabsTrigger>
+              <TabsTrigger value="inclusions">{t('package.inclusions')}</TabsTrigger>
+              <TabsTrigger value="gallery">{t('package.gallery')}</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold mb-4">About The Package</h3>
+                <h3 className="text-xl font-bold mb-4">{t('package.aboutPackage')}</h3>
                 <p className="text-muted-foreground mb-4">{pkg.description}</p>
                 
-                {pkg.roomType && <div className="bg-primary/10 p-4 rounded-lg mb-4">
-                    <h4 className="font-bold mb-3 text-primary">Room Details</h4>
+                {pkg.roomType && (
+                  <div className="bg-primary/10 p-4 rounded-lg mb-4">
+                    <h4 className="font-bold mb-3 text-primary">{t('package.roomDetails')}</h4>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <div>
-                        <div className="text-sm text-muted-foreground">Room Type</div>
+                        <div className="text-sm text-muted-foreground">{t('package.roomType')}</div>
                         <div className="font-semibold">{pkg.roomType}</div>
                       </div>
                       <div>
-                        <div className="text-sm text-muted-foreground">Room Size</div>
+                        <div className="text-sm text-muted-foreground">{t('package.roomSize')}</div>
                         <div className="font-semibold">{pkg.roomSize}</div>
                       </div>
                       <div>
-                        <div className="text-sm text-muted-foreground">Bedding</div>
+                        <div className="text-sm text-muted-foreground">{t('package.bedding')}</div>
                         <div className="font-semibold">{pkg.bedding}</div>
                       </div>
                     </div>
                     
-                    {pkg.roomAmenities && <div className="mt-4">
-                        <div className="text-sm font-semibold mb-2">Room Amenities</div>
+                    {pkg.roomAmenities && (
+                      <div className="mt-4">
+                        <div className="text-sm font-semibold mb-2">{t('package.roomAmenities')}</div>
                         <div className="grid grid-cols-2 gap-2">
-                          {pkg.roomAmenities.map((amenity, idx) => <div key={idx} className="flex items-center gap-2">
+                          {pkg.roomAmenities.map((amenity, idx) => (
+                            <div key={idx} className="flex items-center gap-2">
                               <CheckCircle2 className="w-3 h-3 text-primary" />
                               <span className="text-sm">{amenity}</span>
-                            </div>)}
+                            </div>
+                          ))}
                         </div>
-                      </div>}
-                  </div>}
+                      </div>
+                    )}
+                  </div>
+                )}
                 
                 <div className="bg-accent/10 p-4 rounded-lg">
-                  <h4 className="font-bold mb-2 text-accent">Recommended Dining</h4>
+                  <h4 className="font-bold mb-2 text-accent">{t('package.recommendedDining')}</h4>
                   <ul className="space-y-1">
-                    {pkg.diningOptions?.map((option, idx) => <li key={idx} className="flex items-center gap-2">
+                    {pkg.diningOptions?.map((option, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-green-500" />
                         <span className="text-sm">{option}</span>
-                      </li>)}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -87,23 +96,25 @@ const DianiPackages = () => {
 
             <TabsContent value="pricing" className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold mb-4">Package Pricing</h3>
+                <h3 className="text-xl font-bold mb-4">{t('package.packagePricing')}</h3>
                 <div className="bg-card border rounded-lg p-6">
-                   <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-between mb-4">
                     <div>
                       <span className="text-3xl font-bold text-primary">{pkg.price}</span>
-                      {pkg.originalPrice && <span className="text-lg text-muted-foreground line-through ml-2">
+                      {pkg.originalPrice && (
+                        <span className="text-lg text-muted-foreground line-through ml-2">
                           {pkg.originalPrice}
-                        </span>}
+                        </span>
+                      )}
                     </div>
                     <Badge className="bg-green-500 text-white">
-                      {pkg.originalPrice && `Save $${Math.abs(parseInt(pkg.originalPrice.replace(/[^\d]/g, '')) - parseInt(pkg.price.replace(/[^\d]/g, '')))}`}
+                      {pkg.originalPrice && `${t('common.save')} $${Math.abs(parseInt(pkg.originalPrice.replace(/[^\d]/g, '')) - parseInt(pkg.price.replace(/[^\d]/g, '')))}`}
                     </Badge>
                   </div>
                   <div className="text-sm text-muted-foreground mb-4">
-                    Starting from • Per person sharing
+                    {t('common.startingFrom')} • {t('package.perPersonSharing')}
                   </div>
-                  <BookingDialog packageName={pkg.title} packagePrice={pkg.price} buttonText="BOOK NOW" buttonVariant="default" />
+                  <BookingDialog packageName={pkg.title} packagePrice={pkg.price} buttonText={t('common.bookNow').toUpperCase()} buttonVariant="default" />
                 </div>
               </div>
             </TabsContent>
@@ -111,22 +122,26 @@ const DianiPackages = () => {
             <TabsContent value="inclusions" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-bold text-green-600 mb-3">Inclusions</h4>
+                  <h4 className="font-bold text-green-600 mb-3">{t('package.inclusions')}</h4>
                   <ul className="space-y-2">
-                    {pkg.inclusions.map((item, idx) => <li key={idx} className="flex items-center gap-2">
+                    {pkg.inclusions.map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                         <span className="text-sm">{item}</span>
-                      </li>)}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h4 className="font-bold text-red-600 mb-3">Exclusions</h4>
+                  <h4 className="font-bold text-red-600 mb-3">{t('package.exclusions')}</h4>
                   <ul className="space-y-2">
-                    {pkg.exclusions.map((item, idx) => <li key={idx} className="flex items-center gap-2">
+                    {pkg.exclusions.map((item, idx) => (
+                      <li key={idx} className="flex items-center gap-2">
                         <div className="w-4 h-4 rounded-full border-2 border-red-500 flex-shrink-0" />
                         <span className="text-sm">{item}</span>
-                      </li>)}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -134,11 +149,13 @@ const DianiPackages = () => {
 
             <TabsContent value="gallery" className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold mb-4">Photo Gallery</h3>
+                <h3 className="text-xl font-bold mb-4">{t('package.photoGallery')}</h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {pkg.images.map((img, idx) => <div key={idx} className="relative overflow-hidden rounded-lg aspect-video">
-                      <img src={img} alt={`${pkg.title} image ${idx + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
-                    </div>)}
+                  {pkg.images.map((img, idx) => (
+                    <div key={idx} className="relative overflow-hidden rounded-lg aspect-video">
+                      <img src={img} alt={`${pkg.title} image ${idx + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" loading="lazy" decoding="async" />
+                    </div>
+                  ))}
                 </div>
               </div>
             </TabsContent>
@@ -147,14 +164,14 @@ const DianiPackages = () => {
 
         <div className="space-y-6">
           <div className="bg-slate-800 text-white p-6 rounded-lg">
-            <h3 className="font-bold text-lg mb-4">TRIP INFORMATION</h3>
+            <h3 className="font-bold text-lg mb-4">{t('package.tripInfo')}</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-sm opacity-75">Location</div>
+                  <div className="text-sm opacity-75">{t('common.location')}</div>
                   <div className="font-medium">{pkg.location}</div>
                 </div>
               </div>
@@ -164,7 +181,7 @@ const DianiPackages = () => {
                   <Calendar className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-sm opacity-75">Days Count</div>
+                  <div className="text-sm opacity-75">{t('package.daysCount')}</div>
                   <div className="font-medium">{pkg.dayCount}</div>
                 </div>
               </div>
@@ -174,7 +191,7 @@ const DianiPackages = () => {
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-sm opacity-75">Included</div>
+                  <div className="text-sm opacity-75">{t('package.included')}</div>
                   <div className="font-medium">{pkg.freeSightseeing}</div>
                 </div>
               </div>
@@ -183,24 +200,27 @@ const DianiPackages = () => {
 
           <div className="bg-accent/10 p-6 rounded-lg border border-accent/20">
             <div className="text-center">
-              <div className="text-sm text-muted-foreground mb-2">Starting From</div>
+              <div className="text-sm text-muted-foreground mb-2">{t('common.startingFrom')}</div>
               <div className="text-3xl font-bold text-accent mb-4">{pkg.price}</div>
               <div className="mb-3">
-                <BookingDialog packageName={pkg.title} packagePrice={pkg.price} buttonText="BOOK NOW" buttonVariant="default" />
+                <BookingDialog packageName={pkg.title} packagePrice={pkg.price} buttonText={t('common.bookNow').toUpperCase()} buttonVariant="default" />
               </div>
               <Button variant="outline" className="w-full">
-                VIEW THIS PACKAGE
+                {t('package.viewThisPackage')}
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </DialogContent>;
-  return <section id="diani-packages" className="py-16 px-4 bg-background">
+    </DialogContent>
+  );
+
+  return (
+    <section id="diani-packages" className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Popular Packages & Activities
+            {t('sections.popularPackages')}
           </h2>
         </div>
 
@@ -210,7 +230,7 @@ const DianiPackages = () => {
               <DialogTrigger asChild>
                 <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-card cursor-pointer rounded-2xl">
                   <div className="relative overflow-hidden h-80">
-                    <img src={pkg.images[0]} alt={pkg.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img src={pkg.images[0]} alt={pkg.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" decoding="async" />
                     <div className="absolute top-4 right-4">
                       <Badge className="bg-accent text-white text-lg px-4 py-2 rounded-full font-bold">
                         {pkg.price}
@@ -227,11 +247,11 @@ const DianiPackages = () => {
                     </p>
                     <div className="flex items-center gap-2 text-muted-foreground mb-3">
                       <span className="flex items-center gap-1">
-                        ⏱️ Duration: {pkg.duration}
+                        ⏱️ {t('common.duration')}: {pkg.duration}
                       </span>
                     </div>
                     <div className="text-sm text-muted-foreground">
-                      <strong>Includes:</strong>
+                      <strong>{t('common.includes')}:</strong>
                       <ul className="mt-2 space-y-1">
                         {pkg.inclusions.slice(0, 3).map((item, idx) => 
                           <li key={idx}>• {item}</li>
@@ -242,13 +262,15 @@ const DianiPackages = () => {
                 </Card>
               </DialogTrigger>
               <PackageDetailModal pkg={pkg} />
-            </Dialog>)}
+            </Dialog>
+          )}
         </div>
 
         <div className="text-center mt-12">
-          
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default DianiPackages;

@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import heroBeach from "@/assets/hero-beach.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative h-screen flex items-center justify-start overflow-hidden">
       {/* Background Image with Overlay */}
@@ -19,12 +22,12 @@ const Hero = () => {
       <div className="relative z-10 text-white max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="max-w-3xl">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Discover Kenya's{" "}
-            <span className="text-accent">Hidden Treasures</span>
+            {t('hero.title')}{" "}
+            <span className="text-accent">{t('hero.titleHighlight')}</span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl mb-10 opacity-95 font-light max-w-2xl">
-            From pristine beaches to majestic wildlife safaris, experience unforgettable adventures with Kenya's most trusted travel partner
+            {t('hero.subtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
@@ -35,7 +38,7 @@ const Hero = () => {
                 document.getElementById('packages-section')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Book Your Adventure
+              {t('hero.bookAdventure')}
             </Button>
             <Button 
               size="lg" 
@@ -45,7 +48,7 @@ const Hero = () => {
                 document.getElementById('destinations-section')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Explore Destinations
+              {t('hero.exploreDestinations')}
             </Button>
           </div>
         </div>
