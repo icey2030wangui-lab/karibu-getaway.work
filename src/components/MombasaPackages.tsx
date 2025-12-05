@@ -344,16 +344,6 @@ const MombasaPackages = () => {
               
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                  <Calendar className="w-4 h-4" />
-                </div>
-                <div>
-                  <div className="text-sm opacity-75">Duration</div>
-                  <div className="font-medium">{pkg.duration}</div>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
