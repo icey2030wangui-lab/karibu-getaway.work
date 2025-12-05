@@ -29,7 +29,7 @@ const Header = () => {
       }
     },
     { 
-      label: "Stay and Dine Selection", 
+      label: t('nav.stayAndDine'), 
       id: "diani-stay-dine",
       onClick: () => {
         document.getElementById('diani-stay-dine')?.scrollIntoView({ behavior: 'smooth' });
@@ -92,7 +92,7 @@ const Header = () => {
               </DrawerTrigger>
               <DrawerContent className="bg-primary/95 backdrop-blur-sm border-accent/20">
                 <DrawerHeader className="flex justify-between items-center border-b border-accent/20 pb-4">
-                  <DrawerTitle className="text-white text-xl">Menu</DrawerTitle>
+                  <DrawerTitle className="text-white text-xl">{t('nav.menu')}</DrawerTitle>
                   <DrawerClose asChild>
                     <button 
                       className="text-white hover:text-accent transition-colors p-2"

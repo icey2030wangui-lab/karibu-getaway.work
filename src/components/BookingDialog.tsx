@@ -14,6 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2, CreditCard } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface BookingDialogProps {
   packageName: string;
@@ -26,13 +27,14 @@ interface BookingDialogProps {
 export const BookingDialog = ({ 
   packageName, 
   packagePrice, 
-  buttonText = "Book Now",
+  buttonText,
   buttonVariant = "default",
   buttonSize = "default"
 }: BookingDialogProps) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
+  const { t } = useLanguage();
   
   const [formData, setFormData] = useState({
     firstName: "",
@@ -53,8 +55,8 @@ export const BookingDialog = ({
     // Validate form
     if (!formData.firstName || !formData.lastName || !formData.email) {
       toast({
-        title: "Missing Information",
-        description: "Please fill in all fields before proceeding.",
+        title: t('booking.missingInfo'),
+        description: t('booking.fillAllFields'),
         variant: "destructive",
       });
       return;
@@ -95,7 +97,7 @@ export const BookingDialog = ({
       console.error('Error initiating payment:', error);
       
       toast({
-        title: "Payment Failed",
+        title: t('booking.paymentFailed'),
         description: error instanceof Error ? error.message : "There was an error processing your payment request.",
         variant: "destructive",
       });
@@ -109,8 +111,8 @@ export const BookingDialog = ({
     // Validate form
     if (!formData.firstName || !formData.lastName || !formData.email) {
       toast({
-        title: "Missing Information",
-        description: "Please fill in all fields before proceeding.",
+        title: t('booking.missingInfo'),
+        description: t('booking.fillAllFields'),
         variant: "destructive",
       });
       return;
@@ -151,7 +153,7 @@ export const BookingDialog = ({
       console.error('Error initiating payment:', error);
       
       toast({
-        title: "Payment Failed",
+        title: t('booking.paymentFailed'),
         description: error instanceof Error ? error.message : "There was an error processing your payment request.",
         variant: "destructive",
       });
@@ -162,19 +164,19 @@ export const BookingDialog = ({
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant={buttonVariant} size={buttonSize}>{buttonText}</Button>
+        <Button variant={buttonVariant} size={buttonSize}>{buttonText || t('common.bookNow')}</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle>Book Your Package</DialogTitle>
+          <DialogTitle>{t('booking.title')}</DialogTitle>
           <DialogDescription>
-            Complete your details and choose your payment method
+            {t('booking.subtitle')}
           </DialogDescription>
         </DialogHeader>
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="firstName">First Name</Label>
+              <Label htmlFor="firstName">{t('common.firstName')}</Label>
               <Input
                 id="firstName"
                 name="firstName"
@@ -186,7 +188,7 @@ export const BookingDialog = ({
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="lastName">Last Name</Label>
+              <Label htmlFor="lastName">{t('common.lastName')}</Label>
               <Input
                 id="lastName"
                 name="lastName"
@@ -199,7 +201,7 @@ export const BookingDialog = ({
             </div>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">{t('common.email')}</Label>
             <Input
               id="email"
               name="email"
@@ -213,11 +215,11 @@ export const BookingDialog = ({
           </div>
           <div className="pt-4 border-t">
             <div className="flex justify-between items-center mb-4">
-              <span className="text-sm text-muted-foreground">Package:</span>
+              <span className="text-sm text-muted-foreground">{t('common.package')}:</span>
               <span className="font-medium">{packageName}</span>
             </div>
             <div className="flex justify-between items-center mb-4">
-              <span className="text-sm text-muted-foreground">Total Amount:</span>
+              <span className="text-sm text-muted-foreground">{t('common.totalAmount')}:</span>
               <span className="text-xl font-bold text-primary">{packagePrice}</span>
             </div>
           </div>
@@ -226,7 +228,7 @@ export const BookingDialog = ({
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="card">
                 <CreditCard className="mr-2 h-4 w-4" />
-                Card Payment
+                {t('booking.cardPayment')}
               </TabsTrigger>
               <TabsTrigger value="paypal">PayPal</TabsTrigger>
             </TabsList>
@@ -241,12 +243,12 @@ export const BookingDialog = ({
                   {loading ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Processing...
+                      {t('common.processing')}
                     </>
                   ) : (
                     <>
                       <CreditCard className="mr-2 h-4 w-4" />
-                      Pay with Card
+                      {t('booking.payWithCard')}
                     </>
                   )}
                 </Button>
@@ -263,10 +265,10 @@ export const BookingDialog = ({
                   {loading ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Processing...
+                      {t('common.processing')}
                     </>
                   ) : (
-                    "Pay with PayPal"
+                    t('booking.payWithPaypal')
                   )}
                 </Button>
               </form>

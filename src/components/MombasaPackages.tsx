@@ -8,7 +8,10 @@ import { Star, MapPin, Calendar, Users, CheckCircle2, Building, Phone, Mail, Clo
 import { useState } from "react";
 import { mombasaPackages } from "@/data/packages";
 import { BookingDialog } from "@/components/BookingDialog";
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const MombasaPackages = () => {
+  const { t } = useLanguage();
   const [bookingDetails, setBookingDetails] = useState({
     adults: 2,
     children: 0,
